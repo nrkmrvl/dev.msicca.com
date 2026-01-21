@@ -110,11 +110,11 @@
   window.addEventListener("scroll", highlightNav, { passive: true });
 
   // =========================================
-  // Typewriter Effect on Hero (optional enhancement)
+  // Typewriter Effect on Hero (Terminal Style)
   // =========================================
   const heroTagline = document.querySelector(".hero-tagline");
   if (heroTagline) {
-    const text = heroTagline.textContent;
+    const text = "Code. Build. Deploy."; // Use fixed text for precision
     heroTagline.textContent = "";
     heroTagline.style.visibility = "visible";
 
@@ -123,11 +123,11 @@
       if (i < text.length) {
         heroTagline.textContent += text.charAt(i);
         i++;
-        setTimeout(typeWriter, 80);
+        setTimeout(typeWriter, 120); // Slightly slower for terminal feel
       }
     };
 
     // Start typing after a short delay
-    setTimeout(typeWriter, 800);
+    setTimeout(typeWriter, 1000);
   }
 })();

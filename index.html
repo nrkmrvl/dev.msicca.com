@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -33,7 +33,7 @@
   <body>
     <!-- Navigation -->
     <header class="header">
-      <nav class="nav">
+      <div class="container nav">
         <a href="#" class="logo" aria-label="Home">
           <svg
             class="logo-icon"
@@ -70,71 +70,26 @@
           <span class="menu-line"></span>
           <span class="menu-line"></span>
         </button>
-      </nav>
+      </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">
-          <span class="title-line">Edge Minimal</span>
-          <span class="title-line">Developers</span>
-        </h1>
-        <p class="hero-tagline">Code. Build. Deploy.</p>
-        <a
-          href="https://github.com/msicca"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-primary"
-        >
-          <svg
-            class="btn-icon"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="title-line">Edge Minimal</span>
+            <span class="title-line">Developers</span>
+          </h1>
+          <p class="hero-tagline">Code. Build. Deploy.</p>
+          <a
+            href="https://github.com/msicca"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary"
           >
-            <rect
-              x="3"
-              y="4"
-              width="18"
-              height="14"
-              rx="2"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <line
-              x1="3"
-              y1="9"
-              x2="21"
-              y2="9"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <circle cx="6" cy="6.5" r="0.75" fill="currentColor" />
-            <circle cx="9" cy="6.5" r="0.75" fill="currentColor" />
-          </svg>
-          View on GitHub
-        </a>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-      <div class="features-header">
-        <span class="section-label">Features</span>
-        <h2 class="features-title">Built for Performance. Powered by Code.</h2>
-        <h3 class="features-subtitle">Minimalist design, peak performance.</h3>
-        <p class="features-description">
-          A bespoke engineering approach built for those who demand precision,
-          rapid scalability, and seamless digital flow. We eliminate complexity
-          to deliver high-clarity code, robust systems, and software that simply
-          flows.
-        </p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
             <svg
+              class="btn-icon"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -159,120 +114,33 @@
               <circle cx="6" cy="6.5" r="0.75" fill="currentColor" />
               <circle cx="9" cy="6.5" r="0.75" fill="currentColor" />
             </svg>
-          </div>
-          <h3 class="feature-title">Transparent Architecture</h3>
-          <p class="feature-highlight">Clean code, observable workflows.</p>
-          <p class="feature-text">
-            We eliminate "black boxes" by providing full visibility into the
-            development process. You get high-clarity engineering designed for
-            long-term maintainability and zero technical debt.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="3"
-                stroke="currentColor"
-                stroke-width="1.5"
-              />
-              <path
-                d="M12 2v4M12 18v4M2 12h4M18 12h4"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-              />
-              <path
-                d="M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-              />
-            </svg>
-          </div>
-          <h3 class="feature-title">High-Performance Stack</h3>
-          <p class="feature-highlight">TypeScript, Node.js, Cloud-Native.</p>
-          <p class="feature-text">
-            Engineering without compromises. Every solution is crafted with a
-            performance-first mindset, ensuring that security and speed are
-            baked into the core of your product from day one.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 2L2 7l10 5 10-5-10-5z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M2 17l10 5 10-5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M2 12l10 5 10-5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-          <h3 class="feature-title">Frictionless Deployment</h3>
-          <p class="feature-highlight">CI/CD pipelines, Atomic rollouts.</p>
-          <p class="feature-text">
-            Code goes live in seconds, not hours. Our automated delivery systems
-            allow you to iterate, ship, and repeat with the confidence of
-            zero-downtime and instant scalability.
-          </p>
+            View on GitHub
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-      <div class="about-content">
-        <h2 class="about-title">About</h2>
-        <p class="about-intro">I'm a developer who builds with edge tech.</p>
-        <ul class="tech-stack">
-          <li><span class="tech-bullet"></span>JavaScript</li>
-          <li><span class="tech-bullet"></span>TypeScript</li>
-          <li><span class="tech-bullet"></span>Next.js</li>
-          <li><span class="tech-bullet"></span>Node.js</li>
-          <li><span class="tech-bullet"></span>Git</li>
-          <li><span class="tech-bullet"></span>Linux</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-      <div class="projects-header">
-        <span class="section-label">Projects</span>
-        <h2 class="projects-title">Selected Work</h2>
-        <p class="projects-description">
-          A curated collection of projects showcasing modern web development.
-        </p>
-      </div>
-      <div class="projects-grid">
-        <article class="project-card">
-          <div class="project-image">
-            <div class="project-placeholder">
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="features-header">
+          <span class="section-label">Features</span>
+          <h2 class="features-title">
+            Built for Performance. Powered by Code.
+          </h2>
+          <h3 class="features-subtitle">
+            Minimalist design, peak performance.
+          </h3>
+          <p class="features-description">
+            A bespoke engineering approach built for those who demand precision,
+            rapid scalability, and seamless digital flow. We eliminate
+            complexity to deliver high-clarity code, robust systems, and
+            software that simply flows.
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -280,38 +148,71 @@
               >
                 <rect
                   x="3"
-                  y="3"
+                  y="4"
                   width="18"
-                  height="18"
+                  height="14"
                   rx="2"
                   stroke="currentColor"
                   stroke-width="1.5"
                 />
+                <line
+                  x1="3"
+                  y1="9"
+                  x2="21"
+                  y2="9"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <circle cx="6" cy="6.5" r="0.75" fill="currentColor" />
+                <circle cx="9" cy="6.5" r="0.75" fill="currentColor" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Transparent Architecture</h3>
+            <p class="feature-highlight">Clean code, observable workflows.</p>
+            <p class="feature-text">
+              We eliminate "black boxes" by providing full visibility into the
+              development process. You get high-clarity engineering designed for
+              long-term maintainability and zero technical debt.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="3"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
                 <path
-                  d="M9 9l6 6M15 9l-6 6"
+                  d="M12 2v4M12 18v4M2 12h4M18 12h4"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
                   stroke="currentColor"
                   stroke-width="1.5"
                   stroke-linecap="round"
                 />
               </svg>
             </div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-name">Cloud Dashboard</h3>
-            <p class="project-desc">
-              Real-time monitoring interface with WebSocket integration and
-              serverless backend.
+            <h3 class="feature-title">High-Performance Stack</h3>
+            <p class="feature-highlight">TypeScript, Node.js, Cloud-Native.</p>
+            <p class="feature-text">
+              Engineering without compromises. Every solution is crafted with a
+              performance-first mindset, ensuring that security and speed are
+              baked into the core of your product from day one.
             </p>
-            <div class="project-tech">
-              <span>Next.js</span>
-              <span>TypeScript</span>
-              <span>AWS</span>
-            </div>
           </div>
-        </article>
-        <article class="project-card">
-          <div class="project-image">
-            <div class="project-placeholder">
+          <div class="feature-card">
+            <div class="feature-icon">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -339,123 +240,242 @@
                 />
               </svg>
             </div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-name">API Gateway</h3>
-            <p class="project-desc">
-              High-performance REST API with rate limiting, auth, and automated
-              documentation.
+            <h3 class="feature-title">Frictionless Deployment</h3>
+            <p class="feature-highlight">CI/CD pipelines, Atomic rollouts.</p>
+            <p class="feature-text">
+              Code goes live in seconds, not hours. Our automated delivery
+              systems allow you to iterate, ship, and repeat with the confidence
+              of zero-downtime and instant scalability.
             </p>
-            <div class="project-tech">
-              <span>Node.js</span>
-              <span>Express</span>
-              <span>Redis</span>
-            </div>
           </div>
-        </article>
-        <article class="project-card">
-          <div class="project-image">
-            <div class="project-placeholder">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="9"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                />
-                <path
-                  d="M12 7v5l3 3"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-content">
+          <h2 class="about-title">About</h2>
+          <p class="about-intro">I'm a developer who builds with edge tech.</p>
+          <ul class="tech-stack">
+            <li><span class="tech-bullet"></span>JavaScript</li>
+            <li><span class="tech-bullet"></span>TypeScript</li>
+            <li><span class="tech-bullet"></span>Next.js</li>
+            <li><span class="tech-bullet"></span>Node.js</li>
+            <li><span class="tech-bullet"></span>Git</li>
+            <li><span class="tech-bullet"></span>Linux</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="projects-header">
+          <span class="section-label">Projects</span>
+          <h2 class="projects-title">Selected Work</h2>
+          <p class="projects-description">
+            A curated collection of projects showcasing modern web development.
+          </p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M9 9l6 6M15 9l-6 6"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-name">CI/CD Pipeline</h3>
-            <p class="project-desc">
-              Zero-downtime deployment system with automated testing and
-              rollback capabilities.
-            </p>
-            <div class="project-tech">
-              <span>GitHub Actions</span>
-              <span>Docker</span>
-              <span>K8s</span>
+            <div class="project-content">
+              <h3 class="project-name">Cloud Dashboard</h3>
+              <p class="project-desc">
+                Real-time monitoring interface with WebSocket integration and
+                serverless backend.
+              </p>
+              <div class="project-tech">
+                <span>Next.js</span>
+                <span>TypeScript</span>
+                <span>AWS</span>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2 17l10 5 10-5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2 12l10 5 10-5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-name">API Gateway</h3>
+              <p class="project-desc">
+                High-performance REST API with rate limiting, auth, and
+                automated documentation.
+              </p>
+              <div class="project-tech">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>Redis</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M12 7v5l3 3"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-name">CI/CD Pipeline</h3>
+              <p class="project-desc">
+                Zero-downtime deployment system with automated testing and
+                rollback capabilities.
+              </p>
+              <div class="project-tech">
+                <span>GitHub Actions</span>
+                <span>Docker</span>
+                <span>K8s</span>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-      <div class="contact-content">
-        <span class="section-label">Contact</span>
-        <h2 class="contact-title">Let's Build Something</h2>
-        <p class="contact-description">
-          Ready to bring your project to life? Get in touch.
-        </p>
-        <a href="mailto:hello@msicca.com" class="btn-primary contact-btn">
-          <svg
-            class="btn-icon"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              x="2"
-              y="4"
-              width="20"
-              height="16"
-              rx="2"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <path
-              d="M2 7l10 6 10-6"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          hello@msicca.com
-        </a>
+      <div class="container">
+        <div class="contact-content">
+          <span class="section-label">Contact</span>
+          <h2 class="contact-title">Let's Build Something</h2>
+          <p class="contact-description">
+            Ready to bring your project to life? Get in touch.
+          </p>
+          <a href="mailto:hello@msicca.com" class="btn-primary contact-btn">
+            <svg
+              class="btn-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="2"
+                y="4"
+                width="20"
+                height="16"
+                rx="2"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M2 7l10 6 10-6"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            hello@msicca.com
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <nav class="footer-nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a
-        href="https://github.com/msicca"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="github-link"
-        aria-label="GitHub"
-      >
-        <svg
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-          />
-        </svg>
-      </a>
-      <p class="copyright">© 2026 msicca</p>
+      <div class="container footer-content">
+        <nav class="footer-nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-right">
+          <a
+            href="https://github.com/msicca"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="github-link"
+            aria-label="GitHub"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+          </a>
+          <p class="copyright">© 2026 msicca</p>
+        </div>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>
