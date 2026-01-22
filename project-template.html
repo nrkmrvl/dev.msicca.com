@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Case Study | dev.msicca.com</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="retro.css" />
+  </head>
+  <body>
+    <!-- Navigation (loaded via JS) -->
+    <div id="header-placeholder"></div>
+    <script>
+      function initHeaderScrollAnimation() {
+        const header = document.querySelector(".header");
+        if (!header) return;
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+              header.classList.add("header-scrolled");
+            } else {
+              header.classList.remove("header-scrolled");
+            }
+          },
+          { passive: true },
+        );
+      }
+      fetch("/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initHeaderScrollAnimation();
+        });
+    </script>
+
+    <main>
+      <section class="portfolio-hero">
+        <div class="portfolio-hero__bg"></div>
+        <div class="portfolio-hero__overlay"></div>
+        <div class="container portfolio-hero__content">
+          <span class="section-label">Case Study</span>
+          <h1 class="features-title">Project Title Here</h1>
+          <p class="features-description">
+            Short project summary or tagline goes here.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-case-study">
+        <div class="container">
+          <article class="case-study-content">
+            <h2>Overview</h2>
+            <p>
+              This is a generic case study template. Replace this content with
+              the specific details of the project, including objectives,
+              challenges, solutions, and results.
+            </p>
+            <h3>Objectives</h3>
+            <ul>
+              <li>Describe the main goals of the project.</li>
+              <li>Highlight any unique requirements or constraints.</li>
+            </ul>
+            <h3>Challenges</h3>
+            <ul>
+              <li>Summarize technical or business challenges faced.</li>
+              <li>Explain why this project was non-trivial or interesting.</li>
+            </ul>
+            <h3>Solution</h3>
+            <p>
+              Describe the approach, technologies, and architecture used to
+              solve the problem. Mention any innovative aspects or best
+              practices applied.
+            </p>
+            <h3>Results</h3>
+            <ul>
+              <li>List the outcomes, improvements, or impact delivered.</li>
+              <li>
+                Include metrics, testimonials, or before/after comparisons if
+                available.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact CTA (loaded via JS) -->
+    <div id="contact-cta-placeholder"></div>
+    <script>
+      fetch("/contact-cta.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document
+            .getElementById("contact-cta-placeholder")
+            .insertAdjacentHTML("beforeend", data);
+        });
+    </script>
+
+    <!-- Footer (loaded via JS) -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+    <script src="/script.js"></script>
+  </body>
+</html>
