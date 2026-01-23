@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modular Industrial Resource Planning (ERP) Suite | dev.msicca.com</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/retro.css" />
+  </head>
+  <body>
+    <!-- Navigation (loaded via JS) -->
+    <div id="header-placeholder"></div>
+    <script>
+      function initHeaderScrollAnimation() {
+        const header = document.querySelector(".header");
+        if (!header) return;
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+              header.classList.add("header-scrolled");
+            } else {
+              header.classList.remove("header-scrolled");
+            }
+          },
+          { passive: true },
+        );
+      }
+      fetch("/components/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initHeaderScrollAnimation();
+          if (window.initNavHighlight) window.initNavHighlight();
+        });
+    </script>
+
+    <main>
+      <!-- Project Hero -->
+      <section class="portfolio-hero case-study-hero">
+        <div class="portfolio-hero__bg"></div>
+        <div class="portfolio-hero__overlay"></div>
+        <div class="container portfolio-hero__content">
+          <span class="section-label">Case Study</span>
+          <h1 class="features-title">Modular Industrial Resource Planning (ERP) Suite</h1>
+          <p class="features-description">
+            A high-performance, multi-tenant framework for engineering and construction management.
+          </p>
+          <div class="project-tech case-study-tags">
+            <span>PHP 8.1+</span>
+            <span>Svelte</span>
+            <span>PostgreSQL</span>
+            <span>JWT</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision & Impact -->
+      <section class="case-study-section" id="vision">
+        <div class="container">
+          <span class="section-label">01</span>
+          <h2 class="features-title">Vision & Impact</h2>
+          <p class="features-description">
+            Managing complex engineering projects requires more than just spreadsheets; it demands 
+            a unified source of truth. We engineered a custom, open-source ERP system designed 
+            specifically for the rigors of the construction and industrial sectors. By decentralizing 
+            data access while centralizing control, this platform empowers firms to scale their 
+            operations with Sustainability and Impact at the core.
+          </p>
+        </div>
+      </section>
+
+      <!-- The Challenge -->
+      <section class="case-study-section case-study-section--alt" id="challenge">
+        <div class="container">
+          <span class="section-label">02</span>
+          <h2 class="features-title">The Engineering Challenge</h2>
+          <p class="features-description">
+            "Encapsulation & Scalability" — The main architectural hurdle was creating a system 
+            that could grow infinitely without becoming a "monolithic mess."
+          </p>
+          <div class="approach-highlights">
+            <div class="feature-card">
+              <h3 class="feature-title">The Solution</h3>
+              <p class="feature-text">
+                We adopted a Strict Modular MVC Architecture. Each business domain (Resources, 
+                Project Lifecycle, Financials) is a self-contained unit with its own models, 
+                controllers, and assets. This ensures that a failure or update in one module 
+                never compromises the integrity of the entire system.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="case-study-section" id="stack">
+        <div class="container">
+          <span class="section-label">03</span>
+          <h2 class="features-title">Technical Stack & Architecture</h2>
+          <p class="features-description">
+            This stack was selected to balance high-speed data processing with reactive user interfaces.
+          </p>
+          <div class="tech-stack-table">
+            <table class="stack-table">
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Technology</th>
+                  <th>Technical Justification</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Backend</td>
+                  <td>PHP 8.1+ (Strictly Typed)</td>
+                  <td>Utilizes modern PHP features (Enums, Fiber, Readonly properties) for robust server-side logic</td>
+                </tr>
+                <tr>
+                  <td>Frontend</td>
+                  <td>Svelte + Tailwind CSS</td>
+                  <td>Svelte's "zero-runtime" approach provides the snappiest dashboard experience possible</td>
+                </tr>
+                <tr>
+                  <td>Data Engine</td>
+                  <td>PostgreSQL (Multi-DB)</td>
+                  <td>Triple-database architecture (Operational, Auth, and BI) to prevent data bottlenecks</td>
+                </tr>
+                <tr>
+                  <td>Auth & Security</td>
+                  <td>JWT + Dual-Approval</td>
+                  <td>JSON Web Tokens for stateless security with "dual-signature" logic for high-risk transactions</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Highlights -->
+      <section class="case-study-section case-study-section--alt" id="highlights">
+        <div class="container">
+          <span class="section-label">04</span>
+          <h2 class="features-title">Key Engineering Highlights</h2>
+          <p class="features-description">
+            Breakdown of the key functionalities and components.
+          </p>
+          <div class="features-grid modules-grid">
+            <div class="feature-card">
+              <h3 class="feature-title">Multi-Tenant Data Isolation</h3>
+              <p class="feature-text">
+                We implemented Row-Level Security (RLS) and tenant-specific filtering. This allows 
+                a single deployment to serve multiple business units while guaranteeing data never 
+                leaks between sensitive accounts.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Automated Document Engineering</h3>
+              <p class="feature-text">
+                Instead of direct instantiation of PDF libraries, we built a Template-Based Reporting 
+                Engine. This abstracts the complexity of document generation for standardized, 
+                audit-ready financial and technical reports.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">PSR-4 Standardized Autoloading</h3>
+              <p class="feature-text">
+                The entire codebase follows strict PHP-FIG standards, ensuring the system is 
+                interoperable and maintainable by any high-level engineering team globally.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Hybrid Reactive Dashboards</h3>
+              <p class="feature-text">
+                By integrating Svelte components into a PHP-driven core, we achieved the SEO 
+                and stability of a traditional server-side app with the interactivity of a modern SPA.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <section class="case-study-section" id="values">
+        <div class="container">
+          <span class="section-label">05</span>
+          <h2 class="features-title">Division Values Applied</h2>
+          <p class="features-description">
+            Which of MSICCA's core values were demonstrated in this project.
+          </p>
+          <div class="values-highlight">
+            <div class="value-card">
+              <h3 class="value-name">Ingenuity</h3>
+              <p class="value-description">
+                The modular design allows engineers to "plug in" new tools (like IoT monitoring 
+                or BIM integration) without rebuilding the core.
+              </p>
+            </div>
+            <div class="value-card">
+              <h3 class="value-name">Collaboration</h3>
+              <p class="value-description">
+                The system's role-based access control (RBAC) fosters teamwork by ensuring every 
+                stakeholder has the exact information they need—no more, no less.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact CTA (loaded via JS) -->
+    <div id="contact-cta-placeholder"></div>
+    <script>
+      fetch("/components/contact-cta.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const placeholder = document.getElementById("contact-cta-placeholder");
+          placeholder.insertAdjacentHTML("beforeend", data);
+          const newElements = placeholder.querySelectorAll(
+            ".reveal-on-scroll, .contact-content, .contact-panel",
+          );
+          newElements.forEach((el) => {
+            el.classList.add("reveal-on-scroll");
+            if (window.revealOnScroll) {
+              window.revealOnScroll.observe(el);
+            } else {
+              el.classList.add("revealed");
+            }
+          });
+        });
+    </script>
+
+    <!-- Footer (loaded via JS) -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("/components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

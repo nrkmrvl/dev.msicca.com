@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Financial Metrics PWA | dev.msicca.com</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/retro.css" />
+  </head>
+  <body>
+    <!-- Navigation (loaded via JS) -->
+    <div id="header-placeholder"></div>
+    <script>
+      function initHeaderScrollAnimation() {
+        const header = document.querySelector(".header");
+        if (!header) return;
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+              header.classList.add("header-scrolled");
+            } else {
+              header.classList.remove("header-scrolled");
+            }
+          },
+          { passive: true },
+        );
+      }
+      fetch("/components/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initHeaderScrollAnimation();
+          if (window.initNavHighlight) window.initNavHighlight();
+        });
+    </script>
+
+    <main>
+      <!-- Project Hero -->
+      <section class="portfolio-hero case-study-hero">
+        <div class="portfolio-hero__bg"></div>
+        <div class="portfolio-hero__overlay"></div>
+        <div class="container portfolio-hero__content">
+          <span class="section-label">Case Study</span>
+          <h1 class="features-title">Real-Time Financial Metrics PWA</h1>
+          <p class="features-description">
+            High-availability dashboard for mission-critical economic indicators.
+          </p>
+          <div class="project-tech case-study-tags">
+            <span>React 19</span>
+            <span>TypeScript</span>
+            <span>Vite</span>
+            <span>PWA</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview -->
+      <section class="case-study-section" id="overview">
+        <div class="container">
+          <span class="section-label">01</span>
+          <h2 class="features-title">Overview</h2>
+          <p class="features-description">
+            In volatile economic environments, access to synchronized data is crucial for decision-making. 
+            We developed a Progressive Web App (PWA) designed to aggregate and display real-time 
+            institutional and market-driven financial indicators. The solution focuses on extreme 
+            performance, minimal data consumption, and 100% uptime for professional users.
+          </p>
+        </div>
+      </section>
+
+      <!-- The Challenge -->
+      <section class="case-study-section case-study-section--alt" id="challenge">
+        <div class="container">
+          <span class="section-label">02</span>
+          <h2 class="features-title">The Engineering Challenge</h2>
+          <p class="features-description">
+            "Resilience in Low-Bandwidth Environments" — The primary challenge was ensuring data 
+            integrity and availability for users with intermittent connectivity.
+          </p>
+          <div class="approach-highlights">
+            <div class="feature-card">
+              <h3 class="feature-title">The Solution</h3>
+              <p class="feature-text">
+                We implemented a Service Worker-based architecture with a "Stale-While-Revalidate" 
+                caching strategy. This ensures that the application remains functional offline, 
+                providing the last verified metrics even without an active internet connection.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="case-study-section" id="stack">
+        <div class="container">
+          <span class="section-label">03</span>
+          <h2 class="features-title">Technical Stack & Architecture</h2>
+          <p class="features-description">
+            This architecture highlights our commitment to modern, scalable software engineering.
+          </p>
+          <div class="tech-stack-table">
+            <table class="stack-table">
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Technology</th>
+                  <th>Technical Justification</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Frontend</td>
+                  <td>React 19 + Vite</td>
+                  <td>Leverages React's latest concurrent rendering features and Vite's optimized build pipeline for sub-second load times</td>
+                </tr>
+                <tr>
+                  <td>Language</td>
+                  <td>TypeScript</td>
+                  <td>Ensures strict typing for mathematical operations and data transformation, eliminating runtime errors</td>
+                </tr>
+                <tr>
+                  <td>Styling</td>
+                  <td>Tailwind CSS</td>
+                  <td>Utilizes a utility-first approach to generate highly optimized, purgeable CSS</td>
+                </tr>
+                <tr>
+                  <td>PWA Engine</td>
+                  <td>Vite-Plugin-PWA / Workbox</td>
+                  <td>Manages background synchronization and offline asset persistence for a native-like experience</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Highlights -->
+      <section class="case-study-section case-study-section--alt" id="highlights">
+        <div class="container">
+          <span class="section-label">04</span>
+          <h2 class="features-title">Key Engineering Highlights</h2>
+          <p class="features-description">
+            Breakdown of the key functionalities and components.
+          </p>
+          <div class="features-grid modules-grid">
+            <div class="feature-card">
+              <h3 class="feature-title">Service Layer Abstraction</h3>
+              <p class="feature-text">
+                Data fetching is decoupled from the UI via a centralized dataService.ts. This layer 
+                handles normalization from multiple distributed APIs and provides a unified interface 
+                for the application state.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Automated Asset Pipeline</h3>
+              <p class="feature-text">
+                We built custom Node.js scripts to automate the generation of platform-specific 
+                manifests and iconography, ensuring compliance with both iOS and Android PWA standards.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">High-Precision Calculation Engine</h3>
+              <p class="feature-text">
+                The app includes an interactive calculation module designed to handle multi-unit 
+                conversions with real-time updates and clipboard integration for professional workflows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <section class="case-study-section" id="values">
+        <div class="container">
+          <span class="section-label">05</span>
+          <h2 class="features-title">Division Values Applied</h2>
+          <p class="features-description">
+            Which of MSICCA's core values were demonstrated in this project.
+          </p>
+          <div class="values-highlight">
+            <div class="value-card">
+              <h3 class="value-name">Accessibility</h3>
+              <p class="value-description">
+                By choosing a PWA over a native app, we ensure that advanced financial tools 
+                are available to every user with a browser, regardless of their device's hardware constraints.
+              </p>
+            </div>
+            <div class="value-card">
+              <h3 class="value-name">Impact</h3>
+              <p class="value-description">
+                This tool empowers professionals to make data-driven decisions by providing 
+                a reliable source of truth in a fast-paced environment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact CTA (loaded via JS) -->
+    <div id="contact-cta-placeholder"></div>
+    <script>
+      fetch("/components/contact-cta.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const placeholder = document.getElementById("contact-cta-placeholder");
+          placeholder.insertAdjacentHTML("beforeend", data);
+          const newElements = placeholder.querySelectorAll(
+            ".reveal-on-scroll, .contact-content, .contact-panel",
+          );
+          newElements.forEach((el) => {
+            el.classList.add("reveal-on-scroll");
+            if (window.revealOnScroll) {
+              window.revealOnScroll.observe(el);
+            } else {
+              el.classList.add("revealed");
+            }
+          });
+        });
+    </script>
+
+    <!-- Footer (loaded via JS) -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("/components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

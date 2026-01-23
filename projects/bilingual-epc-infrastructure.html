@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilingual EPC Corporate Infrastructure | dev.msicca.com</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/retro.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <script>
+      function initHeaderScrollAnimation() {
+        const header = document.querySelector(".header");
+        if (!header) return;
+        window.addEventListener("scroll", () => {
+          const currentScroll = window.pageYOffset;
+          if (currentScroll > 50) {
+            header.classList.add("header-scrolled");
+          } else {
+            header.classList.remove("header-scrolled");
+          }
+        }, { passive: true });
+      }
+      fetch("/components/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initHeaderScrollAnimation();
+          if (window.initNavHighlight) window.initNavHighlight();
+        });
+    </script>
+
+    <main>
+      <section class="portfolio-hero case-study-hero">
+        <div class="portfolio-hero__bg"></div>
+        <div class="portfolio-hero__overlay"></div>
+        <div class="container portfolio-hero__content">
+          <span class="section-label">Case Study</span>
+          <h1 class="features-title">Bilingual EPC Corporate Infrastructure</h1>
+          <p class="features-description">
+            A high-performance, accessible web portal for multi-disciplinary engineering consultancy.
+          </p>
+          <div class="project-tech case-study-tags">
+            <span>Static MPA</span>
+            <span>Vanilla JS</span>
+            <span>WebP</span>
+            <span>SEO</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section" id="vision">
+        <div class="container">
+          <span class="section-label">01</span>
+          <h2 class="features-title">Vision & Impact</h2>
+          <p class="features-description">
+            In the Engineering, Procurement, and Construction (EPC) sector, a digital presence must 
+            mirror the precision of the physical projects. We developed a bespoke, bilingual 
+            (English/Spanish) static platform that serves as the global gateway for the firm. 
+            By prioritizing speed, accessibility, and professional aesthetics, we ensured that 
+            the firm's capability statements and project portfolios are accessible to stakeholders 
+            worldwide, regardless of their device or connection speed.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-study-section case-study-section--alt" id="challenge">
+        <div class="container">
+          <span class="section-label">02</span>
+          <h2 class="features-title">The Engineering Challenge</h2>
+          <p class="features-description">
+            "Global Reach without Technical Bloat" — The challenge was to maintain a bilingual, 
+            multi-page site without the overhead of a database or a complex backend.
+          </p>
+          <div class="approach-highlights">
+            <div class="feature-card">
+              <h3 class="feature-title">The Solution</h3>
+              <p class="feature-text">
+                We implemented a Modular Static Architecture. By utilizing a custom-built "Partial 
+                Injection" system via JavaScript, we synchronized navigation and footer components 
+                across the entire MPA, achieving the maintainability of a framework with the raw 
+                speed of static HTML.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section" id="stack">
+        <div class="container">
+          <span class="section-label">03</span>
+          <h2 class="features-title">Technical Stack & Implementation</h2>
+          <p class="features-description">
+            A "Performance-First" stack engineered for SEO dominance and rapid content delivery.
+          </p>
+          <div class="tech-stack-table">
+            <table class="stack-table">
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Technology</th>
+                  <th>Technical Justification</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Architecture</td>
+                  <td>Static MPA</td>
+                  <td>Eliminates server-side processing and database vulnerabilities, resulting in near-instant load times</td>
+                </tr>
+                <tr>
+                  <td>Bilingual Logic</td>
+                  <td>Vanilla JS (partials.js)</td>
+                  <td>A custom routing and mapping engine that handles seamless language toggling</td>
+                </tr>
+                <tr>
+                  <td>Design System</td>
+                  <td>Custom Utility-First CSS</td>
+                  <td>A proprietary framework focusing on "Glassmorphism" and responsive grids</td>
+                </tr>
+                <tr>
+                  <td>Asset Pipeline</td>
+                  <td>WebP + Lazy Loading</td>
+                  <td>Optimized image delivery using next-gen formats and srcset to minimize data consumption</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section case-study-section--alt" id="highlights">
+        <div class="container">
+          <span class="section-label">04</span>
+          <h2 class="features-title">Key Engineering Highlights</h2>
+          <div class="features-grid modules-grid">
+            <div class="feature-card">
+              <h3 class="feature-title">Bilingual Partial Orchestration</h3>
+              <p class="feature-text">
+                To ensure consistency across the Spanish and English versions, we engineered a 
+                logic layer that dynamically loads shared components, reducing the risk of 
+                outdated information during content updates.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">SEO & Metadata Integrity</h3>
+              <p class="feature-text">
+                Every page is optimized with Open Graph, Twitter Cards, and Alternate Language Tags. 
+                This ensures that search engines correctly index the bilingual content.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Accessibility & Semantic Core</h3>
+              <p class="feature-text">
+                Built with ARIA labels and high-contrast typography, the site meets modern 
+                accessibility standards with screen-reader compatibility and keyboard navigation.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Asset Optimization & Performance</h3>
+              <p class="feature-text">
+                By implementing srcset and sizes for imagery, the platform delivers the smallest 
+                possible file size for the user's screen resolution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section" id="values">
+        <div class="container">
+          <span class="section-label">05</span>
+          <h2 class="features-title">Division Values Applied</h2>
+          <div class="values-highlight">
+            <div class="value-card">
+              <h3 class="value-name">Accessibility</h3>
+              <p class="value-description">
+                Making advanced EPC knowledge and company capabilities available to all through 
+                a low-bandwidth, high-speed interface.
+              </p>
+            </div>
+            <div class="value-card">
+              <h3 class="value-name">Impact</h3>
+              <p class="value-description">
+                Serving as a reliable digital repository for technical CVs, project case studies, 
+                and capability statements that drive infrastructure forward.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="contact-cta-placeholder"></div>
+    <script>
+      fetch("/components/contact-cta.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const placeholder = document.getElementById("contact-cta-placeholder");
+          placeholder.insertAdjacentHTML("beforeend", data);
+          const newElements = placeholder.querySelectorAll(".reveal-on-scroll, .contact-content, .contact-panel");
+          newElements.forEach((el) => {
+            el.classList.add("reveal-on-scroll");
+            if (window.revealOnScroll) window.revealOnScroll.observe(el);
+            else el.classList.add("revealed");
+          });
+        });
+    </script>
+
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("/components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
