@@ -125,12 +125,30 @@
     }
 
     // Re-apply translations when dynamic content is loaded (header/footer)
-    // Use MutationObserver for dynamic content
+    // Use MutationObserver for dynamic content with optimization
     const observer = new MutationObserver((mutations) => {
+      // Check if any added nodes contain translatable content
+      let hasTranslatableContent = false;
       for (const mutation of mutations) {
-        if (mutation.addedNodes.length) {
-          applyTranslations(trans);
+        for (const node of mutation.addedNodes) {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            // Check if the node or its descendants have i18n attributes
+            if (node.hasAttribute && (
+              node.hasAttribute('data-i18n') || 
+              node.hasAttribute('data-i18n-placeholder') ||
+              node.querySelector('[data-i18n], [data-i18n-placeholder]')
+            )) {
+              hasTranslatableContent = true;
+              break;
+            }
+          }
         }
+        if (hasTranslatableContent) break;
+      }
+      
+      // Only apply translations if translatable content was added
+      if (hasTranslatableContent) {
+        applyTranslations(trans);
       }
     });
 
