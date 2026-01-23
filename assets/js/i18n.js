@@ -2,6 +2,8 @@
  * i18n - Internationalization System for Edge Minimal Developers
  * Automatically detects browser language and applies translations
  * Supports EN (default) and ES
+ * 
+ * Can be enabled/disabled via window.MSICCA_CONFIG.I18N_ENABLED in config.js
  */
 
 (function() {
@@ -13,6 +15,19 @@
   // Cache for loaded translations
   let translations = {};
   let currentLang = DEFAULT_LANG;
+
+  /**
+   * Check if i18n is enabled via configuration
+   * @returns {boolean} Whether i18n is enabled
+   */
+  function isI18nEnabled() {
+    // Default to enabled if config is not loaded yet or I18N_ENABLED is not explicitly set
+    if (!window.MSICCA_CONFIG) {
+      return true;
+    }
+    // Use explicit false check so any truthy value enables i18n
+    return window.MSICCA_CONFIG.I18N_ENABLED !== false;
+  }
 
   /**
    * Detect user's preferred language from browser settings
@@ -114,6 +129,12 @@
    * Initialize i18n system
    */
   async function init() {
+    // Check if i18n is enabled
+    if (!isI18nEnabled()) {
+      console.log('i18n: Translations disabled via config');
+      return;
+    }
+
     currentLang = detectLanguage();
     const trans = await loadTranslations(currentLang);
     
