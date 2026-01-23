@@ -393,6 +393,7 @@
                 <input
                   type="email"
                   name="email"
+                  autocomplete="email"
                   class="contact-panel__input"
                   placeholder="Enter your email address"
                   required
@@ -532,7 +533,8 @@
         if (window.location.hash) {
           const targetSection = document.querySelector(window.location.hash);
           if (targetSection) {
-            setTimeout(() => {
+            // Use requestAnimationFrame to avoid forced reflow
+            requestAnimationFrame(() => {
               targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
               // Also activate the corresponding tab
               const sectionId = window.location.hash.replace('#', '');
@@ -542,7 +544,7 @@
                   tab.classList.add('active');
                 }
               });
-            }, 100);
+            });
           }
         }
       });
