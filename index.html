@@ -61,6 +61,7 @@
         });
     </script>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero-bg-layer"></div>
@@ -512,9 +513,7 @@
             </p>
             <form
               class="contact-panel__form"
-              action="mailto:hello@msicca.com"
-              method="POST"
-              enctype="text/plain"
+              onsubmit="return handleEmailSubmit(this);"
             >
               <input
                 type="email"
@@ -554,7 +553,7 @@
         </div>
       </div>
     </section>
-
+    </main>
 
     <!-- Footer (loaded via JS) -->
     <div id="footer-placeholder"></div>

@@ -2,6 +2,26 @@
  * Edge Minimal Developers - Interactive Features
  */
 
+// =========================================
+// Email Form Handler (Global function for contact forms)
+// =========================================
+window.handleEmailSubmit = function(form) {
+  var emailInput = form.email;
+  var email = emailInput.value.trim();
+  
+  // Validate email format
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailRegex.test(email)) {
+    emailInput.focus();
+    return false;
+  }
+  
+  // Construct mailto URL and navigate
+  window.location.href = 'mailto:hello@msicca.com?subject=Contact%20from%20' + 
+    encodeURIComponent(email) + '&body=Email:%20' + encodeURIComponent(email);
+  return false;
+};
+
 (function () {
   "use strict";
 

@@ -512,9 +512,7 @@
               </p>
               <form
                 class="contact-panel__form"
-                action="mailto:hello@msicca.com"
-                method="POST"
-                enctype="text/plain"
+                onsubmit="return handleEmailSubmit(this);"
               >
                 <input
                   type="email"
