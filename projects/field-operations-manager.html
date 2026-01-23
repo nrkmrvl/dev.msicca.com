@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Field Operations & Tactical Resource Manager | dev.msicca.com</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/retro.css" />
+  </head>
+  <body>
+    <!-- Navigation (loaded via JS) -->
+    <div id="header-placeholder"></div>
+    <script>
+      function initHeaderScrollAnimation() {
+        const header = document.querySelector(".header");
+        if (!header) return;
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+              header.classList.add("header-scrolled");
+            } else {
+              header.classList.remove("header-scrolled");
+            }
+          },
+          { passive: true },
+        );
+      }
+      fetch("/components/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initHeaderScrollAnimation();
+          if (window.initNavHighlight) window.initNavHighlight();
+        });
+    </script>
+
+    <main>
+      <!-- Project Hero -->
+      <section class="portfolio-hero case-study-hero">
+        <div class="portfolio-hero__bg"></div>
+        <div class="portfolio-hero__overlay"></div>
+        <div class="container portfolio-hero__content">
+          <span class="section-label">Case Study</span>
+          <h1 class="features-title">Field Operations & Tactical Resource Manager</h1>
+          <p class="features-description">
+            A high-resilience, offline-first platform for real-time site synchronization.
+          </p>
+          <div class="project-tech case-study-tags">
+            <span>React</span>
+            <span>PWA</span>
+            <span>IndexedDB</span>
+            <span>Offline-Sync</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision & Impact -->
+      <section class="case-study-section" id="vision">
+        <div class="container">
+          <span class="section-label">01</span>
+          <h2 class="features-title">Vision & Impact</h2>
+          <p class="features-description">
+            The greatest risk in large-scale construction is the "Information Gap" between the site 
+            and the office. We engineered a Field Operations Manager designed to serve as the 
+            operational heartbeat of any project. While technical specifications are managed via 
+            our centralized documentation framework, this tool focuses on the "live" variables: 
+            labor, material consumption, and daily progress tracking. This ensures that project 
+            managers make decisions based on what is happening now, not what happened a week ago.
+          </p>
+        </div>
+      </section>
+
+      <!-- The Challenge -->
+      <section class="case-study-section case-study-section--alt" id="challenge">
+        <div class="container">
+          <span class="section-label">02</span>
+          <h2 class="features-title">The Engineering Challenge</h2>
+          <p class="features-description">
+            "The Connectivity Frontier" — Construction sites are often located in areas with 
+            unstable or non-existent internet connectivity. A standard web app would fail in 
+            these environments.
+          </p>
+          <div class="approach-highlights">
+            <div class="feature-card">
+              <h3 class="feature-title">The Solution</h3>
+              <p class="feature-text">
+                We developed an Offline-First Architecture. The system utilizes local storage 
+                engines to cache all field entries—including high-resolution photo documentation—and 
+                implements a robust synchronization protocol that resumes data transfer automatically 
+                once a stable connection is detected.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="case-study-section" id="stack">
+        <div class="container">
+          <span class="section-label">03</span>
+          <h2 class="features-title">Technical Stack & Architecture</h2>
+          <p class="features-description">
+            Engineered for durability and rapid data entry under extreme field conditions.
+          </p>
+          <div class="tech-stack-table">
+            <table class="stack-table">
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Technology</th>
+                  <th>Technical Justification</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Frontend Core</td>
+                  <td>Mobile-First React / PWA</td>
+                  <td>Ensures cross-platform compatibility with a focus on low-power consumption for mobile devices</td>
+                </tr>
+                <tr>
+                  <td>Offline Engine</td>
+                  <td>IndexedDB / Service Workers</td>
+                  <td>Provides a high-capacity local database for storing site logs and media without an active connection</td>
+                </tr>
+                <tr>
+                  <td>Media Handler</td>
+                  <td>Automated Geotagging API</td>
+                  <td>Injects metadata (timestamps and GPS coordinates) directly into image headers for audit-ready documentation</td>
+                </tr>
+                <tr>
+                  <td>UI Framework</td>
+                  <td>High-Contrast Tailwind CSS</td>
+                  <td>Custom design tokens optimized for outdoor use, ensuring visibility in high-heat and high-glare environments</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Highlights -->
+      <section class="case-study-section case-study-section--alt" id="highlights">
+        <div class="container">
+          <span class="section-label">04</span>
+          <h2 class="features-title">Key Engineering Highlights</h2>
+          <p class="features-description">
+            Breakdown of the key functionalities and components.
+          </p>
+          <div class="features-grid modules-grid">
+            <div class="feature-card">
+              <h3 class="feature-title">Automated Digital Site Journal</h3>
+              <p class="feature-text">
+                We replaced manual paperwork with a digital diary that automates progress reporting. 
+                It utilizes an event-driven architecture to notify stakeholders of site incidents 
+                or weather-related delays in real-time.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Dynamic Material Reconciliation</h3>
+              <p class="feature-text">
+                The system features a comparison engine that tracks "Theoretical vs. Actual" 
+                consumption. By cross-referencing site inventory with the project's Bill of 
+                Materials (BoM), the app triggers automated procurement alerts before critical shortages occur.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Multi-Level Validation Workflow</h3>
+              <p class="feature-text">
+                To maintain data integrity, we implemented a hierarchical approval gate. Data 
+                captured in the field remains in a "Pending" state until a supervisor validates 
+                the entry, ensuring the central database only consumes "clean," verified information.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Geospatial Progress Tracking</h3>
+              <p class="feature-text">
+                By integrating GPS-stamped photo modules, the system creates a visual and temporal 
+                map of project evolution, providing an irrefutable audit trail for valuations 
+                and insurance purposes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <section class="case-study-section" id="values">
+        <div class="container">
+          <span class="section-label">05</span>
+          <h2 class="features-title">Division Values Applied</h2>
+          <p class="features-description">
+            Which of MSICCA's core values were demonstrated in this project.
+          </p>
+          <div class="values-highlight">
+            <div class="value-card">
+              <h3 class="value-name">Impact</h3>
+              <p class="value-description">
+                Minimizes material waste and administrative delays, directly improving the 
+                profitability of infrastructure projects.
+              </p>
+            </div>
+            <div class="value-card">
+              <h3 class="value-name">Sustainability</h3>
+              <p class="value-description">
+                Eliminates the use of paper-based reporting and optimizes logistics, reducing 
+                the overall carbon footprint of site operations.
+              </p>
+            </div>
+            <div class="value-card">
+              <h3 class="value-name">Ingenuity</h3>
+              <p class="value-description">
+                The offline-sync logic proves that we can build "Silicon Valley" grade tech 
+                that survives "Real World" field constraints.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact CTA (loaded via JS) -->
+    <div id="contact-cta-placeholder"></div>
+    <script>
+      fetch("/components/contact-cta.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const placeholder = document.getElementById("contact-cta-placeholder");
+          placeholder.insertAdjacentHTML("beforeend", data);
+          const newElements = placeholder.querySelectorAll(
+            ".reveal-on-scroll, .contact-content, .contact-panel",
+          );
+          newElements.forEach((el) => {
+            el.classList.add("reveal-on-scroll");
+            if (window.revealOnScroll) {
+              window.revealOnScroll.observe(el);
+            } else {
+              el.classList.add("revealed");
+            }
+          });
+        });
+    </script>
+
+    <!-- Footer (loaded via JS) -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("/components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

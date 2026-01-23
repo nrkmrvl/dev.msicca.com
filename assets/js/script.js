@@ -2,6 +2,26 @@
  * Edge Minimal Developers - Interactive Features
  */
 
+// =========================================
+// Email Form Handler (Global function for contact forms)
+// =========================================
+window.handleEmailSubmit = function(form) {
+  var emailInput = form.email;
+  var email = emailInput.value.trim();
+  
+  // Validate email format
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailRegex.test(email)) {
+    emailInput.focus();
+    return false;
+  }
+  
+  // Construct mailto URL and navigate
+  window.location.href = 'mailto:hello@msicca.com?subject=Contact%20from%20' + 
+    encodeURIComponent(email) + '&body=Email:%20' + encodeURIComponent(email);
+  return false;
+};
+
 (function () {
   "use strict";
 
@@ -83,7 +103,27 @@
   // =========================================
   const sections = document.querySelectorAll("section[id]");
 
+  // Determine current page type for navigation highlighting
+  // Use more specific path matching to avoid false positives
+  const currentPath = window.location.pathname;
+  const pathSegments = currentPath.split('/').pop() || '';
+  const isProjectRelatedPage = pathSegments === 'projects.html' || 
+                                pathSegments.startsWith('project-') ||
+                                currentPath.includes('/projects/');
+
+  // Navigation highlight function (runs on scroll and after header load)
   const highlightNav = () => {
+    const navLinks = document.querySelectorAll(".nav-links a");
+    if (!navLinks.length) return; // Header not loaded yet
+    
+    // If on a project-related page, always highlight .projects
+    if (isProjectRelatedPage) {
+      navLinks.forEach((link) => link.classList.remove("active"));
+      const projectsLink = document.querySelector('.nav-links a[data-section="projects"]');
+      if (projectsLink) projectsLink.classList.add("active");
+      return;
+    }
+    
     const marker = 140; // header height + breathing room for detection
     const nearBottom =
       window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
@@ -91,10 +131,8 @@
     // If we're at the very bottom, force the last section (contact) to active
     if (nearBottom && sections.length) {
       const lastId = sections[sections.length - 1].getAttribute("id");
-      document
-        .querySelectorAll(".nav-links a")
-        .forEach((link) => link.classList.remove("active"));
-      const navLink = document.querySelector(`.nav-links a[href="#${lastId}"]`);
+      navLinks.forEach((link) => link.classList.remove("active"));
+      const navLink = document.querySelector(`.nav-links a[data-section="${lastId}"]`);
       if (navLink) navLink.classList.add("active");
       return;
     }
@@ -111,16 +149,17 @@
       }
     });
 
-    document
-      .querySelectorAll(".nav-links a")
-      .forEach((link) => link.classList.remove("active"));
+    navLinks.forEach((link) => link.classList.remove("active"));
     if (currentId) {
       const navLink = document.querySelector(
-        `.nav-links a[href="#${currentId}"]`,
+        `.nav-links a[data-section="${currentId}"]`,
       );
       if (navLink) navLink.classList.add("active");
     }
   };
+
+  // Expose function globally so it can be called after header loads
+  window.initNavHighlight = highlightNav;
 
   window.addEventListener("scroll", highlightNav, { passive: true });
   window.addEventListener("load", highlightNav, { passive: true });

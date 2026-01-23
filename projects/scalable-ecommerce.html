@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scalable E-Commerce & E-Learning Ecosystems | dev.msicca.com</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/retro.css" />
+  </head>
+  <body>
+    <!-- Navigation (loaded via JS) -->
+    <div id="header-placeholder"></div>
+    <script>
+      function initHeaderScrollAnimation() {
+        const header = document.querySelector(".header");
+        if (!header) return;
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+              header.classList.add("header-scrolled");
+            } else {
+              header.classList.remove("header-scrolled");
+            }
+          },
+          { passive: true },
+        );
+      }
+      fetch("/components/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initHeaderScrollAnimation();
+          if (window.initNavHighlight) window.initNavHighlight();
+        });
+    </script>
+
+    <main>
+      <!-- Project Hero -->
+      <section class="portfolio-hero case-study-hero">
+        <div class="portfolio-hero__bg"></div>
+        <div class="portfolio-hero__overlay"></div>
+        <div class="container portfolio-hero__content">
+          <span class="section-label">Case Study</span>
+          <h1 class="features-title">Scalable E-Commerce & E-Learning Ecosystems</h1>
+          <p class="features-description">
+            High-conversion digital storefronts and educational platforms built on WordPress.
+          </p>
+          <div class="project-tech case-study-tags">
+            <span>WordPress</span>
+            <span>WooCommerce</span>
+            <span>LMS</span>
+            <span>Elementor</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview -->
+      <section class="case-study-section" id="overview">
+        <div class="container">
+          <span class="section-label">01</span>
+          <h2 class="features-title">Overview</h2>
+          <p class="features-description">
+            We provide end-to-end development of robust web solutions utilizing the WordPress ecosystem. 
+            Our implementations go beyond basic templates; we build high-performance WooCommerce stores 
+            and Learning Management Systems (LMS) designed to scale with your business. By combining 
+            visual flexibility with rigorous backend optimization, we ensure that digital presence 
+            translates directly into measurable Impact.
+          </p>
+        </div>
+      </section>
+
+      <!-- The Challenge -->
+      <section class="case-study-section case-study-section--alt" id="challenge">
+        <div class="container">
+          <span class="section-label">02</span>
+          <h2 class="features-title">The Engineering Challenge</h2>
+          <p class="features-description">
+            "Performance vs. Versatility" — The primary risk with modular platforms like WordPress 
+            is "plugin bloat," which can degrade load times and security.
+          </p>
+          <div class="approach-highlights">
+            <div class="feature-card">
+              <h3 class="feature-title">The Solution</h3>
+              <p class="feature-text">
+                We implement a "Lean Build" methodology. Whether using Elementor or WPBakery, 
+                we optimize the rendering path, utilize advanced caching layers, and perform 
+                routine security hardening to ensure a seamless user experience across all devices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="case-study-section" id="stack">
+        <div class="container">
+          <span class="section-label">03</span>
+          <h2 class="features-title">Technical Implementation & Services</h2>
+          <p class="features-description">
+            Technologies used and their justifications.
+          </p>
+          <div class="tech-stack-table">
+            <table class="stack-table">
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Technology</th>
+                  <th>Service Scope</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Core Platform</td>
+                  <td>WordPress (latest)</td>
+                  <td>Installation, hardening, and environment optimization</td>
+                </tr>
+                <tr>
+                  <td>Commerce/Education</td>
+                  <td>WooCommerce / LMS</td>
+                  <td>Full setup of product cycles, payment gateways, and course hierarchies</td>
+                </tr>
+                <tr>
+                  <td>Visual Builders</td>
+                  <td>Elementor / WPBakery</td>
+                  <td>Custom theme development and UI/UX consistency across all landing pages</td>
+                </tr>
+                <tr>
+                  <td>Maintenance</td>
+                  <td>Managed Updates</td>
+                  <td>Proactive security patches, daily backups, and database optimization</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Highlights -->
+      <section class="case-study-section case-study-section--alt" id="highlights">
+        <div class="container">
+          <span class="section-label">04</span>
+          <h2 class="features-title">Key Technical Highlights</h2>
+          <p class="features-description">
+            Breakdown of the key functionalities and components.
+          </p>
+          <div class="features-grid modules-grid">
+            <div class="feature-card">
+              <h3 class="feature-title">Advanced E-Learning Workflows</h3>
+              <p class="feature-text">
+                Implementation of complex LMS structures (Lesson progression, Quizzes, Certification) 
+                with automated email notifications and user progress tracking.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">E-Commerce Logistics</h3>
+              <p class="feature-text">
+                Configuration of WooCommerce to handle variable tax rates, shipping zones, 
+                and integration with local/international payment processors.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Optimization Suite</h3>
+              <p class="feature-text">
+                Deployment of server-side caching (Object Cache), image optimization (WebP conversion), 
+                and CDN integration to achieve high PageSpeed scores.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Security & Recovery</h3>
+              <p class="feature-text">
+                Implementation of Web Application Firewalls (WAF), brute-force protection, 
+                and off-site disaster recovery protocols.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <section class="case-study-section" id="values">
+        <div class="container">
+          <span class="section-label">05</span>
+          <h2 class="features-title">Division Values Applied</h2>
+          <p class="features-description">
+            Which of MSICCA's core values were demonstrated in this project.
+          </p>
+          <div class="values-highlight">
+            <div class="value-card">
+              <h3 class="value-name">Ingenuity</h3>
+              <p class="value-description">
+                Our "Lean Build" and "Optimization Suite" approach ensures that even with 
+                flexible visual builders, we maintain engineering-grade performance standards.
+              </p>
+            </div>
+            <div class="value-card">
+              <h3 class="value-name">Sustainability</h3>
+              <p class="value-description">
+                Managed Services and Proactive Hardening ensure long-term platform viability 
+                and sustainable revenue through recurring maintenance agreements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact CTA (loaded via JS) -->
+    <div id="contact-cta-placeholder"></div>
+    <script>
+      fetch("/components/contact-cta.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const placeholder = document.getElementById("contact-cta-placeholder");
+          placeholder.insertAdjacentHTML("beforeend", data);
+          const newElements = placeholder.querySelectorAll(
+            ".reveal-on-scroll, .contact-content, .contact-panel",
+          );
+          newElements.forEach((el) => {
+            el.classList.add("reveal-on-scroll");
+            if (window.revealOnScroll) {
+              window.revealOnScroll.observe(el);
+            } else {
+              el.classList.add("revealed");
+            }
+          });
+        });
+    </script>
+
+    <!-- Footer (loaded via JS) -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("/components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

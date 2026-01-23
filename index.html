@@ -27,8 +27,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="retro.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/retro.css" />
   </head>
 
   <body>
@@ -51,14 +51,17 @@
           { passive: true },
         );
       }
-      fetch("header.html")
+      fetch("/components/header.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("header-placeholder").innerHTML = data;
           initHeaderScrollAnimation();
+          // Initialize navigation highlighting after header loads
+          if (window.initNavHighlight) window.initNavHighlight();
         });
     </script>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero-bg-layer"></div>
@@ -510,9 +513,7 @@
             </p>
             <form
               class="contact-panel__form"
-              action="mailto:hello@msicca.com"
-              method="POST"
-              enctype="text/plain"
+              onsubmit="return handleEmailSubmit(this);"
             >
               <input
                 type="email"
@@ -552,18 +553,18 @@
         </div>
       </div>
     </section>
-
+    </main>
 
     <!-- Footer (loaded via JS) -->
     <div id="footer-placeholder"></div>
     <script>
       // Load footer.html into #footer-placeholder
-      fetch("footer.html")
+      fetch("/components/footer.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("footer-placeholder").innerHTML = data;
         });
     </script>
-    <script src="script.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enterprise Core Identity & Orchestration Framework | dev.msicca.com</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/retro.css" />
+  </head>
+  <body>
+    <!-- Navigation (loaded via JS) -->
+    <div id="header-placeholder"></div>
+    <script>
+      function initHeaderScrollAnimation() {
+        const header = document.querySelector(".header");
+        if (!header) return;
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+              header.classList.add("header-scrolled");
+            } else {
+              header.classList.remove("header-scrolled");
+            }
+          },
+          { passive: true },
+        );
+      }
+      fetch("/components/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initHeaderScrollAnimation();
+          if (window.initNavHighlight) window.initNavHighlight();
+        });
+    </script>
+
+    <main>
+      <!-- Project Hero -->
+      <section class="portfolio-hero case-study-hero">
+        <div class="portfolio-hero__bg"></div>
+        <div class="portfolio-hero__overlay"></div>
+        <div class="container portfolio-hero__content">
+          <span class="section-label">Case Study</span>
+          <h1 class="features-title">Enterprise Core Identity & Orchestration Framework</h1>
+          <p class="features-description">
+            The foundational kernel for distributed enterprise ecosystems.
+          </p>
+          <div class="project-tech case-study-tags">
+            <span>PHP 8.2+</span>
+            <span>Alpine.js</span>
+            <span>OIDC/SSO</span>
+            <span>PostgreSQL</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision & Impact -->
+      <section class="case-study-section" id="vision">
+        <div class="container">
+          <span class="section-label">01</span>
+          <h2 class="features-title">Vision & Impact</h2>
+          <p class="features-description">
+            Modern enterprises suffer from "software fragmentation"—disparate systems that don't 
+            speak the same language. We engineered a centralized Identity and Administration Framework 
+            that serves as the backbone for all corporate applications. This "Kernel" approach ensures 
+            that whether a company is running an ERP, a BI tool, or a Project Management suite, they 
+            all share a single source of truth for security, configuration, and data auditing.
+          </p>
+        </div>
+      </section>
+
+      <!-- The Challenge -->
+      <section class="case-study-section case-study-section--alt" id="challenge">
+        <div class="container">
+          <span class="section-label">02</span>
+          <h2 class="features-title">The Engineering Challenge</h2>
+          <p class="features-description">
+            "Vertical Apps vs. Horizontal Services" — The goal was to build a system where new 
+            applications could be plugged in without rewriting core services like Authentication 
+            or File Management.
+          </p>
+          <div class="approach-highlights">
+            <div class="feature-card">
+              <h3 class="feature-title">The Solution</h3>
+              <p class="feature-text">
+                A Monorepo-based architecture using a manifest-driven engine. Each vertical app 
+                (Project Management, Analytics, etc.) is registered via a manifest.json, which 
+                automatically injects its permissions, menus, and routes into the core system.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="case-study-section" id="stack">
+        <div class="container">
+          <span class="section-label">03</span>
+          <h2 class="features-title">Technical Stack & Architecture</h2>
+          <p class="features-description">
+            We utilized a high-performance "Modern Monolith" stack, prioritizing execution speed and developer ergonomics.
+          </p>
+          <div class="tech-stack-table">
+            <table class="stack-table">
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Technology</th>
+                  <th>Technical Justification</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Backend Core</td>
+                  <td>PHP 8.2+ (PSR-12/15)</td>
+                  <td>Leveraging the latest PHP 8.2 features for high-performance, middleware-based request handling</td>
+                </tr>
+                <tr>
+                  <td>Frontend Orchestration</td>
+                  <td>Alpine.js + Turbo Drive</td>
+                  <td>Achieves SPA speed and fluidity without the overhead of heavy JS frameworks</td>
+                </tr>
+                <tr>
+                  <td>Identity Layer</td>
+                  <td>OIDC / SSO / MFA</td>
+                  <td>Industry-standard protocols for secure, centralized authentication across multiple platforms</td>
+                </tr>
+                <tr>
+                  <td>Data Integrity</td>
+                  <td>PostgreSQL + Audit Logs</td>
+                  <td>Every transaction is tracked via an immutable audit service for 100% traceability</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Highlights -->
+      <section class="case-study-section case-study-section--alt" id="highlights">
+        <div class="container">
+          <span class="section-label">04</span>
+          <h2 class="features-title">Key Engineering Highlights</h2>
+          <p class="features-description">
+            Breakdown of the key functionalities and components.
+          </p>
+          <div class="features-grid modules-grid">
+            <div class="feature-card">
+              <h3 class="feature-title">Manifest-Driven UI/UX</h3>
+              <p class="feature-text">
+                The administrative panel is completely dynamic. It reads the requirements of each 
+                installed module to build the navigation, permission matrices, and configuration 
+                screens on the fly.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Unified Security Kernel</h3>
+              <p class="feature-text">
+                Implements Multi-Factor Authentication (MFA) and Single Sign-On (SSO) at the core 
+                level. Any app built on this framework inherits "military-grade" security by default.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Multi-Tenant Isolation Patterns</h3>
+              <p class="feature-text">
+                The framework supports complex multi-tenancy, allowing for per-tenant theming, 
+                configuration, and database isolation—crucial for SaaS deployments.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Distributed Task Scheduling</h3>
+              <p class="feature-text">
+                A centralized scheduler handles background processes across all vertical apps, 
+                optimizing server resources and preventing task overlaps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <section class="case-study-section" id="values">
+        <div class="container">
+          <span class="section-label">05</span>
+          <h2 class="features-title">Division Values Applied</h2>
+          <p class="features-description">
+            Which of MSICCA's core values were demonstrated in this project.
+          </p>
+          <div class="values-highlight">
+            <div class="value-card">
+              <h3 class="value-name">Ingenuity</h3>
+              <p class="value-description">
+                The framework eliminates "reinventing the wheel." Developers focus on business 
+                logic while the core handles the "heavy lifting" of infrastructure.
+              </p>
+            </div>
+            <div class="value-card">
+              <h3 class="value-name">Sustainability</h3>
+              <p class="value-description">
+                By centralizing updates (security patches, UI improvements) in the core, the 
+                entire suite of applications evolves simultaneously, ensuring long-term technical viability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact CTA (loaded via JS) -->
+    <div id="contact-cta-placeholder"></div>
+    <script>
+      fetch("/components/contact-cta.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const placeholder = document.getElementById("contact-cta-placeholder");
+          placeholder.insertAdjacentHTML("beforeend", data);
+          const newElements = placeholder.querySelectorAll(
+            ".reveal-on-scroll, .contact-content, .contact-panel",
+          );
+          newElements.forEach((el) => {
+            el.classList.add("reveal-on-scroll");
+            if (window.revealOnScroll) {
+              window.revealOnScroll.observe(el);
+            } else {
+              el.classList.add("revealed");
+            }
+          });
+        });
+    </script>
+
+    <!-- Footer (loaded via JS) -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("/components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

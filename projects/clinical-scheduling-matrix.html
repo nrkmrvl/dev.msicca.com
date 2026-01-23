@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinical Resource & Scheduling Orchestration Matrix | dev.msicca.com</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/retro.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <script>
+      function initHeaderScrollAnimation() {
+        const header = document.querySelector(".header");
+        if (!header) return;
+        window.addEventListener("scroll", () => {
+          const currentScroll = window.pageYOffset;
+          if (currentScroll > 50) {
+            header.classList.add("header-scrolled");
+          } else {
+            header.classList.remove("header-scrolled");
+          }
+        }, { passive: true });
+      }
+      fetch("/components/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initHeaderScrollAnimation();
+          if (window.initNavHighlight) window.initNavHighlight();
+        });
+    </script>
+
+    <main>
+      <section class="portfolio-hero case-study-hero">
+        <div class="portfolio-hero__bg"></div>
+        <div class="portfolio-hero__overlay"></div>
+        <div class="container portfolio-hero__content">
+          <span class="section-label">Case Study</span>
+          <h1 class="features-title">Clinical Resource & Scheduling Orchestration Matrix</h1>
+          <p class="features-description">
+            A high-precision system for synchronized asset management and multi-specialty scheduling.
+          </p>
+          <div class="project-tech case-study-tags">
+            <span>React.js</span>
+            <span>Tailwind CSS</span>
+            <span>Webhooks</span>
+            <span>Node.js</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section" id="vision">
+        <div class="container">
+          <span class="section-label">01</span>
+          <h2 class="features-title">Vision & Impact</h2>
+          <p class="features-description">
+            In high-complexity clinical environments, scheduling is often a bottleneck due to the 
+            intersection of three scarce resources: specialist time, physical facility availability, 
+            and specialized technical equipment. We engineered a Resource Intersection Matrix (RIM) 
+            that moves beyond traditional calendars to provide a real-time, multi-variable availability 
+            engine. This solution maximizes infrastructure throughput and eliminates operational downtime.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-study-section case-study-section--alt" id="challenge">
+        <div class="container">
+          <span class="section-label">02</span>
+          <h2 class="features-title">The Engineering Challenge</h2>
+          <p class="features-description">
+            "The Triple-Constraint Conflict" — Most scheduling tools only track "time." Our challenge 
+            was to prevent overbooking by validating that a specialist, a specific procedure room, 
+            and the required technical unit are all available simultaneously.
+          </p>
+          <div class="approach-highlights">
+            <div class="feature-card">
+              <h3 class="feature-title">The Solution</h3>
+              <p class="feature-text">
+                We implemented a custom Intersection Logic that filters availability through a 
+                "clinical grid." If one of the three components is missing, the slot is automatically 
+                flagged, ensuring 100% operational reliability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section" id="stack">
+        <div class="container">
+          <span class="section-label">03</span>
+          <h2 class="features-title">Technical Stack & Architecture</h2>
+          <p class="features-description">
+            Designed for high concurrency and real-time synchronization.
+          </p>
+          <div class="tech-stack-table">
+            <table class="stack-table">
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Technology</th>
+                  <th>Technical Justification</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Frontend</td>
+                  <td>React.js (Hooks/Context)</td>
+                  <td>Efficient management of complex UI states and real-time updates across multiple clinical views</td>
+                </tr>
+                <tr>
+                  <td>Styling</td>
+                  <td>Tailwind CSS</td>
+                  <td>Design-token system ensuring visual consistency and native Dark Mode for low-light clinical environments</td>
+                </tr>
+                <tr>
+                  <td>Bidirectional Sync</td>
+                  <td>Webhooks / Node.js</td>
+                  <td>Integrates with external providers (Google/Outlook) to interpret personal time blocks</td>
+                </tr>
+                <tr>
+                  <td>Performance</td>
+                  <td>Redis (Suggested)</td>
+                  <td>Handles high-concurrency availability queries with sub-millisecond latency</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section case-study-section--alt" id="highlights">
+        <div class="container">
+          <span class="section-label">04</span>
+          <h2 class="features-title">Key Engineering Highlights</h2>
+          <div class="features-grid modules-grid">
+            <div class="feature-card">
+              <h3 class="feature-title">Bi-Directional Conflict Interpretation</h3>
+              <p class="feature-text">
+                Unlike basic API integrations, our engine doesn't just read external events; it 
+                interprets "Time Blocks" as immutable constraints, preventing administrative staff 
+                from overriding specialist availability by mistake.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Physical Asset Matrix (The Grid)</h3>
+              <p class="feature-text">
+                We shifted the UI paradigm from a vertical list to a Facility-First Grid. This 
+                allows administrators to visualize the load of each procedure room independently.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Touch-First Operational UX</h3>
+              <p class="feature-text">
+                The interface was built with a "Touch-First" philosophy, optimized for tablets 
+                and mobile devices with high-contrast color coding for different workflow stages.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Technical Asset Validation</h3>
+              <p class="feature-text">
+                Every procedure is linked to a set of mandatory equipment. The system automatically 
+                filters rooms based on their technical capacity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section" id="values">
+        <div class="container">
+          <span class="section-label">05</span>
+          <h2 class="features-title">Division Values Applied</h2>
+          <div class="values-highlight">
+            <div class="value-card">
+              <h3 class="value-name">Ingenuity</h3>
+              <p class="value-description">
+                We solved the problem of "Dead Time" by automating the cross-verification of 
+                three distinct resource categories.
+              </p>
+            </div>
+            <div class="value-card">
+              <h3 class="value-name">Sustainability</h3>
+              <p class="value-description">
+                By maximizing the use of existing physical assets, we reduce the need for 
+                unnecessary infrastructure expansion.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="contact-cta-placeholder"></div>
+    <script>
+      fetch("/components/contact-cta.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const placeholder = document.getElementById("contact-cta-placeholder");
+          placeholder.insertAdjacentHTML("beforeend", data);
+          const newElements = placeholder.querySelectorAll(".reveal-on-scroll, .contact-content, .contact-panel");
+          newElements.forEach((el) => {
+            el.classList.add("reveal-on-scroll");
+            if (window.revealOnScroll) window.revealOnScroll.observe(el);
+            else el.classList.add("revealed");
+          });
+        });
+    </script>
+
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("/components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
