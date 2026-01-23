@@ -965,6 +965,10 @@ section[id] {
    Case Study Template Styles
    ============================================= */
 
+.case-study-hero {
+  padding-top: 80px; /* Account for fixed header */
+}
+
 .case-study-hero .case-study-tags {
   margin-top: 1.5rem;
   justify-content: center;
@@ -1308,7 +1312,7 @@ section[id] {
   background-color: var(--base-200);
   padding: 1rem 0;
   border-bottom: 1px solid var(--border-color);
-  margin-top: 80px; /* Account for fixed header */
+  /* margin-top removed - breadcrumb now appears below portfolio-hero */
 }
 
 .breadcrumb .container {
