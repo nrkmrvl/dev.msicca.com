@@ -21,7 +21,12 @@
    * @returns {boolean} Whether i18n is enabled
    */
   function isI18nEnabled() {
-    return window.MSICCA_CONFIG && window.MSICCA_CONFIG.I18N_ENABLED === true;
+    // Default to enabled if config is not loaded yet or I18N_ENABLED is not explicitly set
+    if (!window.MSICCA_CONFIG) {
+      return true;
+    }
+    // Use explicit false check so any truthy value enables i18n
+    return window.MSICCA_CONFIG.I18N_ENABLED !== false;
   }
 
   /**
