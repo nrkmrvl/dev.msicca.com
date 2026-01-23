@@ -1263,18 +1263,43 @@ section[id] {
     padding: 1rem 0;
   }
 
+  .portfolio-nav .container {
+    overflow: hidden;
+  }
+
   .portfolio-tabs {
     gap: 0.25rem;
     overflow-x: auto;
     flex-wrap: nowrap;
     padding-bottom: 0.5rem;
     -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    scrollbar-width: thin;
+  }
+
+  .portfolio-tabs::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .portfolio-tabs::-webkit-scrollbar-track {
+    background: var(--base-300);
+  }
+
+  .portfolio-tabs::-webkit-scrollbar-thumb {
+    background: var(--text-muted);
+    border-radius: 2px;
   }
 
   .portfolio-tab {
     font-size: 12px;
     padding: 0.4rem 0.75rem;
     white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .portfolio-filters {
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .filter-tags {
@@ -1282,10 +1307,26 @@ section[id] {
     flex-wrap: nowrap;
     padding-bottom: 0.5rem;
     -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    scrollbar-width: thin;
+  }
+
+  .filter-tags::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .filter-tags::-webkit-scrollbar-track {
+    background: var(--base-300);
+  }
+
+  .filter-tags::-webkit-scrollbar-thumb {
+    background: var(--text-muted);
+    border-radius: 2px;
   }
 
   .filter-tag {
     white-space: nowrap;
+    flex-shrink: 0;
   }
 }
 

@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="WordPress Solutions - eCommerce & LMS Plans | Edge Minimal Developers" />
+    <meta name="description" content="Launch your online store or academy in minutes with our WordPress plans. High-performance WooCommerce and LMS solutions with premium plugins, SSL, and expert support." />
+    <meta name="keywords" content="WordPress, WooCommerce, LMS, e-commerce, e-learning, online store, online courses, Elementor, managed WordPress hosting" />
+    <meta name="author" content="MSICCA - Edge Minimal Developers" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://dev.msicca.com/wordpress.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dev.msicca.com/wordpress.html" />
+    <meta property="og:title" content="WordPress Solutions - eCommerce & LMS Plans | Edge Minimal Developers" />
+    <meta property="og:description" content="Launch your online store or academy in minutes with our WordPress plans." />
+    <meta property="og:image" content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WordPress Solutions | Edge Minimal Developers" />
+    <meta name="twitter:description" content="Launch your online store or academy in minutes with our WordPress plans." />
+
+    <title>WordPress Solutions | dev.msicca.com</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/retro.css" />
+  </head>
+  <body>
+    <!-- Navigation (loaded via JS) -->
+    <div id="header-placeholder"></div>
+    <script>
+      function initHeaderScrollAnimation() {
+        const header = document.querySelector(".header");
+        if (!header) return;
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+              header.classList.add("header-scrolled");
+            } else {
+              header.classList.remove("header-scrolled");
+            }
+          },
+          { passive: true },
+        );
+      }
+      fetch("/components/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initHeaderScrollAnimation();
+          if (window.initNavHighlight) window.initNavHighlight();
+          if (window.initMobileMenu) window.initMobileMenu();
+        });
+    </script>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="portfolio-hero case-study-hero">
+        <div class="portfolio-hero__bg" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="portfolio-hero__overlay"></div>
+        <div class="container portfolio-hero__content">
+          <span class="section-label">WordPress Solutions</span>
+          <h1 class="features-title">Launch Your Online Store or Academy in Minutes</h1>
+          <p class="features-description">
+            High-performance WooCommerce and LMS solutions built for speed, security, and seamless user experience. We handle the tech, you focus on your business.
+          </p>
+          <div class="hero-actions" style="justify-content: center; margin-top: 2rem;">
+            <a href="#plans" class="btn-primary" aria-label="View Plans">
+              View Plans
+            </a>
+            <a href="#contact" class="btn-secondary" aria-label="Request Demo">
+              Request Demo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solution Segments -->
+      <section class="case-study-section" id="solutions">
+        <div class="container">
+          <span class="section-label">Solutions</span>
+          <h2 class="features-title">Choose Your Path to Digital Success</h2>
+          <p class="features-description">
+            Whether you're selling products or knowledge, we have the right solution for you.
+          </p>
+          <div class="features-grid" style="margin-top: 3rem;">
+            <!-- eCommerce Block -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">eCommerce with WooCommerce</h3>
+              <p class="feature-highlight">Sell products online with ease.</p>
+              <p class="feature-text">
+                Complete online store setup with payment gateway integration, inventory management, shipping zones, and optimized checkout flows. Perfect for physical and digital products.
+              </p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem;">
+                <li>Multi-currency & tax management</li>
+                <li>Secure payment processing</li>
+                <li>Mobile-optimized storefront</li>
+                <li>Analytics & conversion tracking</li>
+              </ul>
+            </div>
+            
+            <!-- LMS Block -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">E-Learning with LMS</h3>
+              <p class="feature-highlight">Build your online academy.</p>
+              <p class="feature-text">
+                Professional Learning Management System with course creation tools, student progress tracking, quizzes, certificates, and membership management. Scale your educational business.
+              </p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem;">
+                <li>Drip content & lesson scheduling</li>
+                <li>Quizzes & certifications</li>
+                <li>Student progress tracking</li>
+                <li>Membership subscriptions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Plans -->
+      <section class="case-study-section case-study-section--alt" id="plans">
+        <div class="container">
+          <span class="section-label">Plans</span>
+          <h2 class="features-title">Transparent Pricing for Every Stage</h2>
+          <p class="features-description">
+            All plans include SSL certificate, daily backups, and technical support.
+          </p>
+          <div class="features-grid" style="margin-top: 3rem;">
+            <!-- Starter Plan -->
+            <div class="feature-card">
+              <h3 class="feature-title">Starter</h3>
+              <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">$299</p>
+              <p class="feature-text">Perfect for launching your first online store or course.</p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
+                <li>WordPress + WooCommerce/LMS setup</li>
+                <li>5 GB storage</li>
+                <li>Free SSL certificate</li>
+                <li>1 Premium theme</li>
+                <li>Basic SEO optimization</li>
+                <li>Email support</li>
+              </ul>
+              <a href="#contact" class="btn-secondary" style="margin-top: 1.5rem; width: 100%;">Get Started</a>
+            </div>
+            
+            <!-- Professional Plan -->
+            <div class="feature-card" style="border-color: var(--accent);">
+              <span class="section-label" style="font-size: 10px;">Most Popular</span>
+              <h3 class="feature-title">Professional</h3>
+              <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">$599</p>
+              <p class="feature-text">For growing businesses that need more power and flexibility.</p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
+                <li>Everything in Starter, plus:</li>
+                <li>20 GB storage</li>
+                <li>Premium plugins bundle</li>
+                <li>Advanced caching & CDN</li>
+                <li>Payment gateway setup</li>
+                <li>Priority support</li>
+              </ul>
+              <a href="#contact" class="btn-primary" style="margin-top: 1.5rem; width: 100%;">Get Started</a>
+            </div>
+            
+            <!-- Enterprise Plan -->
+            <div class="feature-card">
+              <h3 class="feature-title">Enterprise</h3>
+              <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">Custom</p>
+              <p class="feature-text">Tailored solutions for high-traffic platforms and complex requirements.</p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
+                <li>Everything in Professional, plus:</li>
+                <li>Unlimited storage</li>
+                <li>Custom development</li>
+                <li>Multi-site setup</li>
+                <li>API integrations</li>
+                <li>Dedicated account manager</li>
+              </ul>
+              <a href="#contact" class="btn-secondary" style="margin-top: 1.5rem; width: 100%;">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Proof -->
+      <section class="case-study-section" id="proof">
+        <div class="container">
+          <span class="section-label">Results</span>
+          <h2 class="features-title">Trusted by Growing Businesses</h2>
+          <div class="impact-metrics">
+            <div class="metric-card">
+              <span class="metric-value">50+</span>
+              <span class="metric-label">WordPress Sites Deployed</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">99.9%</span>
+              <span class="metric-label">Uptime Guarantee</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">&lt;3s</span>
+              <span class="metric-label">Average Load Time</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">24h</span>
+              <span class="metric-label">Support Response</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="case-study-section case-study-section--alt" id="faq">
+        <div class="container">
+          <span class="section-label">FAQ</span>
+          <h2 class="features-title">Frequently Asked Questions</h2>
+          <div class="features-grid" style="margin-top: 3rem;">
+            <div class="feature-card">
+              <h3 class="feature-title">Can I migrate my existing site?</h3>
+              <p class="feature-text">
+                Yes! We offer free migration services for all plans. Our team will handle the transfer of your content, themes, plugins, and database to ensure zero downtime.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Is technical support included?</h3>
+              <p class="feature-text">
+                Absolutely. All plans include technical support via email. Professional and Enterprise plans include priority support with faster response times.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">What payment methods do you support?</h3>
+              <p class="feature-text">
+                We integrate with all major payment processors including PayPal, Stripe, Square, and local gateways. We'll help you choose the best option for your market.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Do you handle updates and security?</h3>
+              <p class="feature-text">
+                Yes. We perform regular WordPress core, theme, and plugin updates. Security monitoring is included with automated backups and malware scanning.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact CTA (loaded via JS) -->
+    <div id="contact-cta-placeholder"></div>
+    <script>
+      fetch("/components/contact-cta.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const placeholder = document.getElementById("contact-cta-placeholder");
+          placeholder.insertAdjacentHTML("beforeend", data);
+          const newElements = placeholder.querySelectorAll(
+            ".reveal-on-scroll, .contact-content, .contact-panel",
+          );
+          newElements.forEach((el) => {
+            el.classList.add("reveal-on-scroll");
+            if (window.revealOnScroll) {
+              window.revealOnScroll.observe(el);
+            } else {
+              el.classList.add("revealed");
+            }
+          });
+        });
+    </script>
+
+    <!-- Footer (loaded via JS) -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("/components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="Dolibarr ERP & CRM Solutions | Edge Minimal Developers" />
+    <meta name="description" content="Manage your entire business from one place with Dolibarr ERP. Modular CRM, invoicing, inventory, and HR solutions with no hidden license costs." />
+    <meta name="keywords" content="Dolibarr, ERP, CRM, enterprise resource planning, invoicing, inventory management, open source ERP, business management" />
+    <meta name="author" content="MSICCA - Edge Minimal Developers" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://dev.msicca.com/dolibarr.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dev.msicca.com/dolibarr.html" />
+    <meta property="og:title" content="Dolibarr ERP & CRM Solutions | Edge Minimal Developers" />
+    <meta property="og:description" content="Manage your entire business from one place with Dolibarr ERP." />
+    <meta property="og:image" content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dolibarr ERP & CRM Solutions | Edge Minimal Developers" />
+    <meta name="twitter:description" content="Manage your entire business from one place with Dolibarr ERP." />
+
+    <title>Dolibarr ERP & CRM | dev.msicca.com</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/retro.css" />
+  </head>
+  <body>
+    <!-- Navigation (loaded via JS) -->
+    <div id="header-placeholder"></div>
+    <script>
+      function initHeaderScrollAnimation() {
+        const header = document.querySelector(".header");
+        if (!header) return;
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+              header.classList.add("header-scrolled");
+            } else {
+              header.classList.remove("header-scrolled");
+            }
+          },
+          { passive: true },
+        );
+      }
+      fetch("/components/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+          initHeaderScrollAnimation();
+          if (window.initNavHighlight) window.initNavHighlight();
+          if (window.initMobileMenu) window.initMobileMenu();
+        });
+    </script>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="portfolio-hero case-study-hero">
+        <div class="portfolio-hero__bg" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="portfolio-hero__overlay"></div>
+        <div class="container portfolio-hero__content">
+          <span class="section-label">Dolibarr ERP & CRM</span>
+          <h1 class="features-title">Manage Your Entire Business in One Place</h1>
+          <p class="features-description">
+            Modular ERP & CRM simplified. Activate only the modules you need and take control of invoicing, inventory, HR, and more — with no hidden license costs.
+          </p>
+          <div class="hero-actions" style="justify-content: center; margin-top: 2rem;">
+            <a href="#plans" class="btn-primary" aria-label="View Implementation Plans">
+              View Plans
+            </a>
+            <a href="#contact" class="btn-secondary" aria-label="Request Free Demo">
+              Request Demo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modularity Section -->
+      <section class="case-study-section" id="modules">
+        <div class="container">
+          <span class="section-label">Modularity</span>
+          <h2 class="features-title">Only Enable What You Need</h2>
+          <p class="features-description">
+            Dolibarr's strength lies in its modular architecture. Unlike bloated enterprise software, you activate only the features your business requires — keeping the interface clean and performance optimal.
+          </p>
+          <div class="features-grid" style="margin-top: 3rem;">
+            <!-- CRM Module -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">Sales & CRM</h3>
+              <p class="feature-highlight">Manage customer relationships.</p>
+              <p class="feature-text">
+                Track leads, create proposals, manage orders, and maintain complete customer histories. Streamline your sales pipeline from first contact to closed deal.
+              </p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem;">
+                <li>Proposals & quotes</li>
+                <li>Customer orders</li>
+                <li>Contact management</li>
+                <li>Sales pipeline tracking</li>
+              </ul>
+            </div>
+            
+            <!-- Financial Module -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="1" y="4" width="22" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <line x1="1" y1="10" x2="23" y2="10" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">Financial Management</h3>
+              <p class="feature-highlight">Invoicing & accounting simplified.</p>
+              <p class="feature-text">
+                Generate electronic invoices, manage payments, track expenses, and reconcile bank accounts. Full compliance with local billing regulations.
+              </p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem;">
+                <li>Electronic invoicing</li>
+                <li>Payment tracking</li>
+                <li>Bank reconciliation</li>
+                <li>Expense management</li>
+              </ul>
+            </div>
+            
+            <!-- Operations Module -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="currentColor" stroke-width="1.5"/>
+                  <polyline points="3.27,6.96 12,12.01 20.73,6.96" stroke="currentColor" stroke-width="1.5"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">Operations & Stock</h3>
+              <p class="feature-highlight">Inventory & warehouse control.</p>
+              <p class="feature-text">
+                Multi-warehouse stock management, production planning (MRP), supplier orders, and shipment tracking. Keep your operations running smoothly.
+              </p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem;">
+                <li>Inventory tracking</li>
+                <li>Supplier management</li>
+                <li>Warehouse locations</li>
+                <li>MRP production</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Plans by Company Profile -->
+      <section class="case-study-section case-study-section--alt" id="plans">
+        <div class="container">
+          <span class="section-label">Implementation Plans</span>
+          <h2 class="features-title">Solutions Tailored to Your Business Size</h2>
+          <p class="features-description">
+            Choose the plan that matches your operational needs. All plans include installation, configuration, and initial training.
+          </p>
+          <div class="features-grid" style="margin-top: 3rem;">
+            <!-- Entrepreneur Plan -->
+            <div class="feature-card">
+              <h3 class="feature-title">Entrepreneur</h3>
+              <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">$399</p>
+              <p class="feature-text">For freelancers and small businesses starting their digital journey.</p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
+                <li>CRM & Contact management</li>
+                <li>Invoicing & Payments</li>
+                <li>Agenda & Calendar</li>
+                <li>Cloud VPS hosting</li>
+                <li>SSL/TLS security</li>
+                <li>Email support</li>
+              </ul>
+              <a href="#contact" class="btn-secondary" style="margin-top: 1.5rem; width: 100%;">Get Started</a>
+            </div>
+            
+            <!-- SME Plan -->
+            <div class="feature-card" style="border-color: var(--accent);">
+              <span class="section-label" style="font-size: 10px;">Most Popular</span>
+              <h3 class="feature-title">SME</h3>
+              <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">$799</p>
+              <p class="feature-text">For growing businesses that need complete operational control.</p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
+                <li>Everything in Entrepreneur, plus:</li>
+                <li>Stock & Inventory management</li>
+                <li>Project management</li>
+                <li>Human Resources (HRM)</li>
+                <li>Multi-user access</li>
+                <li>Priority support</li>
+              </ul>
+              <a href="#contact" class="btn-primary" style="margin-top: 1.5rem; width: 100%;">Get Started</a>
+            </div>
+            
+            <!-- Enterprise Plan -->
+            <div class="feature-card">
+              <h3 class="feature-title">Enterprise</h3>
+              <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">Custom</p>
+              <p class="feature-text">Full integration with custom modules and dedicated infrastructure.</p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
+                <li>Everything in SME, plus:</li>
+                <li>API integrations</li>
+                <li>Custom module development</li>
+                <li>On-premise or private cloud</li>
+                <li>Data migration assistance</li>
+                <li>Dedicated account manager</li>
+              </ul>
+              <a href="#contact" class="btn-secondary" style="margin-top: 1.5rem; width: 100%;">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Proof & Metrics -->
+      <section class="case-study-section" id="proof">
+        <div class="container">
+          <span class="section-label">Impact</span>
+          <h2 class="features-title">Proven Results for Our Clients</h2>
+          <div class="impact-metrics">
+            <div class="metric-card">
+              <span class="metric-value">500+</span>
+              <span class="metric-label">Successful Implementations</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">30%</span>
+              <span class="metric-label">Reduction in Admin Time</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">100%</span>
+              <span class="metric-label">Data Ownership</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">$0</span>
+              <span class="metric-label">License Fees</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Benefits -->
+      <section class="case-study-section case-study-section--alt" id="benefits">
+        <div class="container">
+          <span class="section-label">Trust Signals</span>
+          <h2 class="features-title">Why Choose Dolibarr with MSICCA?</h2>
+          <div class="features-grid" style="margin-top: 3rem;">
+            <div class="feature-card">
+              <h3 class="feature-title">No Hidden License Costs</h3>
+              <p class="feature-text">
+                Dolibarr is 100% open source. You pay for implementation and hosting, not for software licenses. Your investment goes into your business, not vendor lock-in.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Data Sovereignty</h3>
+              <p class="feature-text">
+                Your data belongs to you. Host on your own servers, a private cloud, or our managed infrastructure. Full control over where your business data resides.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Painless Migration</h3>
+              <p class="feature-text">
+                Coming from Excel or another ERP? We handle data imports and migrations. Preserve your historical records while upgrading to a modern system.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Mobile-Ready Interface</h3>
+              <p class="feature-text">
+                Access your ERP from any device. Dolibarr's responsive web interface works on desktops, tablets, and smartphones — manage your business anywhere.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="case-study-section" id="faq">
+        <div class="container">
+          <span class="section-label">FAQ</span>
+          <h2 class="features-title">Common Questions</h2>
+          <div class="features-grid" style="margin-top: 3rem;">
+            <div class="feature-card">
+              <h3 class="feature-title">Is it compatible with my country's billing regulations?</h3>
+              <p class="feature-text">
+                Yes. Dolibarr supports electronic invoicing standards for multiple countries. We configure the system to comply with your local tax and billing requirements.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Can I use it from my mobile phone?</h3>
+              <p class="feature-text">
+                Absolutely. Dolibarr has a fully responsive web interface that adapts to any screen size. Access your CRM, invoices, and stock from your phone.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">How long does implementation take?</h3>
+              <p class="feature-text">
+                Entrepreneur plans can be deployed in 1-2 weeks. SME implementations typically take 3-4 weeks. Enterprise solutions are scoped based on requirements.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Can I integrate it with other systems?</h3>
+              <p class="feature-text">
+                Yes. Dolibarr has a REST API for integrations. We can connect it with your existing tools, e-commerce platforms, payment processors, and more.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact CTA (loaded via JS) -->
+    <div id="contact-cta-placeholder"></div>
+    <script>
+      fetch("/components/contact-cta.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const placeholder = document.getElementById("contact-cta-placeholder");
+          placeholder.insertAdjacentHTML("beforeend", data);
+          const newElements = placeholder.querySelectorAll(
+            ".reveal-on-scroll, .contact-content, .contact-panel",
+          );
+          newElements.forEach((el) => {
+            el.classList.add("reveal-on-scroll");
+            if (window.revealOnScroll) {
+              window.revealOnScroll.observe(el);
+            } else {
+              el.classList.add("revealed");
+            }
+          });
+        });
+    </script>
+
+    <!-- Footer (loaded via JS) -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("/components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
