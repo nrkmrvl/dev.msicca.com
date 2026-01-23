@@ -3,6 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="Portfolio | Edge Minimal Developers" />
+    <meta name="description" content="Explore our portfolio of enterprise software solutions: Core & Infrastructure systems, Field & Industrial Operations, Analytics & Visual Systems, and Managed Ecosystems." />
+    <meta name="keywords" content="software portfolio, enterprise architecture, industrial operations, financial analytics, PWA, cloud ERP, field operations, web development projects" />
+    <meta name="author" content="MSICCA - Edge Minimal Developers" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://dev.msicca.com/projects.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dev.msicca.com/projects.html" />
+    <meta property="og:title" content="Portfolio | Edge Minimal Developers" />
+    <meta property="og:description" content="Explore our portfolio of enterprise software solutions across multiple industries." />
+    <meta property="og:image" content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png" />
+    <meta property="og:site_name" content="Edge Minimal Developers" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://dev.msicca.com/projects.html" />
+    <meta name="twitter:title" content="Portfolio | Edge Minimal Developers" />
+    <meta name="twitter:description" content="Explore our portfolio of enterprise software solutions across multiple industries." />
+    <meta name="twitter:image" content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png" />
+
     <title>Portfolio | dev.msicca.com</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,400 +82,252 @@
         </div>
       </section>
 
-      <section class="projects" id="portfolio">
+      <!-- Portfolio Navigation Tabs -->
+      <section class="portfolio-nav" id="portfolio-nav">
         <div class="container">
+          <nav class="portfolio-tabs" aria-label="Portfolio categories">
+            <button class="portfolio-tab active" data-category="all">All Projects</button>
+            <button class="portfolio-tab" data-category="core-infrastructure">Core & Infrastructure</button>
+            <button class="portfolio-tab" data-category="field-industrial">Field & Industrial Ops</button>
+            <button class="portfolio-tab" data-category="analytics-visual">Analytics & Visual Systems</button>
+            <button class="portfolio-tab" data-category="managed-ecosystems">Managed Ecosystems</button>
+          </nav>
+          <div class="portfolio-filters">
+            <span class="filter-label">Filters:</span>
+            <div class="filter-tags">
+              <button class="filter-tag" data-filter="EnterpriseFramework">#EnterpriseFramework</button>
+              <button class="filter-tag" data-filter="OfflineResilience">#OfflineResilience</button>
+              <button class="filter-tag" data-filter="HighPrecision">#HighPrecision</button>
+              <button class="filter-tag" data-filter="EdgeComputing">#EdgeComputing</button>
+              <button class="filter-tag" data-filter="ScalableArchitecture">#ScalableArchitecture</button>
+              <button class="filter-tag" data-filter="IndustrialAutomation">#IndustrialAutomation</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core & Infrastructure Section -->
+      <section class="projects portfolio-section" id="core-infrastructure">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Core & Infrastructure</h2>
+            <p class="section-subtitle">Systems base, kernels, and enterprise resource management</p>
+          </div>
           <div class="projects-grid">
-            <article class="project-card">
+            <article class="project-card" data-category="core-infrastructure,EnterpriseFramework,ScalableArchitecture" onclick="window.location.href='/projects/enterprise-core-framework.html'">
               <div class="project-image">
                 <div class="project-placeholder">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="3"
-                      y="3"
-                      width="18"
-                      height="18"
-                      rx="2"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    />
-                    <path
-                      d="M9 9l6 6M15 9l-6 6"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                    />
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="12,2 22,22 2,22" stroke="currentColor" stroke-width="1.5" fill="none"/>
                   </svg>
                 </div>
               </div>
               <div class="project-content">
-                <h3 class="project-name">
-                  Scalable E-Commerce & E-Learning Ecosystems
-                </h3>
-                <p class="project-desc">
-                  Real-time monitoring with WebSocket streams and serverless
-                  backend.
-                </p>
-                <div class="project-tech">
-                  <span>React</span><span>TypeScript</span><span>AWS</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image">
-                <div class="project-placeholder">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 2L2 7l10 5 10-5-10-5z"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M2 17l10 5 10-5"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M2 12l10 5 10-5"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-name">Real-Time Financial Metrics PWA</h3>
-                <p class="project-desc">
-                  Secure REST gateway with auth, rate limiting and auto-docs.
-                </p>
-                <div class="project-tech">
-                  <span>Node.js</span><span>Express</span><span>Redis</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image project-image-rotator">
-                <img
-                  src="assets/projects/ajak/inversionesajak_mockup.jpg"
-                  alt="Inversiones AJAK Mockup"
-                  class="project-img"
-                  style="
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
-                    position: absolute;
-                    inset: 0;
-                    opacity: 1;
-                    transition: opacity 0.7s;
-                  "
-                />
-                <img
-                  src="assets/projects/ajak/inversionesajak_mockup_tienda.jpg"
-                  alt="Inversiones AJAK Tienda Mockup"
-                  class="project-img"
-                  style="
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
-                    position: absolute;
-                    inset: 0;
-                    opacity: 0;
-                    transition: opacity 0.7s;
-                  "
-                />
-              </div>
-              <div class="project-content">
-                <h3 class="project-name">
-                  Modular Industrial Resource Planning (ERP) Suite
-                </h3>
-                <p class="project-desc">
-                  Automated testing and zero-downtime deploys with rollbacks.
-                </p>
-                <div class="project-tech">
-                  <span>GitHub Actions</span><span>Docker</span><span>K8s</span>
-                </div>
-              </div>
-              <script>
-                // Simple image rotator for the last project card
-                document.addEventListener("DOMContentLoaded", function () {
-                  var rotators = document.querySelectorAll(
-                    ".project-image-rotator",
-                  );
-                  rotators.forEach(function (rotator) {
-                    var imgs = rotator.querySelectorAll(".project-img");
-                    if (imgs.length < 2) return;
-                    let idx = 0;
-                    setInterval(function () {
-                      imgs[idx].style.opacity = 0;
-                      idx = (idx + 1) % imgs.length;
-                      imgs[idx].style.opacity = 1;
-                    }, 2600);
-                  });
-                });
-              </script>
-            </article>
-
-            <!-- Add more project-card entries here as needed -->
-            <article class="project-card">
-              <div class="project-image">
-                <div class="project-placeholder">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-name">
-                  Industrial Power Systems Engineering Suite
-                </h3>
-                <p class="project-desc">
-                  Scalable storefront with real-time inventory and analytics.
-                </p>
-                <div class="project-tech">
-                  <span>Vue.js</span><span>Firebase</span><span>Stripe</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image">
-                <div class="project-placeholder">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="4"
-                      y="4"
-                      width="16"
-                      height="16"
-                      rx="3"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-name">
-                  Field Operations & Tactical Resource Manager
-                </h3>
-                <p class="project-desc">
-                  Modular resource planning for industrial operations.
-                </p>
-                <div class="project-tech">
-                  <span>Python</span><span>Django</span><span>PostgreSQL</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image">
-                <div class="project-placeholder">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polygon
-                      points="12,2 22,22 2,22"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      fill="none"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-name">
-                  Enterprise Core Identity & Orchestration Framework
-                </h3>
-                <p class="project-desc">
-                  Single sign-on and user orchestration for enterprise apps.
-                </p>
+                <h3 class="project-name">Enterprise Core Identity & Orchestration Framework</h3>
+                <p class="project-desc">Single sign-on and user orchestration for enterprise apps.</p>
                 <div class="project-tech">
                   <span>Go</span><span>OAuth2</span><span>gRPC</span>
                 </div>
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="core-infrastructure,EnterpriseFramework,ScalableArchitecture" onclick="window.location.href='/projects/cloud-managed-erp.html'">
               <div class="project-image">
                 <div class="project-placeholder">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <ellipse
-                      cx="12"
-                      cy="12"
-                      rx="10"
-                      ry="6"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    />
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="12" cy="12" rx="10" ry="6" stroke="currentColor" stroke-width="1.5"/>
                   </svg>
                 </div>
               </div>
               <div class="project-content">
-                <h3 class="project-name">
-                  Cloud-Managed Enterprise Resource Planning (ERP)
-                </h3>
-                <p class="project-desc">
-                  Resource and shift management for clinical teams.
-                </p>
+                <h3 class="project-name">Cloud-Managed Enterprise Resource Planning (ERP)</h3>
+                <p class="project-desc">Deployment and orchestration of open-source ERP for operational efficiency.</p>
                 <div class="project-tech">
                   <span>React</span><span>Redux</span><span>Node.js</span>
                 </div>
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="core-infrastructure,EnterpriseFramework" onclick="window.location.href='/projects/bilingual-epc-infrastructure.html'">
               <div class="project-image">
                 <div class="project-placeholder">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="6"
-                      y="6"
-                      width="12"
-                      height="12"
-                      rx="2"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    />
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 12h16M12 4v16" stroke="currentColor" stroke-width="1.5"/>
                   </svg>
                 </div>
               </div>
               <div class="project-content">
-                <h3 class="project-name">
-                  Clinical Resource & Scheduling Orchestration Matrix
-                </h3>
-                <p class="project-desc">
-                  Progressive web app for real-time financial KPIs.
-                </p>
-                <div class="project-tech">
-                  <span>PWA</span><span>Chart.js</span
-                  ><span>Service Worker</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image">
-                <div class="project-placeholder">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 12h16M12 4v16"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-name">
-                  Bilingual EPC Corporate Infrastructure
-                </h3>
-                <p class="project-desc">
-                  Tactical resource tracking for field operations.
-                </p>
+                <h3 class="project-name">Bilingual EPC Corporate Infrastructure</h3>
+                <p class="project-desc">High-performance bilingual web portal for engineering consultancy.</p>
                 <div class="project-tech">
                   <span>Flutter</span><span>Firebase</span><span>Maps API</span>
                 </div>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
 
-            <article class="project-card">
+      <!-- Field & Industrial Ops Section -->
+      <section class="projects portfolio-section portfolio-section--alt" id="field-industrial">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Field & Industrial Ops</h2>
+            <p class="section-subtitle">Tactical software for on-site execution and technical calculations</p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card" data-category="field-industrial,OfflineResilience,HighPrecision,EdgeComputing,IndustrialAutomation" onclick="window.location.href='/projects/field-operations-manager.html'">
               <div class="project-image">
                 <div class="project-placeholder">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="2"
-                      y="2"
-                      width="20"
-                      height="20"
-                      rx="5"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    />
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/>
                   </svg>
                 </div>
               </div>
               <div class="project-content">
-                <h3 class="project-name">
-                  Automated Visual Identity & Content Engine
-                </h3>
-                <p class="project-desc">
-                  Design and monitoring for industrial power systems.
-                </p>
+                <h3 class="project-name">Field Operations & Tactical Resource Manager</h3>
+                <p class="project-desc">Modular resource planning for industrial operations.</p>
+                <div class="project-tech">
+                  <span>Python</span><span>Django</span><span>PostgreSQL</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="field-industrial,HighPrecision,IndustrialAutomation" onclick="window.location.href='/projects/power-systems-suite.html'">
+              <div class="project-image">
+                <div class="project-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-name">Industrial Power Systems Engineering Suite</h3>
+                <p class="project-desc">High-precision computational toolkit for electrical infrastructure design.</p>
+                <div class="project-tech">
+                  <span>Vue.js</span><span>Firebase</span><span>Stripe</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="field-industrial,IndustrialAutomation,EdgeComputing" onclick="window.location.href='/projects/modular-erp-suite.html'">
+              <div class="project-image project-image-rotator">
+                <img src="assets/projects/ajak/inversionesajak_mockup.jpg" alt="Inversiones AJAK Mockup" class="project-img" style="width: 100%; height: 200px; object-fit: cover; position: absolute; inset: 0; opacity: 1; transition: opacity 0.7s;"/>
+                <img src="assets/projects/ajak/inversionesajak_mockup_tienda.jpg" alt="Inversiones AJAK Tienda Mockup" class="project-img" style="width: 100%; height: 200px; object-fit: cover; position: absolute; inset: 0; opacity: 0; transition: opacity 0.7s;"/>
+              </div>
+              <div class="project-content">
+                <h3 class="project-name">Modular Industrial Resource Planning (ERP) Suite</h3>
+                <p class="project-desc">Multi-tenant framework for engineering and construction management.</p>
+                <div class="project-tech">
+                  <span>GitHub Actions</span><span>Docker</span><span>K8s</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Analytics & Visual Systems Section -->
+      <section class="projects portfolio-section" id="analytics-visual">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Analytics & Visual Systems</h2>
+            <p class="section-subtitle">Data visualization engines, BI, and graphics rendering</p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card" data-category="analytics-visual,ScalableArchitecture,EdgeComputing" onclick="window.location.href='/projects/financial-metrics-pwa.html'">
+              <div class="project-image">
+                <div class="project-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-name">Real-Time Financial Metrics PWA</h3>
+                <p class="project-desc">Secure REST gateway with auth, rate limiting and auto-docs.</p>
+                <div class="project-tech">
+                  <span>Node.js</span><span>Express</span><span>Redis</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="analytics-visual,HighPrecision" onclick="window.location.href='/projects/clinical-scheduling-matrix.html'">
+              <div class="project-image">
+                <div class="project-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-name">Clinical Resource & Scheduling Orchestration Matrix</h3>
+                <p class="project-desc">Progressive web app for real-time financial KPIs.</p>
+                <div class="project-tech">
+                  <span>PWA</span><span>Chart.js</span><span>Service Worker</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="analytics-visual,ScalableArchitecture" onclick="window.location.href='/projects/visual-identity-engine.html'">
+              <div class="project-image">
+                <div class="project-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-name">Automated Visual Identity & Content Engine</h3>
+                <p class="project-desc">Browser-based graphics renderer for corporate brand consistency.</p>
                 <div class="project-tech">
                   <span>LabVIEW</span><span>SCADA</span><span>IoT</span>
                 </div>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
 
-            <article class="project-card">
+      <!-- Managed Ecosystems Section -->
+      <section class="projects portfolio-section portfolio-section--alt" id="managed-ecosystems">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Managed Ecosystems</h2>
+            <p class="section-subtitle">Open platform deployments and global corporate environments</p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card" data-category="managed-ecosystems,ScalableArchitecture,EnterpriseFramework" onclick="window.location.href='/projects/scalable-ecommerce.html'">
               <div class="project-image">
                 <div class="project-placeholder">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polygon
-                      points="4,4 20,4 12,20"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      fill="none"
-                    />
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                   </svg>
                 </div>
               </div>
               <div class="project-content">
-                <h3 class="project-name">
-                  Automated Engineering Lifecycle & Metadata Orchestrator
-                </h3>
-                <p class="project-desc">
-                  Automated content generation and visual identity tools.
-                </p>
+                <h3 class="project-name">Scalable E-Commerce & E-Learning Ecosystems</h3>
+                <p class="project-desc">Real-time monitoring with WebSocket streams and serverless backend.</p>
+                <div class="project-tech">
+                  <span>React</span><span>TypeScript</span><span>AWS</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="managed-ecosystems,EdgeComputing,ScalableArchitecture" onclick="window.location.href='/projects/engineering-metadata-orchestrator.html'">
+              <div class="project-image">
+                <div class="project-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="4,4 20,4 12,20" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-name">Automated Engineering Lifecycle & Metadata Orchestrator</h3>
+                <p class="project-desc">Automated content generation and visual identity tools.</p>
                 <div class="project-tech">
                   <span>Next.js</span><span>OpenAI</span><span>Figma API</span>
                 </div>
@@ -565,5 +441,111 @@
     </script>
 
     <script src="/assets/js/script.js"></script>
+    <script>
+      // Portfolio Navigation and Filter Functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        // Image rotator for project cards
+        var rotators = document.querySelectorAll('.project-image-rotator');
+        rotators.forEach(function(rotator) {
+          var imgs = rotator.querySelectorAll('.project-img');
+          if (imgs.length < 2) return;
+          let idx = 0;
+          setInterval(function() {
+            imgs[idx].style.opacity = 0;
+            idx = (idx + 1) % imgs.length;
+            imgs[idx].style.opacity = 1;
+          }, 2600);
+        });
+
+        // Portfolio category tabs
+        const tabs = document.querySelectorAll('.portfolio-tab');
+        const sections = document.querySelectorAll('.portfolio-section');
+        
+        tabs.forEach(tab => {
+          tab.addEventListener('click', function() {
+            const category = this.dataset.category;
+            
+            // Update active tab
+            tabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            
+            if (category === 'all') {
+              // Show all sections
+              sections.forEach(section => {
+                section.style.display = 'block';
+              });
+            } else {
+              // Show only matching section
+              sections.forEach(section => {
+                if (section.id === category) {
+                  section.style.display = 'block';
+                  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                  section.style.display = 'none';
+                }
+              });
+            }
+          });
+        });
+
+        // Filter tags functionality
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterTags.forEach(tag => {
+          tag.addEventListener('click', function() {
+            const filter = this.dataset.filter;
+            const isActive = this.classList.contains('active');
+            
+            // Toggle active state
+            if (isActive) {
+              this.classList.remove('active');
+              // Show all projects and sections
+              projectCards.forEach(card => card.style.display = 'flex');
+              sections.forEach(section => section.style.display = 'block');
+            } else {
+              // Remove active from all other filter tags
+              filterTags.forEach(t => t.classList.remove('active'));
+              this.classList.add('active');
+              
+              // Reset tabs to "All"
+              tabs.forEach(t => t.classList.remove('active'));
+              tabs[0].classList.add('active');
+              
+              // Show all sections first
+              sections.forEach(section => section.style.display = 'block');
+              
+              // Filter project cards
+              projectCards.forEach(card => {
+                const categories = card.dataset.category || '';
+                if (categories.includes(filter)) {
+                  card.style.display = 'flex';
+                } else {
+                  card.style.display = 'none';
+                }
+              });
+            }
+          });
+        });
+
+        // Smooth scroll to section when URL has hash
+        if (window.location.hash) {
+          const targetSection = document.querySelector(window.location.hash);
+          if (targetSection) {
+            setTimeout(() => {
+              targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              // Also activate the corresponding tab
+              const sectionId = window.location.hash.replace('#', '');
+              tabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.dataset.category === sectionId) {
+                  tab.classList.add('active');
+                }
+              });
+            }, 100);
+          }
+        }
+      });
+    </script>
   </body>
 </html>

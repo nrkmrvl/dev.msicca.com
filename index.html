@@ -3,22 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="Edge Minimal Developers | dev.msicca.com" />
     <meta
       name="description"
-      content="Edge Minimal Developers - Code. Build. Deploy. A bespoke engineering approach for precision, scalability, and seamless digital flow."
+      content="Edge Minimal Developers - Code. Build. Deploy. A bespoke engineering approach for precision, scalability, and seamless digital flow. Specializing in enterprise architecture, industrial operations, and financial analytics."
     />
+    <meta name="keywords" content="web development, enterprise software, software engineering, TypeScript, React, Node.js, cloud-native, CI/CD, API development, industrial automation, financial analytics, PWA, edge computing" />
+    <meta name="author" content="MSICCA - Edge Minimal Developers" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <link rel="canonical" href="https://dev.msicca.com" />
 
-    <!-- Open Graph / Social -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dev.msicca.com" />
+    <meta property="og:title" content="Edge Minimal Developers | dev.msicca.com" />
     <meta
       property="og:description"
       content="Code. Build. Deploy. A bespoke engineering approach for precision, scalability, and seamless digital flow."
     />
-    <meta property="og:url" content="https://dev.msicca.com" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png" />
+    <meta property="og:site_name" content="Edge Minimal Developers" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://dev.msicca.com" />
+    <meta name="twitter:title" content="Edge Minimal Developers | dev.msicca.com" />
+    <meta name="twitter:description" content="Code. Build. Deploy. A bespoke engineering approach for precision, scalability, and seamless digital flow." />
+    <meta name="twitter:image" content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="/assets/images/png/nrkmrvl.coder_logo.png" />
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Edge Minimal Developers",
+      "url": "https://dev.msicca.com",
+      "logo": "https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png",
+      "description": "A bespoke engineering approach for precision, scalability, and seamless digital flow.",
+      "sameAs": [
+        "https://github.com/nrkmrvl"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@msicca.com",
+        "contactType": "customer service"
+      }
+    }
+    </script>
 
     <title>Edge Minimal Developers | dev.msicca.com</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -326,7 +365,7 @@
         </div>
         <div class="projects-grid">
           <!-- Category 1: Enterprise Ecosystems & Infrastructure -->
-          <article class="project-card" data-category="EnterpriseFramework,ScalableArchitecture">
+          <article class="project-card" data-category="EnterpriseFramework,ScalableArchitecture" onclick="window.location.href='projects.html#core-infrastructure'">
             <div class="project-image">
               <div class="project-placeholder">
                 <svg
@@ -352,7 +391,7 @@
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-name">Enterprise Architecture & Core Systems</h3>
+              <h3 class="project-name">Core & Infrastructure</h3>
               <p class="project-desc">
                 High-performance, multi-tenant frameworks designed as the "Engine Room" for corporate operations. We build modular kernels that centralize identity, security, and data orchestration.
               </p>
@@ -365,7 +404,7 @@
             </div>
           </article>
           <!-- Category 2: Industrial Field Ops & Tactical Tools -->
-          <article class="project-card" data-category="OfflineResilience,HighPrecision,EdgeComputing,IndustrialAutomation">
+          <article class="project-card" data-category="OfflineResilience,HighPrecision,EdgeComputing,IndustrialAutomation" onclick="window.location.href='projects.html#field-industrial'">
             <div class="project-image">
               <div class="project-placeholder">
                 <svg
@@ -397,7 +436,7 @@
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-name">Industrial Operations & Field Logistics</h3>
+              <h3 class="project-name">Field & Industrial Ops</h3>
               <p class="project-desc">
                 Resilience-first applications designed for the rigors of the construction site. We specialize in offline-first synchronization and precision engineering tools for field data integrity.
               </p>
@@ -410,7 +449,7 @@
             </div>
           </article>
           <!-- Category 3: Financial Analytics & Digital Strategy -->
-          <article class="project-card" data-category="ScalableArchitecture,EdgeComputing">
+          <article class="project-card" data-category="ScalableArchitecture,EdgeComputing" onclick="window.location.href='projects.html#analytics-visual'">
             <div class="project-image">
               <div class="project-placeholder">
                 <svg
@@ -436,7 +475,7 @@
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-name">Financial Analytics & Digital Strategy</h3>
+              <h3 class="project-name">Analytics & Visual Systems</h3>
               <p class="project-desc">
                 Real-time data visualization and content engines that transform complex market variables into actionable intelligence. We prioritize sub-second latency and cross-platform accessibility.
               </p>
@@ -445,6 +484,44 @@
                 <span>Canvas API</span>
                 <span>Real-time Data</span>
                 <span>PWA</span>
+              </div>
+            </div>
+          </article>
+          <!-- Category 4: Managed Ecosystems -->
+          <article class="project-card" data-category="ScalableArchitecture,EnterpriseFramework" onclick="window.location.href='projects.html#managed-ecosystems'">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M12 2v4M12 18v4M2 12h4M18 12h4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-name">Managed Ecosystems</h3>
+              <p class="project-desc">
+                Open platform deployments and global corporate environments. We architect scalable solutions that integrate with existing infrastructure while maintaining flexibility for future growth.
+              </p>
+              <div class="project-tech">
+                <span>AWS</span>
+                <span>Kubernetes</span>
+                <span>CI/CD</span>
+                <span>Multi-Tenant</span>
               </div>
             </div>
           </article>
