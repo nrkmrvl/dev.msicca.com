@@ -1263,18 +1263,30 @@ section[id] {
     padding: 1rem 0;
   }
 
+  .portfolio-nav .container {
+    overflow: hidden;
+  }
+
   .portfolio-tabs {
     gap: 0.25rem;
     overflow-x: auto;
     flex-wrap: nowrap;
     padding-bottom: 0.5rem;
     -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    scrollbar-width: thin;
   }
 
   .portfolio-tab {
     font-size: 12px;
     padding: 0.4rem 0.75rem;
     white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .portfolio-filters {
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .filter-tags {
@@ -1282,10 +1294,13 @@ section[id] {
     flex-wrap: nowrap;
     padding-bottom: 0.5rem;
     -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    scrollbar-width: thin;
   }
 
   .filter-tag {
     white-space: nowrap;
+    flex-shrink: 0;
   }
 }
 

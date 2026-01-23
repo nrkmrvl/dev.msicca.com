@@ -65,6 +65,8 @@
           initHeaderScrollAnimation();
           // Initialize navigation highlighting after header loads
           if (window.initNavHighlight) window.initNavHighlight();
+          // Initialize mobile menu after header loads
+          if (window.initMobileMenu) window.initMobileMenu();
         });
     </script>
 
@@ -101,6 +103,8 @@
               <button class="filter-tag" data-filter="EdgeComputing">#EdgeComputing</button>
               <button class="filter-tag" data-filter="ScalableArchitecture">#ScalableArchitecture</button>
               <button class="filter-tag" data-filter="IndustrialAutomation">#IndustrialAutomation</button>
+              <button class="filter-tag" data-filter="WordPress">#WordPress</button>
+              <button class="filter-tag" data-filter="Dolibarr">#Dolibarr</button>
             </div>
           </div>
         </div>
@@ -131,7 +135,7 @@
               </div>
             </article>
 
-            <article class="project-card" data-category="core-infrastructure,EnterpriseFramework,ScalableArchitecture" onclick="window.location.href='/projects/cloud-managed-erp.html'">
+            <article class="project-card" data-category="core-infrastructure,EnterpriseFramework,ScalableArchitecture,Dolibarr" onclick="window.location.href='/projects/cloud-managed-erp.html'">
               <div class="project-image">
                 <div class="project-placeholder">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,7 +147,7 @@
                 <h3 class="project-name">Cloud-Managed Enterprise Resource Planning (ERP)</h3>
                 <p class="project-desc">Deployment and orchestration of open-source ERP for operational efficiency.</p>
                 <div class="project-tech">
-                  <span>React</span><span>Redux</span><span>Node.js</span>
+                  <span>Dolibarr</span><span>MariaDB</span><span>Cloud VPS</span>
                 </div>
               </div>
             </article>
@@ -299,7 +303,7 @@
             <p class="section-subtitle">Open platform deployments and global corporate environments</p>
           </div>
           <div class="projects-grid">
-            <article class="project-card" data-category="managed-ecosystems,ScalableArchitecture,EnterpriseFramework" onclick="window.location.href='/projects/scalable-ecommerce.html'">
+            <article class="project-card" data-category="managed-ecosystems,ScalableArchitecture,EnterpriseFramework,WordPress" onclick="window.location.href='/projects/scalable-ecommerce.html'">
               <div class="project-image">
                 <div class="project-placeholder">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -310,9 +314,9 @@
               </div>
               <div class="project-content">
                 <h3 class="project-name">Scalable E-Commerce & E-Learning Ecosystems</h3>
-                <p class="project-desc">Real-time monitoring with WebSocket streams and serverless backend.</p>
+                <p class="project-desc">High-conversion digital storefronts and educational platforms built on WordPress.</p>
                 <div class="project-tech">
-                  <span>React</span><span>TypeScript</span><span>AWS</span>
+                  <span>WordPress</span><span>WooCommerce</span><span>LMS</span>
                 </div>
               </div>
             </article>

@@ -22,12 +22,10 @@ window.handleEmailSubmit = function(form) {
   return false;
 };
 
-(function () {
-  "use strict";
-
-  // =========================================
-  // Mobile Navigation Toggle
-  // =========================================
+// =========================================
+// Mobile Navigation Toggle (Global function, called after header loads)
+// =========================================
+window.initMobileMenu = function() {
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const navLinks = document.querySelector(".nav-links");
   const navLinksItems = document.querySelectorAll(".nav-links a");
@@ -47,6 +45,15 @@ window.handleEmailSubmit = function(form) {
         mobileMenuBtn.setAttribute("aria-expanded", "false");
       });
     });
+  }
+};
+
+(function () {
+  "use strict";
+
+  // Try to initialize mobile menu (in case header is already in DOM)
+  if (document.querySelector(".mobile-menu-btn")) {
+    window.initMobileMenu();
   }
 
   // =========================================
