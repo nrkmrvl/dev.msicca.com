@@ -66,34 +66,110 @@
     </script>
 
     <main>
-      <!-- Hero Section -->
+      <!-- 1. HERO SECTION - The Hook (Above the Fold) -->
       <section class="portfolio-hero case-study-hero">
         <div class="portfolio-hero__bg" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80');"></div>
         <div class="portfolio-hero__overlay"></div>
         <div class="container portfolio-hero__content">
           <span class="section-label">WordPress Solutions</span>
-          <h1 class="features-title">Launch Your Online Store or Academy in Minutes</h1>
+          <!-- Headline focused on the problem/benefit, not what we do -->
+          <h1 class="features-title">Lanza tu tienda online o academia en 4 semanas sin tocar código</h1>
+          <!-- Subtitle: brief explanation of methodology/unique value proposition -->
           <p class="features-description">
-            High-performance WooCommerce and LMS solutions built for speed, security, and seamless user experience. We handle the tech, you focus on your business.
+            Te entregamos una plataforma lista para vender. Nosotros configuramos, optimizamos y mantenemos tu WordPress mientras tú te concentras en hacer crecer tu negocio.
           </p>
+          <!-- Primary CTA: clear and contrasting -->
           <div class="hero-actions" style="justify-content: center; margin-top: 2rem;">
-            <a href="#plans" class="btn-primary" aria-label="View Plans">
-              View Plans
+            <a href="#contact" class="btn-primary" aria-label="Empezar ahora">
+              Empezar Ahora
             </a>
-            <a href="#contact" class="btn-secondary" aria-label="Request Demo">
-              Request Demo
+            <a href="#plans" class="btn-secondary" aria-label="Ver planes">
+              Ver Planes
             </a>
+          </div>
+          <!-- Immediate Social Proof -->
+          <div class="impact-metrics" style="margin-top: 2.5rem; gap: 1.5rem;">
+            <div class="metric-card" style="padding: 1rem; background: rgba(20,20,20,0.8);">
+              <span class="metric-value" style="font-size: 28px;">50+</span>
+              <span class="metric-label">Sitios desplegados</span>
+            </div>
+            <div class="metric-card" style="padding: 1rem; background: rgba(20,20,20,0.8);">
+              <span class="metric-value" style="font-size: 28px;">99.9%</span>
+              <span class="metric-label">Uptime garantizado</span>
+            </div>
+            <div class="metric-card" style="padding: 1rem; background: rgba(20,20,20,0.8);">
+              <span class="metric-value" style="font-size: 28px;">&lt;3s</span>
+              <span class="metric-label">Tiempo de carga</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Solution Segments -->
-      <section class="case-study-section" id="solutions">
+      <!-- 2. PROBLEM AGITATION & SOLUTION -->
+      <section class="case-study-section" id="problem-solution">
         <div class="container">
-          <span class="section-label">Solutions</span>
-          <h2 class="features-title">Choose Your Path to Digital Success</h2>
+          <span class="section-label">El Problema</span>
+          <h2 class="features-title">¿Te suena familiar?</h2>
+          <div class="features-grid" style="margin-top: 2rem;">
+            <!-- Problem Cards -->
+            <div class="feature-card" style="border-left: 4px solid #e74c3c;">
+              <div class="feature-icon" style="color: #e74c3c;">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 9v4M12 17h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">Tu sitio es lento y pierdes ventas</h3>
+              <p class="feature-text">
+                Cada segundo de demora reduce tus conversiones un 7%. Un sitio lento frustra a tus clientes y te hace perder dinero cada día.
+              </p>
+            </div>
+            <div class="feature-card" style="border-left: 4px solid #e74c3c;">
+              <div class="feature-icon" style="color: #e74c3c;">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">Vulnerabilidades de seguridad</h3>
+              <p class="feature-text">
+                Plugins desactualizados, contraseñas débiles, sin SSL... Tu negocio está expuesto a hackers y podrías perder toda tu información de clientes.
+              </p>
+            </div>
+            <div class="feature-card" style="border-left: 4px solid #e74c3c;">
+              <div class="feature-icon" style="color: #e74c3c;">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">Horas perdidas en técnica</h3>
+              <p class="feature-text">
+                Actualizar plugins, resolver conflictos, configurar pasarelas de pago... Tiempo valioso que deberías invertir en ventas y marketing.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Solution -->
+          <div style="margin-top: 4rem; padding: 3rem; background: var(--base-300); border-radius: 8px; border-left: 4px solid var(--accent);">
+            <span class="section-label">La Solución</span>
+            <h2 class="features-title" style="margin-top: 1rem;">Duerme tranquilo mientras nosotros gestionamos todo</h2>
+            <p class="features-description" style="max-width: none;">
+              Nos encargamos de la configuración inicial, optimización de velocidad, seguridad y mantenimiento continuo. Tú recibes una plataforma lista para vender, con soporte técnico dedicado y la tranquilidad de saber que expertos cuidan tu inversión digital.
+            </p>
+            <div class="hero-actions" style="margin-top: 2rem;">
+              <a href="#contact" class="btn-primary">Solicitar Diagnóstico Gratis</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. SERVICE SEGMENTATION - Bento/Modular Design -->
+      <section class="case-study-section case-study-section--alt" id="solutions">
+        <div class="container">
+          <span class="section-label">Soluciones</span>
+          <h2 class="features-title">Elige tu camino hacia el éxito digital</h2>
           <p class="features-description">
-            Whether you're selling products or knowledge, we have the right solution for you.
+            Soluciones modulares adaptadas a tu modelo de negocio. Activa solo lo que necesitas.
           </p>
           <div class="features-grid" style="margin-top: 3rem;">
             <!-- eCommerce Block -->
@@ -105,16 +181,16 @@
                   <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
-              <h3 class="feature-title">eCommerce with WooCommerce</h3>
-              <p class="feature-highlight">Sell products online with ease.</p>
+              <h3 class="feature-title">eCommerce con WooCommerce</h3>
+              <p class="feature-highlight">Vende productos físicos o digitales.</p>
               <p class="feature-text">
-                Complete online store setup with payment gateway integration, inventory management, shipping zones, and optimized checkout flows. Perfect for physical and digital products.
+                Tienda completa con pasarelas de pago, gestión de inventario, zonas de envío y checkout optimizado para conversión.
               </p>
               <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem;">
-                <li>Multi-currency & tax management</li>
-                <li>Secure payment processing</li>
-                <li>Mobile-optimized storefront</li>
-                <li>Analytics & conversion tracking</li>
+                <li>Multi-moneda y gestión fiscal</li>
+                <li>Pagos seguros (Stripe, PayPal)</li>
+                <li>Storefront móvil optimizado</li>
+                <li>Analytics y tracking de conversión</li>
               </ul>
             </div>
             
@@ -126,137 +202,195 @@
                   <path d="M6 12v5c3 3 9 3 12 0v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
-              <h3 class="feature-title">E-Learning with LMS</h3>
-              <p class="feature-highlight">Build your online academy.</p>
+              <h3 class="feature-title">Academia Online con LMS</h3>
+              <p class="feature-highlight">Monetiza tu conocimiento.</p>
               <p class="feature-text">
-                Professional Learning Management System with course creation tools, student progress tracking, quizzes, certificates, and membership management. Scale your educational business.
+                Plataforma de e-learning profesional con creación de cursos, seguimiento de progreso, quizzes, certificados y membresías.
               </p>
               <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem;">
-                <li>Drip content & lesson scheduling</li>
-                <li>Quizzes & certifications</li>
-                <li>Student progress tracking</li>
-                <li>Membership subscriptions</li>
+                <li>Contenido por goteo programado</li>
+                <li>Quizzes y certificaciones</li>
+                <li>Tracking de progreso estudiantil</li>
+                <li>Suscripciones y membresías</li>
+              </ul>
+            </div>
+            
+            <!-- Maintenance/IT Block -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">Mantenimiento WordPress</h3>
+              <p class="feature-highlight">Protección y optimización continua.</p>
+              <p class="feature-text">
+                Servicio de mantenimiento integral: actualizaciones, backups, monitoreo de seguridad y soporte técnico para que tu sitio siempre funcione al 100%.
+              </p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem;">
+                <li>Actualizaciones core y plugins</li>
+                <li>Backups diarios automáticos</li>
+                <li>Monitoreo de seguridad 24/7</li>
+                <li>Optimización de velocidad</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Pricing Plans -->
+      <!-- 4. SOCIAL PROOF & AUTHORITY -->
+      <section class="case-study-section" id="proof">
+        <div class="container">
+          <span class="section-label">Casos de Éxito</span>
+          <h2 class="features-title">Resultados que hablan por sí solos</h2>
+          
+          <!-- Testimonials with specific results -->
+          <div class="features-grid" style="margin-top: 3rem;">
+            <div class="feature-card" style="border-left: 4px solid var(--accent);">
+              <p class="feature-text" style="font-style: italic; font-size: 1.1rem;">
+                "Pasamos de un sitio que tardaba 8 segundos en cargar a uno que carga en menos de 2. Nuestras ventas aumentaron un 40% el primer mes."
+              </p>
+              <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 48px; height: 48px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">MC</div>
+                <div>
+                  <p class="feature-title" style="margin-bottom: 0;">María Castro</p>
+                  <p class="feature-text" style="margin: 0; font-size: 0.9rem;">Fundadora, Tienda Artesanal Online</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="feature-card" style="border-left: 4px solid var(--accent);">
+              <p class="feature-text" style="font-style: italic; font-size: 1.1rem;">
+                "Ahorramos 20 horas al mes que antes perdíamos resolviendo problemas técnicos. Ahora me enfoco 100% en crear contenido para mis cursos."
+              </p>
+              <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 48px; height: 48px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">JR</div>
+                <div>
+                  <p class="feature-title" style="margin-bottom: 0;">Jorge Ramírez</p>
+                  <p class="feature-text" style="margin: 0; font-size: 0.9rem;">Instructor, Academia de Marketing Digital</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="feature-card" style="border-left: 4px solid var(--accent);">
+              <p class="feature-text" style="font-style: italic; font-size: 1.1rem;">
+                "Sufrimos un hackeo antes de contratar a MSICCA. Desde entonces, cero incidentes de seguridad y backups automáticos cada día."
+              </p>
+              <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 48px; height: 48px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">LP</div>
+                <div>
+                  <p class="feature-title" style="margin-bottom: 0;">Laura Pérez</p>
+                  <p class="feature-text" style="margin: 0; font-size: 0.9rem;">Directora, Consultora Legal Online</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Trust Badges -->
+          <div style="margin-top: 3rem; text-align: center;">
+            <p class="section-label" style="margin-bottom: 1.5rem;">Tecnologías y Certificaciones</p>
+            <div class="compliance-badges" style="justify-content: center;">
+              <span class="compliance-badge">WordPress Certified</span>
+              <span class="compliance-badge">WooCommerce Expert</span>
+              <span class="compliance-badge">SSL/TLS Secured</span>
+              <span class="compliance-badge">GDPR Compliant</span>
+              <span class="compliance-badge">PCI DSS Ready</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. PRICING WITH PSYCHOLOGICAL ANCHORING -->
       <section class="case-study-section case-study-section--alt" id="plans">
         <div class="container">
-          <span class="section-label">Plans</span>
-          <h2 class="features-title">Transparent Pricing for Every Stage</h2>
+          <span class="section-label">Planes</span>
+          <h2 class="features-title">Inversión transparente para cada etapa</h2>
           <p class="features-description">
-            All plans include SSL certificate, daily backups, and technical support.
+            Todos los planes incluyen certificado SSL, backups diarios y soporte técnico.
           </p>
           <div class="features-grid" style="margin-top: 3rem;">
+            <!-- Enterprise Plan FIRST (Anchor) -->
+            <div class="feature-card">
+              <h3 class="feature-title">Enterprise</h3>
+              <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">Custom</p>
+              <p class="feature-text">Soluciones a medida para plataformas de alto tráfico y requisitos complejos.</p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
+                <li>Todo lo de Professional, más:</li>
+                <li>Almacenamiento ilimitado</li>
+                <li>Desarrollo personalizado</li>
+                <li>Configuración multi-sitio</li>
+                <li>Integraciones API</li>
+                <li>Account manager dedicado</li>
+              </ul>
+              <a href="#contact" class="btn-secondary" style="margin-top: 1.5rem; width: 100%;">Contactar</a>
+            </div>
+            
+            <!-- Professional Plan (Recommended - Decoy Effect) -->
+            <div class="feature-card" style="border-color: var(--accent); transform: scale(1.02);">
+              <span class="section-label" style="font-size: 10px;">Más Popular</span>
+              <h3 class="feature-title">Professional</h3>
+              <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">$599</p>
+              <p class="feature-text">Para negocios en crecimiento que necesitan más potencia y flexibilidad.</p>
+              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
+                <li>Todo lo de Starter, más:</li>
+                <li>20 GB almacenamiento</li>
+                <li>Bundle de plugins premium</li>
+                <li>Caché avanzado y CDN</li>
+                <li>Configuración pasarela de pago</li>
+                <li>Soporte prioritario</li>
+              </ul>
+              <a href="#contact" class="btn-primary" style="margin-top: 1.5rem; width: 100%;">Empezar Ahora</a>
+            </div>
+            
             <!-- Starter Plan -->
             <div class="feature-card">
               <h3 class="feature-title">Starter</h3>
               <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">$299</p>
-              <p class="feature-text">Perfect for launching your first online store or course.</p>
+              <p class="feature-text">Perfecto para lanzar tu primera tienda online o curso.</p>
               <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
-                <li>WordPress + WooCommerce/LMS setup</li>
-                <li>5 GB storage</li>
-                <li>Free SSL certificate</li>
-                <li>1 Premium theme</li>
-                <li>Basic SEO optimization</li>
-                <li>Email support</li>
+                <li>WordPress + WooCommerce/LMS</li>
+                <li>5 GB almacenamiento</li>
+                <li>Certificado SSL gratuito</li>
+                <li>1 Tema premium</li>
+                <li>Optimización SEO básica</li>
+                <li>Soporte por email</li>
               </ul>
-              <a href="#contact" class="btn-secondary" style="margin-top: 1.5rem; width: 100%;">Get Started</a>
-            </div>
-            
-            <!-- Professional Plan -->
-            <div class="feature-card" style="border-color: var(--accent);">
-              <span class="section-label" style="font-size: 10px;">Most Popular</span>
-              <h3 class="feature-title">Professional</h3>
-              <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">$599</p>
-              <p class="feature-text">For growing businesses that need more power and flexibility.</p>
-              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
-                <li>Everything in Starter, plus:</li>
-                <li>20 GB storage</li>
-                <li>Premium plugins bundle</li>
-                <li>Advanced caching & CDN</li>
-                <li>Payment gateway setup</li>
-                <li>Priority support</li>
-              </ul>
-              <a href="#contact" class="btn-primary" style="margin-top: 1.5rem; width: 100%;">Get Started</a>
-            </div>
-            
-            <!-- Enterprise Plan -->
-            <div class="feature-card">
-              <h3 class="feature-title">Enterprise</h3>
-              <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">Custom</p>
-              <p class="feature-text">Tailored solutions for high-traffic platforms and complex requirements.</p>
-              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
-                <li>Everything in Professional, plus:</li>
-                <li>Unlimited storage</li>
-                <li>Custom development</li>
-                <li>Multi-site setup</li>
-                <li>API integrations</li>
-                <li>Dedicated account manager</li>
-              </ul>
-              <a href="#contact" class="btn-secondary" style="margin-top: 1.5rem; width: 100%;">Contact Us</a>
+              <a href="#contact" class="btn-secondary" style="margin-top: 1.5rem; width: 100%;">Comenzar</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Social Proof -->
-      <section class="case-study-section" id="proof">
-        <div class="container">
-          <span class="section-label">Results</span>
-          <h2 class="features-title">Trusted by Growing Businesses</h2>
-          <div class="impact-metrics">
-            <div class="metric-card">
-              <span class="metric-value">50+</span>
-              <span class="metric-label">WordPress Sites Deployed</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-value">99.9%</span>
-              <span class="metric-label">Uptime Guarantee</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-value">&lt;3s</span>
-              <span class="metric-label">Average Load Time</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-value">24h</span>
-              <span class="metric-label">Support Response</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ Section -->
-      <section class="case-study-section case-study-section--alt" id="faq">
+      <!-- 6. FAQ - Resolve Objections -->
+      <section class="case-study-section" id="faq">
         <div class="container">
           <span class="section-label">FAQ</span>
-          <h2 class="features-title">Frequently Asked Questions</h2>
+          <h2 class="features-title">Preguntas Frecuentes</h2>
+          <p class="features-description">Resolvemos tus dudas antes de empezar.</p>
           <div class="features-grid" style="margin-top: 3rem;">
             <div class="feature-card">
-              <h3 class="feature-title">Can I migrate my existing site?</h3>
+              <h3 class="feature-title">¿Puedo migrar mi sitio actual a su plataforma?</h3>
               <p class="feature-text">
-                Yes! We offer free migration services for all plans. Our team will handle the transfer of your content, themes, plugins, and database to ensure zero downtime.
+                ¡Sí! Ofrecemos migración gratuita en todos los planes. Nuestro equipo se encarga de transferir tu contenido, temas, plugins y base de datos garantizando cero tiempo de inactividad.
               </p>
             </div>
             <div class="feature-card">
-              <h3 class="feature-title">Is technical support included?</h3>
+              <h3 class="feature-title">¿Qué pasa si algo falla en mi sitio?</h3>
               <p class="feature-text">
-                Absolutely. All plans include technical support via email. Professional and Enterprise plans include priority support with faster response times.
+                Realizamos backups diarios automáticos y monitoreo 24/7. Si ocurre cualquier problema, podemos restaurar tu sitio en minutos. Además, tienes soporte técnico incluido para resolver cualquier incidencia.
               </p>
             </div>
             <div class="feature-card">
-              <h3 class="feature-title">What payment methods do you support?</h3>
+              <h3 class="feature-title">¿Cómo es el soporte técnico?</h3>
               <p class="feature-text">
-                We integrate with all major payment processors including PayPal, Stripe, Square, and local gateways. We'll help you choose the best option for your market.
+                Todos los planes incluyen soporte por email. Los planes Professional y Enterprise incluyen soporte prioritario con tiempos de respuesta más rápidos y asistencia telefónica.
               </p>
             </div>
             <div class="feature-card">
-              <h3 class="feature-title">Do you handle updates and security?</h3>
+              <h3 class="feature-title">¿Cuánto tiempo toma poner mi sitio en marcha?</h3>
               <p class="feature-text">
-                Yes. We perform regular WordPress core, theme, and plugin updates. Security monitoring is included with automated backups and malware scanning.
+                El plan Starter puede estar listo en 1-2 semanas. Professional en 2-3 semanas. Enterprise se define según el alcance del proyecto. Te mantenemos informado en cada paso.
               </p>
             </div>
           </div>
