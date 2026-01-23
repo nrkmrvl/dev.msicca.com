@@ -203,6 +203,34 @@ a {
   margin-bottom: 16px;
 }
 
+.contact-panel__form {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.contact-panel__input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background: var(--base-200);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  margin-bottom: 12px;
+  box-shadow: none;
+}
+
+.contact-panel__input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.contact .contact-panel__submit {
+  width: 100%;
+}
+
 .contact .btn-icon {
   width: 20px;
   height: 20px;
@@ -931,6 +959,185 @@ section[id] {
 .reveal-on-scroll.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* =============================================
+   Case Study Template Styles
+   ============================================= */
+
+.case-study-hero .case-study-tags {
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.case-study-section {
+  padding: var(--section-padding) 0;
+  background-color: var(--base-100);
+}
+
+.case-study-section--alt {
+  background-color: var(--base-200);
+}
+
+.case-study-section .section-label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.case-study-section .features-title {
+  margin-bottom: 1.5rem;
+}
+
+.case-study-section .features-description {
+  max-width: 800px;
+}
+
+/* Approach Highlights */
+.approach-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Architecture Diagram */
+.architecture-diagram {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.architecture-placeholder {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  background: var(--base-200);
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--text-muted);
+}
+
+.architecture-placeholder svg {
+  width: 64px;
+  height: 64px;
+}
+
+/* Modules Grid */
+.modules-grid {
+  margin-top: 3rem;
+}
+
+/* Tech Stack Table */
+.tech-stack-table {
+  margin-top: 3rem;
+  overflow-x: auto;
+}
+
+.stack-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.stack-table th,
+.stack-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.stack-table th {
+  background: var(--base-300);
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stack-table tr:hover {
+  background: var(--base-200);
+}
+
+/* Impact Metrics */
+.impact-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.metric-card {
+  background: var(--base-300);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.metric-value {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Compliance Badges */
+.compliance-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.compliance-badge {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+}
+
+/* Values Highlight */
+.values-highlight {
+  margin-top: 3rem;
+}
+
+.value-card {
+  background: var(--base-300);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent);
+  padding: 2rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.value-name {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.value-description {
+  color: var(--text-secondary);
+  line-height: 1.8;
 }
 
 /* End of Edge Minimal Developers - Refined Design System */

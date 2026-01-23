@@ -322,7 +322,8 @@
           </p>
         </div>
         <div class="projects-grid">
-          <article class="project-card">
+          <!-- Category 1: Enterprise Ecosystems & Infrastructure -->
+          <article class="project-card" data-category="EnterpriseFramework,ScalableArchitecture">
             <div class="project-image">
               <div class="project-placeholder">
                 <svg
@@ -340,28 +341,28 @@
                     stroke-width="1.5"
                   />
                   <path
-                    d="M9 9l6 6M15 9l-6 6"
+                    d="M3 9h18M9 21V9"
                     stroke="currentColor"
                     stroke-width="1.5"
-                    stroke-linecap="round"
                   />
                 </svg>
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-name">Cloud Dashboard</h3>
+              <h3 class="project-name">Enterprise Architecture & Core Systems</h3>
               <p class="project-desc">
-                Real-time monitoring interface with WebSocket integration and
-                serverless backend.
+                High-performance, multi-tenant frameworks designed as the "Engine Room" for corporate operations. We build modular kernels that centralize identity, security, and data orchestration.
               </p>
               <div class="project-tech">
-                <span>Next.js</span>
-                <span>TypeScript</span>
-                <span>AWS</span>
+                <span>PHP 8.2</span>
+                <span>PostgreSQL</span>
+                <span>Svelte</span>
+                <span>Micro-Kernel</span>
               </div>
             </div>
           </article>
-          <article class="project-card">
+          <!-- Category 2: Industrial Field Ops & Tactical Tools -->
+          <article class="project-card" data-category="OfflineResilience,HighPrecision,EdgeComputing,IndustrialAutomation">
             <div class="project-image">
               <div class="project-placeholder">
                 <svg
@@ -393,88 +394,65 @@
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-name">API Gateway</h3>
+              <h3 class="project-name">Industrial Operations & Field Logistics</h3>
               <p class="project-desc">
-                High-performance REST API with rate limiting, auth, and
-                automated documentation.
+                Resilience-first applications designed for the rigors of the construction site. We specialize in offline-first synchronization and precision engineering tools for field data integrity.
               </p>
               <div class="project-tech">
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>Redis</span>
+                <span>React</span>
+                <span>PWA</span>
+                <span>Offline-Sync</span>
+                <span>EPC</span>
               </div>
             </div>
           </article>
-          <article class="project-card">
-            <div class="project-image project-image-rotator">
-              <img
-                src="assets/projects/ajak/inversionesajak_mockup.jpg"
-                alt="Inversiones AJAK Mockup"
-                class="project-img"
-                style="
-                  width: 100%;
-                  height: 200px;
-                  object-fit: cover;
-                  position: absolute;
-                  inset: 0;
-                  opacity: 1;
-                  transition: opacity 0.7s;
-                "
-              />
-              <img
-                src="assets/projects/ajak/inversionesajak_mockup_tienda.jpg"
-                alt="Inversiones AJAK Tienda Mockup"
-                class="project-img"
-                style="
-                  width: 100%;
-                  height: 200px;
-                  object-fit: cover;
-                  position: absolute;
-                  inset: 0;
-                  opacity: 0;
-                  transition: opacity 0.7s;
-                "
-              />
-            </div>
-            <div class="project-content">
-              <h3 class="project-name">WP Site Development</h3>
-              <p class="project-desc">
-                Zero-downtime deployment system with automated testing and
-                rollback capabilities.
-              </p>
-              <div class="project-tech">
-                <span>GitHub Actions</span>
-                <span>Docker</span>
-                <span>K8s</span>
+          <!-- Category 3: Financial Analytics & Digital Strategy -->
+          <article class="project-card" data-category="ScalableArchitecture,EdgeComputing">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 3v18h18"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7 14l4-4 4 4 5-6"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </div>
             </div>
-            <script>
-              // Simple image rotator for the last project card
-              document.addEventListener("DOMContentLoaded", function () {
-                var rotators = document.querySelectorAll(
-                  ".project-image-rotator",
-                );
-                rotators.forEach(function (rotator) {
-                  var imgs = rotator.querySelectorAll(".project-img");
-                  if (imgs.length < 2) return;
-                  let idx = 0;
-                  setInterval(function () {
-                    imgs[idx].style.opacity = 0;
-                    idx = (idx + 1) % imgs.length;
-                    imgs[idx].style.opacity = 1;
-                  }, 2600);
-                });
-              });
-            </script>
+            <div class="project-content">
+              <h3 class="project-name">Financial Analytics & Digital Strategy</h3>
+              <p class="project-desc">
+                Real-time data visualization and content engines that transform complex market variables into actionable intelligence. We prioritize sub-second latency and cross-platform accessibility.
+              </p>
+              <div class="project-tech">
+                <span>React 19</span>
+                <span>Canvas API</span>
+                <span>Real-time Data</span>
+                <span>PWA</span>
+              </div>
+            </div>
           </article>
         </div>
         <div class="projects-cta">
           <a
             href="projects.html"
             class="btn-primary"
-            aria-label="Ver portafolio completo"
+            aria-label="View full portfolio"
           >
-            Ver portafolio
+            View Portfolio
           </a>
         </div>
       </div>
@@ -488,7 +466,7 @@
             <span class="section-label">Direct Contact</span>
             <h2 class="contact-title">Let's build something.</h2>
             <p class="contact-description">
-              Share your scope, timeline, and stack via email. We’ll analyze the
+              Share your scope, timeline, and stack via email. We'll analyze the
               requirements and respond within 24 hours with a technical path
               forward.
             </p>
@@ -527,7 +505,7 @@
             <p class="contact-panel__title">Start a thread.</p>
             <p class="contact-panel__note">
               No brief yet? Just drop your email.<br />
-              We’ll reach out to you to discuss your goals, constraints, and how
+              We'll reach out to you to discuss your goals, constraints, and how
               we can help your project flow.
             </p>
             <form
@@ -535,34 +513,20 @@
               action="mailto:hello@msicca.com"
               method="POST"
               enctype="text/plain"
-              style="width: 100%; margin-top: 18px"
             >
               <input
                 type="email"
                 name="email"
+                class="contact-panel__input"
                 placeholder="Enter your email address"
                 required
-                style="
-                  width: 100%;
-                  height: 52px;
-                  padding: 0 16px;
-                  font-size: 16px;
-                  border-radius: 4px;
-                  border: 1px solid var(--border-color);
-                  background: var(--base-200);
-                  color: var(--text-primary);
-                  font-family: var(--font-mono);
-                  margin-bottom: 12px;
-                  box-shadow: none;
-                "
               />
-              <button type="submit" class="btn-secondary" style="width: 100%">
+              <button type="submit" class="btn-secondary contact-panel__submit">
                 <svg
                   class="btn-icon"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  style="width: 20px; height: 20px"
                 >
                   <rect
                     x="2"
@@ -589,17 +553,6 @@
       </div>
     </section>
 
-    <!-- Contact CTA (loaded via JS) -->
-    <div id="contact-cta-placeholder"></div>
-    <script>
-      fetch("contact-cta.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document
-            .getElementById("contact-cta-placeholder")
-            .insertAdjacentHTML("beforeend", data);
-        });
-    </script>
 
     <!-- Footer (loaded via JS) -->
     <div id="footer-placeholder"></div>
