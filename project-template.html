@@ -43,7 +43,8 @@
     </script>
 
     <main>
-      <section class="portfolio-hero">
+      <!-- Project Hero -->
+      <section class="portfolio-hero case-study-hero">
         <div class="portfolio-hero__bg"></div>
         <div class="portfolio-hero__overlay"></div>
         <div class="container portfolio-hero__content">
@@ -52,43 +53,273 @@
           <p class="features-description">
             Short project summary or tagline goes here.
           </p>
+          <div class="project-tech case-study-tags">
+            <span>Tag1</span>
+            <span>Tag2</span>
+            <span>Tag3</span>
+          </div>
         </div>
       </section>
 
-      <section class="project-case-study">
+      <!-- The Challenge -->
+      <section class="case-study-section" id="challenge">
         <div class="container">
-          <article class="case-study-content">
-            <h2>Overview</h2>
-            <p>
-              This is a generic case study template. Replace this content with
-              the specific details of the project, including objectives,
-              challenges, solutions, and results.
-            </p>
-            <h3>Objectives</h3>
-            <ul>
-              <li>Describe the main goals of the project.</li>
-              <li>Highlight any unique requirements or constraints.</li>
-            </ul>
-            <h3>Challenges</h3>
-            <ul>
-              <li>Summarize technical or business challenges faced.</li>
-              <li>Explain why this project was non-trivial or interesting.</li>
-            </ul>
-            <h3>Solution</h3>
-            <p>
-              Describe the approach, technologies, and architecture used to
-              solve the problem. Mention any innovative aspects or best
-              practices applied.
-            </p>
-            <h3>Results</h3>
-            <ul>
-              <li>List the outcomes, improvements, or impact delivered.</li>
-              <li>
-                Include metrics, testimonials, or before/after comparisons if
-                available.
-              </li>
-            </ul>
-          </article>
+          <span class="section-label">01</span>
+          <h2 class="features-title">The Challenge</h2>
+          <p class="features-description">
+            Describe the problem that was detected in the industry or company.
+            What pain points existed? What was the business impact of not
+            solving this problem?
+          </p>
+        </div>
+      </section>
+
+      <!-- Engineering Approach -->
+      <section class="case-study-section case-study-section--alt" id="approach">
+        <div class="container">
+          <span class="section-label">02</span>
+          <h2 class="features-title">Engineering Approach</h2>
+          <p class="features-description">
+            Explain why this specific architecture was chosen. What trade-offs
+            were considered? Why was this the optimal solution for the
+            requirements?
+          </p>
+          <div class="approach-highlights">
+            <div class="feature-card">
+              <h3 class="feature-title">Technical Decision 1</h3>
+              <p class="feature-text">
+                Explanation of a key architectural decision and its benefits.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Technical Decision 2</h3>
+              <p class="feature-text">
+                Explanation of another key architectural decision and its
+                benefits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- System Architecture -->
+      <section class="case-study-section" id="architecture">
+        <div class="container">
+          <span class="section-label">03</span>
+          <h2 class="features-title">System Architecture</h2>
+          <p class="features-description">
+            High-level overview of the system's data flow and logic.
+          </p>
+          <div class="architecture-diagram">
+            <!-- Placeholder for architecture diagram -->
+            <div class="project-placeholder architecture-placeholder">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="3"
+                  y="3"
+                  width="18"
+                  height="18"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M12 8v8M8 12h8"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <p>System Architecture Diagram</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Modules -->
+      <section class="case-study-section case-study-section--alt" id="modules">
+        <div class="container">
+          <span class="section-label">04</span>
+          <h2 class="features-title">Core Modules</h2>
+          <p class="features-description">
+            Breakdown of the key functionalities and components of the software.
+          </p>
+          <div class="features-grid modules-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="14"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+              <h3 class="feature-title">Module Name</h3>
+              <p class="feature-text">
+                Description of what this module does and its role in the system.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+              <h3 class="feature-title">Module Name</h3>
+              <p class="feature-text">
+                Description of what this module does and its role in the system.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="feature-title">Module Name</h3>
+              <p class="feature-text">
+                Description of what this module does and its role in the system.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="case-study-section" id="stack">
+        <div class="container">
+          <span class="section-label">05</span>
+          <h2 class="features-title">Tech Stack</h2>
+          <p class="features-description">
+            Technologies used and their justifications.
+          </p>
+          <div class="tech-stack-table">
+            <table class="stack-table">
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Technology</th>
+                  <th>Justification</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Backend</td>
+                  <td>Technology Name</td>
+                  <td>Why this was chosen</td>
+                </tr>
+                <tr>
+                  <td>Frontend</td>
+                  <td>Technology Name</td>
+                  <td>Why this was chosen</td>
+                </tr>
+                <tr>
+                  <td>Database</td>
+                  <td>Technology Name</td>
+                  <td>Why this was chosen</td>
+                </tr>
+                <tr>
+                  <td>Infrastructure</td>
+                  <td>Technology Name</td>
+                  <td>Why this was chosen</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Operational Impact -->
+      <section class="case-study-section case-study-section--alt" id="impact">
+        <div class="container">
+          <span class="section-label">06</span>
+          <h2 class="features-title">Operational Impact</h2>
+          <p class="features-description">
+            Measurable results and benefits delivered to the client.
+          </p>
+          <div class="impact-metrics">
+            <div class="metric-card">
+              <span class="metric-value">XX%</span>
+              <span class="metric-label">Metric Description</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">XX%</span>
+              <span class="metric-label">Metric Description</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">XX%</span>
+              <span class="metric-label">Metric Description</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compliance & Standards -->
+      <section class="case-study-section" id="compliance">
+        <div class="container">
+          <span class="section-label">07</span>
+          <h2 class="features-title">Compliance & Standards</h2>
+          <p class="features-description">
+            Technical standards and norms the code adheres to.
+          </p>
+          <div class="compliance-badges">
+            <span class="compliance-badge">PSR-12</span>
+            <span class="compliance-badge">ISO 27001</span>
+            <span class="compliance-badge">OIDC</span>
+            <span class="compliance-badge">WCAG 2.1</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Division Values -->
+      <section class="case-study-section case-study-section--alt" id="values">
+        <div class="container">
+          <span class="section-label">08</span>
+          <h2 class="features-title">Division Values Applied</h2>
+          <p class="features-description">
+            Which of MSICCA's core values were demonstrated in this project.
+          </p>
+          <div class="values-highlight">
+            <div class="value-card">
+              <h3 class="value-name">Value Name</h3>
+              <p class="value-description">
+                How this value was applied in the project execution and
+                delivery.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -103,7 +334,7 @@
             "contact-cta-placeholder",
           );
           placeholder.insertAdjacentHTML("beforeend", data);
-          // Registrar los nuevos elementos en el IntersectionObserver global
+          // Register new elements with IntersectionObserver
           const newElements = placeholder.querySelectorAll(
             ".reveal-on-scroll, .contact-content, .contact-panel",
           );
