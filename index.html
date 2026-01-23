@@ -68,6 +68,7 @@
     />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/retro.css" />
+    <script src="/assets/js/i18n.js"></script>
   </head>
 
   <body>
@@ -110,18 +111,19 @@
       <div class="container">
         <div class="hero-content">
           <h1 class="hero-title">
-            <span class="title-line">Edge Minimal</span>
-            <span class="title-line">Developers</span>
+            <span class="title-line" data-i18n="hero.title_line1">Edge Minimal</span>
+            <span class="title-line" data-i18n="hero.title_line2">Developers</span>
           </h1>
           <p class="hero-tagline">Code. Build. Deploy.</p>
           <div class="hero-actions">
-            <a href="#features" class="btn-primary" aria-label="View features">
+            <a href="#features" class="btn-primary" aria-label="View features" data-i18n="nav.features">
               Features
             </a>
             <a
               href="#projects"
               class="btn-secondary"
               aria-label="View projects"
+              data-i18n="nav.projects"
             >
               Projects
             </a>
@@ -134,11 +136,11 @@
     <section class="about" id="about">
       <div class="container">
         <div class="features-header about-header">
-          <span class="section-label">About</span>
-          <h2 class="features-title">
+          <span class="section-label" data-i18n="about.label">About</span>
+          <h2 class="features-title" data-i18n="about.title">
             We are a studio built on the principles of clarity and precision.
           </h2>
-          <p class="features-description">
+          <p class="features-description" data-i18n="about.description">
             Obsessed with the edge. Our team lives at the intersection of the
             modern web and the stability of high-performance engineering and
             minimalist design. We bridge the gap between complex infrastructure
@@ -222,14 +224,14 @@
     <section class="features" id="features">
       <div class="container">
         <div class="features-header">
-          <span class="section-label">Features</span>
-          <h2 class="features-title">
+          <span class="section-label" data-i18n="features.label">Features</span>
+          <h2 class="features-title" data-i18n="features.title">
             Built for Performance. Powered by Code.
           </h2>
-          <h3 class="features-subtitle">
+          <h3 class="features-subtitle" data-i18n="features.subtitle">
             Minimalist design, peak performance.
           </h3>
-          <p class="features-description">
+          <p class="features-description" data-i18n="features.description">
             A bespoke engineering approach built for those who demand precision,
             rapid scalability, and seamless digital flow. We eliminate
             complexity to deliver high-clarity code, robust systems, and
@@ -265,9 +267,9 @@
                 <circle cx="9" cy="6.5" r="0.75" fill="currentColor" />
               </svg>
             </div>
-            <h3 class="feature-title">Transparent Architecture</h3>
-            <p class="feature-highlight">Clean code, observable workflows.</p>
-            <p class="feature-text">
+            <h3 class="feature-title" data-i18n="features.card1.title">Transparent Architecture</h3>
+            <p class="feature-highlight" data-i18n="features.card1.highlight">Clean code, observable workflows.</p>
+            <p class="feature-text" data-i18n="features.card1.text">
               We eliminate "black boxes" by providing full visibility into the
               development process. You get high-clarity engineering designed for
               long-term maintainability and zero technical debt.
@@ -301,9 +303,9 @@
                 />
               </svg>
             </div>
-            <h3 class="feature-title">High-Performance Stack</h3>
-            <p class="feature-highlight">TypeScript, Node.js, Cloud-Native.</p>
-            <p class="feature-text">
+            <h3 class="feature-title" data-i18n="features.card2.title">High-Performance Stack</h3>
+            <p class="feature-highlight" data-i18n="features.card2.highlight">TypeScript, Node.js, Cloud-Native.</p>
+            <p class="feature-text" data-i18n="features.card2.text">
               Engineering without compromises. Every solution is crafted with a
               performance-first mindset, ensuring that security and speed are
               baked into the core of your product from day one.
@@ -338,9 +340,9 @@
                 />
               </svg>
             </div>
-            <h3 class="feature-title">Frictionless Deployment</h3>
-            <p class="feature-highlight">CI/CD pipelines, Atomic rollouts.</p>
-            <p class="feature-text">
+            <h3 class="feature-title" data-i18n="features.card3.title">Frictionless Deployment</h3>
+            <p class="feature-highlight" data-i18n="features.card3.highlight">CI/CD pipelines, Atomic rollouts.</p>
+            <p class="feature-text" data-i18n="features.card3.text">
               Code goes live in seconds, not hours. Our automated delivery
               systems allow you to iterate, ship, and repeat with the confidence
               of zero-downtime and instant scalability.
@@ -354,9 +356,9 @@
     <section class="projects" id="projects">
       <div class="container">
         <div class="features-header projects-header">
-          <span class="section-label">Projects</span>
-          <h2 class="features-title">Selected Work</h2>
-          <p class="features-description">
+          <span class="section-label" data-i18n="projects.label">Projects</span>
+          <h2 class="features-title" data-i18n="projects.title">Selected Work</h2>
+          <p class="features-description" data-i18n="projects.description">
             Through a bespoke engineering approach, we focus on eliminating
             technical friction to deliver software that simply flows. By
             leveraging the stability of Linux and the agility of a modern
@@ -393,8 +395,8 @@
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-name">Core & Infrastructure</h3>
-              <p class="project-desc">
+              <h3 class="project-name" data-i18n="projects.card1.name">Core & Infrastructure</h3>
+              <p class="project-desc" data-i18n="projects.card1.desc">
                 High-performance, multi-tenant frameworks designed as the "Engine Room" for corporate operations. We build modular kernels that centralize identity, security, and data orchestration.
               </p>
               <div class="project-tech">
@@ -438,8 +440,8 @@
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-name">Field & Industrial Ops</h3>
-              <p class="project-desc">
+              <h3 class="project-name" data-i18n="projects.card2.name">Field & Industrial Ops</h3>
+              <p class="project-desc" data-i18n="projects.card2.desc">
                 Resilience-first applications designed for the rigors of the construction site. We specialize in offline-first synchronization and precision engineering tools for field data integrity.
               </p>
               <div class="project-tech">
@@ -477,8 +479,8 @@
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-name">Analytics & Visual Systems</h3>
-              <p class="project-desc">
+              <h3 class="project-name" data-i18n="projects.card3.name">Analytics & Visual Systems</h3>
+              <p class="project-desc" data-i18n="projects.card3.desc">
                 Real-time data visualization and content engines that transform complex market variables into actionable intelligence. We prioritize sub-second latency and cross-platform accessibility.
               </p>
               <div class="project-tech">
@@ -515,8 +517,8 @@
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-name">Managed Ecosystems</h3>
-              <p class="project-desc">
+              <h3 class="project-name" data-i18n="projects.card4.name">Managed Ecosystems</h3>
+              <p class="project-desc" data-i18n="projects.card4.desc">
                 Open platform deployments and global corporate environments. We architect scalable solutions that integrate with existing infrastructure while maintaining flexibility for future growth.
               </p>
               <div class="project-tech">
@@ -533,6 +535,7 @@
             href="projects.html"
             class="btn-primary"
             aria-label="View full portfolio"
+            data-i18n="projects.view_portfolio"
           >
             View Portfolio
           </a>
@@ -545,16 +548,16 @@
       <div class="container">
         <div class="contact-grid">
           <div class="contact-content">
-            <span class="section-label">Direct Contact</span>
-            <h2 class="contact-title">Let's build something.</h2>
-            <p class="contact-description">
+            <span class="section-label" data-i18n="contact.label">Direct Contact</span>
+            <h2 class="contact-title" data-i18n="contact.title">Let's build something.</h2>
+            <p class="contact-description" data-i18n="contact.description">
               Share your scope, timeline, and stack via email. We'll analyze the
               requirements and respond within 24 hours with a technical path
               forward.
             </p>
             <ul class="contact-points">
-              <li>Best for: Defined projects and concise briefs.</li>
-              <li>Outcome: A lean execution plan.</li>
+              <li data-i18n="contact.point1">Best for: Defined projects and concise briefs.</li>
+              <li data-i18n="contact.point2">Outcome: A lean execution plan.</li>
             </ul>
             <a href="mailto:hello@msicca.com" class="btn-secondary">
               <svg
@@ -584,8 +587,8 @@
             </a>
           </div>
           <div class="contact-panel">
-            <p class="contact-panel__title">Start a thread.</p>
-            <p class="contact-panel__note">
+            <p class="contact-panel__title" data-i18n="contact.panel_title">Start a thread.</p>
+            <p class="contact-panel__note" data-i18n="contact.panel_note" data-i18n-html>
               No brief yet? Just drop your email.<br />
               We'll reach out to you to discuss your goals, constraints, and how
               we can help your project flow.
@@ -600,6 +603,7 @@
                 autocomplete="email"
                 class="contact-panel__input"
                 placeholder="Enter your email address"
+                data-i18n-placeholder="contact.email_placeholder"
                 required
               />
               <button type="submit" class="btn-secondary contact-panel__submit">
@@ -626,7 +630,7 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                Send
+                <span data-i18n="contact.send">Send</span>
               </button>
             </form>
           </div>

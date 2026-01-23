@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": ".inicio",
+    "about": ".nosotros",
+    "features": ".servicios",
+    "projects": ".proyectos",
+    "contact": ".contacto"
+  },
+  "hero": {
+    "title_line1": "Edge Minimal",
+    "title_line2": "Developers",
+    "tagline": "Código. Construye. Despliega."
+  },
+  "about": {
+    "label": "Nosotros",
+    "title": "Somos un estudio construido sobre los principios de claridad y precisión.",
+    "description": "Obsesionados con el límite. Nuestro equipo vive en la intersección de la web moderna y la estabilidad de la ingeniería de alto rendimiento y el diseño minimalista. Conectamos la brecha entre infraestructura compleja y experiencias de usuario fluidas. No solo escribimos código; arquitectamos la columna vertebral digital para quienes se niegan a comprometer el rendimiento."
+  },
+  "features": {
+    "label": "Servicios",
+    "title": "Construido para el Rendimiento. Impulsado por Código.",
+    "subtitle": "Diseño minimalista, máximo rendimiento.",
+    "description": "Un enfoque de ingeniería a medida construido para aquellos que exigen precisión, escalabilidad rápida y flujo digital sin fricciones. Eliminamos la complejidad para entregar código de alta claridad, sistemas robustos y software que simplemente fluye.",
+    "card1": {
+      "title": "Arquitectura Transparente",
+      "highlight": "Código limpio, flujos observables.",
+      "text": "Eliminamos las \"cajas negras\" proporcionando visibilidad completa del proceso de desarrollo. Obtienes ingeniería de alta claridad diseñada para mantenimiento a largo plazo y cero deuda técnica."
+    },
+    "card2": {
+      "title": "Stack de Alto Rendimiento",
+      "highlight": "TypeScript, Node.js, Cloud-Native.",
+      "text": "Ingeniería sin compromisos. Cada solución está diseñada con una mentalidad de rendimiento primero, asegurando que la seguridad y la velocidad estén integradas en el núcleo de tu producto desde el día uno."
+    },
+    "card3": {
+      "title": "Despliegue Sin Fricción",
+      "highlight": "Pipelines CI/CD, Rollouts atómicos.",
+      "text": "El código sale en segundos, no en horas. Nuestros sistemas de entrega automatizados te permiten iterar, desplegar y repetir con la confianza de cero tiempo de inactividad y escalabilidad instantánea."
+    }
+  },
+  "projects": {
+    "label": "Proyectos",
+    "title": "Trabajos Seleccionados",
+    "description": "A través de un enfoque de ingeniería a medida, nos enfocamos en eliminar la fricción técnica para entregar software que simplemente fluye. Aprovechando la estabilidad de Linux y la agilidad de un stack edge-first moderno, transformamos lógica compleja en código de alta claridad, asegurando escalabilidad a prueba de futuro para quienes no exigen nada menos que la perfección.",
+    "view_portfolio": "Ver Portafolio",
+    "card1": {
+      "name": "Core e Infraestructura",
+      "desc": "Frameworks multi-tenant de alto rendimiento diseñados como la \"Sala de Máquinas\" para operaciones corporativas. Construimos kernels modulares que centralizan identidad, seguridad y orquestación de datos."
+    },
+    "card2": {
+      "name": "Operaciones de Campo e Industrial",
+      "desc": "Aplicaciones de resiliencia primero diseñadas para los rigores del sitio de construcción. Nos especializamos en sincronización offline-first y herramientas de ingeniería de precisión para integridad de datos de campo."
+    },
+    "card3": {
+      "name": "Sistemas de Análisis y Visuales",
+      "desc": "Visualización de datos en tiempo real y motores de contenido que transforman variables de mercado complejas en inteligencia accionable. Priorizamos latencia sub-segundo y accesibilidad multiplataforma."
+    },
+    "card4": {
+      "name": "Ecosistemas Administrados",
+      "desc": "Despliegues de plataformas abiertas y entornos corporativos globales. Arquitectamos soluciones escalables que se integran con infraestructura existente manteniendo flexibilidad para crecimiento futuro."
+    }
+  },
+  "contact": {
+    "label": "Contacto Directo",
+    "title": "Construyamos algo.",
+    "description": "Comparte tu alcance, cronograma y stack por email. Analizaremos los requisitos y responderemos en 24 horas con un camino técnico hacia adelante.",
+    "point1": "Ideal para: Proyectos definidos y briefs concisos.",
+    "point2": "Resultado: Un plan de ejecución lean.",
+    "panel_title": "Inicia un hilo.",
+    "panel_note": "¿Aún no tienes brief? Solo deja tu email.<br />Te contactaremos para discutir tus objetivos, restricciones y cómo podemos ayudar a fluir tu proyecto.",
+    "email_placeholder": "Ingresa tu dirección de email",
+    "send": "Enviar"
+  },
+  "footer": {
+    "copyright": "© 2026 msicca"
+  },
+  "error404": {
+    "status": "ESTADO:",
+    "failed": "FALLIDO",
+    "version": "dev.msicca-v2.5-debugger",
+    "command1": "verificar-integridad --verbose --ruta=\"url_actual\"",
+    "output1": "[!] CRÍTICO: ERROR_404. Recurso no encontrado. Enlace lógico roto.",
+    "command2": "buscar-alternativas --estado=activo",
+    "output2": "Escaneando cluster de datos por rutas válidas...",
+    "link_home": "➜ [OK] /inicio (Punto de entrada principal)",
+    "link_projects": "➜ [OK] /proyectos (Repositorio de Proyectos)",
+    "link_contact": "➜ [OK] /contacto (Enlace de comunicación directa)",
+    "copyright": "© 2026 EQUIPO DESARROLLADOR MSICCA",
+    "return_root": "Volver al Inicio",
+    "node": "Nodo: dev.msicca.com"
+  }
+}
