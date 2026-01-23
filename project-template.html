@@ -39,6 +39,8 @@
         .then((data) => {
           document.getElementById("header-placeholder").innerHTML = data;
           initHeaderScrollAnimation();
+          // Initialize navigation highlighting after header loads
+          if (window.initNavHighlight) window.initNavHighlight();
         });
     </script>
 

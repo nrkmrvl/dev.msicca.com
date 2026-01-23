@@ -84,13 +84,17 @@
   const sections = document.querySelectorAll("section[id]");
 
   // Determine current page type for navigation highlighting
+  // Use more specific path matching to avoid false positives
   const currentPath = window.location.pathname;
-  const isProjectRelatedPage = currentPath.includes('projects.html') || 
-                                currentPath.includes('project-') ||
-                                currentPath.includes('/projects/');
+  const pathSegments = currentPath.split('/').pop() || '';
+  const isProjectRelatedPage = pathSegments === 'projects.html' || 
+                                pathSegments.startsWith('project-') ||
+                                currentPath.endsWith('/projects/');
 
+  // Navigation highlight function (runs on scroll and after header load)
   const highlightNav = () => {
     const navLinks = document.querySelectorAll(".nav-links a");
+    if (!navLinks.length) return; // Header not loaded yet
     
     // If on a project-related page, always highlight .projects
     if (isProjectRelatedPage) {
@@ -133,6 +137,9 @@
       if (navLink) navLink.classList.add("active");
     }
   };
+
+  // Expose function globally so it can be called after header loads
+  window.initNavHighlight = highlightNav;
 
   window.addEventListener("scroll", highlightNav, { passive: true });
   window.addEventListener("load", highlightNav, { passive: true });
