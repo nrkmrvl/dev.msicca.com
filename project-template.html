@@ -99,9 +99,22 @@
       fetch("/contact-cta.html")
         .then((response) => response.text())
         .then((data) => {
-          document
-            .getElementById("contact-cta-placeholder")
-            .insertAdjacentHTML("beforeend", data);
+          const placeholder = document.getElementById(
+            "contact-cta-placeholder",
+          );
+          placeholder.insertAdjacentHTML("beforeend", data);
+          // Registrar los nuevos elementos en el IntersectionObserver global
+          const newElements = placeholder.querySelectorAll(
+            ".reveal-on-scroll, .contact-content, .contact-panel",
+          );
+          newElements.forEach((el) => {
+            el.classList.add("reveal-on-scroll");
+            if (window.revealOnScroll) {
+              window.revealOnScroll.observe(el);
+            } else {
+              el.classList.add("revealed");
+            }
+          });
         });
     </script>
 

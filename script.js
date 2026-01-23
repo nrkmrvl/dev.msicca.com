@@ -38,11 +38,11 @@
     threshold: 0.1,
   };
 
-  const revealOnScroll = new IntersectionObserver((entries) => {
+  window.revealOnScroll = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("revealed");
-        revealOnScroll.unobserve(entry.target);
+        window.revealOnScroll.unobserve(entry.target);
       }
     });
   }, observerOptions);

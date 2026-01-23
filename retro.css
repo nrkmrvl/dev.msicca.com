@@ -5,7 +5,8 @@
 .feature-card {
   border: 3px solid var(--base-500, #202020);
   padding: 2rem;
-  transition: transform 0.24s cubic-bezier(0.33, 1, 0.68, 1),
+  transition:
+    transform 0.24s cubic-bezier(0.33, 1, 0.68, 1),
     box-shadow 0.24s cubic-bezier(0.33, 1, 0.68, 1);
   display: flex;
   flex-direction: column;
@@ -41,7 +42,8 @@
 
 .project-card {
   border: 3px solid var(--base-500, #202020);
-  transition: transform 0.24s cubic-bezier(0.33, 1, 0.68, 1),
+  transition:
+    transform 0.24s cubic-bezier(0.33, 1, 0.68, 1),
     box-shadow 0.24s cubic-bezier(0.33, 1, 0.68, 1);
   display: flex;
   flex-direction: column;
@@ -133,7 +135,8 @@
   padding: 0.5rem 3rem;
   border: 3px solid black;
   color: black;
-  transition: transform 0.24s cubic-bezier(0.33, 1, 0.68, 1),
+  transition:
+    transform 0.24s cubic-bezier(0.33, 1, 0.68, 1),
     box-shadow 0.24s cubic-bezier(0.33, 1, 0.68, 1),
     color 0.24s cubic-bezier(0.33, 1, 0.68, 1),
     border-color 0.24s cubic-bezier(0.33, 1, 0.68, 1);
@@ -159,6 +162,12 @@
   color: var(--text-primary, #f5f5f5);
   border-color: white;
   font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  vertical-align: middle;
+  overflow: visible;
 }
 
 .btn-secondary:hover {
