@@ -83,7 +83,23 @@
   // =========================================
   const sections = document.querySelectorAll("section[id]");
 
+  // Determine current page type for navigation highlighting
+  const currentPath = window.location.pathname;
+  const isProjectRelatedPage = currentPath.includes('projects.html') || 
+                                currentPath.includes('project-') ||
+                                currentPath.includes('/projects/');
+
   const highlightNav = () => {
+    const navLinks = document.querySelectorAll(".nav-links a");
+    
+    // If on a project-related page, always highlight .projects
+    if (isProjectRelatedPage) {
+      navLinks.forEach((link) => link.classList.remove("active"));
+      const projectsLink = document.querySelector('.nav-links a[data-section="projects"]');
+      if (projectsLink) projectsLink.classList.add("active");
+      return;
+    }
+    
     const marker = 140; // header height + breathing room for detection
     const nearBottom =
       window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
@@ -91,10 +107,8 @@
     // If we're at the very bottom, force the last section (contact) to active
     if (nearBottom && sections.length) {
       const lastId = sections[sections.length - 1].getAttribute("id");
-      document
-        .querySelectorAll(".nav-links a")
-        .forEach((link) => link.classList.remove("active"));
-      const navLink = document.querySelector(`.nav-links a[href="#${lastId}"]`);
+      navLinks.forEach((link) => link.classList.remove("active"));
+      const navLink = document.querySelector(`.nav-links a[data-section="${lastId}"]`);
       if (navLink) navLink.classList.add("active");
       return;
     }
@@ -111,12 +125,10 @@
       }
     });
 
-    document
-      .querySelectorAll(".nav-links a")
-      .forEach((link) => link.classList.remove("active"));
+    navLinks.forEach((link) => link.classList.remove("active"));
     if (currentId) {
       const navLink = document.querySelector(
-        `.nav-links a[href="#${currentId}"]`,
+        `.nav-links a[data-section="${currentId}"]`,
       );
       if (navLink) navLink.classList.add("active");
     }
