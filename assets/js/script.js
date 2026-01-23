@@ -109,7 +109,7 @@ window.handleEmailSubmit = function(form) {
   const pathSegments = currentPath.split('/').pop() || '';
   const isProjectRelatedPage = pathSegments === 'projects.html' || 
                                 pathSegments.startsWith('project-') ||
-                                currentPath.endsWith('/projects/');
+                                currentPath.includes('/projects/');
 
   // Navigation highlight function (runs on scroll and after header load)
   const highlightNav = () => {
