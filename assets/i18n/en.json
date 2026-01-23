@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": ".home",
+    "about": ".about",
+    "features": ".features",
+    "projects": ".projects",
+    "contact": ".contact"
+  },
+  "hero": {
+    "title_line1": "Edge Minimal",
+    "title_line2": "Developers",
+    "tagline": "Code. Build. Deploy."
+  },
+  "about": {
+    "label": "About",
+    "title": "We are a studio built on the principles of clarity and precision.",
+    "description": "Obsessed with the edge. Our team lives at the intersection of the modern web and the stability of high-performance engineering and minimalist design. We bridge the gap between complex infrastructure and seamless user experiences. We don't just write code; we architect the digital backbone for those who refuse to compromise on performance."
+  },
+  "features": {
+    "label": "Features",
+    "title": "Built for Performance. Powered by Code.",
+    "subtitle": "Minimalist design, peak performance.",
+    "description": "A bespoke engineering approach built for those who demand precision, rapid scalability, and seamless digital flow. We eliminate complexity to deliver high-clarity code, robust systems, and software that simply flows.",
+    "card1": {
+      "title": "Transparent Architecture",
+      "highlight": "Clean code, observable workflows.",
+      "text": "We eliminate \"black boxes\" by providing full visibility into the development process. You get high-clarity engineering designed for long-term maintainability and zero technical debt."
+    },
+    "card2": {
+      "title": "High-Performance Stack",
+      "highlight": "TypeScript, Node.js, Cloud-Native.",
+      "text": "Engineering without compromises. Every solution is crafted with a performance-first mindset, ensuring that security and speed are baked into the core of your product from day one."
+    },
+    "card3": {
+      "title": "Frictionless Deployment",
+      "highlight": "CI/CD pipelines, Atomic rollouts.",
+      "text": "Code goes live in seconds, not hours. Our automated delivery systems allow you to iterate, ship, and repeat with the confidence of zero-downtime and instant scalability."
+    }
+  },
+  "projects": {
+    "label": "Projects",
+    "title": "Selected Work",
+    "description": "Through a bespoke engineering approach, we focus on eliminating technical friction to deliver software that simply flows. By leveraging the stability of Linux and the agility of a modern edge-first stack, we transform complex logic into high-clarity code, ensuring future-proof scalability for those who demand nothing less than perfection.",
+    "view_portfolio": "View Portfolio",
+    "card1": {
+      "name": "Core & Infrastructure",
+      "desc": "High-performance, multi-tenant frameworks designed as the \"Engine Room\" for corporate operations. We build modular kernels that centralize identity, security, and data orchestration."
+    },
+    "card2": {
+      "name": "Field & Industrial Ops",
+      "desc": "Resilience-first applications designed for the rigors of the construction site. We specialize in offline-first synchronization and precision engineering tools for field data integrity."
+    },
+    "card3": {
+      "name": "Analytics & Visual Systems",
+      "desc": "Real-time data visualization and content engines that transform complex market variables into actionable intelligence. We prioritize sub-second latency and cross-platform accessibility."
+    },
+    "card4": {
+      "name": "Managed Ecosystems",
+      "desc": "Open platform deployments and global corporate environments. We architect scalable solutions that integrate with existing infrastructure while maintaining flexibility for future growth."
+    }
+  },
+  "contact": {
+    "label": "Direct Contact",
+    "title": "Let's build something.",
+    "description": "Share your scope, timeline, and stack via email. We'll analyze the requirements and respond within 24 hours with a technical path forward.",
+    "point1": "Best for: Defined projects and concise briefs.",
+    "point2": "Outcome: A lean execution plan.",
+    "panel_title": "Start a thread.",
+    "panel_note": "No brief yet? Just drop your email.<br />We'll reach out to you to discuss your goals, constraints, and how we can help your project flow.",
+    "email_placeholder": "Enter your email address",
+    "send": "Send"
+  },
+  "footer": {
+    "copyright": "© 2026 msicca"
+  },
+  "error404": {
+    "status": "STATUS:",
+    "failed": "FAILED",
+    "version": "dev.msicca-v2.5-debugger",
+    "command1": "check-integrity --verbose --path=\"current_url\"",
+    "output1": "[!] CRITICAL: ERROR_404. Resource not found. Logical link broken.",
+    "command2": "find-alternatives --status=active",
+    "output2": "Scanning data cluster by valid paths...",
+    "link_home": "➜ [OK] /home (Main entry point)",
+    "link_projects": "➜ [OK] /projects (Project Repository)",
+    "link_contact": "➜ [OK] /contact (Direct communication link)",
+    "copyright": "© 2024 MSICCA DEVELOPER TEAM",
+    "return_root": "Return to Root",
+    "node": "Node: dev.msicca.com"
+  }
+}
