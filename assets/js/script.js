@@ -5,27 +5,30 @@
 // =========================================
 // Email Form Handler (Global function for contact forms)
 // =========================================
-window.handleEmailSubmit = function(form) {
+window.handleEmailSubmit = function (form) {
   var emailInput = form.email;
   var email = emailInput.value.trim();
-  
+
   // Validate email format
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email || !emailRegex.test(email)) {
     emailInput.focus();
     return false;
   }
-  
+
   // Construct mailto URL and navigate
-  window.location.href = 'mailto:hello@msicca.com?subject=Contact%20from%20' + 
-    encodeURIComponent(email) + '&body=Email:%20' + encodeURIComponent(email);
+  window.location.href =
+    "mailto:hello@msicca.com?subject=Contact%20from%20" +
+    encodeURIComponent(email) +
+    "&body=Email:%20" +
+    encodeURIComponent(email);
   return false;
 };
 
 // =========================================
 // Mobile Navigation Toggle (Global function, called after header loads)
 // =========================================
-window.initMobileMenu = function() {
+window.initMobileMenu = function () {
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const navLinks = document.querySelector(".nav-links");
   const navLinksItems = document.querySelectorAll(".nav-links a");
@@ -113,24 +116,27 @@ window.initMobileMenu = function() {
   // Determine current page type for navigation highlighting
   // Use more specific path matching to avoid false positives
   const currentPath = window.location.pathname;
-  const pathSegments = currentPath.split('/').pop() || '';
-  const isProjectRelatedPage = pathSegments === 'projects.html' || 
-                                pathSegments.startsWith('project-') ||
-                                currentPath.includes('/projects/');
+  const pathSegments = currentPath.split("/").pop() || "";
+  const isProjectRelatedPage =
+    pathSegments === "projects.html" ||
+    pathSegments.startsWith("project-") ||
+    currentPath.includes("/projects/");
 
   // Navigation highlight function (runs on scroll and after header load)
   const highlightNav = () => {
     const navLinks = document.querySelectorAll(".nav-links a");
     if (!navLinks.length) return; // Header not loaded yet
-    
+
     // If on a project-related page, always highlight .projects
     if (isProjectRelatedPage) {
       navLinks.forEach((link) => link.classList.remove("active"));
-      const projectsLink = document.querySelector('.nav-links a[data-section="projects"]');
+      const projectsLink = document.querySelector(
+        '.nav-links a[data-section="projects"]',
+      );
       if (projectsLink) projectsLink.classList.add("active");
       return;
     }
-    
+
     const marker = 140; // header height + breathing room for detection
     const nearBottom =
       window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
@@ -139,7 +145,9 @@ window.initMobileMenu = function() {
     if (nearBottom && sections.length) {
       const lastId = sections[sections.length - 1].getAttribute("id");
       navLinks.forEach((link) => link.classList.remove("active"));
-      const navLink = document.querySelector(`.nav-links a[data-section="${lastId}"]`);
+      const navLink = document.querySelector(
+        `.nav-links a[data-section="${lastId}"]`,
+      );
       if (navLink) navLink.classList.add("active");
       return;
     }
@@ -299,14 +307,21 @@ window.initMobileMenu = function() {
     ? Array.from(heroSection.querySelectorAll(".hero-bg-layer"))
     : [];
 
-  if (heroSection && heroLayers.length >= 2) {
-    const heroImages = [
-      "assets/images/webp/mohammad-rahmani-nBXwqxjDa5c-unsplash.webp",
-      "assets/images/webp/mohammad-rahmani-Y5yxdx2a4PI-unsplash.webp",
-      "assets/images/webp/vishnu-kalanad-evzHeMgbKOg-unsplash.webp",
-      "assets/images/webp/mohammad-rahmani-oXlXu2qukGE-unsplash.webp",
-    ];
+  const defaultHeroImages = [
+    "assets/images/webp/mohammad-rahmani-nBXwqxjDa5c-unsplash.webp",
+    "assets/images/webp/mohammad-rahmani-Y5yxdx2a4PI-unsplash.webp",
+    "assets/images/webp/vishnu-kalanad-evzHeMgbKOg-unsplash.webp",
+    "assets/images/webp/mohammad-rahmani-oXlXu2qukGE-unsplash.webp",
+  ];
 
+  const dataHeroImages = (heroSection?.dataset.heroImages || "")
+    .split(",")
+    .map((src) => src.trim())
+    .filter(Boolean);
+
+  const heroImages = dataHeroImages.length ? dataHeroImages : defaultHeroImages;
+
+  if (heroSection && heroLayers.length >= 2 && heroImages.length) {
     let current = 0;
     let visibleLayer = 0;
     let timerId;
