@@ -34,6 +34,106 @@
     />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/retro.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --hero-gradient-start: rgba(34, 211, 211, 0.15);
+        --hero-gradient-end: rgba(20, 20, 20, 0.9);
+      }
+
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          var(--hero-gradient-start) 0%,
+          var(--hero-gradient-end) 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-gradient::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle,
+          rgba(34, 211, 211, 0.2) 0%,
+          transparent 70%
+        );
+        animation: pulse 8s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.1); }
+      }
+
+      .btn-glow {
+        position: relative;
+        box-shadow: 0 0 20px rgba(34, 211, 211, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .btn-glow:hover {
+        box-shadow: 0 0 30px rgba(34, 211, 211, 0.5);
+        transform: translateY(-2px);
+      }
+
+      .floating-visual {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle at center,
+          rgba(34, 211, 211, 0.15) 0%,
+          rgba(34, 211, 211, 0.05) 50%,
+          transparent 100%
+        );
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+        pointer-events: none;
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(-50%) translateX(0); }
+        50% { transform: translateY(-50%) translateX(20px); }
+      }
+
+      .hero-badge {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: rgba(34, 211, 211, 0.1);
+        border: 1px solid rgba(34, 211, 211, 0.3);
+        border-radius: 50px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        animation: fadeInDown 0.8s ease-out;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .floating-visual {
+          display: none;
+        }
+      }
+    </style>
     <script src="/assets/js/config.js"></script>
     <script src="/assets/js/i18n.js"></script>
   </head>
@@ -69,43 +169,52 @@
 
     <main>
       <!-- Hero Section -->
-      <section class="hero" id="hero">
-        <div class="hero-bg-layer"></div>
-        <div class="hero-bg-layer"></div>
-        <div class="container">
-          <div class="hero-content">
-            <span class="section-label">WordPress Solutions</span>
-            <h1 class="hero-title">
-              <span class="title-line">Launch Your Online</span>
-              <span class="title-line">Store in 4 Weeks</span>
+      <section class="hero hero-gradient" id="hero">
+        <div class="container relative z-10">
+          <div class="hero-content" style="max-width: 800px; position: relative;">
+            <!-- Badge -->
+            <span class="hero-badge">WordPress Solutions</span>
+            
+            <!-- Title -->
+            <h1 class="hero-title" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem;">
+              <span class="title-line">Speedy, simplified</span>
+              <span class="title-line">hosting for WordPress</span>
             </h1>
-            <p class="hero-tagline">
-              We deliver a ready-to-sell platform. We configure, optimize, and maintain your WordPress while you focus on growing your business.
+            
+            <!-- Description -->
+            <p class="hero-tagline" style="font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 600px;">
+              We create digital solutions that connect people to news, entertainment, ideas – and to each other.
             </p>
-            <div class="hero-actions">
-              <a href="#contact-cta" class="btn-primary" aria-label="Get Started">
-                Get Started
+            
+            <!-- Action Buttons -->
+            <div class="hero-actions" style="gap: 1rem;">
+              <a href="#contact-cta" class="btn-primary btn-glow" aria-label="Unlock your potential">
+                Unlock your potential with our services →
               </a>
               <a href="#plans" class="btn-secondary" aria-label="View Plans">
                 View Plans
               </a>
             </div>
+            
             <!-- Immediate Social Proof -->
-            <div class="impact-metrics" style="margin-top: 2.5rem; gap: 1.5rem;">
-              <div class="metric-card" style="padding: 1rem; background: rgba(20,20,20,0.8);">
+            <div class="impact-metrics" style="margin-top: 3rem; gap: 1.5rem;">
+              <div class="metric-card" style="padding: 1rem; background: rgba(20,20,20,0.8); backdrop-filter: blur(10px);">
                 <span class="metric-value" style="font-size: 28px;">50+</span>
                 <span class="metric-label">Sites Deployed</span>
               </div>
-              <div class="metric-card" style="padding: 1rem; background: rgba(20,20,20,0.8);">
+              <div class="metric-card" style="padding: 1rem; background: rgba(20,20,20,0.8); backdrop-filter: blur(10px);">
                 <span class="metric-value" style="font-size: 28px;">99.9%</span>
                 <span class="metric-label">Guaranteed Uptime</span>
               </div>
-              <div class="metric-card" style="padding: 1rem; background: rgba(20,20,20,0.8);">
+              <div class="metric-card" style="padding: 1rem; background: rgba(20,20,20,0.8); backdrop-filter: blur(10px);">
                 <span class="metric-value" style="font-size: 28px;">&lt;3s</span>
                 <span class="metric-label">Load Time</span>
               </div>
             </div>
           </div>
+          
+          <!-- Floating Visual Element -->
+          <div class="floating-visual"></div>
         </div>
       </section>
 
