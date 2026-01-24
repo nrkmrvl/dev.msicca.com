@@ -36,22 +36,20 @@
     <link rel="stylesheet" href="/assets/css/retro.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      :root {
-        --hero-gradient-start: rgba(34, 211, 211, 0.15);
-        --hero-gradient-end: rgba(20, 20, 20, 0.9);
-      }
-
-      .hero-gradient {
+      /* WordPress Page Specific Styles - Scoped to avoid affecting other pages */
+      
+      /* Hero Section Styles */
+      #wordpress-page .hero-gradient {
         background: linear-gradient(
           135deg,
-          var(--hero-gradient-start) 0%,
-          var(--hero-gradient-end) 100%
+          rgba(34, 211, 211, 0.15) 0%,
+          rgba(20, 20, 20, 0.9) 100%
         );
         position: relative;
         overflow: hidden;
       }
 
-      .hero-gradient::before {
+      #wordpress-page .hero-gradient::before {
         content: '';
         position: absolute;
         top: -50%;
@@ -63,26 +61,15 @@
           rgba(34, 211, 211, 0.2) 0%,
           transparent 70%
         );
-        animation: pulse 8s ease-in-out infinite;
+        animation: wp-pulse 8s ease-in-out infinite;
       }
 
-      @keyframes pulse {
+      @keyframes wp-pulse {
         0%, 100% { opacity: 0.5; transform: scale(1); }
         50% { opacity: 1; transform: scale(1.1); }
       }
 
-      .btn-glow {
-        position: relative;
-        box-shadow: 0 0 20px rgba(34, 211, 211, 0.3);
-        transition: all 0.3s ease;
-      }
-
-      .btn-glow:hover {
-        box-shadow: 0 0 30px rgba(34, 211, 211, 0.5);
-        transform: translateY(-2px);
-      }
-
-      .floating-visual {
+      #wordpress-page .floating-visual {
         position: absolute;
         right: 5%;
         top: 50%;
@@ -96,16 +83,16 @@
           transparent 100%
         );
         border-radius: 50%;
-        animation: float 6s ease-in-out infinite;
+        animation: wp-float 6s ease-in-out infinite;
         pointer-events: none;
       }
 
-      @keyframes float {
+      @keyframes wp-float {
         0%, 100% { transform: translateY(-50%) translateX(0); }
         50% { transform: translateY(-50%) translateX(20px); }
       }
 
-      .hero-badge {
+      #wordpress-page .hero-badge {
         display: inline-block;
         padding: 0.5rem 1rem;
         background: rgba(34, 211, 211, 0.1);
@@ -114,10 +101,10 @@
         font-size: 0.875rem;
         font-weight: 500;
         margin-bottom: 1.5rem;
-        animation: fadeInDown 0.8s ease-out;
+        animation: wp-fadeInDown 0.8s ease-out;
       }
 
-      @keyframes fadeInDown {
+      @keyframes wp-fadeInDown {
         from {
           opacity: 0;
           transform: translateY(-20px);
@@ -128,21 +115,15 @@
         }
       }
 
-      @media (max-width: 768px) {
-        .floating-visual {
-          display: none;
-        }
-      }
-
-      /* Counter Animation Styles */
-      .stats-section {
+      /* Stats Section - Using Retro Shadow Style */
+      #wordpress-page .stats-section {
         background: var(--base-200);
         padding: 4rem 0;
-        border-top: 1px solid rgba(34, 211, 211, 0.1);
-        border-bottom: 1px solid rgba(34, 211, 211, 0.1);
+        border-top: 3px solid var(--base-500);
+        border-bottom: 3px solid var(--base-500);
       }
 
-      .stats-grid {
+      #wordpress-page .stats-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2rem;
@@ -150,47 +131,48 @@
         margin: 0 auto;
       }
 
-      .stat-item {
+      #wordpress-page .stat-item {
         text-align: center;
         padding: 2rem;
-        background: rgba(20, 20, 20, 0.5);
-        border-radius: 12px;
-        border: 1px solid rgba(34, 211, 211, 0.2);
-        transition: all 0.3s ease;
+        background: var(--base-300);
+        border: 3px solid var(--base-500);
+        transition: transform 0.24s cubic-bezier(0.33, 1, 0.68, 1),
+                    box-shadow 0.24s cubic-bezier(0.33, 1, 0.68, 1);
         opacity: 0;
         transform: translateY(30px);
       }
 
-      .stat-item.animated {
-        animation: fadeInUp 0.8s ease-out forwards;
+      #wordpress-page .stat-item.animated {
+        animation: wp-fadeInUp 0.8s ease-out forwards;
       }
 
-      .stat-item:nth-child(1).animated {
+      #wordpress-page .stat-item:nth-child(1).animated {
         animation-delay: 0.1s;
       }
 
-      .stat-item:nth-child(2).animated {
+      #wordpress-page .stat-item:nth-child(2).animated {
         animation-delay: 0.3s;
       }
 
-      .stat-item:nth-child(3).animated {
+      #wordpress-page .stat-item:nth-child(3).animated {
         animation-delay: 0.5s;
       }
 
-      @keyframes fadeInUp {
+      @keyframes wp-fadeInUp {
         to {
           opacity: 1;
           transform: translateY(0);
         }
       }
 
-      .stat-item:hover {
-        transform: translateY(-5px);
-        border-color: rgba(34, 211, 211, 0.5);
-        box-shadow: 0 10px 30px rgba(34, 211, 211, 0.2);
+      /* Retro shadow effect on hover */
+      #wordpress-page .stat-item:hover {
+        transform: translate(8px, -8px);
+        box-shadow: -8px 8px 0px black;
+        border-color: var(--accent);
       }
 
-      .stat-number {
+      #wordpress-page .stat-number {
         font-size: 3.5rem;
         font-weight: 700;
         color: var(--accent);
@@ -200,7 +182,7 @@
         display: block;
       }
 
-      .stat-label {
+      #wordpress-page .stat-label {
         font-size: 1rem;
         color: var(--text-secondary);
         font-family: var(--font-main);
@@ -208,50 +190,53 @@
         letter-spacing: 0.05em;
       }
 
-      /* Pricing Card Enhancements */
-      .pricing-badge {
+      /* Pricing Cards - Using Retro Shadow Style */
+      #wordpress-page .pricing-badge {
         position: absolute;
         top: -15px;
         right: 20px;
-        background: linear-gradient(135deg, var(--accent) 0%, rgba(34, 211, 211, 0.7) 100%);
+        background: var(--accent);
         color: var(--base-100);
         padding: 0.5rem 1.5rem;
-        border-radius: 50px;
+        border: 3px solid var(--base-500);
         font-size: 0.75rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        box-shadow: 0 4px 15px rgba(34, 211, 211, 0.4);
-        animation: pulse-badge 2s ease-in-out infinite;
+        animation: wp-pulse-badge 2s ease-in-out infinite;
       }
 
-      @keyframes pulse-badge {
+      @keyframes wp-pulse-badge {
         0%, 100% {
           transform: scale(1);
-          box-shadow: 0 4px 15px rgba(34, 211, 211, 0.4);
         }
         50% {
           transform: scale(1.05);
-          box-shadow: 0 6px 20px rgba(34, 211, 211, 0.6);
         }
       }
 
-      .pricing-card-featured {
+      #wordpress-page .pricing-card-featured {
         position: relative;
-        transform: scale(1.05);
-        z-index: 2;
+        border-color: var(--accent);
+        border-width: 3px;
+      }
+
+      /* Enhanced retro shadow for featured card */
+      #wordpress-page .pricing-card-featured:hover {
+        transform: translate(12px, -12px);
+        box-shadow: -12px 12px 0px black;
       }
 
       @media (max-width: 768px) {
-        .pricing-card-featured {
-          transform: scale(1);
+        #wordpress-page .floating-visual {
+          display: none;
         }
       }
     </style>
     <script src="/assets/js/config.js"></script>
     <script src="/assets/js/i18n.js"></script>
   </head>
-  <body>
+  <body id="wordpress-page">
     <!-- Navigation (loaded via JS) -->
     <div id="header-placeholder"></div>
     <script>
@@ -304,7 +289,7 @@
             
             <!-- Action Buttons -->
             <div class="hero-actions" style="gap: 1rem;">
-              <a href="#contact-cta" class="btn-primary btn-glow" aria-label="Unlock your potential">
+              <a href="#contact-cta" class="btn-primary" aria-label="Unlock your potential">
                 Unlock your potential with our services →
               </a>
               <a href="#plans" class="btn-secondary" aria-label="View Plans">
@@ -498,7 +483,7 @@
             </div>
             
             <!-- Professional Plan (Featured - Best Value) -->
-            <div class="feature-card pricing-card-featured" style="border-color: var(--accent); border-width: 2px; box-shadow: 0 0 30px rgba(34, 211, 211, 0.25);">
+            <div class="feature-card pricing-card-featured">
               <span class="pricing-badge">Best Value</span>
               <h3 class="feature-title">Professional</h3>
               <p class="feature-highlight" style="font-size: 2.5rem; color: var(--accent); font-weight: 700;">$599</p>
@@ -511,7 +496,7 @@
                 <li>Payment gateway setup</li>
                 <li>Priority support</li>
               </ul>
-              <a href="#contact-cta" class="btn-primary btn-glow" style="margin-top: 1.5rem; width: 100%;">Get Started</a>
+              <a href="#contact-cta" class="btn-primary" style="margin-top: 1.5rem; width: 100%;">Get Started</a>
             </div>
 
             <!-- Enterprise Plan -->
