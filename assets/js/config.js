@@ -9,5 +9,5 @@ window.MSICCA_CONFIG = {
    * Set to true to enable automatic language detection and translation
    * Set to false to display content in the page's default language (English)
    */
-  I18N_ENABLED: true
+  I18N_ENABLED: false,
 };
