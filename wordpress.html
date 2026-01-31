@@ -59,220 +59,7 @@
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/retro.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* WordPress Page Specific Styles - Scoped to avoid affecting other pages */
-      
-      /* Hero Section Styles */
-      #wordpress-page .hero-gradient {
-        background: linear-gradient(
-          135deg,
-          rgba(34, 211, 211, 0.15) 0%,
-          rgba(20, 20, 20, 0.9) 100%
-        );
-        position: relative;
-        overflow: hidden;
-      }
-
-      #wordpress-page .hero-gradient::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -50%;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(
-          circle,
-          rgba(34, 211, 211, 0.2) 0%,
-          transparent 70%
-        );
-        animation: wp-pulse 8s ease-in-out infinite;
-      }
-
-      @keyframes wp-pulse {
-        0%, 100% { opacity: 0.5; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.1); }
-      }
-
-      #wordpress-page .floating-visual {
-        position: absolute;
-        right: 5%;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 400px;
-        height: 400px;
-        background: radial-gradient(
-          circle at center,
-          rgba(34, 211, 211, 0.15) 0%,
-          rgba(34, 211, 211, 0.05) 50%,
-          transparent 100%
-        );
-        border-radius: 50%;
-        animation: wp-float 6s ease-in-out infinite;
-        pointer-events: none;
-      }
-
-      @keyframes wp-float {
-        0%, 100% { transform: translateY(-50%) translateX(0); }
-        50% { transform: translateY(-50%) translateX(20px); }
-      }
-
-      #wordpress-page .hero-badge {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background: rgba(34, 211, 211, 0.1);
-        border: 1px solid rgba(34, 211, 211, 0.3);
-        border-radius: 50px;
-        font-size: 0.875rem;
-        font-weight: 500;
-        margin-bottom: 1.5rem;
-        animation: wp-fadeInDown 0.8s ease-out;
-      }
-
-      @keyframes wp-fadeInDown {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Stats Section - Using Retro Shadow Style */
-      #wordpress-page .stats-section {
-        background: var(--base-200);
-        padding: 4rem 0;
-        border-top: 3px solid var(--base-500);
-        border-bottom: 3px solid var(--base-500);
-      }
-
-      #wordpress-page .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      #wordpress-page .stat-item {
-        text-align: center;
-        padding: 2rem;
-        background: var(--base-300);
-        border: 3px solid var(--base-500);
-        transition: transform 0.24s cubic-bezier(0.33, 1, 0.68, 1),
-                    box-shadow 0.24s cubic-bezier(0.33, 1, 0.68, 1);
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      #wordpress-page .stat-item.animated {
-        animation: wp-fadeInUp 0.8s ease-out forwards;
-      }
-
-      #wordpress-page .stat-item:nth-child(1).animated {
-        animation-delay: 0.1s;
-      }
-
-      #wordpress-page .stat-item:nth-child(2).animated {
-        animation-delay: 0.3s;
-      }
-
-      #wordpress-page .stat-item:nth-child(3).animated {
-        animation-delay: 0.5s;
-      }
-
-      @keyframes wp-fadeInUp {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Retro shadow effect on hover */
-      #wordpress-page .stat-item:hover {
-        transform: translate(8px, -8px);
-        box-shadow: -8px 8px 0px black;
-        border-color: var(--accent);
-      }
-
-      #wordpress-page .stat-number {
-        font-size: 3.5rem;
-        font-weight: 700;
-        color: var(--accent);
-        font-family: var(--font-mono);
-        line-height: 1;
-        margin-bottom: 0.5rem;
-        display: block;
-      }
-
-      #wordpress-page .stat-label {
-        font-size: 1rem;
-        color: var(--text-secondary);
-        font-family: var(--font-main);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-      }
-
-      /* Pricing Cards - Using Retro Shadow Style */
-      #wordpress-page .pricing-badge {
-        position: absolute;
-        top: -15px;
-        right: 20px;
-        background: var(--accent);
-        color: var(--base-100);
-        padding: 0.5rem 1.5rem;
-        border: 3px solid var(--base-500);
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        animation: wp-pulse-badge 2s ease-in-out infinite;
-      }
-
-      @keyframes wp-pulse-badge {
-        0%, 100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-      }
-
-      #wordpress-page .pricing-card-featured {
-        position: relative;
-        border-color: var(--accent);
-        border-width: 3px;
-      }
-
-      /* Enhanced retro shadow for featured card */
-      #wordpress-page .pricing-card-featured:hover {
-        transform: translate(12px, -12px);
-        box-shadow: -12px 12px 0px black;
-      }
-
-      @media (max-width: 768px) {
-        #wordpress-page .floating-visual {
-          display: none;
-        }
-      }
-
-      /* Center section headers (excluding hero, contact, footer) */
-      #wordpress-page .stats-section .section-label,
-      #wordpress-page .stats-section .features-title,
-      #wordpress-page .stats-section .features-description,
-      #wordpress-page .case-study-section .section-label,
-      #wordpress-page .case-study-section .features-title,
-      #wordpress-page .case-study-section .features-description {
-        text-align: center;
-      }
-
-      #wordpress-page .case-study-section .features-description {
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/wordpress.css" />
     <script src="/assets/js/config.js"></script>
     <script src="/assets/js/i18n.js"></script>
   </head>
@@ -308,36 +95,50 @@
 
     <main>
       <!-- Hero Section -->
-      <section class="hero hero-gradient" id="hero">
+      <section
+        class="hero hero-gradient"
+        id="hero"
+        data-hero-images="assets/images/webp/wp_souvik-banerjee--WPrNEM_6dg-unsplash.webp, assets/images/webp/wp_justin-morgan-ZjX-z2Q5zrk-unsplash.webp, assets/images/webp/wp_stephen-phillips-hostreviews-co-uk--zRNvl3EUdw-unsplash.webp, assets/images/webp/wp_stephen-phillips-hostreviews-co-uk-sSPzmL7fpWc-unsplash.webp, assets/images/webp/wp_stephen-phillips-hostreviews-co-uk-zs98a0DtKL4-unsplash.webp"
+      >
         <div class="hero-bg-layer"></div>
         <div class="hero-bg-layer"></div>
         <div class="container relative z-10">
-          <div class="hero-content" style="max-width: 800px; position: relative;">
+          <div
+            class="hero-content"
+            style="max-width: 800px; position: relative"
+          >
             <!-- Badge -->
             <span class="hero-badge">WordPress Solutions</span>
-            
+
             <!-- Title -->
-            <h1 class="hero-title" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem;">
-              <span class="title-line">Speedy, simplified</span>
-              <span class="title-line">hosting for WordPress</span>
+            <h1 class="hero-title">
+              <span class="title-line"
+                >Needs a
+                <span style="color: var(--accent)">WordPress</span>
+                Website?</span
+              >
             </h1>
-            
+
             <!-- Description -->
-            <p class="hero-tagline" style="font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 600px;">
-              We create digital solutions that connect people to news, entertainment, ideas – and to each other.
+            <p class="hero-tagline">
+              We create Fast, Secure, and Optimized WordPress Sites.
             </p>
-            
+
             <!-- Action Buttons -->
-            <div class="hero-actions" style="gap: 1rem;">
-              <a href="#contact-cta" class="btn-primary" aria-label="Unlock your potential">
-                Unlock your potential with our services →
+            <div class="hero-actions" style="gap: 1rem">
+              <a
+                href="#contact-cta"
+                class="btn-primary"
+                aria-label="Unlock your potential"
+              >
+                Our Services →
               </a>
               <a href="#plans" class="btn-secondary" aria-label="View Plans">
                 View Plans
               </a>
             </div>
           </div>
-          
+
           <!-- Floating Visual Element -->
           <div class="floating-visual"></div>
         </div>
@@ -649,13 +450,27 @@
             All plans include SSL certificate, daily backups, and technical
             support.
           </p>
-          <div class="features-grid" style="margin-top: 3rem;">
+          <div class="features-grid" style="margin-top: 3rem">
             <!-- Starter Plan -->
             <div class="feature-card">
               <h3 class="feature-title">Starter</h3>
-              <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">$299</p>
-              <p class="feature-text">Perfect for launching your first online store or course.</p>
-              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
+              <p
+                class="feature-highlight"
+                style="font-size: 2rem; color: var(--accent)"
+              >
+                $299
+              </p>
+              <p class="feature-text">
+                Perfect for launching your first online store or course.
+              </p>
+              <ul
+                style="
+                  color: var(--text-secondary);
+                  margin-top: 1rem;
+                  padding-left: 1.5rem;
+                  line-height: 2;
+                "
+              >
                 <li>WordPress + WooCommerce/LMS</li>
                 <li>5 GB storage</li>
                 <li>Free SSL certificate</li>
@@ -663,16 +478,39 @@
                 <li>Basic SEO optimization</li>
                 <li>Email support</li>
               </ul>
-              <a href="#contact-cta" class="btn-secondary" style="margin-top: 1.5rem; width: 100%;">Begin</a>
+              <a
+                href="#contact-cta"
+                class="btn-secondary"
+                style="margin-top: 1.5rem; width: 100%"
+                >Begin</a
+              >
             </div>
-            
+
             <!-- Professional Plan (Featured - Best Value) -->
             <div class="feature-card pricing-card-featured">
               <span class="pricing-badge">Best Value</span>
               <h3 class="feature-title">Professional</h3>
-              <p class="feature-highlight" style="font-size: 2.5rem; color: var(--accent); font-weight: 700;">$599</p>
-              <p class="feature-text" style="font-weight: 500;">For growing businesses that need more power and flexibility.</p>
-              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
+              <p
+                class="feature-highlight"
+                style="
+                  font-size: 2.5rem;
+                  color: var(--accent);
+                  font-weight: 700;
+                "
+              >
+                $599
+              </p>
+              <p class="feature-text" style="font-weight: 500">
+                For growing businesses that need more power and flexibility.
+              </p>
+              <ul
+                style="
+                  color: var(--text-secondary);
+                  margin-top: 1rem;
+                  padding-left: 1.5rem;
+                  line-height: 2;
+                "
+              >
                 <li>Everything in Starter, plus:</li>
                 <li>20 GB storage</li>
                 <li>Premium plugin bundle</li>
@@ -691,9 +529,24 @@
             <!-- Enterprise Plan -->
             <div class="feature-card">
               <h3 class="feature-title">Enterprise</h3>
-              <p class="feature-highlight" style="font-size: 2rem; color: var(--accent);">Custom</p>
-              <p class="feature-text">Tailored solutions for high-traffic platforms and complex requirements.</p>
-              <ul style="color: var(--text-secondary); margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
+              <p
+                class="feature-highlight"
+                style="font-size: 2rem; color: var(--accent)"
+              >
+                Custom
+              </p>
+              <p class="feature-text">
+                Tailored solutions for high-traffic platforms and complex
+                requirements.
+              </p>
+              <ul
+                style="
+                  color: var(--text-secondary);
+                  margin-top: 1rem;
+                  padding-left: 1.5rem;
+                  line-height: 2;
+                "
+              >
                 <li>Everything in Professional, plus:</li>
                 <li>Unlimited storage</li>
                 <li>Custom development</li>
@@ -701,7 +554,12 @@
                 <li>API integrations</li>
                 <li>Dedicated account manager</li>
               </ul>
-              <a href="#contact-cta" class="btn-secondary" style="margin-top: 1.5rem; width: 100%;">Contact Us</a>
+              <a
+                href="#contact-cta"
+                class="btn-secondary"
+                style="margin-top: 1.5rem; width: 100%"
+                >Contact Us</a
+              >
             </div>
           </div>
         </div>
@@ -793,13 +651,13 @@
         });
     </script>
     <script src="/assets/js/script.js"></script>
-    
+
     <!-- Counter Animation Script -->
     <script>
       // Animate counters when they come into view
       const observerOptions = {
         threshold: 0.5,
-        rootMargin: '0px'
+        rootMargin: "0px",
       };
 
       const animateCounter = (element) => {
@@ -814,16 +672,17 @@
             if (target < 10) {
               element.textContent = current.toFixed(1);
             } else {
-              element.textContent = Math.floor(current) + (target >= 50 ? '+' : '');
+              element.textContent =
+                Math.floor(current) + (target >= 50 ? "+" : "");
             }
             requestAnimationFrame(updateCounter);
           } else {
             if (target === 99.9) {
-              element.textContent = '99.9';
+              element.textContent = "99.9";
             } else if (target === 3) {
-              element.textContent = '<3';
+              element.textContent = "<3";
             } else {
-              element.textContent = Math.floor(target) + '+';
+              element.textContent = Math.floor(target) + "+";
             }
           }
         };
@@ -832,12 +691,12 @@
       };
 
       const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animated');
-            const counter = entry.target.querySelector('.stat-number');
+            entry.target.classList.add("animated");
+            const counter = entry.target.querySelector(".stat-number");
             if (counter && !counter.dataset.animated) {
-              counter.dataset.animated = 'true';
+              counter.dataset.animated = "true";
               animateCounter(counter);
             }
           }
@@ -845,8 +704,8 @@
       }, observerOptions);
 
       // Observe all stat items
-      document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.stat-item').forEach(item => {
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".stat-item").forEach((item) => {
           statsObserver.observe(item);
         });
       });

@@ -50,7 +50,7 @@ body {
   font-family: var(--font-main);
   background-color: var(--base-100);
   color: var(--text-primary);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -60,7 +60,6 @@ body {
 h1,
 h2,
 h3,
-  transition: height var(--transition);
 h4,
 h5,
 h6,
@@ -113,7 +112,7 @@ a {
   min-height: 3.6em; /* Reserve space for up to ~3 lines to prevent button shifting */
 }
 .nav-links a {
-  font-size: 16px;
+  font-size: 1rem;
   /* text-base */
   font-weight: 500;
   /* medium */
@@ -127,7 +126,6 @@ a {
   max-width: fit-content;
   white-space: nowrap;
 }
-
 
 .contact-grid {
   position: relative;
@@ -267,7 +265,7 @@ a {
 
 /* About Section */
 .about-title {
-  font-size: 30px;
+  font-size: 1.875rem;
   /* text-3xl */
   font-weight: 600;
   /* semibold */
@@ -275,13 +273,13 @@ a {
 }
 
 .about-intro {
-  font-size: 20px;
+  font-size: 1.25rem;
   /* text-xl */
   color: var(--text-secondary);
 }
 
 .tech-stack li {
-  font-size: 16px;
+  font-size: 1rem;
   /* text-base */
   list-style: none;
   display: flex;
@@ -292,7 +290,7 @@ a {
 /* Features Section */
 .section-label {
   font-family: var(--font-mono);
-  font-size: 16px;
+  font-size: 1rem;
   /* text-base */
   line-height: 1.75;
   /* /7 equivalent-ish */
@@ -303,7 +301,7 @@ a {
 }
 
 .features-title {
-  font-size: 36px;
+  font-size: 2.25rem;
   /* text-4xl mobile */
   font-weight: 600;
   /* semibold */
@@ -311,7 +309,7 @@ a {
 }
 
 .features-description {
-  font-size: 18px;
+  font-size: 1.125rem;
   /* text-lg */
   line-height: 2;
   /* /8 equivalent */
@@ -319,7 +317,7 @@ a {
 }
 
 .feature-title {
-  font-size: 16px;
+  font-size: 1rem;
   /* text-base/7 */
   font-weight: 600;
   /* semibold */
@@ -327,29 +325,29 @@ a {
 }
 
 .feature-text {
-  font-size: 16px;
+  font-size: 1rem;
   /* text-base/7 */
   color: var(--text-secondary);
 }
 
 /* Projects & Footer */
 .projects-title {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 600;
 }
 
 .project-desc {
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--text-secondary);
 }
 
 .footer-nav a {
-  font-size: 16px;
+  font-size: 1rem;
   /* text-base */
 }
 
 .copyright {
-  font-size: 12px;
+  font-size: 0.75rem;
   /* text-xs */
   color: var(--text-muted);
 }
@@ -360,17 +358,17 @@ a {
 
 @media (min-width: 640px) {
   .hero-title {
-    font-size: 129.6px; /* 1.8x */
+    font-size: 8.125rem; /* 130px */
     /* sm:text-7xl */
   }
 
   .hero-tagline {
-    font-size: 34.56px; /* reduced 20% */
+    font-size: 2.16rem; /* 34.56px */
     /* sm:text-2xl */
   }
 
   .features-title {
-    font-size: 48px;
+    font-size: 3rem;
     /* sm:text-5xl */
   }
 }
@@ -468,12 +466,13 @@ a {
 
 @media (max-width: 768px) {
   .footer-content {
-    flex-direction: column;
+    font-size: 2.25rem;
     align-items: flex-start;
     gap: 1.5rem;
   }
 
   .footer-nav {
+    font-size: 1rem;
     flex-wrap: wrap;
     gap: 1rem;
   }
@@ -546,9 +545,9 @@ section {
 }
 
 .nav-links a {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   transition: var(--transition);
 }
 
@@ -598,7 +597,7 @@ section {
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  /* Negro, gradiente diagonal: arriba-izquierda 95% → derecha-abajo 50% */
+  /* Negro, gradiente diagonal: arriba-izquierda 95% → derecha-abajo 25% */
   background-image: linear-gradient(
     to bottom right,
     rgba(0, 0, 0, 0.95),
@@ -632,15 +631,15 @@ section {
 
 .hero-title {
   font-family: var(--font-mono);
-  font-size: 86.4px; /* 1.8x */
-  font-weight: 600;
+  font-size: 5.4rem; /* 86.4px */
+  font-weight: 900;
   line-height: 1.05;
   margin-bottom: 2.5rem;
 }
 
 .hero-tagline {
   font-family: var(--font-mono);
-  font-size: 28.8px; /* reduced 20% */
+  font-size: 1.8rem; /* 28.8px */
   color: var(--accent);
   margin-bottom: 3rem;
   display: block; /* Ensure it starts on its own line */
@@ -749,7 +748,10 @@ section {
   height: 84px;
   object-fit: contain;
   display: block;
-  transition: transform var(--transition), filter var(--transition), opacity var(--transition);
+  transition:
+    transform var(--transition),
+    filter var(--transition),
+    opacity var(--transition);
 }
 
 .tech-icon {
@@ -903,10 +905,11 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 40px;
     height: 40px;
     border: 1px solid var(--border-color);
-    background: var(--base-200);
+    background: rgba(20, 20, 20, 0.9);
     border-radius: 4px;
     gap: 4px;
   }
@@ -916,6 +919,7 @@ section {
     width: 18px;
     height: 2px;
     background: var(--text-primary);
+    border-radius: 2px;
   }
 
   .nav-links {
@@ -933,7 +937,10 @@ section {
     transform: translateY(-8px);
     pointer-events: none;
     visibility: hidden;
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s ease;
   }
 
   .nav-links.nav-open {
@@ -1087,7 +1094,7 @@ section[id] {
 .metric-value {
   display: block;
   font-family: var(--font-mono);
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--accent);
   line-height: 1;
@@ -1095,7 +1102,7 @@ section[id] {
 }
 
 .metric-label {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--text-secondary);
 }
 
@@ -1246,14 +1253,14 @@ section[id] {
 
 .section-title {
   font-family: var(--font-mono);
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .section-subtitle {
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--text-secondary);
 }
 
@@ -1341,7 +1348,7 @@ section[id] {
   }
 
   .section-title {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -1433,11 +1440,11 @@ section[id] {
   }
 
   .breadcrumb-list {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .breadcrumb-back {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -1607,7 +1614,7 @@ section[id] {
   }
 
   .stack-table {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .stack-table th,
@@ -1627,16 +1634,16 @@ section[id] {
   }
 
   .hero-title {
-    font-size: 48px;
+    font-size: 3rem;
   }
 
   .hero-tagline {
-    font-size: 20px;
+    font-size: 1.25rem;
     min-height: 3.6em;
   }
 
   .features-title {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   .features-grid {
@@ -1670,7 +1677,7 @@ section[id] {
   }
 
   .hero-title {
-    font-size: 72px;
+    font-size: 4.5rem;
   }
 
   .features-grid {

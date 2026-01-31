@@ -185,6 +185,17 @@ window.initMobileMenu = function () {
   // =========================================
   const heroTagline = document.querySelector(".hero-tagline");
   if (heroTagline) {
+    const disableTypewriter = heroTagline.dataset.static === "true";
+
+    // Capture per-page tagline before we clear it
+    const initialTagline = heroTagline.textContent.trim();
+    const pageFinalMessage = heroTagline.dataset.finalMessage || initialTagline;
+
+    if (disableTypewriter) {
+      heroTagline.style.visibility = "visible";
+      // Do not run the typewriter on WordPress or explicitly static taglines
+      return;
+    }
     const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     const rand = (min, max) =>
       Math.floor(Math.random() * (max - min + 1)) + min;
@@ -261,7 +272,7 @@ window.initMobileMenu = function () {
       // 12. DevTools
       "> console.clear()\n> document.querySelector('meta[name=\"tagline\"]').content",
     ];
-    const finalMessage = "Code. Build. Deploy.";
+    const finalMessage = pageFinalMessage || "Code. Build. Deploy.";
 
     heroTagline.textContent = "";
     heroTagline.style.visibility = "visible";

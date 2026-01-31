@@ -1,0 +1,232 @@
+/* WordPress Page Specific Styles - Scoped to avoid affecting other pages */
+
+/* Restore global container sizing (Tailwind's .container overrides width on this page) */
+#wordpress-page .container {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* Hero Section Styles */
+#wordpress-page .hero-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.15) 15%,
+    rgba(20, 20, 20, 0.5) 50%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+#wordpress-page .hero-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  /* Match index hero overlay darkness */
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+
+@keyframes wp-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+#wordpress-page .floating-visual {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle at center,
+    rgba(34, 211, 211, 0.15) 0%,
+    rgba(34, 211, 211, 0.05) 50%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  animation: wp-float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes wp-float {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-50%) translateX(20px);
+  }
+}
+
+#wordpress-page .hero-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(34, 211, 211, 0.1);
+  border: 1px solid rgba(34, 211, 211, 0.3);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  animation: wp-fadeInDown 0.8s ease-out;
+}
+
+@keyframes wp-fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stats Section - Using Retro Shadow Style */
+#wordpress-page .stats-section {
+  background: var(--base-200);
+  padding: 4rem 0;
+  border-top: 3px solid var(--base-500);
+  border-bottom: 3px solid var(--base-500);
+}
+
+#wordpress-page .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#wordpress-page .stat-item {
+  text-align: center;
+  padding: 2rem;
+  background: var(--base-300);
+  border: 3px solid var(--base-500);
+  transition:
+    transform 0.24s cubic-bezier(0.33, 1, 0.68, 1),
+    box-shadow 0.24s cubic-bezier(0.33, 1, 0.68, 1);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+#wordpress-page .stat-item.animated {
+  animation: wp-fadeInUp 0.8s ease-out forwards;
+}
+
+#wordpress-page .stat-item:nth-child(1).animated {
+  animation-delay: 0.1s;
+}
+#wordpress-page .stat-item:nth-child(2).animated {
+  animation-delay: 0.3s;
+}
+#wordpress-page .stat-item:nth-child(3).animated {
+  animation-delay: 0.5s;
+}
+
+@keyframes wp-fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Retro shadow effect on hover */
+#wordpress-page .stat-item:hover {
+  transform: translate(8px, -8px);
+  box-shadow: -8px 8px 0px black;
+  border-color: var(--accent);
+}
+
+#wordpress-page .stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+#wordpress-page .stat-label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Pricing Cards - Using Retro Shadow Style */
+#wordpress-page .pricing-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: var(--accent);
+  color: var(--base-100);
+  padding: 0.5rem 1.5rem;
+  border: 3px solid var(--base-500);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  animation: wp-pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes wp-pulse-badge {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+#wordpress-page .pricing-card-featured {
+  position: relative;
+  border-color: var(--accent);
+  border-width: 3px;
+}
+
+/* Enhanced retro shadow for featured card */
+#wordpress-page .pricing-card-featured:hover {
+  transform: translate(12px, -12px);
+  box-shadow: -12px 12px 0px black;
+}
+
+@media (max-width: 768px) {
+  #wordpress-page .floating-visual {
+    display: none;
+  }
+}
+
+/* Center section headers (excluding hero, contact, footer) */
+#wordpress-page .stats-section .section-label,
+#wordpress-page .stats-section .features-title,
+#wordpress-page .stats-section .features-description,
+#wordpress-page .case-study-section .section-label,
+#wordpress-page .case-study-section .features-title,
+#wordpress-page .case-study-section .features-description {
+  text-align: center;
+}
+
+#wordpress-page .case-study-section .features-description {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
