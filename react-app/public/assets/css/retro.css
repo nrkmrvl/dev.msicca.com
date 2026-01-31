@@ -1,0 +1,190 @@
+/* =============================
+   Tarjetas de características y proyectos
+   ============================= */
+
+.feature-card {
+  border: 3px solid var(--base-500, #202020);
+  padding: 2rem;
+  transition:
+    transform 0.24s cubic-bezier(0.33, 1, 0.68, 1),
+    box-shadow 0.24s cubic-bezier(0.33, 1, 0.68, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: inherit;
+}
+
+.feature-icon svg {
+  width: 48px;
+  height: 48px;
+  color: var(--accent, #00ffff);
+}
+.feature-card.pop-out:hover {
+  cursor: pointer;
+  transform: translate(8px, -8px);
+  box-shadow: -8px 8px 0px black;
+}
+
+.feature-card.pop-out:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+.feature-card.pop-in {
+  transform: translate(8px, -8px);
+  box-shadow: -8px 8px 0px black;
+  border-color: var(--accent, #00ffff);
+}
+
+.feature-card.pop-in:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.project-card {
+  border: 3px solid var(--base-500, #202020);
+  transition:
+    transform 0.24s cubic-bezier(0.33, 1, 0.68, 1),
+    box-shadow 0.24s cubic-bezier(0.33, 1, 0.68, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Mantiene la imagen dentro de los bordes */
+  cursor: pointer;
+}
+
+/* Estado de elevación */
+.project-card:hover {
+  transform: translate(8px, -8px);
+  box-shadow: -8px 8px 0px black;
+}
+
+/* Estado de pulsación */
+.project-card:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+/* Estructura Interna */
+.project-image {
+  border-bottom: 3px solid var(--base-500, #202020);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-placeholder svg {
+  width: 50px;
+  height: 50px;
+  color: var(--accent, #00ffff);
+}
+
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Tags de tecnología */
+.project-tech {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.project-tech span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 2px solid black;
+  padding: 0.2rem 0.5rem;
+}
+
+/* =============================
+   Botones unificados (primario/secundario)
+   ============================= */
+
+.btn,
+.btn-primary,
+.btn-secondary {
+  font-family: var(--font-mono, "Roboto Mono", monospace);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+  /*Paraalineariconosytexto*/
+  align-items: center;
+  text-decoration: none;
+  /*Quitasubrayadosies<a>*/
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0.5rem 3rem;
+  border: 3px solid black;
+  color: black;
+  transition:
+    transform 0.24s cubic-bezier(0.33, 1, 0.68, 1),
+    box-shadow 0.24s cubic-bezier(0.33, 1, 0.68, 1),
+    color 0.24s cubic-bezier(0.33, 1, 0.68, 1),
+    border-color 0.24s cubic-bezier(0.33, 1, 0.68, 1);
+  will-change: transform, box-shadow;
+}
+
+.btn-primary {
+  background: var(--accent, #00ffff);
+  color: var(--base-100, #0a0a0a);
+  /* Estado base: plano, sin sombra */
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-primary:hover {
+  /* Hover: pop-out con sombra negra */
+  transform: translate(8px, -8px);
+  box-shadow: -8px 8px 0px rgb(0, 0, 0);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary, #f5f5f5);
+  border-color: white;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  vertical-align: middle;
+  overflow: visible;
+}
+
+.btn-secondary:hover {
+  background: transparent;
+  color: var(--text-primary, #f5f5f5);
+  border-color: var(--accent, #00ffff);
+  transform: translate(8px, -8px);
+  box-shadow: -10px 10px 0px rgba(0, 0, 0, 1);
+}
+
+/* Estados comunes de accesibilidad e interacción */
+.btn:focus-visible {
+  outline: 3px dashed black;
+  outline-offset: 2px;
+}
+
+.btn-primary:active {
+  transform: none;
+  box-shadow: none;
+}

@@ -1,0 +1,245 @@
+/* =============================================
+   404 Error Page Styles
+   Uses the site's design system variables
+   ============================================= */
+
+/* Error Page Layout */
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.error-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  padding-top: 120px; /* Account for fixed header */
+}
+
+.error-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Error Header */
+.error-header {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.error-status {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.error-failed {
+  color: #ef4444;
+}
+
+/* Terminal Window */
+.terminal-window {
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  background: rgba(10, 10, 10, 0.95);
+  box-shadow: 0 0 20px rgba(34, 211, 211, 0.2);
+  overflow: hidden;
+}
+
+/* Terminal Header */
+.terminal-header {
+  background: var(--base-400);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.terminal-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-btn--red {
+  background: rgba(239, 68, 68, 0.5);
+}
+
+.terminal-btn--yellow {
+  background: rgba(245, 158, 11, 0.5);
+}
+
+.terminal-btn--green {
+  background: rgba(16, 185, 129, 0.5);
+}
+
+.terminal-title {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+/* Terminal Body */
+.terminal-body {
+  padding: 1.5rem;
+  min-height: 400px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.terminal-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.terminal-prompt-line {
+  margin-top: 0.5rem;
+}
+
+/* Command Prompt */
+.command-prompt::before {
+  content: "dev@msicca:~$ ";
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Output Lines */
+.output-line {
+  opacity: 0;
+  transform: translateY(5px);
+  animation: fadeInLine 0.3s forwards;
+}
+
+@keyframes fadeInLine {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.output-error {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.output-muted {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.output-link {
+  color: var(--accent);
+}
+
+/* Terminal Link */
+.terminal-link {
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.terminal-link:hover {
+  text-decoration: underline;
+}
+
+/* Terminal Cursor */
+.terminal-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em;
+  background: var(--accent);
+  vertical-align: middle;
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Error Footer */
+.error-footer {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.error-footer__links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.error-footer__link {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+.error-footer__link:hover {
+  color: var(--accent);
+}
+
+.error-footer__node {
+  color: var(--text-muted);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .error-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .terminal-body {
+    font-size: 16px;
+  }
+  
+  .error-status {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-main {
+    padding-top: 80px;
+  }
+  
+  .terminal-body {
+    padding: 1rem;
+    min-height: 300px;
+    font-size: 12px;
+  }
+  
+  .error-status {
+    font-size: 1.25rem;
+  }
+  
+  .terminal-title {
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+/* Global Styles for MSICCA React App */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+  min-width: 320px;
+  background: rgb(255, 240, 229);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
