@@ -1,0 +1,341 @@
+/* =============================================
+   MSICCA Theme - Codecademy-Inspired Branding
+   ============================================= */
+
+/* 
+ * This theme overwrites the existing color scheme with
+ * MSICCA branding inspired by Codecademy's design system.
+ * 
+ * Color Palette:
+ * - Primary: Deep blue (#1F2937) - Dark background
+ * - Secondary: Rich blue (#10162F) - Darker accents
+ * - Accent: Bright purple (#7C3AED) - Interactive elements
+ * - Accent Alt: Cyan blue (#06B6D4) - Secondary actions
+ * - Success: Green (#10B981)
+ * - Text: Clean whites and grays for readability
+ */
+
+:root {
+  /* Background Colors - Dark Blue Scheme */
+  --base-100: #10162F !important;  /* Deep navy (darkest) */
+  --base-200: #1F2937 !important;  /* Dark blue-gray */
+  --base-300: #1E293B !important;  /* Medium blue-gray */
+  --base-400: #334155 !important;  /* Light blue-gray */
+  --base-500: #475569 !important;  /* Lightest blue-gray */
+
+  /* Text Colors */
+  --text-primary: #F9FAFB !important;     /* Almost white */
+  --text-secondary: #E5E7EB !important;   /* Light gray */
+  --text-muted: #9CA3AF !important;       /* Medium gray */
+
+  /* Accent Colors - Purple & Cyan (Codecademy style) */
+  --accent: #7C3AED !important;                      /* Bright purple */
+  --accent-soft: rgba(124, 58, 237, 0.1) !important; /* Soft purple glow */
+  --accent-alt: #06B6D4 !important;                  /* Cyan blue */
+  --accent-alt-soft: rgba(6, 182, 212, 0.1) !important;
+  
+  /* Success/Info Colors */
+  --success: #10B981 !important;   /* Green */
+  --info: #3B82F6 !important;      /* Blue */
+  --warning: #F59E0B !important;   /* Amber */
+
+  /* Border & Divider Colors */
+  --border-color: rgba(255, 255, 255, 0.08) !important;
+  --border-hover: rgba(124, 58, 237, 0.3) !important;
+
+  /* Interactive Element Colors */
+  --hover-bg: rgba(124, 58, 237, 0.15) !important;
+  --active-bg: rgba(124, 58, 237, 0.25) !important;
+
+  /* Card & Panel Colors */
+  --card-bg: #1F2937 !important;
+  --panel-bg: rgba(31, 41, 55, 0.5) !important;
+
+  /* Code/Mono Colors */
+  --code-bg: #0F172A !important;
+  --code-text: #E0E7FF !important;
+}
+
+/* =============================================
+   Global Element Overrides
+   ============================================= */
+
+/* Body background */
+body {
+  background-color: var(--base-100) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Links - Purple accent */
+a {
+  color: var(--accent) !important;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-alt) !important;
+  opacity: 0.9;
+}
+
+/* Buttons - Primary (Purple) */
+.btn-primary,
+button.btn-primary,
+a.btn-primary {
+  background: linear-gradient(135deg, var(--accent) 0%, #6D28D9 100%) !important;
+  color: white !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 4px 14px 0 rgba(124, 58, 237, 0.4) !important;
+}
+
+.btn-primary:hover,
+button.btn-primary:hover,
+a.btn-primary:hover {
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%) !important;
+  box-shadow: 0 6px 20px 0 rgba(124, 58, 237, 0.5) !important;
+  transform: translateY(-2px);
+}
+
+/* Buttons - Secondary (Cyan) */
+.btn-secondary,
+button.btn-secondary,
+a.btn-secondary {
+  background: rgba(6, 182, 212, 0.1) !important;
+  color: var(--accent-alt) !important;
+  border: 1px solid var(--accent-alt) !important;
+  box-shadow: none !important;
+}
+
+.btn-secondary:hover,
+button.btn-secondary:hover,
+a.btn-secondary:hover {
+  background: rgba(6, 182, 212, 0.2) !important;
+  border-color: var(--accent-alt) !important;
+  box-shadow: 0 4px 14px 0 rgba(6, 182, 212, 0.3) !important;
+  transform: translateY(-2px);
+}
+
+/* Cards & Panels */
+.card,
+.feature-card,
+.project-card,
+.contact-panel,
+[class*="-card"] {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card:hover,
+.feature-card:hover,
+.project-card:hover {
+  border-color: var(--border-hover) !important;
+  box-shadow: 0 10px 15px -3px rgba(124, 58, 237, 0.2),
+              0 4px 6px -2px rgba(124, 58, 237, 0.1) !important;
+  transform: translateY(-2px);
+}
+
+/* Headers & Navigation */
+.header,
+header,
+nav {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  backdrop-filter: blur(10px);
+}
+
+.header.scrolled {
+  background: rgba(15, 23, 42, 0.98) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Navigation Links */
+.nav-links a {
+  color: var(--text-secondary) !important;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent) !important;
+}
+
+/* Sections */
+section {
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Forms */
+input,
+textarea,
+select {
+  background: var(--base-300) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px var(--accent-soft) !important;
+}
+
+/* Contact Form Specific */
+.contact-panel__input {
+  background: var(--base-300) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.contact-panel__input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px var(--accent-soft) !important;
+}
+
+/* Code Blocks */
+code,
+pre,
+.code-block {
+  background: var(--code-bg) !important;
+  color: var(--code-text) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Accent Elements (badges, tags, labels) */
+.badge,
+.tag,
+.label,
+.section-label {
+  background: var(--accent-soft) !important;
+  color: var(--accent) !important;
+  border: 1px solid rgba(124, 58, 237, 0.3) !important;
+}
+
+/* Footer */
+footer,
+.footer {
+  background: var(--base-200) !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+/* Scrollbar Styling (Webkit browsers) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--base-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--base-400);
+  border-radius: 6px;
+  border: 2px solid var(--base-100);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent) !important;
+  color: white !important;
+}
+
+::-moz-selection {
+  background: var(--accent) !important;
+  color: white !important;
+}
+
+/* Utility Classes */
+.text-accent {
+  color: var(--accent) !important;
+}
+
+.text-accent-alt {
+  color: var(--accent-alt) !important;
+}
+
+.bg-accent {
+  background: var(--accent) !important;
+}
+
+.bg-accent-soft {
+  background: var(--accent-soft) !important;
+}
+
+.border-accent {
+  border-color: var(--accent) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px;
+  }
+}
+
+/* =============================================
+   Animation Enhancements
+   ============================================= */
+
+/* Smooth transitions for interactive elements only */
+a,
+button,
+input,
+textarea,
+select,
+.btn-primary,
+.btn-secondary,
+.card,
+.feature-card,
+.project-card,
+.contact-panel {
+  transition: background-color 0.2s ease,
+              border-color 0.2s ease,
+              color 0.2s ease,
+              box-shadow 0.2s ease,
+              transform 0.2s ease !important;
+}
+
+/* Glow effect on hover for interactive elements */
+.btn-primary:hover,
+.feature-card:hover,
+.project-card:hover {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 4px 14px 0 rgba(124, 58, 237, 0.4);
+  }
+  50% {
+    box-shadow: 0 6px 20px 0 rgba(124, 58, 237, 0.6);
+  }
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent) !important;
+  outline-offset: 2px !important;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Success states */
+.success {
+  border-color: var(--success) !important;
+  background: rgba(16, 185, 129, 0.1) !important;
+}
+
+/* Error states */
+.error {
+  border-color: var(--warning) !important;
+  background: rgba(245, 158, 11, 0.1) !important;
+}
