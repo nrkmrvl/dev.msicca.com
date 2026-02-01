@@ -92,6 +92,8 @@ export default function About() {
     { logo: '/assets/images/svg/NODE.JS_logo.svg', name: 'Node.js' },
     { logo: '/assets/images/svg/GIT_logo.svg', name: 'Git' },
     { logo: '/assets/images/svg/PHP_logo.svg', name: 'PHP' },
+    { logo: '/assets/images/svg/Postgresql_elephant_logo.svg', name: 'PostgreSQL' },
+    { logo: '/assets/images/svg/WordPress_logo.svg', name: 'WordPress' },
   ];
 
   return (
