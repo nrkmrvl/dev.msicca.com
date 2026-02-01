@@ -281,12 +281,23 @@ footer,
    Animation Enhancements
    ============================================= */
 
-/* Smooth transitions for theme */
-* {
+/* Smooth transitions for interactive elements only */
+a,
+button,
+input,
+textarea,
+select,
+.btn-primary,
+.btn-secondary,
+.card,
+.feature-card,
+.project-card,
+.contact-panel {
   transition: background-color 0.2s ease,
               border-color 0.2s ease,
               color 0.2s ease,
-              box-shadow 0.2s ease !important;
+              box-shadow 0.2s ease,
+              transform 0.2s ease !important;
 }
 
 /* Glow effect on hover for interactive elements */

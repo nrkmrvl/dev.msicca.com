@@ -29,8 +29,8 @@ const PRESUPUESTOS_FILE = path.join(__dirname, 'presupuestos.txt');
   }
 });
 
-// Helper function to append data to file
-function appendToFile(filePath, data) {
+// Helper function to append data to file (async)
+async function appendToFile(filePath, data) {
   const timestamp = new Date().toISOString();
   const entry = `
 ========================================
@@ -38,7 +38,7 @@ Fecha: ${timestamp}
 ${data}
 ========================================
 `;
-  fs.appendFileSync(filePath, entry, 'utf8');
+  await fs.promises.appendFile(filePath, entry, 'utf8');
 }
 
 // Helper function to validate email
@@ -61,7 +61,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // POST /api/contacto - Capture contact data
-app.post('/api/contacto', (req, res) => {
+app.post('/api/contacto', async (req, res) => {
   try {
     const { nombre, email, telefono, mensaje } = req.body;
 
@@ -88,7 +88,7 @@ Teléfono: ${telefono || 'No proporcionado'}
 Mensaje: ${mensaje || 'No proporcionado'}`;
 
     // Save to file
-    appendToFile(CONTACTS_FILE, contactData);
+    await appendToFile(CONTACTS_FILE, contactData);
 
     // Log to console
     console.log(`✓ New contact saved: ${nombre} (${email})`);
@@ -110,7 +110,7 @@ Mensaje: ${mensaje || 'No proporcionado'}`;
 });
 
 // POST /api/presupuesto - Capture budget request data
-app.post('/api/presupuesto', (req, res) => {
+app.post('/api/presupuesto', async (req, res) => {
   try {
     const {
       nombre,
@@ -148,7 +148,7 @@ Presupuesto Estimado: ${presupuesto || 'No especificado'}
 Descripción: ${descripcion || 'No proporcionado'}`;
 
     // Save to file
-    appendToFile(PRESUPUESTOS_FILE, presupuestoData);
+    await appendToFile(PRESUPUESTOS_FILE, presupuestoData);
 
     // Log to console
     console.log(`✓ New budget request saved: ${nombre} (${email}) - ${tipoProyecto}`);
