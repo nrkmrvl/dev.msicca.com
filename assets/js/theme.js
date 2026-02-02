@@ -106,7 +106,9 @@
     // Skip transition on initial load to prevent flash
     if (skipTransition) {
       html.style.transition = 'none';
-      body.style.transition = 'none';
+      if (body) {
+        body.style.transition = 'none';
+      }
     }
 
     // Set the theme attribute
@@ -124,7 +126,9 @@
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           html.style.transition = '';
-          body.style.transition = '';
+          if (body) {
+            body.style.transition = '';
+          }
         });
       });
     }

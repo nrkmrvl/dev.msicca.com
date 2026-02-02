@@ -6,7 +6,7 @@
     <title>404 - Page Not Found | dev.msicca.com</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,18 +17,18 @@
     />
 
     <!-- Site Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/neo-brutalista-msicca.css" />
-    <link rel="stylesheet" href="/assets/css/theme.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/retro.css" />
+    <link rel="stylesheet" href="assets/css/neo-brutalista-msicca.css" />
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/retro.css" />
 
     <!-- i18n Support -->
-    <script src="/assets/js/theme.js"></script>
-    <script src="/assets/js/config.js"></script>
-    <script src="/assets/js/i18n.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/i18n.js"></script>
 
     <!-- 404 Page Specific Styles -->
-    <link rel="stylesheet" href="/assets/css/404.css" />
+    <link rel="stylesheet" href="assets/css/404.css" />
   </head>
   <body class="error-page">
     <!-- Navigation (loaded via JS) -->
@@ -50,7 +50,7 @@
           { passive: true },
         );
       }
-      fetch("/components/header.html")
+      fetch("components/header.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("header-placeholder").innerHTML = data;
@@ -117,14 +117,14 @@
     <!-- Footer (loaded via JS) -->
     <div id="footer-placeholder"></div>
     <script>
-      fetch("/components/footer.html")
+      fetch("components/footer.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("footer-placeholder").innerHTML = data;
         });
     </script>
 
-    <script src="/assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
     <script>
       // Terminal Animation Script
       (function () {
