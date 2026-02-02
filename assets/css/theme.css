@@ -665,3 +665,106 @@ section {
     color: black;
   }
 }
+
+/* =============================================
+   FORCED DARK COMPONENT OVERRIDES
+   Enhanced specificity to ensure invariants hold
+   ============================================= */
+
+/* Header forced dark - overrides styles.css */
+header.header[data-surface="dark"],
+.header[data-surface="dark"] {
+  background-color: var(--surface-bg-primary) !important;
+  color: var(--surface-text-primary) !important;
+}
+
+.header[data-surface="dark"] .nav-links a {
+  color: var(--surface-text-secondary) !important;
+}
+
+.header[data-surface="dark"] .nav-links a:hover,
+.header[data-surface="dark"] .nav-links a.active {
+  color: var(--surface-accent-primary) !important;
+}
+
+.header[data-surface="dark"].header-scrolled {
+  background-color: rgba(10, 10, 10, 0.95) !important;
+  border-bottom-color: var(--surface-border-secondary) !important;
+}
+
+/* Hero section forced dark - overrides styles.css */
+.hero[data-surface="dark"],
+section.hero[data-surface="dark"] {
+  background-color: var(--surface-bg-primary) !important;
+  color: var(--surface-text-primary) !important;
+}
+
+.hero[data-surface="dark"] .hero-title {
+  color: var(--surface-text-primary) !important;
+}
+
+.hero[data-surface="dark"] .hero-tagline {
+  color: var(--surface-accent-primary) !important;
+}
+
+/* Contact section forced dark - overrides styles.css */
+.contact[data-surface="dark"],
+section.contact[data-surface="dark"] {
+  color: var(--surface-text-primary) !important;
+}
+
+.contact[data-surface="dark"] .section-label {
+  color: var(--surface-accent-primary) !important;
+}
+
+.contact[data-surface="dark"] .contact-title {
+  color: var(--surface-text-primary) !important;
+}
+
+.contact[data-surface="dark"] .contact-description {
+  color: var(--surface-text-secondary) !important;
+}
+
+.contact[data-surface="dark"] .contact-points li {
+  color: var(--surface-text-secondary) !important;
+}
+
+.contact[data-surface="dark"] .contact-points li::before {
+  background: var(--surface-accent-primary) !important;
+}
+
+.contact[data-surface="dark"] .contact-panel {
+  background: rgba(20, 20, 20, 0.95) !important;
+  border-color: var(--surface-border-secondary) !important;
+  color: var(--surface-text-primary) !important;
+}
+
+.contact[data-surface="dark"] .contact-panel__title {
+  color: var(--surface-text-primary) !important;
+}
+
+.contact[data-surface="dark"] .contact-panel__note {
+  color: var(--surface-text-secondary) !important;
+}
+
+.contact[data-surface="dark"] .contact-panel__input {
+  background: var(--surface-bg-secondary) !important;
+  border-color: var(--surface-border-secondary) !important;
+  color: var(--surface-text-primary) !important;
+}
+
+.contact[data-surface="dark"] .contact-panel__input:focus {
+  border-color: var(--surface-accent-primary) !important;
+}
+
+/* Footer github-link hover in dark surface */
+footer.footer[data-surface="dark"] .github-link:hover {
+  background: var(--surface-accent-primary) !important;
+  color: var(--surface-bg-primary) !important;
+  border-color: var(--surface-accent-primary) !important;
+}
+
+/* Ensure copyright text is visible in dark footer */
+footer.footer[data-surface="dark"] .copyright {
+  color: var(--surface-text-muted) !important;
+}
