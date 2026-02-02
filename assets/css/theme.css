@@ -239,7 +239,14 @@ html[data-theme="dark"] {
 }
 
 /* Additional dark surface overrides to ensure visibility */
-[data-surface="dark"] * {
+[data-surface="dark"] button,
+[data-surface="dark"] input,
+[data-surface="dark"] select,
+[data-surface="dark"] textarea,
+[data-surface="dark"] .card,
+[data-surface="dark"] .btn,
+[data-surface="dark"] .btn-primary,
+[data-surface="dark"] .btn-secondary {
   border-color: var(--surface-border-secondary);
 }
 
