@@ -3,26 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Primary SEO Meta Tags -->
-    <meta name="title" content="Automated Visual Identity & Content Engine | Edge Minimal Developers" />
-    <meta name="description" content="Case study: High-performance, browser-based graphics renderer for corporate brand consistency using Canvas API and vanilla JS." />
-    <meta name="keywords" content="visual identity, Canvas API, content engine, brand consistency, graphics renderer, vanilla JS" />
+    <meta
+      name="title"
+      content="Automated Visual Identity & Content Engine | Edge Minimal Developers"
+    />
+    <meta
+      name="description"
+      content="Case study: High-performance, browser-based graphics renderer for corporate brand consistency using Canvas API and vanilla JS."
+    />
+    <meta
+      name="keywords"
+      content="visual identity, Canvas API, content engine, brand consistency, graphics renderer, vanilla JS"
+    />
     <meta name="author" content="MSICCA - Edge Minimal Developers" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://dev.msicca.com/projects/visual-identity-engine.html" />
+    <link
+      rel="canonical"
+      href="https://dev.msicca.com/projects/visual-identity-engine.html"
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://dev.msicca.com/projects/visual-identity-engine.html" />
-    <meta property="og:title" content="Visual Identity & Content Engine | Case Study" />
-    <meta property="og:description" content="Browser-based graphics renderer for corporate brand consistency." />
-    <meta property="og:image" content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png" />
+    <meta
+      property="og:url"
+      content="https://dev.msicca.com/projects/visual-identity-engine.html"
+    />
+    <meta
+      property="og:title"
+      content="Visual Identity & Content Engine | Case Study"
+    />
+    <meta
+      property="og:description"
+      content="Browser-based graphics renderer for corporate brand consistency."
+    />
+    <meta
+      property="og:image"
+      content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png"
+    />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Visual Identity & Content Engine | Case Study" />
-    <meta name="twitter:description" content="Browser-based graphics renderer for corporate brand consistency." />
+    <meta
+      name="twitter:title"
+      content="Visual Identity & Content Engine | Case Study"
+    />
+    <meta
+      name="twitter:description"
+      content="Browser-based graphics renderer for corporate brand consistency."
+    />
 
     <title>Automated Visual Identity & Content Engine | dev.msicca.com</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -34,7 +64,6 @@
     />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/retro.css" />
-    <link rel="stylesheet" href="/assets/css/msicca-theme.css" />
     <script src="/assets/js/config.js"></script>
     <script src="/assets/js/i18n.js"></script>
   </head>
@@ -44,14 +73,18 @@
       function initHeaderScrollAnimation() {
         const header = document.querySelector(".header");
         if (!header) return;
-        window.addEventListener("scroll", () => {
-          const currentScroll = window.pageYOffset;
-          if (currentScroll > 50) {
-            header.classList.add("header-scrolled");
-          } else {
-            header.classList.remove("header-scrolled");
-          }
-        }, { passive: true });
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+              header.classList.add("header-scrolled");
+            } else {
+              header.classList.remove("header-scrolled");
+            }
+          },
+          { passive: true },
+        );
       }
       fetch("/components/header.html")
         .then((response) => response.text())
@@ -70,9 +103,12 @@
         <div class="portfolio-hero__overlay"></div>
         <div class="container portfolio-hero__content">
           <span class="section-label">Case Study</span>
-          <h1 class="features-title">Automated Visual Identity & Content Engine</h1>
+          <h1 class="features-title">
+            Automated Visual Identity & Content Engine
+          </h1>
           <p class="features-description">
-            A high-performance, browser-based graphics renderer for corporate brand consistency.
+            A high-performance, browser-based graphics renderer for corporate
+            brand consistency.
           </p>
           <div class="project-tech case-study-tags">
             <span>Canvas API</span>
@@ -88,12 +124,28 @@
         <div class="container">
           <ol class="breadcrumb-list">
             <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="/projects.html">Portfolio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Visual Identity Engine</li>
+            <li class="breadcrumb-item">
+              <a href="/projects.html">Portfolio</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Visual Identity Engine
+            </li>
           </ol>
           <a href="/projects.html" class="breadcrumb-back">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-              <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+            >
+              <path
+                d="M19 12H5M5 12L12 19M5 12L12 5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
             Back to Portfolio
           </a>
@@ -106,32 +158,39 @@
           <span class="section-label">01</span>
           <h2 class="features-title">Vision & Impact</h2>
           <p class="features-description">
-            In the digital age, maintaining a consistent brand identity across multiple platforms 
-            is a logistical challenge for engineering firms. We developed a Vanilla JS Graphics Engine 
-            that allows users to generate professional-grade social media content instantly. By 
-            automating the design process, we empower technical teams to communicate their impact 
-            with visual precision, ensuring that every post meets strict corporate identity (CI) standards.
+            In the digital age, maintaining a consistent brand identity across
+            multiple platforms is a logistical challenge for engineering firms.
+            We developed a Vanilla JS Graphics Engine that allows users to
+            generate professional-grade social media content instantly. By
+            automating the design process, we empower technical teams to
+            communicate their impact with visual precision, ensuring that every
+            post meets strict corporate identity (CI) standards.
           </p>
         </div>
       </section>
 
-      <section class="case-study-section case-study-section--alt" id="challenge">
+      <section
+        class="case-study-section case-study-section--alt"
+        id="challenge"
+      >
         <div class="container">
           <span class="section-label">02</span>
           <h2 class="features-title">The Engineering Challenge</h2>
           <p class="features-description">
-            "Framework-less Graphical Rendering" — Most content tools rely on heavy server-side 
-            processing or bloated JavaScript frameworks. Our goal was to create a "zero-latency" 
-            experience that runs entirely on the client's browser.
+            "Framework-less Graphical Rendering" — Most content tools rely on
+            heavy server-side processing or bloated JavaScript frameworks. Our
+            goal was to create a "zero-latency" experience that runs entirely on
+            the client's browser.
           </p>
           <div class="approach-highlights">
             <div class="feature-card">
               <h3 class="feature-title">The Solution</h3>
               <p class="feature-text">
-                We engineered a custom CanvasEngine. Unlike standard HTML/CSS layouts, this engine 
-                treats the browser's Canvas API as a professional drawing board, allowing for 
-                pixel-perfect control, complex layering, and high-resolution exports without 
-                external libraries.
+                We engineered a custom CanvasEngine. Unlike standard HTML/CSS
+                layouts, this engine treats the browser's Canvas API as a
+                professional drawing board, allowing for pixel-perfect control,
+                complex layering, and high-resolution exports without external
+                libraries.
               </p>
             </div>
           </div>
@@ -143,7 +202,8 @@
           <span class="section-label">03</span>
           <h2 class="features-title">Technical Stack & Architecture</h2>
           <p class="features-description">
-            We prioritized a "Lightweight Core" philosophy to ensure the app remains accessible on any device.
+            We prioritized a "Lightweight Core" philosophy to ensure the app
+            remains accessible on any device.
           </p>
           <div class="tech-stack-table">
             <table class="stack-table">
@@ -158,22 +218,34 @@
                 <tr>
                   <td>Graphics Core</td>
                   <td>HTML5 Canvas API</td>
-                  <td>Provides low-level access to pixel rendering, essential for generating rasterized PNG exports</td>
+                  <td>
+                    Provides low-level access to pixel rendering, essential for
+                    generating rasterized PNG exports
+                  </td>
                 </tr>
                 <tr>
                   <td>State Management</td>
                   <td>Vanilla JS (ES6+)</td>
-                  <td>Implements a custom profileStore to manage multi-tenant brand assets dynamically</td>
+                  <td>
+                    Implements a custom profileStore to manage multi-tenant
+                    brand assets dynamically
+                  </td>
                 </tr>
                 <tr>
                   <td>Layout Engine</td>
                   <td>JSON-based Logic</td>
-                  <td>Decouples design from code, allowing new templates to be added via simple coordinate mappings</td>
+                  <td>
+                    Decouples design from code, allowing new templates to be
+                    added via simple coordinate mappings
+                  </td>
                 </tr>
                 <tr>
                   <td>Styling</td>
                   <td>CSS3 Variables</td>
-                  <td>Enables real-time "theming" of the UI to match the selected brand profile instantly</td>
+                  <td>
+                    Enables real-time "theming" of the UI to match the selected
+                    brand profile instantly
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -181,7 +253,10 @@
         </div>
       </section>
 
-      <section class="case-study-section case-study-section--alt" id="highlights">
+      <section
+        class="case-study-section case-study-section--alt"
+        id="highlights"
+      >
         <div class="container">
           <span class="section-label">04</span>
           <h2 class="features-title">Key Engineering Highlights</h2>
@@ -189,30 +264,34 @@
             <div class="feature-card">
               <h3 class="feature-title">Relative Coordinate Mapping</h3>
               <p class="feature-text">
-                Instead of fixed pixel values, our engine uses a normalized coordinate system. 
-                This allows a single layout definition to be scaled to any aspect ratio 
-                (Square, Story, Portrait) with mathematical precision.
+                Instead of fixed pixel values, our engine uses a normalized
+                coordinate system. This allows a single layout definition to be
+                scaled to any aspect ratio (Square, Story, Portrait) with
+                mathematical precision.
               </p>
             </div>
             <div class="feature-card">
               <h3 class="feature-title">Heuristic Text-Scaling Algorithm</h3>
               <p class="feature-text">
-                We developed a "Fit-to-Box" algorithm that dynamically calculates the optimal 
-                font size based on character count and container dimensions.
+                We developed a "Fit-to-Box" algorithm that dynamically
+                calculates the optimal font size based on character count and
+                container dimensions.
               </p>
             </div>
             <div class="feature-card">
               <h3 class="feature-title">Platform-Aware "Safe Zones"</h3>
               <p class="feature-text">
-                The renderer includes a visual overlay system that maps the "UI noise" of platforms 
-                like Instagram and LinkedIn, ensuring critical content is never obscured.
+                The renderer includes a visual overlay system that maps the "UI
+                noise" of platforms like Instagram and LinkedIn, ensuring
+                critical content is never obscured.
               </p>
             </div>
             <div class="feature-card">
               <h3 class="feature-title">Multi-Tenant Profile Architecture</h3>
               <p class="feature-text">
-                The profileStore.js module acts as a centralized brain, allowing users to switch 
-                between different "Brand Personas" without reloading the application.
+                The profileStore.js module acts as a centralized brain, allowing
+                users to switch between different "Brand Personas" without
+                reloading the application.
               </p>
             </div>
           </div>
@@ -227,15 +306,17 @@
             <div class="value-card">
               <h3 class="value-name">Ingenuity</h3>
               <p class="value-description">
-                Building a proprietary graphics engine instead of using generic templates shows 
-                our commitment to custom, high-value engineering.
+                Building a proprietary graphics engine instead of using generic
+                templates shows our commitment to custom, high-value
+                engineering.
               </p>
             </div>
             <div class="value-card">
               <h3 class="value-name">Accessibility</h3>
               <p class="value-description">
-                By keeping the core "Vanilla" (no frameworks), the application is ultra-lightweight, 
-                making it usable even in regions with limited internet bandwidth.
+                By keeping the core "Vanilla" (no frameworks), the application
+                is ultra-lightweight, making it usable even in regions with
+                limited internet bandwidth.
               </p>
             </div>
           </div>
@@ -248,9 +329,13 @@
       fetch("/components/contact-cta.html")
         .then((response) => response.text())
         .then((data) => {
-          const placeholder = document.getElementById("contact-cta-placeholder");
+          const placeholder = document.getElementById(
+            "contact-cta-placeholder",
+          );
           placeholder.insertAdjacentHTML("beforeend", data);
-          const newElements = placeholder.querySelectorAll(".reveal-on-scroll, .contact-content, .contact-panel");
+          const newElements = placeholder.querySelectorAll(
+            ".reveal-on-scroll, .contact-content, .contact-panel",
+          );
           newElements.forEach((el) => {
             el.classList.add("reveal-on-scroll");
             if (window.revealOnScroll) window.revealOnScroll.observe(el);

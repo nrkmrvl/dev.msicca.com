@@ -3,28 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Primary SEO Meta Tags -->
-    <meta name="title" content="Automated Engineering Lifecycle & Metadata Orchestrator | Edge Minimal Developers" />
-    <meta name="description" content="Case study: High-precision Master Document Register (MDR) and alphanumeric code generator for engineering document control." />
-    <meta name="keywords" content="document control, MDR, metadata, engineering lifecycle, Google Apps Script, automation" />
+    <meta
+      name="title"
+      content="Automated Engineering Lifecycle & Metadata Orchestrator | Edge Minimal Developers"
+    />
+    <meta
+      name="description"
+      content="Case study: High-precision Master Document Register (MDR) and alphanumeric code generator for engineering document control."
+    />
+    <meta
+      name="keywords"
+      content="document control, MDR, metadata, engineering lifecycle, Google Apps Script, automation"
+    />
     <meta name="author" content="MSICCA - Edge Minimal Developers" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://dev.msicca.com/projects/engineering-metadata-orchestrator.html" />
+    <link
+      rel="canonical"
+      href="https://dev.msicca.com/projects/engineering-metadata-orchestrator.html"
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://dev.msicca.com/projects/engineering-metadata-orchestrator.html" />
-    <meta property="og:title" content="Engineering Metadata Orchestrator | Case Study" />
-    <meta property="og:description" content="High-precision Master Document Register (MDR) and alphanumeric code generator." />
-    <meta property="og:image" content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png" />
+    <meta
+      property="og:url"
+      content="https://dev.msicca.com/projects/engineering-metadata-orchestrator.html"
+    />
+    <meta
+      property="og:title"
+      content="Engineering Metadata Orchestrator | Case Study"
+    />
+    <meta
+      property="og:description"
+      content="High-precision Master Document Register (MDR) and alphanumeric code generator."
+    />
+    <meta
+      property="og:image"
+      content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png"
+    />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Engineering Metadata Orchestrator | Case Study" />
-    <meta name="twitter:description" content="High-precision Master Document Register (MDR) and alphanumeric code generator." />
+    <meta
+      name="twitter:title"
+      content="Engineering Metadata Orchestrator | Case Study"
+    />
+    <meta
+      name="twitter:description"
+      content="High-precision Master Document Register (MDR) and alphanumeric code generator."
+    />
 
-    <title>Automated Engineering Lifecycle & Metadata Orchestrator | dev.msicca.com</title>
+    <title>
+      Automated Engineering Lifecycle & Metadata Orchestrator | dev.msicca.com
+    </title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +66,6 @@
     />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/retro.css" />
-    <link rel="stylesheet" href="/assets/css/msicca-theme.css" />
     <script src="/assets/js/config.js"></script>
     <script src="/assets/js/i18n.js"></script>
   </head>
@@ -44,14 +75,18 @@
       function initHeaderScrollAnimation() {
         const header = document.querySelector(".header");
         if (!header) return;
-        window.addEventListener("scroll", () => {
-          const currentScroll = window.pageYOffset;
-          if (currentScroll > 50) {
-            header.classList.add("header-scrolled");
-          } else {
-            header.classList.remove("header-scrolled");
-          }
-        }, { passive: true });
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+              header.classList.add("header-scrolled");
+            } else {
+              header.classList.remove("header-scrolled");
+            }
+          },
+          { passive: true },
+        );
       }
       fetch("/components/header.html")
         .then((response) => response.text())
@@ -70,9 +105,12 @@
         <div class="portfolio-hero__overlay"></div>
         <div class="container portfolio-hero__content">
           <span class="section-label">Case Study</span>
-          <h1 class="features-title">Automated Engineering Lifecycle & Metadata Orchestrator</h1>
+          <h1 class="features-title">
+            Automated Engineering Lifecycle & Metadata Orchestrator
+          </h1>
           <p class="features-description">
-            A high-precision Master Document Register (MDR) and alphanumeric code generator.
+            A high-precision Master Document Register (MDR) and alphanumeric
+            code generator.
           </p>
           <div class="project-tech case-study-tags">
             <span>Google Apps Script</span>
@@ -88,12 +126,28 @@
         <div class="container">
           <ol class="breadcrumb-list">
             <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="/projects.html">Portfolio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Metadata Orchestrator</li>
+            <li class="breadcrumb-item">
+              <a href="/projects.html">Portfolio</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Metadata Orchestrator
+            </li>
           </ol>
           <a href="/projects.html" class="breadcrumb-back">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-              <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+            >
+              <path
+                d="M19 12H5M5 12L12 19M5 12L12 5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
             Back to Portfolio
           </a>
@@ -106,32 +160,38 @@
           <span class="section-label">01</span>
           <h2 class="features-title">Vision & Impact</h2>
           <p class="features-description">
-            In large-scale engineering, a misplaced document or an incorrect naming convention 
-            can lead to catastrophic site errors or costly delays. We developed a proprietary 
-            Document Control System designed to automate the generation, registration, and 
-            tracking of technical assets. By centralizing the naming logic, we ensure 100% 
-            compliance with complex international engineering standards, reducing administrative 
-            overhead by approximately 40%.
+            In large-scale engineering, a misplaced document or an incorrect
+            naming convention can lead to catastrophic site errors or costly
+            delays. We developed a proprietary Document Control System designed
+            to automate the generation, registration, and tracking of technical
+            assets. By centralizing the naming logic, we ensure 100% compliance
+            with complex international engineering standards, reducing
+            administrative overhead by approximately 40%.
           </p>
         </div>
       </section>
 
-      <section class="case-study-section case-study-section--alt" id="challenge">
+      <section
+        class="case-study-section case-study-section--alt"
+        id="challenge"
+      >
         <div class="container">
           <span class="section-label">02</span>
           <h2 class="features-title">The Engineering Challenge</h2>
           <p class="features-description">
-            "The Multi-Variant Naming Paradox" — The challenge was to translate a highly complex, 
-            multi-component alphanumeric syntax into a user-friendly interface that prevents 
-            human error. The system must handle mandatory identifiers and optional functional 
-            modifiers while maintaining a clean string structure.
+            "The Multi-Variant Naming Paradox" — The challenge was to translate
+            a highly complex, multi-component alphanumeric syntax into a
+            user-friendly interface that prevents human error. The system must
+            handle mandatory identifiers and optional functional modifiers while
+            maintaining a clean string structure.
           </p>
           <div class="approach-highlights">
             <div class="feature-card">
               <h3 class="feature-title">The Solution</h3>
               <p class="feature-text">
-                A logic-driven Semi-Automatic Generator that uses dynamic concatenation and 
-                contextual filtering to build unique document identifiers in real-time.
+                A logic-driven Semi-Automatic Generator that uses dynamic
+                concatenation and contextual filtering to build unique document
+                identifiers in real-time.
               </p>
             </div>
           </div>
@@ -143,7 +203,8 @@
           <span class="section-label">03</span>
           <h2 class="features-title">Technical Stack & Architecture</h2>
           <p class="features-description">
-            This tool was engineered as a high-efficiency cloud-integrated solution, prioritizing rapid deployment and data accessibility.
+            This tool was engineered as a high-efficiency cloud-integrated
+            solution, prioritizing rapid deployment and data accessibility.
           </p>
           <div class="tech-stack-table">
             <table class="stack-table">
@@ -158,22 +219,34 @@
                 <tr>
                   <td>Logic Engine</td>
                   <td>Google Apps Script / JS</td>
-                  <td>Provides server-side automation and seamless integration with cloud-based collaborative environments</td>
+                  <td>
+                    Provides server-side automation and seamless integration
+                    with cloud-based collaborative environments
+                  </td>
                 </tr>
                 <tr>
                   <td>Data Layer</td>
                   <td>Relational Master Lists</td>
-                  <td>Uses structured arrays to restrict inputs to valid engineering disciplines</td>
+                  <td>
+                    Uses structured arrays to restrict inputs to valid
+                    engineering disciplines
+                  </td>
                 </tr>
                 <tr>
                   <td>Sequential Algorithm</td>
                   <td>MAXIFS / FILTER Logic</td>
-                  <td>A custom-built algorithm that calculates the next available serial number based on multi-criteria parameters</td>
+                  <td>
+                    A custom-built algorithm that calculates the next available
+                    serial number based on multi-criteria parameters
+                  </td>
                 </tr>
                 <tr>
                   <td>String Processor</td>
                   <td>Regex-based Concatenation</td>
-                  <td>Handles complex delimiters to ensure the final string remains valid even when optional fields are omitted</td>
+                  <td>
+                    Handles complex delimiters to ensure the final string
+                    remains valid even when optional fields are omitted
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -181,7 +254,10 @@
         </div>
       </section>
 
-      <section class="case-study-section case-study-section--alt" id="highlights">
+      <section
+        class="case-study-section case-study-section--alt"
+        id="highlights"
+      >
         <div class="container">
           <span class="section-label">04</span>
           <h2 class="features-title">Key Engineering Highlights</h2>
@@ -189,30 +265,34 @@
             <div class="feature-card">
               <h3 class="feature-title">Contextual Functional Logic</h3>
               <p class="feature-text">
-                The system intelligently differentiates between Functional Codes (direct project 
-                objectives) and Service Codes (support activities), ensuring generated metadata 
-                reflects actual engineering intent.
+                The system intelligently differentiates between Functional Codes
+                (direct project objectives) and Service Codes (support
+                activities), ensuring generated metadata reflects actual
+                engineering intent.
               </p>
             </div>
             <div class="feature-card">
               <h3 class="feature-title">Alphanumeric Syntax Architecture</h3>
               <p class="feature-text">
-                The engine handles a sophisticated hierarchical string structure. The system 
-                automatically sanitizes and formats complexity into an audit-ready document code.
+                The engine handles a sophisticated hierarchical string
+                structure. The system automatically sanitizes and formats
+                complexity into an audit-ready document code.
               </p>
             </div>
             <div class="feature-card">
               <h3 class="feature-title">Automated Revision Control</h3>
               <p class="feature-text">
-                Implements a strict "Audit Trail" logic, defaulting new assets to Revision 'A' 
-                while protecting the integrity of subsequent manual overrides.
+                Implements a strict "Audit Trail" logic, defaulting new assets
+                to Revision 'A' while protecting the integrity of subsequent
+                manual overrides.
               </p>
             </div>
             <div class="feature-card">
               <h3 class="feature-title">MDR Relational Database</h3>
               <p class="feature-text">
-                Beyond generation, the tool serves as a Master Document Register, tracking document 
-                status, responsible engineers, and direct paths to digital twins in cloud storage.
+                Beyond generation, the tool serves as a Master Document
+                Register, tracking document status, responsible engineers, and
+                direct paths to digital twins in cloud storage.
               </p>
             </div>
           </div>
@@ -227,16 +307,18 @@
             <div class="value-card">
               <h3 class="value-name">Ingenuity</h3>
               <p class="value-description">
-                We turned a manual, error-prone task into a fail-safe automated process, allowing 
-                engineers to focus on design rather than administrative syntax.
+                We turned a manual, error-prone task into a fail-safe automated
+                process, allowing engineers to focus on design rather than
+                administrative syntax.
               </p>
             </div>
             <div class="value-card">
               <h3 class="value-name">Impact</h3>
               <p class="value-description">
-                Standardized documentation is the foundation of future infrastructure. This tool 
-                ensures that every blueprint and calculation produced is searchable, trackable, 
-                and compliant with global standards.
+                Standardized documentation is the foundation of future
+                infrastructure. This tool ensures that every blueprint and
+                calculation produced is searchable, trackable, and compliant
+                with global standards.
               </p>
             </div>
           </div>
@@ -249,9 +331,13 @@
       fetch("/components/contact-cta.html")
         .then((response) => response.text())
         .then((data) => {
-          const placeholder = document.getElementById("contact-cta-placeholder");
+          const placeholder = document.getElementById(
+            "contact-cta-placeholder",
+          );
           placeholder.insertAdjacentHTML("beforeend", data);
-          const newElements = placeholder.querySelectorAll(".reveal-on-scroll, .contact-content, .contact-panel");
+          const newElements = placeholder.querySelectorAll(
+            ".reveal-on-scroll, .contact-content, .contact-panel",
+          );
           newElements.forEach((el) => {
             el.classList.add("reveal-on-scroll");
             if (window.revealOnScroll) window.revealOnScroll.observe(el);

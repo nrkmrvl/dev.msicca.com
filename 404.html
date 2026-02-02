@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 - Page Not Found | dev.msicca.com</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,20 +15,19 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    
+
     <!-- Site Stylesheets -->
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/retro.css" />
-    <link rel="stylesheet" href="/assets/css/msicca-theme.css" />
-    
+
     <!-- i18n Support -->
     <script src="/assets/js/config.js"></script>
     <script src="/assets/js/i18n.js"></script>
-    
+
     <!-- 404 Page Specific Styles -->
     <link rel="stylesheet" href="/assets/css/404.css" />
-</head>
-<body class="error-page">
+  </head>
+  <body class="error-page">
     <!-- Navigation (loaded via JS) -->
     <div id="header-placeholder"></div>
     <script>
@@ -59,44 +58,57 @@
     </script>
 
     <main class="error-main">
-        <div class="container error-container">
-            <header class="error-header">
-                <h1 class="error-status">
-                    <span data-i18n="error404.status">STATUS:</span> 
-                    <span class="error-failed" data-i18n="error404.failed">FAILED</span>
-                </h1>
-            </header>
+      <div class="container error-container">
+        <header class="error-header">
+          <h1 class="error-status">
+            <span data-i18n="error404.status">STATUS:</span>
+            <span class="error-failed" data-i18n="error404.failed">FAILED</span>
+          </h1>
+        </header>
 
-            <div class="terminal-window">
-                <!-- Terminal Header Bar -->
-                <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="terminal-btn terminal-btn--red"></span>
-                        <span class="terminal-btn terminal-btn--yellow"></span>
-                        <span class="terminal-btn terminal-btn--green"></span>
-                    </div>
-                    <span class="terminal-title" data-i18n="error404.version">dev.msicca-v2.5-debugger</span>
-                </div>
-
-                <!-- Terminal Body -->
-                <div class="terminal-body" id="terminal-body">
-                    <div id="lines-container" class="terminal-lines">
-                        <!-- Lines will be inserted here by JS -->
-                    </div>
-                    <div class="terminal-prompt-line">
-                        <span id="current-prompt" class="command-prompt"></span><span id="typing-area"></span><span class="terminal-cursor"></span>
-                    </div>
-                </div>
+        <div class="terminal-window">
+          <!-- Terminal Header Bar -->
+          <div class="terminal-header">
+            <div class="terminal-buttons">
+              <span class="terminal-btn terminal-btn--red"></span>
+              <span class="terminal-btn terminal-btn--yellow"></span>
+              <span class="terminal-btn terminal-btn--green"></span>
             </div>
+            <span class="terminal-title" data-i18n="error404.version"
+              >dev.msicca-v2.5-debugger</span
+            >
+          </div>
 
-            <footer class="error-footer">
-                <div class="error-footer__copyright" data-i18n="error404.copyright">© 2026 MSICCA DEVELOPER TEAM</div>
-                <div class="error-footer__links">
-                    <a href="/" class="error-footer__link" data-i18n="error404.return_root">Return to Root</a>
-                    <span class="error-footer__node" data-i18n="error404.node">Node: dev.msicca.com</span>
-                </div>
-            </footer>
+          <!-- Terminal Body -->
+          <div class="terminal-body" id="terminal-body">
+            <div id="lines-container" class="terminal-lines">
+              <!-- Lines will be inserted here by JS -->
+            </div>
+            <div class="terminal-prompt-line">
+              <span id="current-prompt" class="command-prompt"></span
+              ><span id="typing-area"></span
+              ><span class="terminal-cursor"></span>
+            </div>
+          </div>
         </div>
+
+        <footer class="error-footer">
+          <div class="error-footer__copyright" data-i18n="error404.copyright">
+            © 2026 MSICCA DEVELOPER TEAM
+          </div>
+          <div class="error-footer__links">
+            <a
+              href="/"
+              class="error-footer__link"
+              data-i18n="error404.return_root"
+              >Return to Root</a
+            >
+            <span class="error-footer__node" data-i18n="error404.node"
+              >Node: dev.msicca.com</span
+            >
+          </div>
+        </footer>
+      </div>
     </main>
 
     <!-- Footer (loaded via JS) -->
@@ -108,90 +120,134 @@
           document.getElementById("footer-placeholder").innerHTML = data;
         });
     </script>
-    
+
     <script src="/assets/js/script.js"></script>
     <script>
-        // Terminal Animation Script
-        (function() {
-            const container = document.getElementById('lines-container');
-            const typingArea = document.getElementById('typing-area');
-            
-            // Get translations if available, otherwise use defaults
-            const t = (key, fallback) => {
-                if (window.i18n && window.i18n.t) {
-                    const value = window.i18n.t(key);
-                    return value !== key ? value : fallback;
-                }
-                return fallback;
-            };
-            
-            // Wait for i18n to be ready
-            const initScript = () => {
-                const script = [
-                    { type: 'command', text: t('error404.command1', 'check-integrity --verbose --path="current_url"') },
-                    { type: 'output', text: t('error404.output1', '[!] CRITICAL: ERROR_404. Resource not found. Logical link broken.'), cssClass: 'output-error' },
-                    { type: 'pause', ms: 800 },
-                    { type: 'command', text: t('error404.command2', 'find-alternatives --status=active') },
-                    { type: 'output', text: t('error404.output2', 'Scanning data cluster by valid paths...'), cssClass: 'output-muted' },
-                    { type: 'pause', ms: 500 },
-                    { type: 'output', text: t('error404.link_home', '➜ [OK] /home (Main entry point)'), cssClass: 'output-link', link: '/' },
-                    { type: 'output', text: t('error404.link_projects', '➜ [OK] /projects (Project Repository)'), cssClass: 'output-link', link: '/projects.html' },
-                    { type: 'output', text: t('error404.link_contact', '➜ [OK] /contact (Direct communication link)'), cssClass: 'output-link', link: '/index.html#contact' },
-                    { type: 'command', text: '' }
-                ];
+      // Terminal Animation Script
+      (function () {
+        const container = document.getElementById("lines-container");
+        const typingArea = document.getElementById("typing-area");
 
-                async function typeText(text) {
-                    for (let char of text) {
-                        typingArea.textContent += char;
-                        await new Promise(r => setTimeout(r, 40 + Math.random() * 40));
-                    }
-                }
+        // Get translations if available, otherwise use defaults
+        const t = (key, fallback) => {
+          if (window.i18n && window.i18n.t) {
+            const value = window.i18n.t(key);
+            return value !== key ? value : fallback;
+          }
+          return fallback;
+        };
 
-                async function runDiagnostic() {
-                    for (const step of script) {
-                        if (step.type === 'command') {
-                            await typeText(step.text);
-                            await new Promise(r => setTimeout(r, 600));
-                            
-                            const line = document.createElement('div');
-                            line.className = 'command-prompt';
-                            line.textContent = step.text;
-                            container.appendChild(line);
-                            typingArea.textContent = '';
-                        } 
-                        else if (step.type === 'output') {
-                            const line = document.createElement('div');
-                            line.className = `output-line ${step.cssClass || ''}`;
-                            
-                            if (step.link) {
-                                const a = document.createElement('a');
-                                a.href = step.link;
-                                a.textContent = step.text;
-                                a.className = 'terminal-link';
-                                line.appendChild(a);
-                            } else {
-                                line.textContent = step.text;
-                            }
-                            
-                            container.appendChild(line);
-                            await new Promise(r => setTimeout(r, 200));
-                        }
-                        else if (step.type === 'pause') {
-                            await new Promise(r => setTimeout(r, step.ms));
-                        }
-                    }
-                }
+        // Wait for i18n to be ready
+        const initScript = () => {
+          const script = [
+            {
+              type: "command",
+              text: t(
+                "error404.command1",
+                'check-integrity --verbose --path="current_url"',
+              ),
+            },
+            {
+              type: "output",
+              text: t(
+                "error404.output1",
+                "[!] CRITICAL: ERROR_404. Resource not found. Logical link broken.",
+              ),
+              cssClass: "output-error",
+            },
+            { type: "pause", ms: 800 },
+            {
+              type: "command",
+              text: t("error404.command2", "find-alternatives --status=active"),
+            },
+            {
+              type: "output",
+              text: t(
+                "error404.output2",
+                "Scanning data cluster by valid paths...",
+              ),
+              cssClass: "output-muted",
+            },
+            { type: "pause", ms: 500 },
+            {
+              type: "output",
+              text: t("error404.link_home", "➜ [OK] /home (Main entry point)"),
+              cssClass: "output-link",
+              link: "/",
+            },
+            {
+              type: "output",
+              text: t(
+                "error404.link_projects",
+                "➜ [OK] /projects (Project Repository)",
+              ),
+              cssClass: "output-link",
+              link: "/projects.html",
+            },
+            {
+              type: "output",
+              text: t(
+                "error404.link_contact",
+                "➜ [OK] /contact (Direct communication link)",
+              ),
+              cssClass: "output-link",
+              link: "/index.html#contact",
+            },
+            { type: "command", text: "" },
+          ];
 
-                setTimeout(runDiagnostic, 500);
-            };
-
-            // Start when DOM is ready
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', () => setTimeout(initScript, 100));
-            } else {
-                setTimeout(initScript, 100);
+          async function typeText(text) {
+            for (let char of text) {
+              typingArea.textContent += char;
+              await new Promise((r) => setTimeout(r, 40 + Math.random() * 40));
             }
-        })();
+          }
+
+          async function runDiagnostic() {
+            for (const step of script) {
+              if (step.type === "command") {
+                await typeText(step.text);
+                await new Promise((r) => setTimeout(r, 600));
+
+                const line = document.createElement("div");
+                line.className = "command-prompt";
+                line.textContent = step.text;
+                container.appendChild(line);
+                typingArea.textContent = "";
+              } else if (step.type === "output") {
+                const line = document.createElement("div");
+                line.className = `output-line ${step.cssClass || ""}`;
+
+                if (step.link) {
+                  const a = document.createElement("a");
+                  a.href = step.link;
+                  a.textContent = step.text;
+                  a.className = "terminal-link";
+                  line.appendChild(a);
+                } else {
+                  line.textContent = step.text;
+                }
+
+                container.appendChild(line);
+                await new Promise((r) => setTimeout(r, 200));
+              } else if (step.type === "pause") {
+                await new Promise((r) => setTimeout(r, step.ms));
+              }
+            }
+          }
+
+          setTimeout(runDiagnostic, 500);
+        };
+
+        // Start when DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", () =>
+            setTimeout(initScript, 100),
+          );
+        } else {
+          setTimeout(initScript, 100);
+        }
+      })();
     </script>
-</body>
+  </body>
 </html>

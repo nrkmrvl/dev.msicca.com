@@ -3,26 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Primary SEO Meta Tags -->
-    <meta name="title" content="Industrial Power Systems Engineering Suite | Edge Minimal Developers" />
-    <meta name="description" content="Case study: High-precision computational toolkit for electrical infrastructure design with PHP 8.x and PostgreSQL." />
-    <meta name="keywords" content="power systems, electrical engineering, computational toolkit, PHP, PostgreSQL, industrial design" />
+    <meta
+      name="title"
+      content="Industrial Power Systems Engineering Suite | Edge Minimal Developers"
+    />
+    <meta
+      name="description"
+      content="Case study: High-precision computational toolkit for electrical infrastructure design with PHP 8.x and PostgreSQL."
+    />
+    <meta
+      name="keywords"
+      content="power systems, electrical engineering, computational toolkit, PHP, PostgreSQL, industrial design"
+    />
     <meta name="author" content="MSICCA - Edge Minimal Developers" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://dev.msicca.com/projects/power-systems-suite.html" />
+    <link
+      rel="canonical"
+      href="https://dev.msicca.com/projects/power-systems-suite.html"
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://dev.msicca.com/projects/power-systems-suite.html" />
-    <meta property="og:title" content="Power Systems Engineering Suite | Case Study" />
-    <meta property="og:description" content="High-precision computational toolkit for electrical infrastructure design." />
-    <meta property="og:image" content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png" />
+    <meta
+      property="og:url"
+      content="https://dev.msicca.com/projects/power-systems-suite.html"
+    />
+    <meta
+      property="og:title"
+      content="Power Systems Engineering Suite | Case Study"
+    />
+    <meta
+      property="og:description"
+      content="High-precision computational toolkit for electrical infrastructure design."
+    />
+    <meta
+      property="og:image"
+      content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png"
+    />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Power Systems Engineering Suite | Case Study" />
-    <meta name="twitter:description" content="High-precision computational toolkit for electrical infrastructure design." />
+    <meta
+      name="twitter:title"
+      content="Power Systems Engineering Suite | Case Study"
+    />
+    <meta
+      name="twitter:description"
+      content="High-precision computational toolkit for electrical infrastructure design."
+    />
 
     <title>Industrial Power Systems Engineering Suite | dev.msicca.com</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -34,7 +64,6 @@
     />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/retro.css" />
-    <link rel="stylesheet" href="/assets/css/msicca-theme.css" />
     <script src="/assets/js/config.js"></script>
     <script src="/assets/js/i18n.js"></script>
   </head>
@@ -44,14 +73,18 @@
       function initHeaderScrollAnimation() {
         const header = document.querySelector(".header");
         if (!header) return;
-        window.addEventListener("scroll", () => {
-          const currentScroll = window.pageYOffset;
-          if (currentScroll > 50) {
-            header.classList.add("header-scrolled");
-          } else {
-            header.classList.remove("header-scrolled");
-          }
-        }, { passive: true });
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+              header.classList.add("header-scrolled");
+            } else {
+              header.classList.remove("header-scrolled");
+            }
+          },
+          { passive: true },
+        );
       }
       fetch("/components/header.html")
         .then((response) => response.text())
@@ -70,9 +103,12 @@
         <div class="portfolio-hero__overlay"></div>
         <div class="container portfolio-hero__content">
           <span class="section-label">Case Study</span>
-          <h1 class="features-title">Industrial Power Systems Engineering Suite</h1>
+          <h1 class="features-title">
+            Industrial Power Systems Engineering Suite
+          </h1>
           <p class="features-description">
-            High-precision computational toolkit for electrical infrastructure design.
+            High-precision computational toolkit for electrical infrastructure
+            design.
           </p>
           <div class="project-tech case-study-tags">
             <span>PHP 8.x</span>
@@ -88,12 +124,28 @@
         <div class="container">
           <ol class="breadcrumb-list">
             <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="/projects.html">Portfolio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Power Systems Suite</li>
+            <li class="breadcrumb-item">
+              <a href="/projects.html">Portfolio</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Power Systems Suite
+            </li>
           </ol>
           <a href="/projects.html" class="breadcrumb-back">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-              <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+            >
+              <path
+                d="M19 12H5M5 12L12 19M5 12L12 5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
             Back to Portfolio
           </a>
@@ -106,31 +158,37 @@
           <span class="section-label">01</span>
           <h2 class="features-title">Vision & Impact</h2>
           <p class="features-description">
-            Engineering design requires absolute precision. We developed a lightweight, 
-            Zero-Framework Web Application tailored for electrical engineers and contractors. 
-            By digitizing complex regulatory calculations (conductor sizing, power loads, and 
-            enclosure selection), we empower professionals to deliver safer, more efficient 
-            infrastructure projects.
+            Engineering design requires absolute precision. We developed a
+            lightweight, Zero-Framework Web Application tailored for electrical
+            engineers and contractors. By digitizing complex regulatory
+            calculations (conductor sizing, power loads, and enclosure
+            selection), we empower professionals to deliver safer, more
+            efficient infrastructure projects.
           </p>
         </div>
       </section>
 
-      <section class="case-study-section case-study-section--alt" id="challenge">
+      <section
+        class="case-study-section case-study-section--alt"
+        id="challenge"
+      >
         <div class="container">
           <span class="section-label">02</span>
           <h2 class="features-title">The Engineering Challenge</h2>
           <p class="features-description">
-            "Performance without Overhead" — The objective was to create a tool that is instantly 
-            accessible, even on low-spec hardware or legacy browsers often found in industrial 
-            field environments.
+            "Performance without Overhead" — The objective was to create a tool
+            that is instantly accessible, even on low-spec hardware or legacy
+            browsers often found in industrial field environments.
           </p>
           <div class="approach-highlights">
             <div class="feature-card">
               <h3 class="feature-title">The Solution</h3>
               <p class="feature-text">
-                We bypassed heavy modern frameworks in favor of a Vanilla Architecture. By using 
-                plain PHP and JavaScript, we eliminated build steps and external dependencies, 
-                resulting in a tool that loads in milliseconds and is extremely easy to maintain or audit.
+                We bypassed heavy modern frameworks in favor of a Vanilla
+                Architecture. By using plain PHP and JavaScript, we eliminated
+                build steps and external dependencies, resulting in a tool that
+                loads in milliseconds and is extremely easy to maintain or
+                audit.
               </p>
             </div>
           </div>
@@ -142,7 +200,8 @@
           <span class="section-label">03</span>
           <h2 class="features-title">Technical Stack & Architecture</h2>
           <p class="features-description">
-            A "Back-to-Basics" approach engineered for maximum reliability and portability.
+            A "Back-to-Basics" approach engineered for maximum reliability and
+            portability.
           </p>
           <div class="tech-stack-table">
             <table class="stack-table">
@@ -157,22 +216,34 @@
                 <tr>
                   <td>Backend Core</td>
                   <td>Plain PHP 8.x</td>
-                  <td>Dynamic template injection via query-based routing, providing a modular structure without framework weight</td>
+                  <td>
+                    Dynamic template injection via query-based routing,
+                    providing a modular structure without framework weight
+                  </td>
                 </tr>
                 <tr>
                   <td>Logic Layer</td>
                   <td>Vanilla JavaScript (IIFE)</td>
-                  <td>Scoped execution patterns to manage complex engineering formulas without polluting the global namespace</td>
+                  <td>
+                    Scoped execution patterns to manage complex engineering
+                    formulas without polluting the global namespace
+                  </td>
                 </tr>
                 <tr>
                   <td>Database</td>
                   <td>PostgreSQL (PDO Singleton)</td>
-                  <td>Prepared for future data persistence using a high-performance relational database</td>
+                  <td>
+                    Prepared for future data persistence using a
+                    high-performance relational database
+                  </td>
                 </tr>
                 <tr>
                   <td>Styling</td>
                   <td>Pure CSS (Variables & Grid)</td>
-                  <td>Utilizes CSS Custom Properties for instant theming and CSS Grid for a robust, responsive industrial UI</td>
+                  <td>
+                    Utilizes CSS Custom Properties for instant theming and CSS
+                    Grid for a robust, responsive industrial UI
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -180,7 +251,10 @@
         </div>
       </section>
 
-      <section class="case-study-section case-study-section--alt" id="highlights">
+      <section
+        class="case-study-section case-study-section--alt"
+        id="highlights"
+      >
         <div class="container">
           <span class="section-label">04</span>
           <h2 class="features-title">Key Engineering Highlights</h2>
@@ -188,31 +262,35 @@
             <div class="feature-card">
               <h3 class="feature-title">Modular Engineering Kernels</h3>
               <p class="feature-text">
-                Each tool (e.g., Voltage Drop, Short Circuit, Thermal Management) is encapsulated 
-                as an independent module. This allows for the "hot-swapping" or addition of new 
-                engineering standards without affecting the core engine.
+                Each tool (e.g., Voltage Drop, Short Circuit, Thermal
+                Management) is encapsulated as an independent module. This
+                allows for the "hot-swapping" or addition of new engineering
+                standards without affecting the core engine.
               </p>
             </div>
             <div class="feature-card">
               <h3 class="feature-title">Singleton Data Persistence</h3>
               <p class="feature-text">
-                Even in a lightweight setup, we implemented a PDO Singleton pattern for database 
-                access, ensuring efficient resource management and a clear path for future expansion.
+                Even in a lightweight setup, we implemented a PDO Singleton
+                pattern for database access, ensuring efficient resource
+                management and a clear path for future expansion.
               </p>
             </div>
             <div class="feature-card">
               <h3 class="feature-title">Scoped Frontend Logic</h3>
               <p class="feature-text">
-                To handle multiple simultaneous calculations, we utilized Immediately Invoked 
-                Function Expressions (IIFEs), ensuring variables for different calculation 
-                modules never interfere with each other.
+                To handle multiple simultaneous calculations, we utilized
+                Immediately Invoked Function Expressions (IIFEs), ensuring
+                variables for different calculation modules never interfere with
+                each other.
               </p>
             </div>
             <div class="feature-card">
               <h3 class="feature-title">Zero-Dependency Deployment</h3>
               <p class="feature-text">
-                The entire suite is served directly. This "Portability-First" approach means 
-                the tool can be deployed on a local intranet or a remote server with zero configuration.
+                The entire suite is served directly. This "Portability-First"
+                approach means the tool can be deployed on a local intranet or a
+                remote server with zero configuration.
               </p>
             </div>
           </div>
@@ -227,15 +305,16 @@
             <div class="value-card">
               <h3 class="value-name">Ingenuity</h3>
               <p class="value-description">
-                We proved that high-level engineering tools don't need "bloated" technology 
-                to be effective; they need smart, clean logic.
+                We proved that high-level engineering tools don't need "bloated"
+                technology to be effective; they need smart, clean logic.
               </p>
             </div>
             <div class="value-card">
               <h3 class="value-name">Impact</h3>
               <p class="value-description">
-                This tool reduces human error in critical electrical calculations, directly 
-                improving the safety and reliability of infrastructure.
+                This tool reduces human error in critical electrical
+                calculations, directly improving the safety and reliability of
+                infrastructure.
               </p>
             </div>
           </div>
@@ -248,9 +327,13 @@
       fetch("/components/contact-cta.html")
         .then((response) => response.text())
         .then((data) => {
-          const placeholder = document.getElementById("contact-cta-placeholder");
+          const placeholder = document.getElementById(
+            "contact-cta-placeholder",
+          );
           placeholder.insertAdjacentHTML("beforeend", data);
-          const newElements = placeholder.querySelectorAll(".reveal-on-scroll, .contact-content, .contact-panel");
+          const newElements = placeholder.querySelectorAll(
+            ".reveal-on-scroll, .contact-content, .contact-panel",
+          );
           newElements.forEach((el) => {
             el.classList.add("reveal-on-scroll");
             if (window.revealOnScroll) window.revealOnScroll.observe(el);

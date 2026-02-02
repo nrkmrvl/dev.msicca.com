@@ -3,28 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Primary SEO Meta Tags -->
-    <meta name="title" content="Cloud-Managed Enterprise Resource Planning (ERP) | Edge Minimal Developers" />
-    <meta name="description" content="Case study: Deployment and orchestration of Dolibarr ERP for operational efficiency with Cloud VPS and MariaDB." />
-    <meta name="keywords" content="ERP, Dolibarr, cloud deployment, CRM, enterprise resource planning, MariaDB, business management" />
+    <meta
+      name="title"
+      content="Cloud-Managed Enterprise Resource Planning (ERP) | Edge Minimal Developers"
+    />
+    <meta
+      name="description"
+      content="Case study: Deployment and orchestration of Dolibarr ERP for operational efficiency with Cloud VPS and MariaDB."
+    />
+    <meta
+      name="keywords"
+      content="ERP, Dolibarr, cloud deployment, CRM, enterprise resource planning, MariaDB, business management"
+    />
     <meta name="author" content="MSICCA - Edge Minimal Developers" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://dev.msicca.com/projects/cloud-managed-erp.html" />
+    <link
+      rel="canonical"
+      href="https://dev.msicca.com/projects/cloud-managed-erp.html"
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://dev.msicca.com/projects/cloud-managed-erp.html" />
+    <meta
+      property="og:url"
+      content="https://dev.msicca.com/projects/cloud-managed-erp.html"
+    />
     <meta property="og:title" content="Cloud-Managed ERP | Case Study" />
-    <meta property="og:description" content="Deployment and orchestration of Dolibarr ERP for operational efficiency." />
-    <meta property="og:image" content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png" />
+    <meta
+      property="og:description"
+      content="Deployment and orchestration of Dolibarr ERP for operational efficiency."
+    />
+    <meta
+      property="og:image"
+      content="https://dev.msicca.com/assets/images/png/nrkmrvl.coder_logo.png"
+    />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Cloud-Managed ERP | Case Study" />
-    <meta name="twitter:description" content="Deployment and orchestration of Dolibarr ERP for operational efficiency." />
+    <meta
+      name="twitter:description"
+      content="Deployment and orchestration of Dolibarr ERP for operational efficiency."
+    />
 
-    <title>Cloud-Managed Enterprise Resource Planning (ERP) | dev.msicca.com</title>
+    <title>
+      Cloud-Managed Enterprise Resource Planning (ERP) | dev.msicca.com
+    </title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +60,6 @@
     />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/retro.css" />
-    <link rel="stylesheet" href="/assets/css/msicca-theme.css" />
     <script src="/assets/js/config.js"></script>
     <script src="/assets/js/i18n.js"></script>
   </head>
@@ -44,14 +69,18 @@
       function initHeaderScrollAnimation() {
         const header = document.querySelector(".header");
         if (!header) return;
-        window.addEventListener("scroll", () => {
-          const currentScroll = window.pageYOffset;
-          if (currentScroll > 50) {
-            header.classList.add("header-scrolled");
-          } else {
-            header.classList.remove("header-scrolled");
-          }
-        }, { passive: true });
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+              header.classList.add("header-scrolled");
+            } else {
+              header.classList.remove("header-scrolled");
+            }
+          },
+          { passive: true },
+        );
       }
       fetch("/components/header.html")
         .then((response) => response.text())
@@ -70,9 +99,12 @@
         <div class="portfolio-hero__overlay"></div>
         <div class="container portfolio-hero__content">
           <span class="section-label">Case Study</span>
-          <h1 class="features-title">Cloud-Managed Enterprise Resource Planning (ERP)</h1>
+          <h1 class="features-title">
+            Cloud-Managed Enterprise Resource Planning (ERP)
+          </h1>
           <p class="features-description">
-            Deployment and orchestration of Dolibarr ERP for operational efficiency.
+            Deployment and orchestration of Dolibarr ERP for operational
+            efficiency.
           </p>
           <div class="project-tech case-study-tags">
             <span>Dolibarr</span>
@@ -88,12 +120,28 @@
         <div class="container">
           <ol class="breadcrumb-list">
             <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="/projects.html">Portfolio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Cloud-Managed ERP</li>
+            <li class="breadcrumb-item">
+              <a href="/projects.html">Portfolio</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Cloud-Managed ERP
+            </li>
           </ol>
           <a href="/projects.html" class="breadcrumb-back">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-              <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+            >
+              <path
+                d="M19 12H5M5 12L12 19M5 12L12 5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
             Back to Portfolio
           </a>
@@ -106,31 +154,36 @@
           <span class="section-label">01</span>
           <h2 class="features-title">Vision & Impact</h2>
           <p class="features-description">
-            Efficiency is the cornerstone of sustainable engineering. We specialize in the cloud 
-            deployment and configuration of Dolibarr ERP & CRM, an open-source powerhouse for 
-            Small and Medium Enterprises (SMEs). Our goal is to provide a unified platform that 
-            manages the entire business lifecycle—from quotes and orders to stock management and 
-            invoicing—eliminating data silos and fostering Collaboration.
+            Efficiency is the cornerstone of sustainable engineering. We
+            specialize in the cloud deployment and configuration of Dolibarr ERP
+            & CRM, an open-source powerhouse for Small and Medium Enterprises
+            (SMEs). Our goal is to provide a unified platform that manages the
+            entire business lifecycle—from quotes and orders to stock management
+            and invoicing—eliminating data silos and fostering Collaboration.
           </p>
         </div>
       </section>
 
-      <section class="case-study-section case-study-section--alt" id="challenge">
+      <section
+        class="case-study-section case-study-section--alt"
+        id="challenge"
+      >
         <div class="container">
           <span class="section-label">02</span>
           <h2 class="features-title">The Engineering Challenge</h2>
           <p class="features-description">
-            "Cloud Reliability & Data Integrity" — An ERP is mission-critical; any downtime 
-            results in lost revenue.
+            "Cloud Reliability & Data Integrity" — An ERP is mission-critical;
+            any downtime results in lost revenue.
           </p>
           <div class="approach-highlights">
             <div class="feature-card">
               <h3 class="feature-title">The Solution</h3>
               <p class="feature-text">
-                We deploy Dolibarr on High-Availability Cloud Servers, utilizing automated backup 
-                cycles and SSL/TLS encryption. We tailor the modular architecture of Dolibarr to 
-                match the specific workflow of the client, ensuring the software adapts to the 
-                business, not the other way around.
+                We deploy Dolibarr on High-Availability Cloud Servers, utilizing
+                automated backup cycles and SSL/TLS encryption. We tailor the
+                modular architecture of Dolibarr to match the specific workflow
+                of the client, ensuring the software adapts to the business, not
+                the other way around.
               </p>
             </div>
           </div>
@@ -154,22 +207,31 @@
                 <tr>
                   <td>Environment</td>
                   <td>Cloud VPS / Linux</td>
-                  <td>Provides full control over server resources and security parameters</td>
+                  <td>
+                    Provides full control over server resources and security
+                    parameters
+                  </td>
                 </tr>
                 <tr>
                   <td>Database</td>
                   <td>MariaDB / MySQL</td>
-                  <td>Optimized for high-concurrency transactional data handling</td>
+                  <td>
+                    Optimized for high-concurrency transactional data handling
+                  </td>
                 </tr>
                 <tr>
                   <td>Web Server</td>
                   <td>Apache / Nginx</td>
-                  <td>Configured with modern PHP-FPM for rapid request processing</td>
+                  <td>
+                    Configured with modern PHP-FPM for rapid request processing
+                  </td>
                 </tr>
                 <tr>
                   <td>Security</td>
                   <td>Let's Encrypt / Fail2Ban</td>
-                  <td>Automated SSL certificates and intrusion prevention systems</td>
+                  <td>
+                    Automated SSL certificates and intrusion prevention systems
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -177,7 +239,10 @@
         </div>
       </section>
 
-      <section class="case-study-section case-study-section--alt" id="highlights">
+      <section
+        class="case-study-section case-study-section--alt"
+        id="highlights"
+      >
         <div class="container">
           <span class="section-label">04</span>
           <h2 class="features-title">Key Engineering Highlights</h2>
@@ -185,29 +250,32 @@
             <div class="feature-card">
               <h3 class="feature-title">Modular Configuration</h3>
               <p class="feature-text">
-                Precision setup of Dolibarr modules (Products, Stocks, Proposals, Invoices, Bank, 
-                Projects) to ensure a clean, uncluttered interface for users.
+                Precision setup of Dolibarr modules (Products, Stocks,
+                Proposals, Invoices, Bank, Projects) to ensure a clean,
+                uncluttered interface for users.
               </p>
             </div>
             <div class="feature-card">
               <h3 class="feature-title">Data Migration & Integration</h3>
               <p class="feature-text">
-                Expertise in importing legacy data into the Dolibarr ecosystem and setting up 
-                external integrations via the REST API.
+                Expertise in importing legacy data into the Dolibarr ecosystem
+                and setting up external integrations via the REST API.
               </p>
             </div>
             <div class="feature-card">
               <h3 class="feature-title">Maintenance & Hardening</h3>
               <p class="feature-text">
-                Continuous monitoring of server health, periodic software upgrades, and database 
-                indexing to maintain system snappiness over time.
+                Continuous monitoring of server health, periodic software
+                upgrades, and database indexing to maintain system snappiness
+                over time.
               </p>
             </div>
             <div class="feature-card">
               <h3 class="feature-title">Custom Theming & Branding</h3>
               <p class="feature-text">
-                Modification of the Dolibarr UI to reflect corporate identity while maintaining 
-                the accessibility and usability of the core platform.
+                Modification of the Dolibarr UI to reflect corporate identity
+                while maintaining the accessibility and usability of the core
+                platform.
               </p>
             </div>
           </div>
@@ -222,15 +290,15 @@
             <div class="value-card">
               <h3 class="value-name">Collaboration</h3>
               <p class="value-description">
-                A unified platform that eliminates data silos and fosters teamwork across 
-                all business functions.
+                A unified platform that eliminates data silos and fosters
+                teamwork across all business functions.
               </p>
             </div>
             <div class="value-card">
               <h3 class="value-name">Sustainability</h3>
               <p class="value-description">
-                Open-source solutions with managed services ensure long-term viability 
-                and cost-effectiveness.
+                Open-source solutions with managed services ensure long-term
+                viability and cost-effectiveness.
               </p>
             </div>
           </div>
@@ -243,9 +311,13 @@
       fetch("/components/contact-cta.html")
         .then((response) => response.text())
         .then((data) => {
-          const placeholder = document.getElementById("contact-cta-placeholder");
+          const placeholder = document.getElementById(
+            "contact-cta-placeholder",
+          );
           placeholder.insertAdjacentHTML("beforeend", data);
-          const newElements = placeholder.querySelectorAll(".reveal-on-scroll, .contact-content, .contact-panel");
+          const newElements = placeholder.querySelectorAll(
+            ".reveal-on-scroll, .contact-content, .contact-panel",
+          );
           newElements.forEach((el) => {
             el.classList.add("reveal-on-scroll");
             if (window.revealOnScroll) window.revealOnScroll.observe(el);

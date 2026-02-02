@@ -366,4 +366,56 @@ window.initMobileMenu = function () {
 
     scheduleNext();
   }
+
+  // =========================================
+  // Provisional Theme Toggle (Dark / Light / Navy)
+  // =========================================
+  const themeOptions = ["dark", "light"];
+  const storedTheme = window.localStorage.getItem("msicca-theme");
+  const initialTheme = themeOptions.includes(storedTheme)
+    ? storedTheme
+    : "dark";
+
+  const applyTheme = (theme) => {
+    document.body.dataset.theme = theme;
+    window.localStorage.setItem("msicca-theme", theme);
+
+    const buttons = document.querySelectorAll(".theme-toggle__btn");
+    buttons.forEach((btn) => {
+      const isActive = btn.dataset.theme === theme;
+      btn.classList.toggle("is-active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+  };
+
+  const mountThemeToggle = () => {
+    if (document.querySelector(".theme-toggle")) return;
+
+    const toggle = document.createElement("div");
+    toggle.className = "theme-toggle";
+    toggle.innerHTML = `
+      <span class="theme-toggle__label">Theme</span>
+      <div class="theme-toggle__group" role="radiogroup" aria-label="Theme">
+        ${themeOptions
+          .map(
+            (theme) =>
+              `<button class="theme-toggle__btn" type="button" data-theme="${theme}" aria-pressed="false">${theme}</button>`,
+          )
+          .join("")}
+      </div>
+    `;
+
+    toggle.addEventListener("click", (event) => {
+      const button = event.target.closest(".theme-toggle__btn");
+      if (!button) return;
+      const nextTheme = button.dataset.theme;
+      if (!nextTheme) return;
+      applyTheme(nextTheme);
+    });
+
+    document.body.appendChild(toggle);
+    applyTheme(initialTheme);
+  };
+
+  mountThemeToggle();
 })();
