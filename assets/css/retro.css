@@ -22,7 +22,7 @@
 }
 .feature-card.pop-out:hover {
   cursor: pointer;
-  transform: translate(8px, -8px);
+  transform: translate(-4px, -4px);
   box-shadow: var(--nb-shadow-hover);
 }
 
@@ -31,7 +31,7 @@
   box-shadow: none;
 }
 .feature-card.pop-in {
-  transform: translate(8px, -8px);
+  transform: translate(-4px, -4px);
   box-shadow: var(--nb-shadow-hover);
   border-color: var(--nb-accent-primary);
 }
@@ -54,7 +54,7 @@
 
 /* Estado de elevación */
 .project-card:hover {
-  transform: translate(8px, -8px);
+  transform: translate(-4px, -4px);
   box-shadow: var(--nb-shadow-hover);
 }
 
