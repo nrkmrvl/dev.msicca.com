@@ -1756,18 +1756,9 @@ body[data-theme="light"] {
   color: var(--nb-text-secondary);
 }
 
-/* Preserve dark header/hero/contact/footer */
-body[data-theme="light"] .header,
-body[data-theme="light"] .header-scrolled,
-body[data-theme="light"] .hero,
-body[data-theme="light"] .contact,
-body[data-theme="light"] footer,
-body[data-theme="light"] .footer,
-body[data-theme="light"] .portfolio-hero,
-body[data-theme="light"] .case-study-hero {
-  background-color: var(--nb-base-100);
-  color: var(--nb-text-primary);
-}
+/* REMOVED: These sections use data-surface="dark" and should not be overridden by theme 
+   Header, hero, footer, and contact sections are forced to dark via [data-surface="dark"]
+   which is defined in theme.css and takes precedence */
 
 /* Light theme targets (exclude header/hero/contact/footer) */
 body[data-theme="light"] section:not(.hero):not(.contact):not(.portfolio-hero):not(.case-study-hero),
