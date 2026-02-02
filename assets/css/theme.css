@@ -385,20 +385,20 @@ footer.footer[data-surface="dark"] .github-link {
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.33, 1, 0.68, 1);
   transform: none;
-  box-shadow: none;
+  box-shadow: var(--theme-shadow-sm);
 }
 
 .btn:hover,
 .btn-primary:hover {
   background-color: var(--theme-btn-primary-hover-bg);
-  box-shadow: var(--nb-shadow-hover);
-  transform: translate(8px, -8px);
+  box-shadow: var(--theme-shadow-hover);
+  transform: translate(-4px, 4px);
 }
 
 .btn:active,
 .btn-primary:active {
-  transform: none;
-  box-shadow: none;
+  transform: translate(2px, -2px);
+  box-shadow: 2px 2px 0px rgba(55, 70, 90, 0.8);
 }
 
 /* Primary button in dark surface */
@@ -448,6 +448,7 @@ footer.footer[data-surface="dark"] .github-link {
   transition: all 0.2s cubic-bezier(0.33, 1, 0.68, 1);
   vertical-align: middle;
   overflow: visible;
+  box-shadow: var(--theme-shadow-sm);
 }
 
 .btn--secondary:hover,
@@ -455,13 +456,13 @@ footer.footer[data-surface="dark"] .github-link {
   background-color: var(--theme-btn-secondary-hover-bg);
   color: var(--theme-btn-secondary-hover-text);
   border-color: var(--theme-accent-primary);
-  box-shadow: var(--nb-shadow-hover-lg);
-  transform: translate(8px, -8px);
+  box-shadow: var(--theme-shadow-hover);
+  transform: translate(-4px, 4px);
 }
 
 .btn-secondary:active {
-  transform: none;
-  box-shadow: none;
+  transform: translate(2px, -2px);
+  box-shadow: 2px 2px 0px rgba(55, 70, 90, 0.8);
 }
 
 /* Secondary button in dark surface */
@@ -543,6 +544,7 @@ footer.footer[data-surface="dark"] .github-link {
   border: 3px solid var(--theme-card-border);
   color: var(--theme-text-primary);
   transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+  box-shadow: var(--theme-shadow-sm);
 }
 
 .card:hover,
@@ -550,6 +552,7 @@ footer.footer[data-surface="dark"] .github-link {
 .project-card:hover {
   box-shadow: var(--theme-shadow-hover);
   transform: translate(-4px, 4px);
+  border-color: var(--theme-accent-primary);
 }
 
 /* Cards in dark surface */
@@ -559,6 +562,14 @@ footer.footer[data-surface="dark"] .github-link {
   background-color: var(--surface-bg-secondary);
   border-color: var(--surface-border-primary);
   color: var(--surface-text-primary);
+  box-shadow: 0 4px 0px rgba(0, 255, 255, 0.2);
+}
+
+[data-surface="dark"] .card:hover,
+[data-surface="dark"] .feature-card:hover,
+[data-surface="dark"] .project-card:hover {
+  box-shadow: -8px 8px 0px rgba(0, 255, 255, 0.3);
+  border-color: var(--surface-accent-primary);
 }
 
 /* =============================================
@@ -816,4 +827,64 @@ footer.footer[data-surface="dark"] .github-link:hover {
 /* Ensure copyright text is visible in dark footer */
 footer.footer[data-surface="dark"] .copyright {
   color: var(--surface-text-muted) !important;
+}
+
+/* =============================================
+   OPTIONAL OVERLAY/PATTERN UTILITIES
+   ============================================= */
+
+/* Dot pattern overlay */
+.pattern-dots {
+  position: relative;
+}
+
+.pattern-dots::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(0, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Grid pattern overlay */
+.pattern-grid {
+  position: relative;
+}
+
+.pattern-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Light theme pattern adjustments */
+html[data-theme="light"] .pattern-dots::before {
+  background-image: radial-gradient(circle, rgba(55, 70, 90, 0.06) 1px, transparent 1px);
+}
+
+html[data-theme="light"] .pattern-grid::before {
+  background-image: 
+    linear-gradient(rgba(55, 70, 90, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(55, 70, 90, 0.04) 1px, transparent 1px);
+}
+
+/* Ensure content stays above pattern */
+.pattern-dots > *,
+.pattern-grid > * {
+  position: relative;
+  z-index: 2;
 }
