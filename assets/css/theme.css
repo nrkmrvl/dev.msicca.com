@@ -69,6 +69,39 @@ html[data-theme="light"] {
   --theme-input-border: rgba(0, 0, 0, 0.2);
   --theme-input-text: #0a0a0a;
   --theme-input-focus: #00ffff;
+
+  /* === Neo-Brutalist Token Override === */
+  --nb-base-100: var(--theme-bg-primary);
+  --nb-base-200: var(--theme-bg-secondary);
+  --nb-base-300: var(--theme-bg-tertiary);
+  --nb-base-400: var(--theme-bg-alt);
+  --nb-base-500: var(--theme-bg-alt);
+
+  --nb-text-primary: var(--theme-text-primary);
+  --nb-text-secondary: var(--theme-text-secondary);
+  --nb-text-muted: var(--theme-text-muted);
+
+  --nb-accent-primary: var(--theme-accent-primary);
+  --nb-accent-secondary: var(--theme-accent-secondary);
+  --nb-accent-soft: var(--theme-accent-soft);
+
+  --nb-border-primary: var(--theme-border-primary);
+  --nb-border-secondary: var(--theme-border-secondary);
+
+  /* === Legacy Token Mapping (for styles.css) === */
+  --base-100: var(--theme-bg-primary);
+  --base-200: var(--theme-bg-secondary);
+  --base-300: var(--theme-bg-tertiary);
+  --base-400: var(--theme-bg-alt);
+  --base-500: var(--theme-bg-alt);
+
+  --text-primary: var(--theme-text-primary);
+  --text-secondary: var(--theme-text-secondary);
+  --text-muted: var(--theme-text-muted);
+
+  --accent: var(--theme-accent-primary);
+  --accent-soft: var(--theme-accent-soft);
+  --border-color: var(--theme-border-secondary);
 }
 
 /* =============================================
@@ -130,6 +163,39 @@ html[data-theme="dark"] {
   --theme-input-border: rgba(255, 255, 255, 0.2);
   --theme-input-text: #f5f5f5;
   --theme-input-focus: #00ffff;
+
+  /* === Neo-Brutalist Token Override === */
+  --nb-base-100: var(--theme-bg-primary);
+  --nb-base-200: var(--theme-bg-secondary);
+  --nb-base-300: var(--theme-bg-tertiary);
+  --nb-base-400: var(--theme-bg-alt);
+  --nb-base-500: var(--theme-bg-alt);
+
+  --nb-text-primary: var(--theme-text-primary);
+  --nb-text-secondary: var(--theme-text-secondary);
+  --nb-text-muted: var(--theme-text-muted);
+
+  --nb-accent-primary: var(--theme-accent-primary);
+  --nb-accent-secondary: var(--theme-accent-secondary);
+  --nb-accent-soft: var(--theme-accent-soft);
+
+  --nb-border-primary: var(--theme-border-primary);
+  --nb-border-secondary: var(--theme-border-secondary);
+
+  /* === Legacy Token Mapping (for styles.css) === */
+  --base-100: var(--theme-bg-primary);
+  --base-200: var(--theme-bg-secondary);
+  --base-300: var(--theme-bg-tertiary);
+  --base-400: var(--theme-bg-alt);
+  --base-500: var(--theme-bg-alt);
+
+  --text-primary: var(--theme-text-primary);
+  --text-secondary: var(--theme-text-secondary);
+  --text-muted: var(--theme-text-muted);
+
+  --accent: var(--theme-accent-primary);
+  --accent-soft: var(--theme-accent-soft);
+  --border-color: var(--theme-border-secondary);
 }
 
 /* =============================================

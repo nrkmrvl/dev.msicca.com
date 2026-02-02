@@ -113,6 +113,15 @@
 
     // Set the theme attribute
     html.setAttribute('data-theme', theme);
+    if (body) {
+      body.setAttribute('data-theme', theme);
+    } else {
+      document.addEventListener('DOMContentLoaded', () => {
+        if (document.body) {
+          document.body.setAttribute('data-theme', theme);
+        }
+      }, { once: true });
+    }
     currentTheme = theme;
 
     // Store the preference
