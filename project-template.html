@@ -57,10 +57,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/neo-brutalista-msicca.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/retro.css" />
-    <link rel="stylesheet" href="/assets/css/theme.css" />
-    <script src="/assets/js/theme.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/retro.css" />
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <script src="assets/js/theme.js"></script>
   </head>
   <body>
     <!-- Navigation (loaded via JS) -->
@@ -82,7 +82,7 @@
           { passive: true },
         );
       }
-      fetch("/components/header.html")
+      fetch("components/header.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("header-placeholder").innerHTML = data;
@@ -412,7 +412,7 @@
     <!-- Contact CTA (loaded via JS) -->
     <div id="contact-cta-placeholder"></div>
     <script>
-      fetch("/components/contact-cta.html")
+      fetch("components/contact-cta.html")
         .then((response) => response.text())
         .then((data) => {
           const placeholder = document.getElementById(
@@ -437,12 +437,12 @@
     <!-- Footer (loaded via JS) -->
     <div id="footer-placeholder"></div>
     <script>
-      fetch("/components/footer.html")
+      fetch("components/footer.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("footer-placeholder").innerHTML = data;
         });
     </script>
-    <script src="/assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
