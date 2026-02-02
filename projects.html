@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,8 +54,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/neo-brutalista-msicca.css" />
+    <link rel="stylesheet" href="/assets/css/theme.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/retro.css" />
+    <script src="/assets/js/theme.js"></script>
     <script src="/assets/js/config.js"></script>
     <script src="/assets/js/i18n.js"></script>
   </head>
@@ -92,7 +94,7 @@
     </script>
 
     <main>
-      <section class="portfolio-hero">
+      <section class="portfolio-hero" data-surface="dark">
         <div class="portfolio-hero__bg"></div>
         <div class="portfolio-hero__overlay"></div>
         <div class="container portfolio-hero__content">
@@ -106,7 +108,7 @@
       </section>
 
       <!-- Portfolio Navigation Tabs -->
-      <section class="portfolio-nav" id="portfolio-nav">
+      <section class="portfolio-nav" id="portfolio-nav" data-section-tone="a">
         <div class="container">
           <nav class="portfolio-tabs" aria-label="Portfolio categories">
             <button class="portfolio-tab active" data-category="all">
@@ -158,7 +160,7 @@
       </section>
 
       <!-- Core & Infrastructure Section -->
-      <section class="projects portfolio-section" id="core-infrastructure">
+      <section class="projects portfolio-section" id="core-infrastructure" data-section-tone="b">
         <div class="container">
           <div class="section-header">
             <h2 class="section-title">Core & Infrastructure</h2>
@@ -288,6 +290,7 @@
       <section
         class="projects portfolio-section portfolio-section--alt"
         id="field-industrial"
+        data-section-tone="a"
       >
         <div class="container">
           <div class="section-header">
@@ -429,7 +432,7 @@
       </section>
 
       <!-- Analytics & Visual Systems Section -->
-      <section class="projects portfolio-section" id="analytics-visual">
+      <section class="projects portfolio-section" id="analytics-visual" data-section-tone="b">
         <div class="container">
           <div class="section-header">
             <h2 class="section-title">Analytics & Visual Systems</h2>
@@ -574,6 +577,7 @@
       <section
         class="projects portfolio-section portfolio-section--alt"
         id="managed-ecosystems"
+        data-section-tone="a"
       >
         <div class="container">
           <div class="section-header">
@@ -669,7 +673,7 @@
         </div>
       </section>
 
-      <section class="contact" id="contact">
+      <section class="contact" id="contact" data-surface="dark">
         <div class="container">
           <div class="contact-grid">
             <div class="contact-content">

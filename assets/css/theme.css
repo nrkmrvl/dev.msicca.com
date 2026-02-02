@@ -1,0 +1,536 @@
+/* =============================================
+   MSICCA Theme System - Light/Dark Theme Architecture
+   Version: 2.0.0
+   
+   Sistema de tokens CSS para tema claro/oscuro con:
+   - Tokens globales por tema (data-theme)
+   - Tokens por superficie/contexto (data-surface)
+   - Alternancia de sección (data-section-tone)
+   - Secciones forzadas en dark (HERO, MENU, FOOTER, CTA)
+   ============================================= */
+
+/* =============================================
+   LIGHT THEME (Default)
+   ============================================= */
+:root,
+html[data-theme="light"] {
+  /* === Base Colors === */
+  --theme-bg-primary: #ffffff;
+  --theme-bg-secondary: #fafafa;
+  --theme-bg-tertiary: #f5f5f5;
+  --theme-bg-alt: #eeeeee;
+  
+  /* === Text Colors === */
+  --theme-text-primary: #0a0a0a;
+  --theme-text-secondary: #525252;
+  --theme-text-muted: #a3a3a3;
+  --theme-text-inverse: #ffffff;
+  
+  /* === Accent Colors (Cyan/MSICCA) === */
+  --theme-accent-primary: #00ffff;
+  --theme-accent-secondary: #00d4d4;
+  --theme-accent-soft: rgba(0, 255, 255, 0.1);
+  --theme-accent-softer: rgba(0, 255, 255, 0.05);
+  
+  /* === Border & Structure === */
+  --theme-border-primary: #000000;
+  --theme-border-secondary: rgba(0, 0, 0, 0.2);
+  --theme-border-tertiary: rgba(0, 0, 0, 0.1);
+  
+  /* === Shadows === */
+  --theme-shadow-sm: 4px 4px 0px rgba(0, 0, 0, 1);
+  --theme-shadow-md: 8px 8px 0px rgba(0, 0, 0, 1);
+  --theme-shadow-lg: 12px 12px 0px rgba(0, 0, 0, 1);
+  --theme-shadow-hover: -8px 8px 0px rgba(0, 0, 0, 1);
+  
+  /* === Section Alternation (Light Theme) === */
+  --theme-section-tone-a: #ffffff;
+  --theme-section-tone-b: #f5f5f5;
+  
+  /* === Button Colors (Light Theme) === */
+  --theme-btn-primary-bg: #000000;
+  --theme-btn-primary-text: #ffffff;
+  --theme-btn-primary-border: #000000;
+  --theme-btn-primary-hover-bg: #1a1a1a;
+  
+  --theme-btn-secondary-bg: transparent;
+  --theme-btn-secondary-text: #000000;
+  --theme-btn-secondary-border: #000000;
+  --theme-btn-secondary-hover-bg: #000000;
+  --theme-btn-secondary-hover-text: #ffffff;
+  
+  /* === Card Colors === */
+  --theme-card-bg: #ffffff;
+  --theme-card-border: #000000;
+  --theme-card-shadow: var(--theme-shadow-sm);
+  
+  /* === Form Elements === */
+  --theme-input-bg: #fafafa;
+  --theme-input-border: rgba(0, 0, 0, 0.2);
+  --theme-input-text: #0a0a0a;
+  --theme-input-focus: #00ffff;
+}
+
+/* =============================================
+   DARK THEME
+   ============================================= */
+html[data-theme="dark"] {
+  /* === Base Colors === */
+  --theme-bg-primary: #0a0a0a;
+  --theme-bg-secondary: #0f0f0f;
+  --theme-bg-tertiary: #141414;
+  --theme-bg-alt: #1a1a1a;
+  
+  /* === Text Colors === */
+  --theme-text-primary: #f5f5f5;
+  --theme-text-secondary: #a3a3a3;
+  --theme-text-muted: #6b6b6b;
+  --theme-text-inverse: #0a0a0a;
+  
+  /* === Accent Colors (Mantener cyan) === */
+  --theme-accent-primary: #00ffff;
+  --theme-accent-secondary: #00d4d4;
+  --theme-accent-soft: rgba(0, 255, 255, 0.15);
+  --theme-accent-softer: rgba(0, 255, 255, 0.08);
+  
+  /* === Border & Structure === */
+  --theme-border-primary: #ffffff;
+  --theme-border-secondary: rgba(255, 255, 255, 0.2);
+  --theme-border-tertiary: rgba(255, 255, 255, 0.1);
+  
+  /* === Shadows === */
+  --theme-shadow-sm: 4px 4px 0px rgba(0, 255, 255, 0.3);
+  --theme-shadow-md: 8px 8px 0px rgba(0, 255, 255, 0.3);
+  --theme-shadow-lg: 12px 12px 0px rgba(0, 255, 255, 0.3);
+  --theme-shadow-hover: -8px 8px 0px rgba(0, 255, 255, 0.3);
+  
+  /* === Section Alternation (Dark Theme) === */
+  --theme-section-tone-a: #0a0a0a;
+  --theme-section-tone-b: #141414;
+  
+  /* === Button Colors (Dark Theme) === */
+  --theme-btn-primary-bg: #00ffff;
+  --theme-btn-primary-text: #0a0a0a;
+  --theme-btn-primary-border: #00ffff;
+  --theme-btn-primary-hover-bg: #00d4d4;
+  
+  --theme-btn-secondary-bg: transparent;
+  --theme-btn-secondary-text: #00ffff;
+  --theme-btn-secondary-border: #00ffff;
+  --theme-btn-secondary-hover-bg: #00ffff;
+  --theme-btn-secondary-hover-text: #0a0a0a;
+  
+  /* === Card Colors === */
+  --theme-card-bg: #141414;
+  --theme-card-border: rgba(0, 255, 255, 0.4);
+  --theme-card-shadow: var(--theme-shadow-sm);
+  
+  /* === Form Elements === */
+  --theme-input-bg: #141414;
+  --theme-input-border: rgba(255, 255, 255, 0.2);
+  --theme-input-text: #f5f5f5;
+  --theme-input-focus: #00ffff;
+}
+
+/* =============================================
+   FORCED DARK SURFACE (HERO, MENU, FOOTER, CTA)
+   Estas secciones SIEMPRE se ven dark sin importar el tema global
+   ============================================= */
+[data-surface="dark"] {
+  /* Force dark background */
+  --surface-bg-primary: #0a0a0a;
+  --surface-bg-secondary: #0f0f0f;
+  --surface-bg-tertiary: #141414;
+  
+  /* Force dark text */
+  --surface-text-primary: #f5f5f5;
+  --surface-text-secondary: #a3a3a3;
+  --surface-text-muted: #6b6b6b;
+  
+  /* Force cyan accent */
+  --surface-accent-primary: #00ffff;
+  --surface-accent-soft: rgba(0, 255, 255, 0.15);
+  
+  /* Force white/light borders */
+  --surface-border-primary: rgba(255, 255, 255, 0.3);
+  --surface-border-secondary: rgba(255, 255, 255, 0.15);
+  
+  /* Dark surface buttons */
+  --surface-btn-primary-bg: #00ffff;
+  --surface-btn-primary-text: #0a0a0a;
+  --surface-btn-primary-border: #00ffff;
+  --surface-btn-primary-hover-bg: #00d4d4;
+  
+  --surface-btn-secondary-bg: transparent;
+  --surface-btn-secondary-text: #00ffff;
+  --surface-btn-secondary-border: #00ffff;
+  --surface-btn-secondary-hover-bg: #00ffff;
+  --surface-btn-secondary-hover-text: #0a0a0a;
+  
+  /* Apply colors */
+  background-color: var(--surface-bg-primary);
+  color: var(--surface-text-primary);
+}
+
+/* =============================================
+   FORCED LIGHT SURFACE (Para casos específicos)
+   ============================================= */
+[data-surface="light"] {
+  /* Force light background */
+  --surface-bg-primary: #ffffff;
+  --surface-bg-secondary: #fafafa;
+  --surface-bg-tertiary: #f5f5f5;
+  
+  /* Force dark text */
+  --surface-text-primary: #0a0a0a;
+  --surface-text-secondary: #525252;
+  --surface-text-muted: #a3a3a3;
+  
+  /* Force cyan accent */
+  --surface-accent-primary: #00ffff;
+  --surface-accent-soft: rgba(0, 255, 255, 0.1);
+  
+  /* Force dark borders */
+  --surface-border-primary: #000000;
+  --surface-border-secondary: rgba(0, 0, 0, 0.2);
+  
+  /* Light surface buttons */
+  --surface-btn-primary-bg: #000000;
+  --surface-btn-primary-text: #ffffff;
+  --surface-btn-primary-border: #000000;
+  --surface-btn-primary-hover-bg: #1a1a1a;
+  
+  --surface-btn-secondary-bg: transparent;
+  --surface-btn-secondary-text: #000000;
+  --surface-btn-secondary-border: #000000;
+  --surface-btn-secondary-hover-bg: #000000;
+  --surface-btn-secondary-hover-text: #ffffff;
+  
+  /* Apply colors */
+  background-color: var(--surface-bg-primary);
+  color: var(--surface-text-primary);
+}
+
+/* =============================================
+   SECTION TONE ALTERNATION
+   Para diferenciar secciones adyacentes dentro del mismo tema
+   ============================================= */
+[data-section-tone="a"] {
+  background-color: var(--theme-section-tone-a);
+}
+
+[data-section-tone="b"] {
+  background-color: var(--theme-section-tone-b);
+}
+
+/* Override section tone within forced surfaces */
+[data-surface="dark"][data-section-tone="a"],
+[data-surface="dark"][data-section-tone="b"] {
+  background-color: var(--surface-bg-primary);
+}
+
+/* =============================================
+   UNIFIED BUTTON SYSTEM
+   Botones que se adaptan automáticamente al contexto
+   ============================================= */
+
+/* Primary Button - Respeta superficie */
+.btn,
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-family: var(--nb-font-mono, "Roboto Mono", monospace);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  border: 3px solid var(--theme-btn-primary-border);
+  background-color: var(--theme-btn-primary-bg);
+  color: var(--theme-btn-primary-text);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+  box-shadow: var(--theme-shadow-sm);
+}
+
+.btn:hover,
+.btn-primary:hover {
+  background-color: var(--theme-btn-primary-hover-bg);
+  box-shadow: var(--theme-shadow-hover);
+  transform: translate(-4px, 4px);
+}
+
+/* Primary button in dark surface */
+[data-surface="dark"] .btn,
+[data-surface="dark"] .btn-primary {
+  border-color: var(--surface-btn-primary-border);
+  background-color: var(--surface-btn-primary-bg);
+  color: var(--surface-btn-primary-text);
+}
+
+[data-surface="dark"] .btn:hover,
+[data-surface="dark"] .btn-primary:hover {
+  background-color: var(--surface-btn-primary-hover-bg);
+}
+
+/* Primary button in light surface */
+[data-surface="light"] .btn,
+[data-surface="light"] .btn-primary {
+  border-color: var(--surface-btn-primary-border);
+  background-color: var(--surface-btn-primary-bg);
+  color: var(--surface-btn-primary-text);
+}
+
+[data-surface="light"] .btn:hover,
+[data-surface="light"] .btn-primary:hover {
+  background-color: var(--surface-btn-primary-hover-bg);
+}
+
+/* Secondary Button - Outline style */
+.btn--secondary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-family: var(--nb-font-mono, "Roboto Mono", monospace);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  border: 3px solid var(--theme-btn-secondary-border);
+  background-color: var(--theme-btn-secondary-bg);
+  color: var(--theme-btn-secondary-text);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+  box-shadow: var(--theme-shadow-sm);
+}
+
+.btn--secondary:hover,
+.btn-secondary:hover {
+  background-color: var(--theme-btn-secondary-hover-bg);
+  color: var(--theme-btn-secondary-hover-text);
+  box-shadow: var(--theme-shadow-hover);
+  transform: translate(-4px, 4px);
+}
+
+/* Secondary button in dark surface */
+[data-surface="dark"] .btn--secondary,
+[data-surface="dark"] .btn-secondary {
+  border-color: var(--surface-btn-secondary-border);
+  background-color: var(--surface-btn-secondary-bg);
+  color: var(--surface-btn-secondary-text);
+}
+
+[data-surface="dark"] .btn--secondary:hover,
+[data-surface="dark"] .btn-secondary:hover {
+  background-color: var(--surface-btn-secondary-hover-bg);
+  color: var(--surface-btn-secondary-hover-text);
+}
+
+/* Secondary button in light surface */
+[data-surface="light"] .btn--secondary,
+[data-surface="light"] .btn-secondary {
+  border-color: var(--surface-btn-secondary-border);
+  background-color: var(--surface-btn-secondary-bg);
+  color: var(--surface-btn-secondary-text);
+}
+
+[data-surface="light"] .btn--secondary:hover,
+[data-surface="light"] .btn-secondary:hover {
+  background-color: var(--surface-btn-secondary-hover-bg);
+  color: var(--surface-btn-secondary-hover-text);
+}
+
+/* Ghost Button */
+.btn--ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-family: var(--nb-font-mono, "Roboto Mono", monospace);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  color: var(--theme-text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn--ghost:hover {
+  color: var(--theme-accent-primary);
+}
+
+[data-surface="dark"] .btn--ghost {
+  color: var(--surface-text-primary);
+}
+
+[data-surface="dark"] .btn--ghost:hover {
+  color: var(--surface-accent-primary);
+}
+
+/* =============================================
+   CARD SYSTEM
+   Cards que se adaptan al tema
+   ============================================= */
+.card,
+.feature-card,
+.project-card {
+  background-color: var(--theme-card-bg);
+  border: 3px solid var(--theme-card-border);
+  color: var(--theme-text-primary);
+  transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.card:hover,
+.feature-card:hover,
+.project-card:hover {
+  box-shadow: var(--theme-shadow-hover);
+  transform: translate(-4px, 4px);
+}
+
+/* Cards in dark surface */
+[data-surface="dark"] .card,
+[data-surface="dark"] .feature-card,
+[data-surface="dark"] .project-card {
+  background-color: var(--surface-bg-secondary);
+  border-color: var(--surface-border-primary);
+  color: var(--surface-text-primary);
+}
+
+/* =============================================
+   BASE STYLING ADJUSTMENTS
+   ============================================= */
+
+/* Body base */
+body {
+  background-color: var(--theme-bg-primary);
+  color: var(--theme-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Links */
+a {
+  color: var(--theme-accent-primary);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--theme-accent-secondary);
+}
+
+[data-surface="dark"] a {
+  color: var(--surface-accent-primary);
+}
+
+/* Sections with alternating tones */
+section {
+  transition: background-color 0.3s ease;
+}
+
+/* =============================================
+   THEME TOGGLE BUTTON
+   ============================================= */
+.theme-toggle {
+  position: fixed;
+  top: 90px;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 1rem;
+  background-color: var(--theme-bg-primary);
+  border: 2px solid var(--theme-border-secondary);
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle__label {
+  font-family: var(--nb-font-mono, "Roboto Mono", monospace);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--theme-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.theme-toggle__group {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.theme-toggle__btn {
+  padding: 0.375rem 0.875rem;
+  font-family: var(--nb-font-mono, "Roboto Mono", monospace);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--theme-text-secondary);
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle__btn:hover {
+  color: var(--theme-text-primary);
+  background-color: var(--theme-bg-tertiary);
+}
+
+.theme-toggle__btn.is-active {
+  color: var(--theme-bg-primary);
+  background-color: var(--theme-accent-primary);
+  border-color: var(--theme-accent-primary);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: auto;
+    bottom: 1.5rem;
+    right: 1rem;
+    padding: 0.5rem 0.875rem;
+  }
+  
+  .theme-toggle__label {
+    display: none;
+  }
+}
+
+/* =============================================
+   ACCESSIBILITY & REDUCED MOTION
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =============================================
+   PRINT STYLES
+   ============================================= */
+@media print {
+  .theme-toggle {
+    display: none;
+  }
+  
+  body {
+    background-color: white;
+    color: black;
+  }
+}
