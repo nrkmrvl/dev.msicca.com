@@ -50,7 +50,7 @@ body {
   font-family: var(--font-main);
   background-color: var(--base-100);
   color: var(--text-primary);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -60,6 +60,7 @@ body {
 h1,
 h2,
 h3,
+  transition: height var(--transition);
 h4,
 h5,
 h6,
@@ -112,7 +113,7 @@ a {
   min-height: 3.6em; /* Reserve space for up to ~3 lines to prevent button shifting */
 }
 .nav-links a {
-  font-size: 1rem;
+  font-size: 16px;
   /* text-base */
   font-weight: 500;
   /* medium */
@@ -126,6 +127,7 @@ a {
   max-width: fit-content;
   white-space: nowrap;
 }
+
 
 .contact-grid {
   position: relative;
@@ -265,7 +267,7 @@ a {
 
 /* About Section */
 .about-title {
-  font-size: 1.875rem;
+  font-size: 30px;
   /* text-3xl */
   font-weight: 600;
   /* semibold */
@@ -273,13 +275,13 @@ a {
 }
 
 .about-intro {
-  font-size: 1.25rem;
+  font-size: 20px;
   /* text-xl */
   color: var(--text-secondary);
 }
 
 .tech-stack li {
-  font-size: 1rem;
+  font-size: 16px;
   /* text-base */
   list-style: none;
   display: flex;
@@ -290,7 +292,7 @@ a {
 /* Features Section */
 .section-label {
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-size: 16px;
   /* text-base */
   line-height: 1.75;
   /* /7 equivalent-ish */
@@ -301,7 +303,7 @@ a {
 }
 
 .features-title {
-  font-size: 2.25rem;
+  font-size: 36px;
   /* text-4xl mobile */
   font-weight: 600;
   /* semibold */
@@ -309,7 +311,7 @@ a {
 }
 
 .features-description {
-  font-size: 1.125rem;
+  font-size: 18px;
   /* text-lg */
   line-height: 2;
   /* /8 equivalent */
@@ -317,7 +319,7 @@ a {
 }
 
 .feature-title {
-  font-size: 1rem;
+  font-size: 16px;
   /* text-base/7 */
   font-weight: 600;
   /* semibold */
@@ -325,29 +327,29 @@ a {
 }
 
 .feature-text {
-  font-size: 1rem;
+  font-size: 16px;
   /* text-base/7 */
   color: var(--text-secondary);
 }
 
 /* Projects & Footer */
 .projects-title {
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 600;
 }
 
 .project-desc {
-  font-size: 1rem;
+  font-size: 16px;
   color: var(--text-secondary);
 }
 
 .footer-nav a {
-  font-size: 1rem;
+  font-size: 16px;
   /* text-base */
 }
 
 .copyright {
-  font-size: 0.75rem;
+  font-size: 12px;
   /* text-xs */
   color: var(--text-muted);
 }
@@ -358,17 +360,17 @@ a {
 
 @media (min-width: 640px) {
   .hero-title {
-    font-size: 8.125rem; /* 130px */
+    font-size: 129.6px; /* 1.8x */
     /* sm:text-7xl */
   }
 
   .hero-tagline {
-    font-size: 2.16rem; /* 34.56px */
+    font-size: 34.56px; /* reduced 20% */
     /* sm:text-2xl */
   }
 
   .features-title {
-    font-size: 3rem;
+    font-size: 48px;
     /* sm:text-5xl */
   }
 }
@@ -466,13 +468,12 @@ a {
 
 @media (max-width: 768px) {
   .footer-content {
-    font-size: 2.25rem;
+    flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
   }
 
   .footer-nav {
-    font-size: 1rem;
     flex-wrap: wrap;
     gap: 1rem;
   }
@@ -545,9 +546,9 @@ section {
 }
 
 .nav-links a {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   transition: var(--transition);
 }
 
@@ -597,7 +598,7 @@ section {
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  /* Negro, gradiente diagonal: arriba-izquierda 95% → derecha-abajo 25% */
+  /* Negro, gradiente diagonal: arriba-izquierda 95% → derecha-abajo 50% */
   background-image: linear-gradient(
     to bottom right,
     rgba(0, 0, 0, 0.95),
@@ -631,15 +632,15 @@ section {
 
 .hero-title {
   font-family: var(--font-mono);
-  font-size: 5.4rem; /* 86.4px */
-  font-weight: 900;
+  font-size: 86.4px; /* 1.8x */
+  font-weight: 600;
   line-height: 1.05;
   margin-bottom: 2.5rem;
 }
 
 .hero-tagline {
   font-family: var(--font-mono);
-  font-size: 1.8rem; /* 28.8px */
+  font-size: 28.8px; /* reduced 20% */
   color: var(--accent);
   margin-bottom: 3rem;
   display: block; /* Ensure it starts on its own line */
@@ -748,10 +749,7 @@ section {
   height: 84px;
   object-fit: contain;
   display: block;
-  transition:
-    transform var(--transition),
-    filter var(--transition),
-    opacity var(--transition);
+  transition: transform var(--transition), filter var(--transition), opacity var(--transition);
 }
 
 .tech-icon {
@@ -905,11 +903,10 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     width: 40px;
     height: 40px;
     border: 1px solid var(--border-color);
-    background: rgba(20, 20, 20, 0.9);
+    background: var(--base-200);
     border-radius: 4px;
     gap: 4px;
   }
@@ -919,7 +916,6 @@ section {
     width: 18px;
     height: 2px;
     background: var(--text-primary);
-    border-radius: 2px;
   }
 
   .nav-links {
@@ -937,10 +933,7 @@ section {
     transform: translateY(-8px);
     pointer-events: none;
     visibility: hidden;
-    transition:
-      opacity 0.2s ease,
-      transform 0.2s ease,
-      visibility 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   }
 
   .nav-links.nav-open {
@@ -1094,7 +1087,7 @@ section[id] {
 .metric-value {
   display: block;
   font-family: var(--font-mono);
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 700;
   color: var(--accent);
   line-height: 1;
@@ -1102,7 +1095,7 @@ section[id] {
 }
 
 .metric-label {
-  font-size: 0.875rem;
+  font-size: 14px;
   color: var(--text-secondary);
 }
 
@@ -1253,14 +1246,14 @@ section[id] {
 
 .section-title {
   font-family: var(--font-mono);
-  font-size: 1.75rem;
+  font-size: 28px;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .section-subtitle {
-  font-size: 1rem;
+  font-size: 16px;
   color: var(--text-secondary);
 }
 
@@ -1348,7 +1341,7 @@ section[id] {
   }
 
   .section-title {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 }
 
@@ -1440,11 +1433,11 @@ section[id] {
   }
 
   .breadcrumb-list {
-    font-size: 0.75rem;
+    font-size: 12px;
   }
 
   .breadcrumb-back {
-    font-size: 0.75rem;
+    font-size: 12px;
   }
 }
 
@@ -1614,7 +1607,7 @@ section[id] {
   }
 
   .stack-table {
-    font-size: 0.75rem;
+    font-size: 12px;
   }
 
   .stack-table th,
@@ -1634,16 +1627,16 @@ section[id] {
   }
 
   .hero-title {
-    font-size: 3rem;
+    font-size: 48px;
   }
 
   .hero-tagline {
-    font-size: 1.25rem;
+    font-size: 20px;
     min-height: 3.6em;
   }
 
   .features-title {
-    font-size: 2rem;
+    font-size: 32px;
   }
 
   .features-grid {
@@ -1677,7 +1670,7 @@ section[id] {
   }
 
   .hero-title {
-    font-size: 4.5rem;
+    font-size: 72px;
   }
 
   .features-grid {
