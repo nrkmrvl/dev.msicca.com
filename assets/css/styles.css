@@ -1,32 +1,33 @@
 /* =============================================
    Edge Minimal Developers - Refined Design System
+   Now using Neo-Brutalist centralized tokens
    ============================================= */
 
 :root {
-  /* Color Palette - Dark Grays & Accents */
-  --base-100: #0a0a0a;
-  --base-200: #0f0f0f;
-  --base-300: #141414;
-  --base-400: #1a1a1a;
-  --base-500: #202020;
+  /* Legacy variable mappings to neo-brutalist tokens */
+  /* These maintain compatibility with existing selectors */
+  --base-100: var(--nb-base-100);
+  --base-200: var(--nb-base-200);
+  --base-300: var(--nb-base-300);
+  --base-400: var(--nb-base-400);
+  --base-500: var(--nb-base-500);
 
-  --text-primary: #f5f5f5;
-  --text-secondary: #a3a3a3;
-  --text-muted: #525252;
+  --text-primary: var(--nb-text-primary);
+  --text-secondary: var(--nb-text-secondary);
+  --text-muted: var(--nb-text-muted);
 
-  /* Aqua/Cyan accents as requested previously */
-  --accent: #22d3d3;
-  --accent-soft: rgba(34, 211, 211, 0.1);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --accent: var(--nb-accent-primary);
+  --accent-soft: var(--nb-accent-soft);
+  --border-color: var(--nb-border-secondary);
 
-  /* Typography - Unified Inter */
-  --font-main: "Roboto", system-ui, sans-serif;
-  --font-mono: "Roboto Mono", monospace;
+  /* Typography */
+  --font-main: var(--nb-font-main);
+  --font-mono: var(--nb-font-mono);
 
   /* Layout */
-  --container-max: 1200px;
-  --section-padding: 120px;
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --container-max: var(--nb-container-max);
+  --section-padding: var(--nb-section-padding);
+  --transition: var(--nb-transition);
 }
 
 /* =============================================

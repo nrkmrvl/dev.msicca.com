@@ -44,10 +44,10 @@
 
 /* Terminal Window */
 .terminal-window {
-  border: 2px solid var(--accent);
+  border: var(--nb-border-width-thin) solid var(--nb-accent-primary);
   border-radius: 8px;
-  background: rgba(10, 10, 10, 0.95);
-  box-shadow: 0 0 20px rgba(34, 211, 211, 0.2);
+  background: var(--nb-base-100);
+  box-shadow: 0 0 20px var(--nb-accent-soft);
   overflow: hidden;
 }
 
