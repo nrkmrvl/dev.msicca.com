@@ -14,16 +14,16 @@
    ============================================= */
 :root,
 html[data-theme="light"] {
-  /* === Base Colors === */
-  --theme-bg-primary: #ffffff;
-  --theme-bg-secondary: #fafafa;
-  --theme-bg-tertiary: #f5f5f5;
-  --theme-bg-alt: #eeeeee;
+  /* === Base Colors (Cream Palette) === */
+  --theme-bg-primary: #FFF0E5;
+  --theme-bg-secondary: #FFE8D6;
+  --theme-bg-tertiary: #FFF5EB;
+  --theme-bg-alt: #FFE0CC;
 
   /* === Text Colors === */
-  --theme-text-primary: #0a0a0a;
-  --theme-text-secondary: #525252;
-  --theme-text-muted: #a3a3a3;
+  --theme-text-primary: #37465A;
+  --theme-text-secondary: #5A6B7F;
+  --theme-text-muted: #8A9BAF;
   --theme-text-inverse: #ffffff;
 
   /* === Accent Colors (Cyan/MSICCA) === */
@@ -33,41 +33,41 @@ html[data-theme="light"] {
   --theme-accent-softer: rgba(0, 255, 255, 0.05);
 
   /* === Border & Structure === */
-  --theme-border-primary: #000000;
-  --theme-border-secondary: rgba(0, 0, 0, 0.2);
-  --theme-border-tertiary: rgba(0, 0, 0, 0.1);
+  --theme-border-primary: #37465A;
+  --theme-border-secondary: rgba(55, 70, 90, 0.3);
+  --theme-border-tertiary: rgba(55, 70, 90, 0.15);
 
   /* === Shadows === */
-  --theme-shadow-sm: 4px 4px 0px rgba(0, 0, 0, 1);
-  --theme-shadow-md: 8px 8px 0px rgba(0, 0, 0, 1);
-  --theme-shadow-lg: 12px 12px 0px rgba(0, 0, 0, 1);
-  --theme-shadow-hover: -8px 8px 0px rgba(0, 0, 0, 1);
+  --theme-shadow-sm: 4px 4px 0px rgba(55, 70, 90, 0.8);
+  --theme-shadow-md: 8px 8px 0px rgba(55, 70, 90, 0.8);
+  --theme-shadow-lg: 12px 12px 0px rgba(55, 70, 90, 0.8);
+  --theme-shadow-hover: -8px 8px 0px rgba(55, 70, 90, 0.8);
 
   /* === Section Alternation (Light Theme) === */
-  --theme-section-tone-a: #ffffff;
-  --theme-section-tone-b: #f5f5f5;
+  --theme-section-tone-a: #FFF0E5;
+  --theme-section-tone-b: #FFF5EB;
 
   /* === Button Colors (Light Theme) === */
-  --theme-btn-primary-bg: #000000;
+  --theme-btn-primary-bg: #37465A;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-border: #000000;
-  --theme-btn-primary-hover-bg: #1a1a1a;
+  --theme-btn-primary-border: #37465A;
+  --theme-btn-primary-hover-bg: #4A5B70;
 
   --theme-btn-secondary-bg: transparent;
-  --theme-btn-secondary-text: #000000;
-  --theme-btn-secondary-border: #000000;
-  --theme-btn-secondary-hover-bg: #000000;
+  --theme-btn-secondary-text: #37465A;
+  --theme-btn-secondary-border: #37465A;
+  --theme-btn-secondary-hover-bg: #37465A;
   --theme-btn-secondary-hover-text: #ffffff;
 
   /* === Card Colors === */
   --theme-card-bg: #ffffff;
-  --theme-card-border: #000000;
+  --theme-card-border: #37465A;
   --theme-card-shadow: var(--theme-shadow-sm);
 
   /* === Form Elements === */
-  --theme-input-bg: #fafafa;
-  --theme-input-border: rgba(0, 0, 0, 0.2);
-  --theme-input-text: #0a0a0a;
+  --theme-input-bg: #ffffff;
+  --theme-input-border: rgba(55, 70, 90, 0.3);
+  --theme-input-text: #37465A;
   --theme-input-focus: #00ffff;
 
   /* === Neo-Brutalist Token Override === */
@@ -108,17 +108,17 @@ html[data-theme="light"] {
    DARK THEME
    ============================================= */
 html[data-theme="dark"] {
-  /* === Base Colors === */
-  --theme-bg-primary: #0a0a0a;
-  --theme-bg-secondary: #0f0f0f;
-  --theme-bg-tertiary: #141414;
-  --theme-bg-alt: #1a1a1a;
+  /* === Base Colors (Navy Palette) === */
+  --theme-bg-primary: #10162F;
+  --theme-bg-secondary: #181E38;
+  --theme-bg-tertiary: #1F2542;
+  --theme-bg-alt: #252D4A;
 
   /* === Text Colors === */
-  --theme-text-primary: #f5f5f5;
-  --theme-text-secondary: #a3a3a3;
-  --theme-text-muted: #6b6b6b;
-  --theme-text-inverse: #0a0a0a;
+  --theme-text-primary: #E8F0FF;
+  --theme-text-secondary: #B8C8E0;
+  --theme-text-muted: #7A8AA0;
+  --theme-text-inverse: #10162F;
 
   /* === Accent Colors (Mantener cyan) === */
   --theme-accent-primary: #00ffff;
@@ -127,9 +127,9 @@ html[data-theme="dark"] {
   --theme-accent-softer: rgba(0, 255, 255, 0.08);
 
   /* === Border & Structure === */
-  --theme-border-primary: #ffffff;
-  --theme-border-secondary: rgba(255, 255, 255, 0.2);
-  --theme-border-tertiary: rgba(255, 255, 255, 0.1);
+  --theme-border-primary: #00ffff;
+  --theme-border-secondary: rgba(0, 255, 255, 0.3);
+  --theme-border-tertiary: rgba(0, 255, 255, 0.15);
 
   /* === Shadows === */
   --theme-shadow-sm: 4px 4px 0px rgba(0, 255, 255, 0.3);
@@ -138,12 +138,12 @@ html[data-theme="dark"] {
   --theme-shadow-hover: -8px 8px 0px rgba(0, 255, 255, 0.3);
 
   /* === Section Alternation (Dark Theme) === */
-  --theme-section-tone-a: #0a0a0a;
-  --theme-section-tone-b: #141414;
+  --theme-section-tone-a: #10162F;
+  --theme-section-tone-b: #181E38;
 
   /* === Button Colors (Dark Theme) === */
   --theme-btn-primary-bg: #00ffff;
-  --theme-btn-primary-text: #0a0a0a;
+  --theme-btn-primary-text: #10162F;
   --theme-btn-primary-border: #00ffff;
   --theme-btn-primary-hover-bg: #00d4d4;
 
@@ -151,17 +151,17 @@ html[data-theme="dark"] {
   --theme-btn-secondary-text: #00ffff;
   --theme-btn-secondary-border: #00ffff;
   --theme-btn-secondary-hover-bg: #00ffff;
-  --theme-btn-secondary-hover-text: #0a0a0a;
+  --theme-btn-secondary-hover-text: #10162F;
 
   /* === Card Colors === */
-  --theme-card-bg: #141414;
+  --theme-card-bg: #181E38;
   --theme-card-border: rgba(0, 255, 255, 0.4);
   --theme-card-shadow: var(--theme-shadow-sm);
 
   /* === Form Elements === */
-  --theme-input-bg: #141414;
-  --theme-input-border: rgba(255, 255, 255, 0.2);
-  --theme-input-text: #f5f5f5;
+  --theme-input-bg: #181E38;
+  --theme-input-border: rgba(0, 255, 255, 0.3);
+  --theme-input-text: #E8F0FF;
   --theme-input-focus: #00ffff;
 
   /* === Neo-Brutalist Token Override === */
@@ -203,27 +203,27 @@ html[data-theme="dark"] {
    Estas secciones SIEMPRE se ven dark sin importar el tema global
    ============================================= */
 [data-surface="dark"] {
-  /* Force dark background */
-  --surface-bg-primary: #0a0a0a;
-  --surface-bg-secondary: #0f0f0f;
-  --surface-bg-tertiary: #141414;
+  /* Force navy dark background */
+  --surface-bg-primary: #10162F;
+  --surface-bg-secondary: #181E38;
+  --surface-bg-tertiary: #1F2542;
 
-  /* Force dark text */
-  --surface-text-primary: #f5f5f5;
-  --surface-text-secondary: #a3a3a3;
-  --surface-text-muted: #6b6b6b;
+  /* Force light text */
+  --surface-text-primary: #E8F0FF;
+  --surface-text-secondary: #B8C8E0;
+  --surface-text-muted: #7A8AA0;
 
   /* Force cyan accent */
   --surface-accent-primary: #00ffff;
   --surface-accent-soft: rgba(0, 255, 255, 0.15);
 
-  /* Force white/light borders */
-  --surface-border-primary: rgba(255, 255, 255, 0.3);
-  --surface-border-secondary: rgba(255, 255, 255, 0.15);
+  /* Force cyan borders */
+  --surface-border-primary: rgba(0, 255, 255, 0.4);
+  --surface-border-secondary: rgba(0, 255, 255, 0.2);
 
   /* Dark surface buttons */
   --surface-btn-primary-bg: #00ffff;
-  --surface-btn-primary-text: #0a0a0a;
+  --surface-btn-primary-text: #10162F;
   --surface-btn-primary-border: #00ffff;
   --surface-btn-primary-hover-bg: #00d4d4;
 
@@ -231,7 +231,7 @@ html[data-theme="dark"] {
   --surface-btn-secondary-text: #00ffff;
   --surface-btn-secondary-border: #00ffff;
   --surface-btn-secondary-hover-bg: #00ffff;
-  --surface-btn-secondary-hover-text: #0a0a0a;
+  --surface-btn-secondary-hover-text: #10162F;
 
   /* Apply colors */
   background-color: var(--surface-bg-primary);
@@ -305,34 +305,34 @@ footer.footer[data-surface="dark"] .github-link {
    FORCED LIGHT SURFACE (Para casos específicos)
    ============================================= */
 [data-surface="light"] {
-  /* Force light background */
-  --surface-bg-primary: #ffffff;
-  --surface-bg-secondary: #fafafa;
-  --surface-bg-tertiary: #f5f5f5;
+  /* Force cream light background */
+  --surface-bg-primary: #FFF0E5;
+  --surface-bg-secondary: #FFE8D6;
+  --surface-bg-tertiary: #FFF5EB;
 
-  /* Force dark text */
-  --surface-text-primary: #0a0a0a;
-  --surface-text-secondary: #525252;
-  --surface-text-muted: #a3a3a3;
+  /* Force slate text */
+  --surface-text-primary: #37465A;
+  --surface-text-secondary: #5A6B7F;
+  --surface-text-muted: #8A9BAF;
 
   /* Force cyan accent */
   --surface-accent-primary: #00ffff;
   --surface-accent-soft: rgba(0, 255, 255, 0.1);
 
-  /* Force dark borders */
-  --surface-border-primary: #000000;
-  --surface-border-secondary: rgba(0, 0, 0, 0.2);
+  /* Force slate borders */
+  --surface-border-primary: #37465A;
+  --surface-border-secondary: rgba(55, 70, 90, 0.3);
 
   /* Light surface buttons */
-  --surface-btn-primary-bg: #000000;
+  --surface-btn-primary-bg: #37465A;
   --surface-btn-primary-text: #ffffff;
-  --surface-btn-primary-border: #000000;
-  --surface-btn-primary-hover-bg: #1a1a1a;
+  --surface-btn-primary-border: #37465A;
+  --surface-btn-primary-hover-bg: #4A5B70;
 
   --surface-btn-secondary-bg: transparent;
-  --surface-btn-secondary-text: #000000;
-  --surface-btn-secondary-border: #000000;
-  --surface-btn-secondary-hover-bg: #000000;
+  --surface-btn-secondary-text: #37465A;
+  --surface-btn-secondary-border: #37465A;
+  --surface-btn-secondary-hover-bg: #37465A;
   --surface-btn-secondary-hover-text: #ffffff;
 
   /* Apply colors */
@@ -594,7 +594,7 @@ section {
 }
 
 /* =============================================
-   THEME TOGGLE BUTTON
+   THEME TOGGLE BUTTON - Compact Pill Design
    ============================================= */
 .theme-toggle {
   position: fixed;
@@ -603,26 +603,22 @@ section {
   z-index: 9999;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.625rem 1rem;
+  gap: 0.25rem;
+  padding: 0.375rem;
   background-color: var(--theme-bg-primary);
   border: 2px solid var(--theme-border-secondary);
   border-radius: 50px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .theme-toggle:hover {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
 }
 
 .theme-toggle__label {
-  font-family: var(--nb-font-mono, "Roboto Mono", monospace);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--theme-text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  display: none; /* Hidden for compact design */
 }
 
 .theme-toggle__group {
@@ -631,17 +627,24 @@ section {
 }
 
 .theme-toggle__btn {
-  padding: 0.375rem 0.875rem;
-  font-family: var(--nb-font-mono, "Roboto Mono", monospace);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
   color: var(--theme-text-secondary);
   background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 20px;
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.theme-toggle__btn svg {
+  width: 16px;
+  height: 16px;
+  display: block;
 }
 
 .theme-toggle__btn:hover {
@@ -652,7 +655,16 @@ section {
 .theme-toggle__btn.is-active {
   color: var(--theme-bg-primary);
   background-color: var(--theme-accent-primary);
-  border-color: var(--theme-accent-primary);
+}
+
+.theme-toggle__btn:focus-visible {
+  outline: 2px solid var(--theme-accent-primary);
+  outline-offset: 2px;
+}
+
+/* Hide button text (keep only icons) */
+.theme-toggle__btn span {
+  display: none;
 }
 
 /* Mobile responsive */
@@ -661,11 +673,6 @@ section {
     top: auto;
     bottom: 1.5rem;
     right: 1rem;
-    padding: 0.5rem 0.875rem;
-  }
-
-  .theme-toggle__label {
-    display: none;
   }
 }
 
@@ -730,7 +737,7 @@ header.header[data-surface="dark"],
 }
 
 .header[data-surface="dark"].header-scrolled {
-  background-color: rgba(10, 10, 10, 0.95) !important;
+  background-color: rgba(16, 22, 47, 0.95) !important;
   border-bottom-color: var(--surface-border-secondary) !important;
 }
 
@@ -776,7 +783,7 @@ section.contact[data-surface="dark"] {
 }
 
 .contact[data-surface="dark"] .contact-panel {
-  background: rgba(20, 20, 20, 0.95) !important;
+  background: rgba(24, 30, 56, 0.95) !important;
   border-color: var(--surface-border-secondary) !important;
   color: var(--surface-text-primary) !important;
 }

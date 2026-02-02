@@ -72,8 +72,7 @@
   /**
    * Get the initial theme based on priority:
    * 1. Stored preference in localStorage
-   * 2. System preference (prefers-color-scheme)
-   * 3. Default theme (light)
+   * 2. Default theme (light) - always defaults to light on first visit
    * @returns {string} The initial theme
    */
   function getInitialTheme() {
@@ -82,18 +81,7 @@
       return stored;
     }
 
-    // Check if user has visited before
-    try {
-      const hasVisited = localStorage.getItem("msicca-has-visited");
-      if (!hasVisited) {
-        // First visit - use system preference
-        localStorage.setItem("msicca-has-visited", "true");
-        return getSystemPreference();
-      }
-    } catch (error) {
-      // Ignore localStorage errors
-    }
-
+    // Always default to light theme on first visit
     return DEFAULT_THEME;
   }
 
@@ -211,7 +199,6 @@
     toggle.setAttribute("aria-label", "Theme selector");
 
     toggle.innerHTML = `
-      <span class="theme-toggle__label" aria-hidden="true">Theme</span>
       <div class="theme-toggle__group" role="radiogroup" aria-label="Theme selection">
         <button 
           class="theme-toggle__btn" 
@@ -220,11 +207,10 @@
           aria-pressed="false"
           aria-label="Switch to light theme"
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
             <path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
-          Light
         </button>
         <button 
           class="theme-toggle__btn" 
@@ -233,10 +219,9 @@
           aria-pressed="false"
           aria-label="Switch to dark theme"
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          Dark
         </button>
       </div>
     `;
