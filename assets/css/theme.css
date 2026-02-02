@@ -238,6 +238,48 @@ html[data-theme="dark"] {
   color: var(--surface-text-primary);
 }
 
+/* Additional dark surface overrides to ensure visibility */
+[data-surface="dark"] button,
+[data-surface="dark"] input,
+[data-surface="dark"] select,
+[data-surface="dark"] textarea,
+[data-surface="dark"] .card,
+[data-surface="dark"] .btn,
+[data-surface="dark"] .btn-primary,
+[data-surface="dark"] .btn-secondary {
+  border-color: var(--surface-border-secondary);
+}
+
+[data-surface="dark"] .nav-links a,
+[data-surface="dark"] .footer-nav a {
+  color: var(--surface-text-secondary);
+}
+
+[data-surface="dark"] .nav-links a:hover,
+[data-surface="dark"] .nav-links a.active,
+[data-surface="dark"] .footer-nav a:hover {
+  color: var(--surface-accent-primary);
+}
+
+[data-surface="dark"] .section-label {
+  color: var(--surface-accent-primary);
+}
+
+[data-surface="dark"] h1,
+[data-surface="dark"] h2,
+[data-surface="dark"] h3 {
+  color: var(--surface-text-primary);
+}
+
+[data-surface="dark"] p,
+[data-surface="dark"] li {
+  color: var(--surface-text-secondary);
+}
+
+[data-surface="dark"] .copyright {
+  color: var(--surface-text-muted);
+}
+
 /* =============================================
    FORCED LIGHT SURFACE (Para casos específicos)
    ============================================= */
