@@ -361,6 +361,10 @@ footer.footer[data-surface="dark"] .github-link {
 /* =============================================
    UNIFIED BUTTON SYSTEM
    Botones que se adaptan automáticamente al contexto
+   
+   NOTE: Font size is 1.5rem to match retro.css button sizing.
+   This ensures consistency across the site and maintains the
+   neo-brutal aesthetic with large, bold buttons.
    ============================================= */
 
 /* Primary Button - Respeta superficie */
@@ -368,26 +372,33 @@ footer.footer[data-surface="dark"] .github-link {
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 1.75rem;
+  gap: 12px;
+  padding: 0.5rem 3rem;
   font-family: var(--nb-font-mono, "Roboto Mono", monospace);
-  font-size: 0.9375rem;
+  font-size: 1.5rem; /* Matches retro.css for consistency */
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
-  border: 3px solid var(--theme-btn-primary-border);
+  border: var(--nb-border-width, 3px) solid var(--theme-btn-primary-border);
   background-color: var(--theme-btn-primary-bg);
   color: var(--theme-btn-primary-text);
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.33, 1, 0.68, 1);
-  box-shadow: var(--theme-shadow-sm);
+  transform: none;
+  box-shadow: none;
 }
 
 .btn:hover,
 .btn-primary:hover {
   background-color: var(--theme-btn-primary-hover-bg);
-  box-shadow: var(--theme-shadow-hover);
-  transform: translate(-4px, 4px);
+  box-shadow: var(--nb-shadow-hover);
+  transform: translate(8px, -8px);
+}
+
+.btn:active,
+.btn-primary:active {
+  transform: none;
+  box-shadow: none;
 }
 
 /* Primary button in dark surface */
@@ -396,11 +407,13 @@ footer.footer[data-surface="dark"] .github-link {
   border-color: var(--surface-btn-primary-border);
   background-color: var(--surface-btn-primary-bg);
   color: var(--surface-btn-primary-text);
+  box-shadow: 0 4px 0px rgba(0, 255, 255, 0.3);
 }
 
 [data-surface="dark"] .btn:hover,
 [data-surface="dark"] .btn-primary:hover {
   background-color: var(--surface-btn-primary-hover-bg);
+  box-shadow: -8px 8px 0px rgba(0, 255, 255, 0.4);
 }
 
 /* Primary button in light surface */
@@ -421,27 +434,34 @@ footer.footer[data-surface="dark"] .github-link {
 .btn-secondary {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 1.75rem;
+  gap: 0.8rem;
+  padding: 0.5rem 3rem;
   font-family: var(--nb-font-mono, "Roboto Mono", monospace);
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 400;
   line-height: 1.2;
   text-decoration: none;
-  border: 3px solid var(--theme-btn-secondary-border);
+  border: var(--nb-border-width, 3px) solid var(--theme-btn-secondary-border);
   background-color: var(--theme-btn-secondary-bg);
   color: var(--theme-btn-secondary-text);
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.33, 1, 0.68, 1);
-  box-shadow: var(--theme-shadow-sm);
+  vertical-align: middle;
+  overflow: visible;
 }
 
 .btn--secondary:hover,
 .btn-secondary:hover {
   background-color: var(--theme-btn-secondary-hover-bg);
   color: var(--theme-btn-secondary-hover-text);
-  box-shadow: var(--theme-shadow-hover);
-  transform: translate(-4px, 4px);
+  border-color: var(--theme-accent-primary);
+  box-shadow: var(--nb-shadow-hover-lg);
+  transform: translate(8px, -8px);
+}
+
+.btn-secondary:active {
+  transform: none;
+  box-shadow: none;
 }
 
 /* Secondary button in dark surface */
@@ -456,6 +476,8 @@ footer.footer[data-surface="dark"] .github-link {
 [data-surface="dark"] .btn-secondary:hover {
   background-color: var(--surface-btn-secondary-hover-bg);
   color: var(--surface-btn-secondary-hover-text);
+  border-color: var(--surface-accent-primary);
+  box-shadow: -8px 8px 0px rgba(0, 255, 255, 0.4);
 }
 
 /* Secondary button in light surface */
@@ -470,6 +492,14 @@ footer.footer[data-surface="dark"] .github-link {
 [data-surface="light"] .btn-secondary:hover {
   background-color: var(--surface-btn-secondary-hover-bg);
   color: var(--surface-btn-secondary-hover-text);
+}
+
+/* Focus visible state */
+.btn:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+  outline: 3px dashed var(--nb-border-primary);
+  outline-offset: 2px;
 }
 
 /* Ghost Button */
@@ -664,4 +694,119 @@ section {
     background-color: white;
     color: black;
   }
+}
+
+/* =============================================
+   FORCED DARK COMPONENT OVERRIDES
+   Enhanced specificity to ensure invariants hold
+   
+   IMPORTANT: These rules use !important to enforce the
+   non-negotiable invariant that Header/Footer/Hero/Contact
+   sections MUST remain dark regardless of global theme.
+   
+   This is necessary because:
+   1. styles.css loads before theme.css but has high specificity
+   2. Legacy rules like .footer { background: var(--base-100) }
+      would otherwise change with theme switches
+   3. The invariants are a core requirement and must never break
+   
+   Without !important, theme changes would break these sections.
+   ============================================= */
+
+/* Header forced dark - overrides styles.css */
+header.header[data-surface="dark"],
+.header[data-surface="dark"] {
+  background-color: var(--surface-bg-primary) !important;
+  color: var(--surface-text-primary) !important;
+}
+
+.header[data-surface="dark"] .nav-links a {
+  color: var(--surface-text-secondary) !important;
+}
+
+.header[data-surface="dark"] .nav-links a:hover,
+.header[data-surface="dark"] .nav-links a.active {
+  color: var(--surface-accent-primary) !important;
+}
+
+.header[data-surface="dark"].header-scrolled {
+  background-color: rgba(10, 10, 10, 0.95) !important;
+  border-bottom-color: var(--surface-border-secondary) !important;
+}
+
+/* Hero section forced dark - overrides styles.css */
+.hero[data-surface="dark"],
+section.hero[data-surface="dark"] {
+  background-color: var(--surface-bg-primary) !important;
+  color: var(--surface-text-primary) !important;
+}
+
+.hero[data-surface="dark"] .hero-title {
+  color: var(--surface-text-primary) !important;
+}
+
+.hero[data-surface="dark"] .hero-tagline {
+  color: var(--surface-accent-primary) !important;
+}
+
+/* Contact section forced dark - overrides styles.css */
+.contact[data-surface="dark"],
+section.contact[data-surface="dark"] {
+  color: var(--surface-text-primary) !important;
+}
+
+.contact[data-surface="dark"] .section-label {
+  color: var(--surface-accent-primary) !important;
+}
+
+.contact[data-surface="dark"] .contact-title {
+  color: var(--surface-text-primary) !important;
+}
+
+.contact[data-surface="dark"] .contact-description {
+  color: var(--surface-text-secondary) !important;
+}
+
+.contact[data-surface="dark"] .contact-points li {
+  color: var(--surface-text-secondary) !important;
+}
+
+.contact[data-surface="dark"] .contact-points li::before {
+  background: var(--surface-accent-primary) !important;
+}
+
+.contact[data-surface="dark"] .contact-panel {
+  background: rgba(20, 20, 20, 0.95) !important;
+  border-color: var(--surface-border-secondary) !important;
+  color: var(--surface-text-primary) !important;
+}
+
+.contact[data-surface="dark"] .contact-panel__title {
+  color: var(--surface-text-primary) !important;
+}
+
+.contact[data-surface="dark"] .contact-panel__note {
+  color: var(--surface-text-secondary) !important;
+}
+
+.contact[data-surface="dark"] .contact-panel__input {
+  background: var(--surface-bg-secondary) !important;
+  border-color: var(--surface-border-secondary) !important;
+  color: var(--surface-text-primary) !important;
+}
+
+.contact[data-surface="dark"] .contact-panel__input:focus {
+  border-color: var(--surface-accent-primary) !important;
+}
+
+/* Footer github-link hover in dark surface */
+footer.footer[data-surface="dark"] .github-link:hover {
+  background: var(--surface-accent-primary) !important;
+  color: var(--surface-bg-primary) !important;
+  border-color: var(--surface-accent-primary) !important;
+}
+
+/* Ensure copyright text is visible in dark footer */
+footer.footer[data-surface="dark"] .copyright {
+  color: var(--surface-text-muted) !important;
 }
