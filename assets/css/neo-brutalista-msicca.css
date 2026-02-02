@@ -1,0 +1,243 @@
+/* =============================================
+   NEO-BRUTALISTA MSICCA - Centralized Design System
+   A portable, theme-ready CSS token system
+   Version: 1.0.0
+   ============================================= */
+
+/* =============================================
+   LIGHT MODE (Default - Active)
+   ============================================= */
+:root {
+  /* === Neo-Brutalist Color Palette === */
+  /* Base Background Layers (Light Mode) */
+  --nb-base-100: #ffffff;
+  --nb-base-200: #fafafa;
+  --nb-base-300: #f5f5f5;
+  --nb-base-400: #eeeeee;
+  --nb-base-500: #e0e0e0;
+  
+  /* Text Colors (Light Mode) */
+  --nb-text-primary: #0a0a0a;
+  --nb-text-secondary: #525252;
+  --nb-text-muted: #a3a3a3;
+  
+  /* Accent Colors - Neo-Brutalist Vibrant */
+  --nb-accent-primary: #00ffff;      /* Cyan - Electric */
+  --nb-accent-secondary: #ff00ff;    /* Magenta - Bold */
+  --nb-accent-tertiary: #ffff00;     /* Yellow - Bright */
+  --nb-accent-soft: rgba(0, 255, 255, 0.1);
+  
+  /* Border & Structure */
+  --nb-border-primary: #000000;
+  --nb-border-secondary: rgba(0, 0, 0, 0.2);
+  --nb-border-width: 3px;
+  --nb-border-width-thin: 2px;
+  --nb-border-width-thick: 4px;
+  
+  /* Shadows - Hard & Geometric */
+  --nb-shadow-sm: 4px 4px 0px rgba(0, 0, 0, 1);
+  --nb-shadow-md: 8px 8px 0px rgba(0, 0, 0, 1);
+  --nb-shadow-lg: 12px 12px 0px rgba(0, 0, 0, 1);
+  --nb-shadow-xl: 16px 16px 0px rgba(0, 0, 0, 1);
+  
+  /* Interactive Shadows (Inverted) */
+  --nb-shadow-hover: -8px 8px 0px rgba(0, 0, 0, 1);
+  --nb-shadow-hover-lg: -10px 10px 0px rgba(0, 0, 0, 1);
+  
+  /* === Typography === */
+  --nb-font-main: "Roboto", system-ui, sans-serif;
+  --nb-font-mono: "Roboto Mono", monospace;
+  
+  /* === Spacing System === */
+  --nb-space-xs: 0.5rem;
+  --nb-space-sm: 1rem;
+  --nb-space-md: 1.5rem;
+  --nb-space-lg: 2rem;
+  --nb-space-xl: 3rem;
+  --nb-space-2xl: 4rem;
+  
+  /* === Layout === */
+  --nb-container-max: 1200px;
+  --nb-section-padding: 120px;
+  --nb-border-radius: 0px;          /* Neo-brutalist = no curves */
+  --nb-border-radius-sm: 2px;       /* Minimal for inputs */
+  
+  /* === Animation === */
+  --nb-transition: 0.24s cubic-bezier(0.33, 1, 0.68, 1);
+  --nb-transition-fast: 0.15s ease-out;
+  --nb-transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* === Component-Specific === */
+  /* Buttons */
+  --nb-btn-bg-primary: var(--nb-accent-primary);
+  --nb-btn-bg-secondary: transparent;
+  --nb-btn-text-primary: var(--nb-base-100);
+  --nb-btn-text-secondary: var(--nb-text-primary);
+  --nb-btn-border: var(--nb-border-primary);
+  
+  /* Cards */
+  --nb-card-bg: var(--nb-base-100);
+  --nb-card-border: var(--nb-border-primary);
+  --nb-card-shadow: none;
+  --nb-card-shadow-hover: var(--nb-shadow-hover);
+  
+  /* Header/Footer */
+  --nb-header-bg: rgba(255, 255, 255, 0.95);
+  --nb-header-border: var(--nb-border-secondary);
+  --nb-footer-bg: var(--nb-base-100);
+  --nb-footer-border: var(--nb-border-secondary);
+  
+  /* Overlays */
+  --nb-overlay-light: rgba(255, 255, 255, 0.9);
+  --nb-overlay-dark: rgba(0, 0, 0, 0.7);
+  
+  /* Form Elements */
+  --nb-input-bg: var(--nb-base-200);
+  --nb-input-border: var(--nb-border-secondary);
+  --nb-input-focus: var(--nb-accent-primary);
+  
+  /* Tech Stack / Tags */
+  --nb-tag-bg: var(--nb-base-100);
+  --nb-tag-border: var(--nb-border-primary);
+  --nb-tag-text: var(--nb-text-primary);
+}
+
+/* =============================================
+   DARK MODE (Ready - Media Query Only)
+   Not visually active, prepared for future use
+   ============================================= */
+@media (prefers-color-scheme: dark) {
+  /* Note: This media query will NOT activate visually 
+     on the current site. It's here for future portability. */
+  :root {
+    /* Base Background Layers (Dark Mode) */
+    --nb-base-100: #0a0a0a;
+    --nb-base-200: #0f0f0f;
+    --nb-base-300: #141414;
+    --nb-base-400: #1a1a1a;
+    --nb-base-500: #202020;
+    
+    /* Text Colors (Dark Mode) */
+    --nb-text-primary: #f5f5f5;
+    --nb-text-secondary: #a3a3a3;
+    --nb-text-muted: #525252;
+    
+    /* Accent Colors (Same - high contrast works in both) */
+    --nb-accent-primary: #00ffff;
+    --nb-accent-secondary: #ff00ff;
+    --nb-accent-tertiary: #ffff00;
+    --nb-accent-soft: rgba(0, 255, 255, 0.1);
+    
+    /* Border & Structure (Inverted) */
+    --nb-border-primary: #ffffff;
+    --nb-border-secondary: rgba(255, 255, 255, 0.2);
+    
+    /* Shadows (Light on Dark) */
+    --nb-shadow-sm: 4px 4px 0px rgba(255, 255, 255, 0.2);
+    --nb-shadow-md: 8px 8px 0px rgba(255, 255, 255, 0.2);
+    --nb-shadow-lg: 12px 12px 0px rgba(255, 255, 255, 0.2);
+    --nb-shadow-xl: 16px 16px 0px rgba(255, 255, 255, 0.2);
+    --nb-shadow-hover: -8px 8px 0px rgba(255, 255, 255, 0.2);
+    --nb-shadow-hover-lg: -10px 10px 0px rgba(255, 255, 255, 0.2);
+    
+    /* Component Overrides for Dark */
+    --nb-btn-text-primary: var(--nb-base-100);
+    --nb-btn-text-secondary: var(--nb-text-primary);
+    
+    --nb-card-bg: var(--nb-base-200);
+    --nb-card-border: var(--nb-border-primary);
+    
+    --nb-header-bg: rgba(10, 10, 10, 0.95);
+    --nb-header-border: var(--nb-border-secondary);
+    --nb-footer-bg: var(--nb-base-100);
+    
+    --nb-overlay-light: rgba(0, 0, 0, 0.9);
+    --nb-overlay-dark: rgba(255, 255, 255, 0.1);
+    
+    --nb-input-bg: var(--nb-base-300);
+    --nb-input-border: var(--nb-border-secondary);
+    --nb-input-focus: var(--nb-accent-primary);
+  }
+}
+
+/* =============================================
+   UTILITY CLASSES (Optional)
+   These can be used directly in HTML if needed
+   ============================================= */
+
+/* Border Utilities */
+.nb-border {
+  border: var(--nb-border-width) solid var(--nb-border-primary);
+}
+
+.nb-border-thin {
+  border: var(--nb-border-width-thin) solid var(--nb-border-primary);
+}
+
+.nb-border-thick {
+  border: var(--nb-border-width-thick) solid var(--nb-border-primary);
+}
+
+/* Shadow Utilities */
+.nb-shadow-sm {
+  box-shadow: var(--nb-shadow-sm);
+}
+
+.nb-shadow-md {
+  box-shadow: var(--nb-shadow-md);
+}
+
+.nb-shadow-lg {
+  box-shadow: var(--nb-shadow-lg);
+}
+
+/* Background Utilities */
+.nb-bg-primary {
+  background-color: var(--nb-base-100);
+}
+
+.nb-bg-secondary {
+  background-color: var(--nb-base-200);
+}
+
+.nb-bg-accent {
+  background-color: var(--nb-accent-primary);
+}
+
+/* Text Utilities */
+.nb-text-primary {
+  color: var(--nb-text-primary);
+}
+
+.nb-text-secondary {
+  color: var(--nb-text-secondary);
+}
+
+.nb-text-accent {
+  color: var(--nb-accent-primary);
+}
+
+/* =============================================
+   IMPLEMENTATION NOTES
+   ============================================= */
+/*
+ * This file provides a centralized token system for neo-brutalist design.
+ * 
+ * USAGE:
+ * 1. Import this file FIRST in all HTML pages
+ * 2. Use the CSS variables (--nb-*) in your component styles
+ * 3. Light mode is active by default
+ * 4. Dark mode is prepared but only triggers with @media (prefers-color-scheme: dark)
+ * 
+ * PORTABILITY:
+ * - This file can be copied to any project
+ * - No dependencies on other CSS files
+ * - All tokens follow --nb- prefix to avoid conflicts
+ * - Modify only this file to change the entire site theme
+ * 
+ * CUSTOMIZATION:
+ * - To change colors: edit the :root color values
+ * - To adjust spacing: edit --nb-space-* values
+ * - To modify shadows: edit --nb-shadow-* values
+ * - All changes propagate automatically to components using these tokens
+ */

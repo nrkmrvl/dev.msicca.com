@@ -1,32 +1,33 @@
 /* =============================================
    Edge Minimal Developers - Refined Design System
+   Now using Neo-Brutalist centralized tokens
    ============================================= */
 
 :root {
-  /* Color Palette - Dark Grays & Accents */
-  --base-100: #0a0a0a;
-  --base-200: #0f0f0f;
-  --base-300: #141414;
-  --base-400: #1a1a1a;
-  --base-500: #202020;
+  /* Legacy variable mappings to neo-brutalist tokens */
+  /* These maintain compatibility with existing selectors */
+  --base-100: var(--nb-base-100);
+  --base-200: var(--nb-base-200);
+  --base-300: var(--nb-base-300);
+  --base-400: var(--nb-base-400);
+  --base-500: var(--nb-base-500);
 
-  --text-primary: #f5f5f5;
-  --text-secondary: #a3a3a3;
-  --text-muted: #525252;
+  --text-primary: var(--nb-text-primary);
+  --text-secondary: var(--nb-text-secondary);
+  --text-muted: var(--nb-text-muted);
 
-  /* Aqua/Cyan accents as requested previously */
-  --accent: #22d3d3;
-  --accent-soft: rgba(34, 211, 211, 0.1);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --accent: var(--nb-accent-primary);
+  --accent-soft: var(--nb-accent-soft);
+  --border-color: var(--nb-border-secondary);
 
-  /* Typography - Unified Inter */
-  --font-main: "Roboto", system-ui, sans-serif;
-  --font-mono: "Roboto Mono", monospace;
+  /* Typography */
+  --font-main: var(--nb-font-main);
+  --font-mono: var(--nb-font-mono);
 
   /* Layout */
-  --container-max: 1200px;
-  --section-padding: 120px;
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --container-max: var(--nb-container-max);
+  --section-padding: var(--nb-section-padding);
+  --transition: var(--nb-transition);
 }
 
 /* =============================================
@@ -1735,24 +1736,24 @@ section[id] {
 }
 
 body[data-theme="light"] .theme-toggle__btn.is-active {
-  color: #0a0a0a;
+  color: var(--nb-text-primary);
 }
 
-/* Light theme variables */
+/* Light theme variables - Using Neo-Brutalist tokens */
 body[data-theme="light"] {
-  --base-100: #fff0e5;
-  --base-200: #f7e8de;
-  --base-300: #ffffff;
-  --base-400: #e9d8cd;
-  --base-500: #d9c5ba;
-  --text-primary: #10162f;
-  --text-secondary: #37465a;
-  --text-muted: #6b7280;
-  --accent: #00ffff;
-  --accent-soft: rgba(0, 255, 255, 0.1);
-  --border-color: rgba(16, 22, 47, 0.12);
-  background-color: #fff0e5;
-  color: #37465a;
+  --base-100: var(--nb-base-100);
+  --base-200: var(--nb-base-200);
+  --base-300: var(--nb-base-300);
+  --base-400: var(--nb-base-400);
+  --base-500: var(--nb-base-500);
+  --text-primary: var(--nb-text-primary);
+  --text-secondary: var(--nb-text-secondary);
+  --text-muted: var(--nb-text-muted);
+  --accent: var(--nb-accent-primary);
+  --accent-soft: var(--nb-accent-soft);
+  --border-color: var(--nb-border-secondary);
+  background-color: var(--nb-base-100);
+  color: var(--nb-text-secondary);
 }
 
 /* Preserve dark header/hero/contact/footer */
@@ -1764,22 +1765,22 @@ body[data-theme="light"] footer,
 body[data-theme="light"] .footer,
 body[data-theme="light"] .portfolio-hero,
 body[data-theme="light"] .case-study-hero {
-  background-color: #0a0a0a;
-  color: #f5f5f5;
+  background-color: var(--nb-base-100);
+  color: var(--nb-text-primary);
 }
 
 /* Light theme targets (exclude header/hero/contact/footer) */
 body[data-theme="light"] section:not(.hero):not(.contact):not(.portfolio-hero):not(.case-study-hero),
 body[data-theme="light"] .portfolio-nav,
 body[data-theme="light"] .breadcrumb {
-  background-color: var(--base-100);
-  color: var(--text-secondary);
+  background-color: var(--nb-base-100);
+  color: var(--nb-text-secondary);
 }
 
 body[data-theme="light"] .case-study-section--alt,
 body[data-theme="light"] .portfolio-section--alt {
-  background-color: #10162f;
-  color: #ffffff;
+  background-color: var(--nb-base-200);
+  color: var(--nb-text-primary);
 }
 
 body[data-theme="light"] .features-title,
@@ -1787,7 +1788,7 @@ body[data-theme="light"] .about-title,
 body[data-theme="light"] .projects-title,
 body[data-theme="light"] .section-title,
 body[data-theme="light"] .feature-title {
-  color: #10162f;
+  color: var(--nb-text-primary);
 }
 
 body[data-theme="light"] .features-description,
@@ -1796,31 +1797,31 @@ body[data-theme="light"] .project-desc,
 body[data-theme="light"] .about-intro,
 body[data-theme="light"] .section-subtitle,
 body[data-theme="light"] .value-description {
-  color: #37465a;
+  color: var(--nb-text-secondary);
 }
 
 body[data-theme="light"] .section-label,
 body[data-theme="light"] .value-name {
-  color: #00ffff;
+  color: var(--nb-accent-primary);
 }
 
 body[data-theme="light"] .feature-card,
 body[data-theme="light"] .project-card,
 body[data-theme="light"] .value-card,
 body[data-theme="light"] .architecture-placeholder {
-  background: #ffffff;
-  border-color: rgba(16, 22, 47, 0.12);
-  color: #37465a;
+  background: var(--nb-base-100);
+  border-color: var(--nb-border-primary);
+  color: var(--nb-text-secondary);
 }
 
 body[data-theme="light"] .portfolio-tab,
 body[data-theme="light"] .filter-tag {
-  color: #37465a;
-  border-color: rgba(16, 22, 47, 0.2);
+  color: var(--nb-text-secondary);
+  border-color: var(--nb-border-secondary);
 }
 
 body[data-theme="light"] .portfolio-tab.active {
-  color: #10162f;
+  color: var(--nb-text-primary);
 }
 
 /* End of Edge Minimal Developers - Refined Design System */

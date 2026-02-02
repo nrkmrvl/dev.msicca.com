@@ -369,12 +369,13 @@ window.initMobileMenu = function () {
 
   // =========================================
   // Provisional Theme Toggle (Dark / Light / Navy)
+  // Neo-Brutalist Theme: Light mode active by default
   // =========================================
   const themeOptions = ["dark", "light"];
   const storedTheme = window.localStorage.getItem("msicca-theme");
   const initialTheme = themeOptions.includes(storedTheme)
     ? storedTheme
-    : "dark";
+    : "light";
 
   const applyTheme = (theme) => {
     document.body.dataset.theme = theme;

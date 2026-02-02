@@ -55,8 +55,8 @@
   height: 400px;
   background: radial-gradient(
     circle at center,
-    rgba(34, 211, 211, 0.15) 0%,
-    rgba(34, 211, 211, 0.05) 50%,
+    var(--nb-accent-soft) 0%,
+    rgba(0, 255, 255, 0.05) 50%,
     transparent 100%
   );
   border-radius: 50%;
@@ -77,8 +77,8 @@
 #wordpress-page .hero-badge {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: rgba(34, 211, 211, 0.1);
-  border: 1px solid rgba(34, 211, 211, 0.3);
+  background: var(--nb-accent-soft);
+  border: 1px solid var(--nb-accent-primary);
   border-radius: 50px;
   font-size: 0.875rem;
   font-weight: 500;
