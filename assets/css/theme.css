@@ -361,6 +361,10 @@ footer.footer[data-surface="dark"] .github-link {
 /* =============================================
    UNIFIED BUTTON SYSTEM
    Botones que se adaptan automáticamente al contexto
+   
+   NOTE: Font size is 1.5rem to match retro.css button sizing.
+   This ensures consistency across the site and maintains the
+   neo-brutal aesthetic with large, bold buttons.
    ============================================= */
 
 /* Primary Button - Respeta superficie */
@@ -371,7 +375,7 @@ footer.footer[data-surface="dark"] .github-link {
   gap: 12px;
   padding: 0.5rem 3rem;
   font-family: var(--nb-font-mono, "Roboto Mono", monospace);
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Matches retro.css for consistency */
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
@@ -695,6 +699,18 @@ section {
 /* =============================================
    FORCED DARK COMPONENT OVERRIDES
    Enhanced specificity to ensure invariants hold
+   
+   IMPORTANT: These rules use !important to enforce the
+   non-negotiable invariant that Header/Footer/Hero/Contact
+   sections MUST remain dark regardless of global theme.
+   
+   This is necessary because:
+   1. styles.css loads before theme.css but has high specificity
+   2. Legacy rules like .footer { background: var(--base-100) }
+      would otherwise change with theme switches
+   3. The invariants are a core requirement and must never break
+   
+   Without !important, theme changes would break these sections.
    ============================================= */
 
 /* Header forced dark - overrides styles.css */
