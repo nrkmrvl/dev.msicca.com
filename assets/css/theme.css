@@ -756,6 +756,7 @@ header.header[data-surface="dark"],
 
 .header[data-surface="dark"].header-scrolled {
   background-color: rgba(16, 22, 47, 0.9) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
   backdrop-filter: blur(12px) !important;
   border-bottom-color: var(--surface-border-secondary) !important;
 }
