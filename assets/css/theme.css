@@ -280,6 +280,27 @@ html[data-theme="dark"] {
   color: var(--surface-text-muted);
 }
 
+/* Forced-dark footer overrides (legacy styles.css compatibility) */
+footer.footer[data-surface="dark"] {
+  background-color: var(--surface-bg-primary) !important;
+  border-top-color: var(--surface-border-secondary) !important;
+  color: var(--surface-text-primary) !important;
+}
+
+footer.footer[data-surface="dark"] .footer-nav a {
+  color: var(--surface-text-secondary) !important;
+}
+
+footer.footer[data-surface="dark"] .footer-nav a:hover {
+  color: var(--surface-accent-primary) !important;
+}
+
+footer.footer[data-surface="dark"] .github-link {
+  background: var(--surface-bg-secondary) !important;
+  color: var(--surface-text-primary) !important;
+  border-color: var(--surface-border-secondary) !important;
+}
+
 /* =============================================
    FORCED LIGHT SURFACE (Para casos específicos)
    ============================================= */
