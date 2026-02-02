@@ -19,51 +19,51 @@ html[data-theme="light"] {
   --theme-bg-secondary: #fafafa;
   --theme-bg-tertiary: #f5f5f5;
   --theme-bg-alt: #eeeeee;
-  
+
   /* === Text Colors === */
   --theme-text-primary: #0a0a0a;
   --theme-text-secondary: #525252;
   --theme-text-muted: #a3a3a3;
   --theme-text-inverse: #ffffff;
-  
+
   /* === Accent Colors (Cyan/MSICCA) === */
   --theme-accent-primary: #00ffff;
   --theme-accent-secondary: #00d4d4;
   --theme-accent-soft: rgba(0, 255, 255, 0.1);
   --theme-accent-softer: rgba(0, 255, 255, 0.05);
-  
+
   /* === Border & Structure === */
   --theme-border-primary: #000000;
   --theme-border-secondary: rgba(0, 0, 0, 0.2);
   --theme-border-tertiary: rgba(0, 0, 0, 0.1);
-  
+
   /* === Shadows === */
   --theme-shadow-sm: 4px 4px 0px rgba(0, 0, 0, 1);
   --theme-shadow-md: 8px 8px 0px rgba(0, 0, 0, 1);
   --theme-shadow-lg: 12px 12px 0px rgba(0, 0, 0, 1);
   --theme-shadow-hover: -8px 8px 0px rgba(0, 0, 0, 1);
-  
+
   /* === Section Alternation (Light Theme) === */
   --theme-section-tone-a: #ffffff;
   --theme-section-tone-b: #f5f5f5;
-  
+
   /* === Button Colors (Light Theme) === */
   --theme-btn-primary-bg: #000000;
   --theme-btn-primary-text: #ffffff;
   --theme-btn-primary-border: #000000;
   --theme-btn-primary-hover-bg: #1a1a1a;
-  
+
   --theme-btn-secondary-bg: transparent;
   --theme-btn-secondary-text: #000000;
   --theme-btn-secondary-border: #000000;
   --theme-btn-secondary-hover-bg: #000000;
   --theme-btn-secondary-hover-text: #ffffff;
-  
+
   /* === Card Colors === */
   --theme-card-bg: #ffffff;
   --theme-card-border: #000000;
   --theme-card-shadow: var(--theme-shadow-sm);
-  
+
   /* === Form Elements === */
   --theme-input-bg: #fafafa;
   --theme-input-border: rgba(0, 0, 0, 0.2);
@@ -113,51 +113,51 @@ html[data-theme="dark"] {
   --theme-bg-secondary: #0f0f0f;
   --theme-bg-tertiary: #141414;
   --theme-bg-alt: #1a1a1a;
-  
+
   /* === Text Colors === */
   --theme-text-primary: #f5f5f5;
   --theme-text-secondary: #a3a3a3;
   --theme-text-muted: #6b6b6b;
   --theme-text-inverse: #0a0a0a;
-  
+
   /* === Accent Colors (Mantener cyan) === */
   --theme-accent-primary: #00ffff;
   --theme-accent-secondary: #00d4d4;
   --theme-accent-soft: rgba(0, 255, 255, 0.15);
   --theme-accent-softer: rgba(0, 255, 255, 0.08);
-  
+
   /* === Border & Structure === */
   --theme-border-primary: #ffffff;
   --theme-border-secondary: rgba(255, 255, 255, 0.2);
   --theme-border-tertiary: rgba(255, 255, 255, 0.1);
-  
+
   /* === Shadows === */
   --theme-shadow-sm: 4px 4px 0px rgba(0, 255, 255, 0.3);
   --theme-shadow-md: 8px 8px 0px rgba(0, 255, 255, 0.3);
   --theme-shadow-lg: 12px 12px 0px rgba(0, 255, 255, 0.3);
   --theme-shadow-hover: -8px 8px 0px rgba(0, 255, 255, 0.3);
-  
+
   /* === Section Alternation (Dark Theme) === */
   --theme-section-tone-a: #0a0a0a;
   --theme-section-tone-b: #141414;
-  
+
   /* === Button Colors (Dark Theme) === */
   --theme-btn-primary-bg: #00ffff;
   --theme-btn-primary-text: #0a0a0a;
   --theme-btn-primary-border: #00ffff;
   --theme-btn-primary-hover-bg: #00d4d4;
-  
+
   --theme-btn-secondary-bg: transparent;
   --theme-btn-secondary-text: #00ffff;
   --theme-btn-secondary-border: #00ffff;
   --theme-btn-secondary-hover-bg: #00ffff;
   --theme-btn-secondary-hover-text: #0a0a0a;
-  
+
   /* === Card Colors === */
   --theme-card-bg: #141414;
   --theme-card-border: rgba(0, 255, 255, 0.4);
   --theme-card-shadow: var(--theme-shadow-sm);
-  
+
   /* === Form Elements === */
   --theme-input-bg: #141414;
   --theme-input-border: rgba(255, 255, 255, 0.2);
@@ -207,32 +207,32 @@ html[data-theme="dark"] {
   --surface-bg-primary: #0a0a0a;
   --surface-bg-secondary: #0f0f0f;
   --surface-bg-tertiary: #141414;
-  
+
   /* Force dark text */
   --surface-text-primary: #f5f5f5;
   --surface-text-secondary: #a3a3a3;
   --surface-text-muted: #6b6b6b;
-  
+
   /* Force cyan accent */
   --surface-accent-primary: #00ffff;
   --surface-accent-soft: rgba(0, 255, 255, 0.15);
-  
+
   /* Force white/light borders */
   --surface-border-primary: rgba(255, 255, 255, 0.3);
   --surface-border-secondary: rgba(255, 255, 255, 0.15);
-  
+
   /* Dark surface buttons */
   --surface-btn-primary-bg: #00ffff;
   --surface-btn-primary-text: #0a0a0a;
   --surface-btn-primary-border: #00ffff;
   --surface-btn-primary-hover-bg: #00d4d4;
-  
+
   --surface-btn-secondary-bg: transparent;
   --surface-btn-secondary-text: #00ffff;
   --surface-btn-secondary-border: #00ffff;
   --surface-btn-secondary-hover-bg: #00ffff;
   --surface-btn-secondary-hover-text: #0a0a0a;
-  
+
   /* Apply colors */
   background-color: var(--surface-bg-primary);
   color: var(--surface-text-primary);
@@ -246,32 +246,32 @@ html[data-theme="dark"] {
   --surface-bg-primary: #ffffff;
   --surface-bg-secondary: #fafafa;
   --surface-bg-tertiary: #f5f5f5;
-  
+
   /* Force dark text */
   --surface-text-primary: #0a0a0a;
   --surface-text-secondary: #525252;
   --surface-text-muted: #a3a3a3;
-  
+
   /* Force cyan accent */
   --surface-accent-primary: #00ffff;
   --surface-accent-soft: rgba(0, 255, 255, 0.1);
-  
+
   /* Force dark borders */
   --surface-border-primary: #000000;
   --surface-border-secondary: rgba(0, 0, 0, 0.2);
-  
+
   /* Light surface buttons */
   --surface-btn-primary-bg: #000000;
   --surface-btn-primary-text: #ffffff;
   --surface-btn-primary-border: #000000;
   --surface-btn-primary-hover-bg: #1a1a1a;
-  
+
   --surface-btn-secondary-bg: transparent;
   --surface-btn-secondary-text: #000000;
   --surface-btn-secondary-border: #000000;
   --surface-btn-secondary-hover-bg: #000000;
   --surface-btn-secondary-hover-text: #ffffff;
-  
+
   /* Apply colors */
   background-color: var(--surface-bg-primary);
   color: var(--surface-text-primary);
@@ -476,7 +476,9 @@ html[data-theme="dark"] {
 body {
   background-color: var(--theme-bg-primary);
   color: var(--theme-text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Links */
@@ -568,7 +570,7 @@ section {
     right: 1rem;
     padding: 0.5rem 0.875rem;
   }
-  
+
   .theme-toggle__label {
     display: none;
   }
@@ -594,7 +596,7 @@ section {
   .theme-toggle {
     display: none;
   }
-  
+
   body {
     background-color: white;
     color: black;

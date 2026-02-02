@@ -1,7 +1,7 @@
 /**
  * MSICCA Theme System - Light/Dark Theme Toggle
  * Version: 2.0.0
- * 
+ *
  * Maneja el toggle entre tema claro y oscuro con:
  * - Persistencia en localStorage
  * - Fallback a prefers-color-scheme
@@ -10,15 +10,15 @@
  */
 
 (function () {
-  'use strict';
+  "use strict";
 
   // =========================================
   // CONSTANTS
   // =========================================
-  const STORAGE_KEY = 'msicca-theme';
+  const STORAGE_KEY = "msicca-theme";
   const THEMES = {
-    LIGHT: 'light',
-    DARK: 'dark'
+    LIGHT: "light",
+    DARK: "dark",
   };
   const DEFAULT_THEME = THEMES.LIGHT;
 
@@ -32,7 +32,10 @@
    * @returns {string} 'dark' or 'light'
    */
   function getSystemPreference() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
       return THEMES.DARK;
     }
     return THEMES.LIGHT;
@@ -49,7 +52,7 @@
         return stored;
       }
     } catch (error) {
-      console.warn('Could not access localStorage:', error);
+      console.warn("Could not access localStorage:", error);
     }
     return null;
   }
@@ -62,7 +65,7 @@
     try {
       localStorage.setItem(STORAGE_KEY, theme);
     } catch (error) {
-      console.warn('Could not save theme to localStorage:', error);
+      console.warn("Could not save theme to localStorage:", error);
     }
   }
 
@@ -78,19 +81,19 @@
     if (stored) {
       return stored;
     }
-    
+
     // Check if user has visited before
     try {
-      const hasVisited = localStorage.getItem('msicca-has-visited');
+      const hasVisited = localStorage.getItem("msicca-has-visited");
       if (!hasVisited) {
         // First visit - use system preference
-        localStorage.setItem('msicca-has-visited', 'true');
+        localStorage.setItem("msicca-has-visited", "true");
         return getSystemPreference();
       }
     } catch (error) {
       // Ignore localStorage errors
     }
-    
+
     return DEFAULT_THEME;
   }
 
@@ -105,22 +108,26 @@
 
     // Skip transition on initial load to prevent flash
     if (skipTransition) {
-      html.style.transition = 'none';
+      html.style.transition = "none";
       if (body) {
-        body.style.transition = 'none';
+        body.style.transition = "none";
       }
     }
 
     // Set the theme attribute
-    html.setAttribute('data-theme', theme);
+    html.setAttribute("data-theme", theme);
     if (body) {
-      body.setAttribute('data-theme', theme);
+      body.setAttribute("data-theme", theme);
     } else {
-      document.addEventListener('DOMContentLoaded', () => {
-        if (document.body) {
-          document.body.setAttribute('data-theme', theme);
-        }
-      }, { once: true });
+      document.addEventListener(
+        "DOMContentLoaded",
+        () => {
+          if (document.body) {
+            document.body.setAttribute("data-theme", theme);
+          }
+        },
+        { once: true },
+      );
     }
     currentTheme = theme;
 
@@ -134,18 +141,20 @@
     if (skipTransition) {
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          html.style.transition = '';
+          html.style.transition = "";
           if (body) {
-            body.style.transition = '';
+            body.style.transition = "";
           }
         });
       });
     }
 
     // Dispatch custom event for other scripts to listen to
-    window.dispatchEvent(new CustomEvent('themechange', {
-      detail: { theme }
-    }));
+    window.dispatchEvent(
+      new CustomEvent("themechange", {
+        detail: { theme },
+      }),
+    );
   }
 
   /**
@@ -171,16 +180,19 @@
    * @param {string} theme - The current theme
    */
   function updateToggleButtons(theme) {
-    const buttons = document.querySelectorAll('.theme-toggle__btn');
-    buttons.forEach(btn => {
-      const btnTheme = btn.getAttribute('data-theme');
+    const buttons = document.querySelectorAll(".theme-toggle__btn");
+    buttons.forEach((btn) => {
+      const btnTheme = btn.getAttribute("data-theme");
       const isActive = btnTheme === theme;
-      
-      btn.classList.toggle('is-active', isActive);
-      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-      
+
+      btn.classList.toggle("is-active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+
       // Update aria-label for accessibility
-      btn.setAttribute('aria-label', `Switch to ${btnTheme} theme${isActive ? ' (current)' : ''}`);
+      btn.setAttribute(
+        "aria-label",
+        `Switch to ${btnTheme} theme${isActive ? " (current)" : ""}`,
+      );
     });
   }
 
@@ -189,15 +201,15 @@
    */
   function mountThemeToggle() {
     // Check if toggle already exists
-    if (document.querySelector('.theme-toggle')) {
+    if (document.querySelector(".theme-toggle")) {
       return;
     }
 
-    const toggle = document.createElement('div');
-    toggle.className = 'theme-toggle';
-    toggle.setAttribute('role', 'group');
-    toggle.setAttribute('aria-label', 'Theme selector');
-    
+    const toggle = document.createElement("div");
+    toggle.className = "theme-toggle";
+    toggle.setAttribute("role", "group");
+    toggle.setAttribute("aria-label", "Theme selector");
+
     toggle.innerHTML = `
       <span class="theme-toggle__label" aria-hidden="true">Theme</span>
       <div class="theme-toggle__group" role="radiogroup" aria-label="Theme selection">
@@ -230,30 +242,30 @@
     `;
 
     // Add event listener for toggle clicks
-    toggle.addEventListener('click', (event) => {
-      const button = event.target.closest('.theme-toggle__btn');
+    toggle.addEventListener("click", (event) => {
+      const button = event.target.closest(".theme-toggle__btn");
       if (!button) return;
 
-      const selectedTheme = button.getAttribute('data-theme');
+      const selectedTheme = button.getAttribute("data-theme");
       if (selectedTheme && selectedTheme !== currentTheme) {
         setTheme(selectedTheme);
       }
     });
 
     // Add keyboard support
-    const buttons = toggle.querySelectorAll('.theme-toggle__btn');
+    const buttons = toggle.querySelectorAll(".theme-toggle__btn");
     buttons.forEach((btn, index) => {
-      btn.addEventListener('keydown', (e) => {
+      btn.addEventListener("keydown", (e) => {
         let nextIndex = null;
-        
-        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") {
           e.preventDefault();
           nextIndex = (index + 1) % buttons.length;
-        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
           e.preventDefault();
           nextIndex = (index - 1 + buttons.length) % buttons.length;
         }
-        
+
         if (nextIndex !== null) {
           buttons[nextIndex].focus();
         }
@@ -262,7 +274,7 @@
 
     // Append to body
     document.body.appendChild(toggle);
-    
+
     // Update button states
     updateToggleButtons(currentTheme);
   }
@@ -273,11 +285,11 @@
   function watchSystemTheme() {
     if (!window.matchMedia) return;
 
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
     // Modern browsers
     if (mediaQuery.addEventListener) {
-      mediaQuery.addEventListener('change', (e) => {
+      mediaQuery.addEventListener("change", (e) => {
         // Only apply system theme if user hasn't set a preference
         const stored = getStoredTheme();
         if (!stored) {
@@ -307,8 +319,8 @@
     applyTheme(initialTheme, true);
 
     // Mount toggle UI when DOM is ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', mountThemeToggle);
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", mountThemeToggle);
     } else {
       mountThemeToggle();
     }
@@ -324,7 +336,7 @@
     toggle: toggleTheme,
     set: setTheme,
     get: () => currentTheme,
-    THEMES: THEMES
+    THEMES: THEMES,
   };
 
   // =========================================
@@ -332,5 +344,4 @@
   // =========================================
   // Initialize immediately (before DOM loads) to prevent flash
   initTheme();
-
 })();
