@@ -579,7 +579,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center; /* keep boxed container centered */
-  background-image: url("assets/images/webp/mohammad-rahmani-nBXwqxjDa5c-unsplash.webp");
+  background-image: url("../images/webp/mohammad-rahmani-nBXwqxjDa5c-unsplash.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

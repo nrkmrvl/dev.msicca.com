@@ -391,13 +391,13 @@ footer.footer[data-surface="dark"] .github-link {
 .btn:hover,
 .btn-primary:hover {
   background-color: var(--theme-btn-primary-hover-bg);
-  box-shadow: var(--theme-shadow-hover);
-  transform: translate(-4px, 4px);
+  box-shadow: 8px 8px 0px rgba(55, 70, 90, 0.8);
+  transform: translate(-4px, -4px);
 }
 
 .btn:active,
 .btn-primary:active {
-  transform: translate(2px, -2px);
+  transform: translate(2px, 2px);
   box-shadow: 2px 2px 0px rgba(55, 70, 90, 0.8);
 }
 
@@ -407,13 +407,14 @@ footer.footer[data-surface="dark"] .github-link {
   border-color: var(--surface-btn-primary-border);
   background-color: var(--surface-btn-primary-bg);
   color: var(--surface-btn-primary-text);
-  box-shadow: 0 4px 0px rgba(0, 255, 255, 0.3);
+  box-shadow: 4px 4px 0px rgba(0, 255, 255, 0.3);
 }
 
 [data-surface="dark"] .btn:hover,
 [data-surface="dark"] .btn-primary:hover {
   background-color: var(--surface-btn-primary-hover-bg);
-  box-shadow: -8px 8px 0px rgba(0, 255, 255, 0.4);
+  box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.4);
+  transform: translate(-4px, -4px);
 }
 
 /* Primary button in light surface */
@@ -456,12 +457,12 @@ footer.footer[data-surface="dark"] .github-link {
   background-color: var(--theme-btn-secondary-hover-bg);
   color: var(--theme-btn-secondary-hover-text);
   border-color: var(--theme-accent-primary);
-  box-shadow: var(--theme-shadow-hover);
-  transform: translate(-4px, 4px);
+  box-shadow: 8px 8px 0px rgba(55, 70, 90, 0.8);
+  transform: translate(-4px, -4px);
 }
 
 .btn-secondary:active {
-  transform: translate(2px, -2px);
+  transform: translate(2px, 2px);
   box-shadow: 2px 2px 0px rgba(55, 70, 90, 0.8);
 }
 
@@ -478,7 +479,8 @@ footer.footer[data-surface="dark"] .github-link {
   background-color: var(--surface-btn-secondary-hover-bg);
   color: var(--surface-btn-secondary-hover-text);
   border-color: var(--surface-accent-primary);
-  box-shadow: -8px 8px 0px rgba(0, 255, 255, 0.4);
+  box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.4);
+  transform: translate(-4px, -4px);
 }
 
 /* Secondary button in light surface */
@@ -550,8 +552,8 @@ footer.footer[data-surface="dark"] .github-link {
 .card:hover,
 .feature-card:hover,
 .project-card:hover {
-  box-shadow: var(--theme-shadow-hover);
-  transform: translate(-4px, 4px);
+  box-shadow: 8px 8px 0px rgba(55, 70, 90, 0.8);
+  transform: translate(-4px, -4px);
   border-color: var(--theme-accent-primary);
 }
 
@@ -562,13 +564,14 @@ footer.footer[data-surface="dark"] .github-link {
   background-color: var(--surface-bg-secondary);
   border-color: var(--surface-border-primary);
   color: var(--surface-text-primary);
-  box-shadow: 0 4px 0px rgba(0, 255, 255, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 255, 255, 0.2);
 }
 
 [data-surface="dark"] .card:hover,
 [data-surface="dark"] .feature-card:hover,
 [data-surface="dark"] .project-card:hover {
-  box-shadow: -8px 8px 0px rgba(0, 255, 255, 0.3);
+  box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.3);
+  transform: translate(-4px, -4px);
   border-color: var(--surface-accent-primary);
 }
 
@@ -621,6 +624,10 @@ section {
   border-radius: 50px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  width: auto;
+  height: auto;
+  max-width: 80px;
+  max-height: 48px;
 }
 
 .theme-toggle:hover {
@@ -734,7 +741,7 @@ section {
 /* Header forced dark - overrides styles.css */
 header.header[data-surface="dark"],
 .header[data-surface="dark"] {
-  background-color: var(--surface-bg-primary) !important;
+  background-color: transparent !important;
   color: var(--surface-text-primary) !important;
 }
 
@@ -748,14 +755,15 @@ header.header[data-surface="dark"],
 }
 
 .header[data-surface="dark"].header-scrolled {
-  background-color: rgba(16, 22, 47, 0.95) !important;
+  background-color: rgba(16, 22, 47, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
   border-bottom-color: var(--surface-border-secondary) !important;
 }
 
 /* Hero section forced dark - overrides styles.css */
 .hero[data-surface="dark"],
 section.hero[data-surface="dark"] {
-  background-color: var(--surface-bg-primary) !important;
+  /* Don't override background - let background-image show through */
   color: var(--surface-text-primary) !important;
 }
 
